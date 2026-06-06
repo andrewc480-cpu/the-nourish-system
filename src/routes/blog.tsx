@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { MoodyImage } from "@/components/site/MoodyImage";
+import glp1MealPrep from "@/assets/glp1-meal-prep.png.asset.json";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
