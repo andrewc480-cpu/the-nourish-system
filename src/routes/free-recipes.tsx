@@ -31,6 +31,7 @@ const recipes: Recipe[] = [
   {
     title: "Miso Glazed Salmon Bowl",
     prep: "25 min", protein: "38g", level: "Easy", tone: "moody-1",
+    image: misoSalmonBowl.url,
     ingredients: ["2 salmon fillets", "2 tbsp white miso", "1 tbsp maple syrup", "1 cup brown rice", "1 cup edamame", "1 avocado, sliced", "Sesame seeds, scallions"],
     steps: ["Whisk miso and maple, brush onto salmon.", "Broil 8 minutes until caramelized.", "Cook rice per package; steam edamame.", "Assemble bowls: rice, edamame, salmon, avocado.", "Top with sesame seeds and scallions."],
   },
