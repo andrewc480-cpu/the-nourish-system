@@ -7,7 +7,7 @@ import searedSalmon from "@/assets/nourish-dinner.png.asset.json";
 import mangoTurmericSmoothie from "@/assets/nourish-smoothie.png.asset.json";
 import eggsAndTurkeyBoard from "@/assets/nourish-snacks-v2.png.asset.json";
 import chocolateDessert from "@/assets/nourish-desserts.png.asset.json";
-import grilledChickenPlate from "@/assets/nourish-bundle.png.asset.json";
+import glp1NutritionGuide from "@/assets/glp1-nutrition-guide.png.asset.json";
 import fermentedKimchiBowl from "@/assets/nourish-hero.png.asset.json";
 import turmericSalmon from "@/assets/nourish-hero.png.asset.json";
 import realFoodReset from "@/assets/11-Real-Food-Reset.png.asset.json";
@@ -43,7 +43,7 @@ const tier2: Product[] = [
 ];
 
 const tier3: Product[] = [
-  { title: "GLP-1 Nutrition Guide", desc: "Eat to support your medication, not against it.", price: "$49", imageUrl: grilledChickenPlate.url, imageAlt: "Balanced grilled chicken plate" },
+  { title: "GLP-1 Nutrition Guide", desc: "Eat to support your medication, not against it.", price: "$49", imageUrl: glp1NutritionGuide.url, imageAlt: "Balanced grilled chicken plate" },
   { title: "Gut Reset Meal Plan", desc: "21 days to a calmer, stronger gut.", price: "$39", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl" },
   { title: "Food as Medicine Collection", desc: "Anti-inflammatory meals backed by science.", price: "$44", imageUrl: turmericSalmon.url, imageAlt: "Turmeric salmon plate" },
   { title: "Real Food Reset", desc: "Strip the noise. Rebuild the basics.", price: "$34", imageUrl: realFoodReset.url, imageAlt: "Real food reset bowl" },
