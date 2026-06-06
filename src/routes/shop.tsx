@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { MoodyImage } from "@/components/site/MoodyImage";
+import roastedChicken from "@/assets/roasted-chicken.png.asset.json";
 
 export const Route = createFileRoute("/shop")({
   head: () => ({
