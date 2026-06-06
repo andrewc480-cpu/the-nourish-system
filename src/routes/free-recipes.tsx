@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import { MoodyImage } from "@/components/site/MoodyImage";
+import misoSalmonBowl from "@/assets/miso-salmon-bowl.png.asset.json";
 
 export const Route = createFileRoute("/free-recipes")({
   head: () => ({
