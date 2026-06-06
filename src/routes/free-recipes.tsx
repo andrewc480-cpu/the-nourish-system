@@ -47,6 +47,7 @@ const recipes: Recipe[] = [
   {
     title: "Sheet Pan Harissa Chicken",
     prep: "35 min", protein: "42g", level: "Medium", tone: "moody-3",
+    image: harissaChicken.url,
     ingredients: ["1.5 lb chicken thighs", "2 tbsp harissa paste", "1 lemon", "2 sweet potatoes, cubed", "1 red onion, wedged", "Olive oil, salt"],
     steps: ["Heat oven to 425°F.", "Toss chicken with harissa and lemon juice.", "Toss potatoes and onion with olive oil and salt.", "Roast on a sheet pan for 30 minutes.", "Rest 5 minutes before serving."],
   },
