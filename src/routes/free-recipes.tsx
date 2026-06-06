@@ -91,7 +91,11 @@ function FreeRecipes() {
             return (
               <article key={r.title} className="flex flex-col bg-linen">
                 <button onClick={() => setOpen(isOpen ? null : i)} className="text-left">
-                  <MoodyImage tone={r.tone} className="aspect-[4/3] w-full" />
+                  {r.image ? (
+                    <img src={r.image} alt={r.title} className="aspect-[4/3] w-full object-cover" />
+                  ) : (
+                    <MoodyImage tone={r.tone} className="aspect-[4/3] w-full" />
+                  )}
                 </button>
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex flex-wrap gap-2">
