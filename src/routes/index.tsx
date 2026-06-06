@@ -78,8 +78,13 @@ function Index() {
     <SiteLayout>
       {/* HERO */}
       <section className="relative">
-        <MoodyImage tone="moody-1" className="h-[88vh] min-h-[600px] w-full" label="Editorial / 001">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
+        <div className="relative h-[88vh] min-h-[600px] w-full overflow-hidden bg-charcoal">
+          <img
+            src={heroImage.url}
+            alt="Roasted vegetable and quinoa bowl on a moody wooden table by candlelight"
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ objectPosition: "right center" }}
+          />
           <div className="relative mx-auto flex h-full max-w-7xl flex-col items-start justify-end px-6 pb-20 md:pb-28">
             <span className="mb-6 font-sans text-xs uppercase tracking-[0.3em] text-white/70">
               The Nóurish Collection — 2026
@@ -98,7 +103,7 @@ function Index() {
               <span aria-hidden>→</span>
             </a>
           </div>
-        </MoodyImage>
+        </div>
       </section>
 
       {/* CATEGORIES */}
