@@ -4,6 +4,7 @@ import { MoodyImage } from "@/components/site/MoodyImage";
 import glp1MealPrep from "@/assets/glp1-meal-prep.png.asset.json";
 import fiberBeforeNoon from "@/assets/fiber-before-noon.png.asset.json";
 import afterOzempic from "@/assets/after-ozempic.png.asset.json";
+import antiInflammatoryDinners from "@/assets/anti-inflammatory-dinners.png.asset.json";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -21,7 +22,7 @@ const posts = [
   { cat: "GLP-1", title: "The GLP-1 Meal Prep Guide No One Is Talking About", read: "8 min", tone: "moody-3" as const },
   { cat: "Gut Health", title: "30g Fiber Before Noon: The Gut Health Rule That Actually Works", read: "6 min", tone: "moody-1" as const, image: fiberBeforeNoon.url },
   { cat: "GLP-1", title: "What to Eat the Week After Starting Ozempic", read: "10 min", tone: "moody-2" as const, image: afterOzempic.url },
-  { cat: "Food as Medicine", title: "10 Anti-Inflammatory Dinners Under 30 Minutes", read: "5 min", tone: "moody-3" as const },
+  { cat: "Food as Medicine", title: "10 Anti-Inflammatory Dinners Under 30 Minutes", read: "5 min", tone: "moody-3" as const, image: antiInflammatoryDinners.url },
   { cat: "High Protein", title: "The 40g Breakfast: Why Your Morning Macros Matter Most", read: "7 min", tone: "moody-1" as const },
   { cat: "Meal Prep", title: "Sunday Strategy: The Three-Container System We Swear By", read: "6 min", tone: "moody-2" as const },
   { cat: "Clean Eating", title: "How to Read a Nutrition Label Without Falling for It", read: "9 min", tone: "moody-1" as const },
