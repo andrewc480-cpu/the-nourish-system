@@ -252,7 +252,7 @@ function Index() {
             type="submit"
             className="bg-sage px-7 py-4 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-sage-foreground transition-all hover:bg-sage/90"
           >
-            Send Recipes
+            Send Me Recipes
           </button>
         </form>
         {submitted && (
