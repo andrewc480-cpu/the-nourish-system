@@ -9,7 +9,7 @@ import breakfastImage from "@/assets/nourish-breakfast.png.asset.json";
 import lunchImage from "@/assets/nourish-lunch.png.asset.json";
 import dinnerImage from "@/assets/nourish-dinner.png.asset.json";
 import smoothieImage from "@/assets/nourish-smoothie.png.asset.json";
-import snacksImage from "@/assets/nourish-snacks.png.asset.json";
+import snacksImage from "@/assets/nourish-snacks-v2.png.asset.json";
 import dessertsImage from "@/assets/nourish-desserts.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -52,7 +52,7 @@ const categories = [
   {
     name: "Snacks",
     image: snacksImage.url,
-    alt: "Wooden snack board with nuts, figs, and dark chocolate",
+    alt: "Bowl of fresh guacamole with tortilla chips, lime, and cilantro on a slate board",
     position: "center center",
   },
   {
