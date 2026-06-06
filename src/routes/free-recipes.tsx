@@ -5,6 +5,7 @@ import { MoodyImage } from "@/components/site/MoodyImage";
 import misoSalmonBowl from "@/assets/miso-salmon-bowl.png.asset.json";
 import proteinOvernightOats from "@/assets/protein-overnight-oats.png.asset.json";
 import harissaChicken from "@/assets/harissa-chicken.png.asset.json";
+import greenSmoothie from "@/assets/green-smoothie.png.asset.json";
 
 export const Route = createFileRoute("/free-recipes")({
   head: () => ({
@@ -54,6 +55,7 @@ const recipes: Recipe[] = [
   {
     title: "Gut-Loving Green Smoothie",
     prep: "5 min", protein: "24g", level: "Easy", tone: "moody-3",
+    image: greenSmoothie.url,
     ingredients: ["1 cup spinach", "1 frozen banana", "1 scoop collagen", "1 cup kefir", "1 tbsp flax", "1 tsp ginger"],
     steps: ["Add all ingredients to a blender.", "Blend on high for 60 seconds.", "Pour and drink immediately."],
   },
