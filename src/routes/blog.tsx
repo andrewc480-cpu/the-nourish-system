@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { MoodyImage } from "@/components/site/MoodyImage";
+import glp1MealPrep from "@/assets/glp1-meal-prep.png.asset.json";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -41,7 +42,7 @@ function Blog() {
       <section className="mx-auto max-w-7xl px-6 py-16">
         {/* Featured */}
         <a href="#" className="group mb-20 grid gap-10 md:grid-cols-2 md:items-center">
-          <MoodyImage tone={hero.tone} className="aspect-[4/3] w-full" label="Featured" />
+          <img src={glp1MealPrep.url} alt={hero.title} className="aspect-[4/3] w-full object-cover" />
           <div>
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">{hero.cat}</span>
             <h2 className="mt-4 font-display text-4xl font-medium leading-tight text-charcoal transition-colors group-hover:text-sage md:text-5xl">
