@@ -7,7 +7,7 @@ import searedSalmon from "@/assets/nourish-dinner.png.asset.json";
 import mangoTurmericSmoothie from "@/assets/nourish-smoothie.png.asset.json";
 import eggsAndTurkeyBoard from "@/assets/nourish-snacks-v2.png.asset.json";
 import chocolateDessert from "@/assets/nourish-desserts.png.asset.json";
-import grilledChickenPlate from "@/assets/nourish-bundle.png.asset.json";
+import glp1NutritionGuide from "@/assets/glp1-nutrition-guide.png.asset.json";
 import fermentedKimchiBowl from "@/assets/nourish-hero.png.asset.json";
 import turmericSalmon from "@/assets/nourish-hero.png.asset.json";
 import realFoodReset from "@/assets/11-Real-Food-Reset.png.asset.json";
