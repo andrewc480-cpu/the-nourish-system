@@ -153,6 +153,36 @@ function Index() {
         </div>
       </section>
 
+      {/* HOW IT WORKS */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <h2 className="mb-16 text-center font-display text-4xl font-medium text-charcoal md:text-5xl">
+          Simple by design.
+        </h2>
+        <div className="grid gap-12 md:grid-cols-3">
+          <div className="text-center">
+            <span className="font-sans text-xs uppercase tracking-[0.2em] text-sage">01</span>
+            <h3 className="mt-3 font-display text-2xl font-medium text-charcoal">Choose Your Collection</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Browse by meal type, diet goal, or lifestyle. There is something for every way you eat.
+            </p>
+          </div>
+          <div className="text-center">
+            <span className="font-sans text-xs uppercase tracking-[0.2em] text-sage">02</span>
+            <h3 className="mt-3 font-display text-2xl font-medium text-charcoal">Instant Download</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Purchase once. Download immediately to any device. No subscriptions. No waiting.
+            </p>
+          </div>
+          <div className="text-center">
+            <span className="font-sans text-xs uppercase tracking-[0.2em] text-sage">03</span>
+            <h3 className="mt-3 font-display text-2xl font-medium text-charcoal">Start Cooking</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              180 tested recipes organized by goal, protein, and prep time. Open and cook.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* TRENDS */}
       <section className="bg-linen py-20">
         <div className="mx-auto max-w-7xl px-6">
