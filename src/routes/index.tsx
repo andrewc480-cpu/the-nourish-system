@@ -63,7 +63,13 @@ const categories = [
   },
 ];
 
-const trends = ["GLP-1", "Gut Health", "Food as Medicine", "Real Food Reset", "Plant-Based"];
+const trends = [
+  { name: "GLP-1", description: "High protein meals designed for Ozempic and Wegovy users" },
+  { name: "Gut Health", description: "Fiber-first recipes that support a healthier microbiome" },
+  { name: "Food as Medicine", description: "Anti-inflammatory meals that work as hard as you do" },
+  { name: "Real Food Reset", description: "30 days of clean eating with zero ultra-processed ingredients" },
+  { name: "Plant-Based", description: "Whole food plant-based meals with 30g or more of protein" },
+];
 
 const testimonials = [
   { quote: "These recipes completely changed how I think about weeknight dinners. Every single one is a keeper.", name: "Sarah K.", role: "Home cook, Brooklyn" },
