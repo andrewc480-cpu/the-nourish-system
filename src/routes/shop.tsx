@@ -9,7 +9,7 @@ import eggsAndTurkeyBoard from "@/assets/nourish-snacks-v2.png.asset.json";
 import chocolateDessert from "@/assets/nourish-desserts.png.asset.json";
 import glp1NutritionGuide from "@/assets/glp1-nutrition-guide.png.asset.json";
 import fermentedKimchiBowl from "@/assets/gut-reset-meal-plan.png.asset.json";
-import turmericSalmon from "@/assets/nourish-hero.png.asset.json";
+import turmericSalmon from "@/assets/food-as-medicine.png.asset.json";
 import realFoodReset from "@/assets/11-Real-Food-Reset.png.asset.json";
 import plantBasedBundle from "@/assets/12-High-Protein-Plant-Based.png.asset.json";
 import mealsUnder10 from "@/assets/13-Meals-Under-10.png.asset.json";
