@@ -6,6 +6,7 @@ import fiberBeforeNoon from "@/assets/fiber-before-noon.png.asset.json";
 import afterOzempic from "@/assets/after-ozempic.png.asset.json";
 import antiInflammatoryDinners from "@/assets/anti-inflammatory-dinners.png.asset.json";
 import breakfast40g from "@/assets/breakfast-40g.png.asset.json";
+import threeContainer from "@/assets/three-container-system.png.asset.json";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -25,7 +26,7 @@ const posts = [
   { cat: "GLP-1", title: "What to Eat the Week After Starting Ozempic", read: "10 min", tone: "moody-2" as const, image: afterOzempic.url },
   { cat: "Food as Medicine", title: "10 Anti-Inflammatory Dinners Under 30 Minutes", read: "5 min", tone: "moody-3" as const, image: antiInflammatoryDinners.url },
   { cat: "High Protein", title: "The 40g Breakfast: Why Your Morning Macros Matter Most", read: "7 min", tone: "moody-1" as const, image: breakfast40g.url },
-  { cat: "Meal Prep", title: "Sunday Strategy: The Three-Container System We Swear By", read: "6 min", tone: "moody-2" as const },
+  { cat: "Meal Prep", title: "Sunday Strategy: The Three-Container System We Swear By", read: "6 min", tone: "moody-2" as const, image: threeContainer.url },
   { cat: "Clean Eating", title: "How to Read a Nutrition Label Without Falling for It", read: "9 min", tone: "moody-1" as const },
   { cat: "Gut Health", title: "Fermented Foods, Ranked by Someone Who Actually Eats Them", read: "5 min", tone: "moody-3" as const },
 ];
