@@ -43,7 +43,6 @@
 :root {
   --radius: 0.25rem;
   --background: oklch(0.985 0.005 90);          /* #FAFAF7 */
-  --foreground: oklch(0.२ 0 0);
   --foreground: oklch(0.20 0 0);                /* #1C1C1C */
   --card: oklch(0.945 0.012 75);                /* linen #F2EDE4 */
   --card-foreground: oklch(0.20 0 0);
