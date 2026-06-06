@@ -4,6 +4,7 @@ import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import { MoodyImage } from "@/components/site/MoodyImage";
 import heroImage from "@/assets/nourish-hero.png.asset.json";
+import bundleImage from "@/assets/nourish-bundle.png.asset.json";
 import breakfastImage from "@/assets/nourish-breakfast.png.asset.json";
 import lunchImage from "@/assets/nourish-lunch.png.asset.json";
 import dinnerImage from "@/assets/nourish-dinner.png.asset.json";
