@@ -11,7 +11,7 @@ export function Footer() {
             Nóurish<span className="text-sage">.</span>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            A smarter relationship with what ends up on your plate.
+            Not a diet. Not a restriction. A smarter relationship with what ends up on your plate.
           </p>
         </div>
         <div>
