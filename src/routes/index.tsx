@@ -3,6 +3,12 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import { MoodyImage } from "@/components/site/MoodyImage";
+import breakfastImage from "@/assets/nourish-breakfast.png.asset.json";
+import lunchImage from "@/assets/nourish-lunch.png.asset.json";
+import dinnerImage from "@/assets/nourish-dinner.png.asset.json";
+import smoothieImage from "@/assets/nourish-smoothie.png.asset.json";
+import snacksImage from "@/assets/nourish-snacks.png.asset.json";
+import dessertsImage from "@/assets/nourish-desserts.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -17,12 +23,42 @@ export const Route = createFileRoute("/")({
 });
 
 const categories = [
-  { name: "Breakfast", tone: "moody-1" as const },
-  { name: "Lunch", tone: "moody-2" as const },
-  { name: "Dinner", tone: "moody-3" as const },
-  { name: "Smoothies", tone: "moody-2" as const },
-  { name: "Snacks", tone: "moody-1" as const },
-  { name: "Desserts", tone: "moody-3" as const },
+  {
+    name: "Breakfast",
+    image: breakfastImage.url,
+    alt: "French toast topped with berries and powdered sugar",
+    position: "center 58%",
+  },
+  {
+    name: "Lunch",
+    image: lunchImage.url,
+    alt: "Mediterranean lunch bowl with hummus, quinoa, vegetables, and chickpeas",
+    position: "center center",
+  },
+  {
+    name: "Dinner",
+    image: dinnerImage.url,
+    alt: "Roasted salmon with asparagus and lemon",
+    position: "center 60%",
+  },
+  {
+    name: "Smoothies",
+    image: smoothieImage.url,
+    alt: "Berry smoothie in a glass topped with strawberries and blueberries",
+    position: "center 45%",
+  },
+  {
+    name: "Snacks",
+    image: snacksImage.url,
+    alt: "Wooden snack board with nuts, figs, and dark chocolate",
+    position: "center center",
+  },
+  {
+    name: "Desserts",
+    image: dessertsImage.url,
+    alt: "Chocolate lava cake with vanilla ice cream",
+    position: "center 48%",
+  },
 ];
 
 const trends = ["GLP-1", "Gut Health", "Food as Medicine", "Real Food Reset", "Plant-Based"];
