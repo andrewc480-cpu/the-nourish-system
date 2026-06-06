@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
-import { MoodyImage } from "@/components/site/MoodyImage";
+import aboutMission from "@/assets/about-mission.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -25,7 +25,7 @@ function About() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 pb-16">
-        <MoodyImage tone="moody-2" className="aspect-[16/9] w-full" />
+        <img src={aboutMission.url} alt="Fresh vegetables, herbs, lentils, and grains arranged on a rustic wooden table" className="aspect-[16/9] w-full object-cover" />
       </section>
 
       <section className="mx-auto max-w-2xl px-6 pb-24">
