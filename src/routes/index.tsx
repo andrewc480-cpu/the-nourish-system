@@ -162,14 +162,15 @@ function Index() {
               Eat with intention.
             </h2>
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-4">
             {trends.map((t) => (
-              <a
-                key={t}
-                href="#"
-                className="rounded-full border border-charcoal/15 bg-background px-6 py-3 font-display text-base text-charcoal transition-all hover:border-sage hover:bg-sage hover:text-sage-foreground"
-              >
-                {t}
+              <a key={t.name} href="#" className="block max-w-[280px]">
+                <span className="inline-block rounded-full border border-charcoal/15 bg-background px-6 py-3 font-display text-base text-charcoal transition-all hover:border-sage hover:bg-sage hover:text-sage-foreground">
+                  {t.name}
+                </span>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                  {t.description}
+                </p>
               </a>
             ))}
           </div>
