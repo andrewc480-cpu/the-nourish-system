@@ -91,7 +91,7 @@ function ProductCard({ p }: { p: Product }) {
         <h3 className="font-display text-xl font-medium leading-snug text-charcoal">{p.title}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
         <div className="mt-6 flex items-center justify-between">
-          <span className="text-2xl font-medium text-gold" style={{ fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif" }}>{p.price}</span>
+          <span className="text-base text-gold">{p.price}</span>
           <a href="#" className="bg-sage px-5 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-sage-foreground transition-all hover:bg-sage/90">
             Get Instant Access
           </a>
@@ -125,7 +125,7 @@ function Shop() {
               Every collection, every goal, every meal. Lifetime access with free updates as the library grows.
             </p>
             <div className="mt-8 flex items-baseline gap-4">
-              <span className="text-5xl font-medium text-gold" style={{ fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif" }}>$99.99</span>
+              <span className="text-base text-gold">$99.99</span>
               <span className="text-sm text-muted-foreground line-through">$240</span>
             </div>
             <a href="#" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
