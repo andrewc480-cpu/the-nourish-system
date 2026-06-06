@@ -16,9 +16,26 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Nóurish. — Eat Well. Every Single Day." },
-      { name: "description", content: "180 tested recipes for every meal, every craving, every lifestyle." },
+      { name: "description", content: "180 tested recipes for every meal, every craving, every lifestyle. A premium healthy recipe collection." },
       { property: "og:title", content: "Nóurish. — Eat Well. Every Single Day." },
       { property: "og:description", content: "180 tested recipes for every meal, every craving, every lifestyle." },
+      { property: "og:url", content: "/" },
+      { property: "og:image", content: heroImage.url },
+      { name: "twitter:image", content: heroImage.url },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Nóurish. — Eat Well. Every Single Day.",
+          description: "180 tested recipes for every meal, every craving, every lifestyle.",
+          url: "/",
+          primaryImageOfPage: heroImage.url,
+        }),
+      },
     ],
   }),
   component: Index,
