@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import { MoodyImage } from "@/components/site/MoodyImage";
 import misoSalmonBowl from "@/assets/miso-salmon-bowl.png.asset.json";
+import proteinOvernightOats from "@/assets/protein-overnight-oats.png.asset.json";
 
 export const Route = createFileRoute("/free-recipes")({
   head: () => ({
@@ -38,6 +39,7 @@ const recipes: Recipe[] = [
   {
     title: "30g Protein Overnight Oats",
     prep: "5 min", protein: "32g", level: "Easy", tone: "moody-2",
+    image: proteinOvernightOats.url,
     ingredients: ["1/2 cup rolled oats", "1 scoop vanilla protein powder", "1 cup milk of choice", "1 tbsp chia seeds", "1 tbsp almond butter", "1/2 cup berries"],
     steps: ["Combine oats, protein, chia, milk in a jar.", "Stir well, refrigerate overnight.", "Top with almond butter and berries before eating."],
   },
