@@ -7,6 +7,7 @@ import proteinOvernightOats from "@/assets/protein-overnight-oats.png.asset.json
 import harissaChicken from "@/assets/harissa-chicken.png.asset.json";
 import greenSmoothie from "@/assets/green-smoothie.png.asset.json";
 import lentilStew from "@/assets/lentil-stew.png.asset.json";
+import cottageCheesePancakes from "@/assets/cottage-cheese-pancakes.png.asset.json";
 
 export const Route = createFileRoute("/free-recipes")({
   head: () => ({
@@ -70,6 +71,7 @@ const recipes: Recipe[] = [
   {
     title: "Cottage Cheese Protein Pancakes",
     prep: "15 min", protein: "35g", level: "Easy", tone: "moody-1",
+    image: cottageCheesePancakes.url,
     ingredients: ["1 cup cottage cheese", "3 eggs", "1/2 cup oats", "1 tsp vanilla", "1 tsp cinnamon", "Butter for pan"],
     steps: ["Blend all ingredients until smooth.", "Heat butter in a nonstick pan.", "Cook 1/4 cup portions, 2 minutes per side.", "Serve with berries and a drizzle of maple."],
   },
