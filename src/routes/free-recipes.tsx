@@ -55,6 +55,7 @@ const recipes: Recipe[] = [
   {
     title: "Gut-Loving Green Smoothie",
     prep: "5 min", protein: "24g", level: "Easy", tone: "moody-3",
+    image: greenSmoothie.url,
     ingredients: ["1 cup spinach", "1 frozen banana", "1 scoop collagen", "1 cup kefir", "1 tbsp flax", "1 tsp ginger"],
     steps: ["Add all ingredients to a blender.", "Blend on high for 60 seconds.", "Pour and drink immediately."],
   },
