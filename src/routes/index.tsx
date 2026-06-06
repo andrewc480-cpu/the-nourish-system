@@ -189,7 +189,7 @@ function Index() {
               The entire Nóurish catalog, organized by goal, protein, and prep time. Lifetime access, instant download, recipe updates included.
             </p>
             <div className="mt-8 flex items-baseline gap-4">
-              <span className="font-display text-4xl font-medium text-gold">$99.99</span>
+              <span className="font-display text-4xl font-bold text-gold md:text-5xl">$99.99</span>
               <span className="text-sm text-muted-foreground line-through">$240</span>
             </div>
             <a href="#" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
