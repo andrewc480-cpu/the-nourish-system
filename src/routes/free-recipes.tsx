@@ -6,6 +6,7 @@ import misoSalmonBowl from "@/assets/miso-salmon-bowl.png.asset.json";
 import proteinOvernightOats from "@/assets/protein-overnight-oats.png.asset.json";
 import harissaChicken from "@/assets/harissa-chicken.png.asset.json";
 import greenSmoothie from "@/assets/green-smoothie.png.asset.json";
+import lentilStew from "@/assets/lentil-stew.png.asset.json";
 
 export const Route = createFileRoute("/free-recipes")({
   head: () => ({
@@ -62,6 +63,7 @@ const recipes: Recipe[] = [
   {
     title: "Anti-Inflammatory Lentil Stew",
     prep: "40 min", protein: "22g", level: "Medium", tone: "moody-2",
+    image: lentilStew.url,
     ingredients: ["1 cup green lentils", "1 onion, diced", "2 carrots, diced", "3 cloves garlic", "1 tsp turmeric", "1 tsp cumin", "4 cups broth", "Lemon, parsley"],
     steps: ["Sauté onion, carrot, garlic until soft.", "Add spices, toast 30 seconds.", "Add lentils and broth, simmer 30 minutes.", "Finish with lemon juice and parsley."],
   },
