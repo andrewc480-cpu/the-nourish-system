@@ -72,9 +72,8 @@ const trends = [
 ];
 
 const testimonials = [
-  { quote: "These recipes completely changed how I think about weeknight dinners. Every single one is a keeper.", name: "Sarah K.", role: "Home cook, Brooklyn" },
-  { quote: "I've tried every meal plan out there. Nóurish is the first one I actually stuck with for more than a month.", name: "Maya R.", role: "Working mom of two" },
-  { quote: "The protein breakdowns are exactly what I needed. Real food. Real numbers. No nonsense.", name: "James T.", role: "GLP-1 patient" },
+  { quote: "These recipes completely changed how I think about weeknight dinners. Every single one is a keeper.", name: "Sarah K.", role: "Brooklyn, NY" },
+  { quote: "I went from ordering takeout 4 nights a week to cooking every day. The recipes are that approachable. Best $99 I've spent this year.", name: "", role: "" },
 ];
 
 function Index() {
