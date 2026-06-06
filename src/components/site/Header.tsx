@@ -21,7 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <Link to="/" className="font-display text-2xl font-semibold tracking-tight text-charcoal">
-          Nóurish<span className="text-sage">.</span>
+          nóurish<span className="text-gold">.</span>
         </Link>
         <nav className="hidden items-center gap-9 md:flex">
           {navLinks.map((l) => (

@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-3">
         <div>
           <div className="font-display text-3xl font-semibold text-charcoal">
-            Nóurish<span className="text-sage">.</span>
+            nóurish<span className="text-gold">.</span>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
             Not a diet. Not a restriction. A smarter relationship with what ends up on your plate.
