@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import { MoodyImage } from "@/components/site/MoodyImage";
+import misoSalmonBowl from "@/assets/miso-salmon-bowl.png.asset.json";
 
 export const Route = createFileRoute("/free-recipes")({
   head: () => ({
@@ -21,6 +22,7 @@ type Recipe = {
   protein: string;
   level: "Easy" | "Medium" | "Advanced";
   tone: "moody-1" | "moody-2" | "moody-3";
+  image?: string;
   ingredients: string[];
   steps: string[];
 };
@@ -29,6 +31,7 @@ const recipes: Recipe[] = [
   {
     title: "Miso Glazed Salmon Bowl",
     prep: "25 min", protein: "38g", level: "Easy", tone: "moody-1",
+    image: misoSalmonBowl.url,
     ingredients: ["2 salmon fillets", "2 tbsp white miso", "1 tbsp maple syrup", "1 cup brown rice", "1 cup edamame", "1 avocado, sliced", "Sesame seeds, scallions"],
     steps: ["Whisk miso and maple, brush onto salmon.", "Broil 8 minutes until caramelized.", "Cook rice per package; steam edamame.", "Assemble bowls: rice, edamame, salmon, avocado.", "Top with sesame seeds and scallions."],
   },
@@ -88,7 +91,11 @@ function FreeRecipes() {
             return (
               <article key={r.title} className="flex flex-col bg-linen">
                 <button onClick={() => setOpen(isOpen ? null : i)} className="text-left">
-                  <MoodyImage tone={r.tone} className="aspect-[4/3] w-full" />
+                  {r.image ? (
+                    <img src={r.image} alt={r.title} className="aspect-[4/3] w-full object-cover" />
+                  ) : (
+                    <MoodyImage tone={r.tone} className="aspect-[4/3] w-full" />
+                  )}
                 </button>
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex flex-wrap gap-2">
