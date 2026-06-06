@@ -6,6 +6,7 @@ import misoSalmonBowl from "@/assets/miso-salmon-bowl.png.asset.json";
 import proteinOvernightOats from "@/assets/protein-overnight-oats.png.asset.json";
 import harissaChicken from "@/assets/harissa-chicken.png.asset.json";
 import greenSmoothie from "@/assets/green-smoothie.png.asset.json";
+import lentilStew from "@/assets/lentil-stew.png.asset.json";
 
 export const Route = createFileRoute("/free-recipes")({
   head: () => ({
