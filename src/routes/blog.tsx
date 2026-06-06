@@ -18,6 +18,22 @@ export const Route = createFileRoute("/blog")({
       { name: "description", content: "Essays on protein, gut health, GLP-1, and food as medicine." },
       { property: "og:title", content: "Journal — Nóurish." },
       { property: "og:description", content: "Essays on protein, gut health, GLP-1, and food as medicine." },
+      { property: "og:url", content: "/blog" },
+      { property: "og:image", content: glp1MealPrep.url },
+      { name: "twitter:image", content: glp1MealPrep.url },
+    ],
+    links: [{ rel: "canonical", href: "/blog" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "Nóurish. Journal",
+          description: "Essays on protein, gut health, GLP-1, and food as medicine.",
+          url: "/blog",
+        }),
+      },
     ],
   }),
   component: Blog,
