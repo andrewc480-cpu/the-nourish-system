@@ -76,7 +76,7 @@ function Shop() {
       {/* Hero product */}
       <section className="border-b border-border bg-linen">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2">
-          <MoodyImage tone="moody-1" className="aspect-[5/6] w-full" label="Bundle" />
+          <img src={roastedChicken.url} alt="The Complete Bundle" className="aspect-[5/6] w-full object-cover" />
           <div>
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">The Complete Bundle</span>
             <h1 className="mt-4 font-display text-5xl font-medium leading-[1.05] text-charcoal md:text-6xl">
