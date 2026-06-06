@@ -22,6 +22,7 @@ type Recipe = {
   protein: string;
   level: "Easy" | "Medium" | "Advanced";
   tone: "moody-1" | "moody-2" | "moody-3";
+  image?: string;
   ingredients: string[];
   steps: string[];
 };
