@@ -16,6 +16,22 @@ export const Route = createFileRoute("/free-recipes")({
       { name: "description", content: "Six free, tested recipes. No strings attached." },
       { property: "og:title", content: "Free Recipes — Nóurish." },
       { property: "og:description", content: "Six free, tested recipes. No strings attached." },
+      { property: "og:url", content: "/free-recipes" },
+      { property: "og:image", content: misoSalmonBowl.url },
+      { name: "twitter:image", content: misoSalmonBowl.url },
+    ],
+    links: [{ rel: "canonical", href: "/free-recipes" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Free Recipes — Nóurish.",
+          description: "Six free, tested recipes. No strings attached.",
+          url: "/free-recipes",
+        }),
+      },
     ],
   }),
   component: FreeRecipes,
