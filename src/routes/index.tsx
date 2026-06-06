@@ -114,13 +114,21 @@ function Index() {
           </Link>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {categories.map((c, i) => (
+          {categories.map((c) => (
             <a
               key={c.name}
               href="#"
               className="group block"
             >
-              <MoodyImage tone={c.tone} className="aspect-[4/5] w-full transition-transform duration-700 group-hover:scale-[1.01]" label={`0${i + 1}`} />
+              <div className="aspect-[4/5] w-full overflow-hidden bg-linen">
+                <img
+                  src={c.image}
+                  alt={c.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.01]"
+                  style={{ objectPosition: c.position }}
+                />
+              </div>
               <div className="mt-5 flex items-baseline justify-between">
                 <h3 className="font-display text-2xl font-medium text-charcoal">{c.name}</h3>
                 <span className="font-sans text-xs uppercase tracking-[0.2em] text-charcoal/50 transition-colors group-hover:text-sage">
