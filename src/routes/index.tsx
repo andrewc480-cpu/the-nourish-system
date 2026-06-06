@@ -4,6 +4,7 @@ import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import { MoodyImage } from "@/components/site/MoodyImage";
 import heroImage from "@/assets/nourish-hero.png.asset.json";
+import bundleImage from "@/assets/nourish-bundle.png.asset.json";
 import breakfastImage from "@/assets/nourish-breakfast.png.asset.json";
 import lunchImage from "@/assets/nourish-lunch.png.asset.json";
 import dinnerImage from "@/assets/nourish-dinner.png.asset.json";
@@ -172,7 +173,13 @@ function Index() {
       {/* BUNDLE CTA */}
       <section id="bundle" className="mx-auto max-w-7xl px-6 py-24">
         <div className="grid items-center gap-12 md:grid-cols-2">
-          <MoodyImage tone="moody-2" className="aspect-[5/6] w-full" />
+          <div className="aspect-[5/6] w-full overflow-hidden bg-linen">
+            <img
+              src={bundleImage.url}
+              alt="Herb-butter steak sliced on a wooden board with rosemary and candlelight"
+              className="h-full w-full object-cover"
+            />
+          </div>
           <div>
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">The Complete Bundle</span>
             <h2 className="mt-4 font-display text-4xl font-medium leading-tight text-charcoal md:text-5xl">
