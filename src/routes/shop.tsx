@@ -43,7 +43,7 @@ export const Route = createFileRoute("/shop")({
           brand: { "@type": "Brand", name: "Nóurish." },
           offers: {
             "@type": "Offer",
-            price: "99.99",
+            price: "99",
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
             url: "/shop",
@@ -58,12 +58,12 @@ export const Route = createFileRoute("/shop")({
 type Product = { title: string; desc: string; price: string; imageUrl: string; imageAlt: string };
 
 const tier2: Product[] = [
-  { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19.99", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet" },
-  { title: "30 High Protein Lunch Ideas", desc: "Midday meals that keep you full till dinner.", price: "$19.99", imageUrl: grilledChickenBreast.url, imageAlt: "Grilled chicken breast lunch" },
-  { title: "30 High Protein Dinner Ideas", desc: "Family-tested, macro-balanced evenings.", price: "$19.99", imageUrl: searedSalmon.url, imageAlt: "Seared salmon dinner" },
-  { title: "30 High Protein Smoothie Ideas", desc: "Real ingredients. Real protein. No fillers.", price: "$19.99", imageUrl: mangoTurmericSmoothie.url, imageAlt: "Mango turmeric smoothie" },
-  { title: "30 High Protein Snack Ideas", desc: "Snacks engineered for steady energy.", price: "$19.99", imageUrl: eggsAndTurkeyBoard.url, imageAlt: "Slate board with eggs and turkey" },
-  { title: "30 High Protein Dessert Ideas", desc: "Sweet, satisfying, and macro-friendly.", price: "$19.99", imageUrl: chocolateDessert.url, imageAlt: "High protein dessert" },
+  { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet" },
+  { title: "30 High Protein Lunch Ideas", desc: "Midday meals that keep you full till dinner.", price: "$19", imageUrl: grilledChickenBreast.url, imageAlt: "Grilled chicken breast lunch" },
+  { title: "30 High Protein Dinner Ideas", desc: "Family-tested, macro-balanced evenings.", price: "$19", imageUrl: searedSalmon.url, imageAlt: "Seared salmon dinner" },
+  { title: "30 High Protein Smoothie Ideas", desc: "Real ingredients. Real protein. No fillers.", price: "$19", imageUrl: mangoTurmericSmoothie.url, imageAlt: "Mango turmeric smoothie" },
+  { title: "30 High Protein Snack Ideas", desc: "Snacks engineered for steady energy.", price: "$19", imageUrl: eggsAndTurkeyBoard.url, imageAlt: "Slate board with eggs and turkey" },
+  { title: "30 High Protein Dessert Ideas", desc: "Sweet, satisfying, and macro-friendly.", price: "$19", imageUrl: chocolateDessert.url, imageAlt: "High protein dessert" },
 ];
 
 const tier3: Product[] = [
@@ -75,12 +75,12 @@ const tier3: Product[] = [
 ];
 
 const tier4: Product[] = [
-  { title: "Meals Under $10", desc: "Budget-friendly without sacrificing quality.", price: "$24.99", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup" },
-  { title: "Meals in 20 Min or Less", desc: "Weeknight-fast, restaurant-worthy.", price: "$24.99", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry" },
-  { title: "Family Dinners Kids Eat", desc: "Picky-eater approved, parent approved.", price: "$24.99", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner" },
-  { title: "Meals for Men Over 40", desc: "Built for muscle, heart, and metabolism.", price: "$24.99", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak" },
-  { title: "Meal Prep Sunday Plans", desc: "Cook once. Eat well all week.", price: "$24.99", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers" },
-  { title: "Meals for Weight Loss After 50", desc: "Sustainable nutrition that respects your body.", price: "$24.99", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate" },
+  { title: "Meals Under $10", desc: "Budget-friendly without sacrificing quality.", price: "$24", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup" },
+  { title: "Meals in 20 Min or Less", desc: "Weeknight-fast, restaurant-worthy.", price: "$24", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry" },
+  { title: "Family Dinners Kids Eat", desc: "Picky-eater approved, parent approved.", price: "$24", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner" },
+  { title: "Meals for Men Over 40", desc: "Built for muscle, heart, and metabolism.", price: "$24", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak" },
+  { title: "Meal Prep Sunday Plans", desc: "Cook once. Eat well all week.", price: "$24", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers" },
+  { title: "Meals for Weight Loss After 50", desc: "Sustainable nutrition that respects your body.", price: "$24", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate" },
 ];
 
 function ProductCard({ p }: { p: Product }) {
@@ -125,7 +125,7 @@ function Shop() {
               Every collection, every goal, every meal. Lifetime access with free updates as the library grows.
             </p>
             <div className="mt-8 flex items-baseline gap-4">
-              <span className="text-base text-gold">$99.99</span>
+              <span className="text-base text-gold">$99</span>
               <span className="text-sm text-muted-foreground line-through">$240</span>
             </div>
             <a href="#" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
