@@ -43,7 +43,7 @@ export const Route = createFileRoute("/shop")({
           brand: { "@type": "Brand", name: "Nóurish." },
           offers: {
             "@type": "Offer",
-            price: "99.99",
+            price: "99",
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
             url: "/shop",
@@ -125,7 +125,7 @@ function Shop() {
               Every collection, every goal, every meal. Lifetime access with free updates as the library grows.
             </p>
             <div className="mt-8 flex items-baseline gap-4">
-              <span className="text-base text-gold">$99.99</span>
+              <span className="text-base text-gold">$99</span>
               <span className="text-sm text-muted-foreground line-through">$240</span>
             </div>
             <a href="#" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
