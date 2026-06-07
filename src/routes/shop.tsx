@@ -58,12 +58,12 @@ export const Route = createFileRoute("/shop")({
 type Product = { title: string; desc: string; price: string; imageUrl: string; imageAlt: string };
 
 const tier2: Product[] = [
-  { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19.99", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet" },
-  { title: "30 High Protein Lunch Ideas", desc: "Midday meals that keep you full till dinner.", price: "$19.99", imageUrl: grilledChickenBreast.url, imageAlt: "Grilled chicken breast lunch" },
-  { title: "30 High Protein Dinner Ideas", desc: "Family-tested, macro-balanced evenings.", price: "$19.99", imageUrl: searedSalmon.url, imageAlt: "Seared salmon dinner" },
-  { title: "30 High Protein Smoothie Ideas", desc: "Real ingredients. Real protein. No fillers.", price: "$19.99", imageUrl: mangoTurmericSmoothie.url, imageAlt: "Mango turmeric smoothie" },
-  { title: "30 High Protein Snack Ideas", desc: "Snacks engineered for steady energy.", price: "$19.99", imageUrl: eggsAndTurkeyBoard.url, imageAlt: "Slate board with eggs and turkey" },
-  { title: "30 High Protein Dessert Ideas", desc: "Sweet, satisfying, and macro-friendly.", price: "$19.99", imageUrl: chocolateDessert.url, imageAlt: "High protein dessert" },
+  { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet" },
+  { title: "30 High Protein Lunch Ideas", desc: "Midday meals that keep you full till dinner.", price: "$19", imageUrl: grilledChickenBreast.url, imageAlt: "Grilled chicken breast lunch" },
+  { title: "30 High Protein Dinner Ideas", desc: "Family-tested, macro-balanced evenings.", price: "$19", imageUrl: searedSalmon.url, imageAlt: "Seared salmon dinner" },
+  { title: "30 High Protein Smoothie Ideas", desc: "Real ingredients. Real protein. No fillers.", price: "$19", imageUrl: mangoTurmericSmoothie.url, imageAlt: "Mango turmeric smoothie" },
+  { title: "30 High Protein Snack Ideas", desc: "Snacks engineered for steady energy.", price: "$19", imageUrl: eggsAndTurkeyBoard.url, imageAlt: "Slate board with eggs and turkey" },
+  { title: "30 High Protein Dessert Ideas", desc: "Sweet, satisfying, and macro-friendly.", price: "$19", imageUrl: chocolateDessert.url, imageAlt: "High protein dessert" },
 ];
 
 const tier3: Product[] = [
