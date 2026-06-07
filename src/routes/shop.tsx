@@ -75,12 +75,12 @@ const tier3: Product[] = [
 ];
 
 const tier4: Product[] = [
-  { title: "Meals Under $10", desc: "Budget-friendly without sacrificing quality.", price: "$24.99", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup" },
-  { title: "Meals in 20 Min or Less", desc: "Weeknight-fast, restaurant-worthy.", price: "$24.99", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry" },
-  { title: "Family Dinners Kids Eat", desc: "Picky-eater approved, parent approved.", price: "$24.99", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner" },
-  { title: "Meals for Men Over 40", desc: "Built for muscle, heart, and metabolism.", price: "$24.99", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak" },
-  { title: "Meal Prep Sunday Plans", desc: "Cook once. Eat well all week.", price: "$24.99", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers" },
-  { title: "Meals for Weight Loss After 50", desc: "Sustainable nutrition that respects your body.", price: "$24.99", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate" },
+  { title: "Meals Under $10", desc: "Budget-friendly without sacrificing quality.", price: "$24", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup" },
+  { title: "Meals in 20 Min or Less", desc: "Weeknight-fast, restaurant-worthy.", price: "$24", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry" },
+  { title: "Family Dinners Kids Eat", desc: "Picky-eater approved, parent approved.", price: "$24", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner" },
+  { title: "Meals for Men Over 40", desc: "Built for muscle, heart, and metabolism.", price: "$24", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak" },
+  { title: "Meal Prep Sunday Plans", desc: "Cook once. Eat well all week.", price: "$24", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers" },
+  { title: "Meals for Weight Loss After 50", desc: "Sustainable nutrition that respects your body.", price: "$24", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate" },
 ];
 
 function ProductCard({ p }: { p: Product }) {
