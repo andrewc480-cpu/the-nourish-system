@@ -206,7 +206,7 @@ function Index() {
           <div className="mb-10 max-w-2xl">
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">What's Trending</span>
             <h2 className="mt-3 font-display text-3xl font-medium text-charcoal md:text-4xl">
-              Eat with intention.
+              Targeted Protocols for Every Health Goal.
             </h2>
           </div>
           <div className="flex flex-nowrap gap-2 md:gap-3">
