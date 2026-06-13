@@ -136,7 +136,7 @@ function Shop() {
       </section>
 
       <div className="mx-auto max-w-7xl px-6 pb-24">
-        <TierHeader eyebrow="High Protein Series" title="30 Ideas, every meal." />
+        <TierHeader eyebrow="The Protein Foundation" title="30-Day Systems for Every Meal." />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tier2.map((p) => <ProductCard key={p.title} p={p} />)}
         </div>
