@@ -136,17 +136,17 @@ function Shop() {
       </section>
 
       <div className="mx-auto max-w-7xl px-6 pb-24">
-        <TierHeader eyebrow="High Protein Series" title="30 Ideas, every meal." />
+        <TierHeader eyebrow="The Protein Foundation" title="30-Day Systems for Every Meal." />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tier2.map((p) => <ProductCard key={p.title} p={p} />)}
         </div>
 
-        <TierHeader eyebrow="Specialty Collections" title="Built around a goal." />
+        <TierHeader eyebrow="Targeted Protocols" title="Solutions for Specific Health Goals." />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tier3.map((p) => <ProductCard key={p.title} p={p} />)}
         </div>
 
-        <TierHeader eyebrow="Lifestyle Series" title="Meals for how you live." />
+        <TierHeader eyebrow="Lifestyle Frameworks" title="High-Performance Eating for Daily Life." />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tier4.map((p) => <ProductCard key={p.title} p={p} />)}
         </div>
