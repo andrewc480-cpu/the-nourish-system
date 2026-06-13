@@ -38,7 +38,7 @@ export const Route = createFileRoute("/shop")({
           "@context": "https://schema.org",
           "@type": "Product",
           name: "The Complete Bundle — 180 Recipes",
-          description: "Every collection, every goal, every meal. Lifetime access with free updates.",
+          description: "Every protocol. Every framework. Every meal. Organized by health goal, protein target, and prep time. Yours forever.",
           image: roastedChicken.url,
           brand: { "@type": "Brand", name: "Nóurish." },
           offers: {
@@ -119,10 +119,10 @@ function Shop() {
           <div>
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">The Complete Bundle</span>
             <h1 className="mt-4 font-display text-5xl font-medium leading-[1.05] text-charcoal md:text-6xl">
-              180 Recipes.<br />One Library.
+              180 Recipes.<br />One Complete Nutritional System.
             </h1>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Every collection, every goal, every meal. Lifetime access with free updates as the library grows.
+              Every protocol. Every framework. Every meal. Organized by health goal, protein target, and prep time. Yours forever.
             </p>
             <div className="mt-8 flex items-baseline gap-4">
               <span className="text-base text-gold">$99</span>
