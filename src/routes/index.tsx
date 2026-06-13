@@ -237,10 +237,10 @@ function Index() {
           <div>
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">The Complete Bundle</span>
             <h2 className="mt-4 font-display text-4xl font-medium leading-tight text-charcoal md:text-5xl">
-              180 recipes. One library. Everything you'll ever cook.
+              180 Recipes. One Complete Nutritional System.
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              The entire Nóurish catalog, organized by goal, protein, and prep time. Lifetime access, instant download, recipe updates included.
+              Every protocol. Every framework. Every meal. Organized by health goal, protein target, and prep time. Yours forever.
             </p>
             <div className="mt-8 flex items-baseline gap-4">
               <span className="text-base text-gold">$99</span>
