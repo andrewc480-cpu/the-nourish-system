@@ -141,7 +141,7 @@ function Shop() {
           {tier2.map((p) => <ProductCard key={p.title} p={p} />)}
         </div>
 
-        <TierHeader eyebrow="Specialty Collections" title="Built around a goal." />
+        <TierHeader eyebrow="Targeted Protocols" title="Solutions for Specific Health Goals." />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tier3.map((p) => <ProductCard key={p.title} p={p} />)}
         </div>
