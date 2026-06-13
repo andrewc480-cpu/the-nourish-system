@@ -134,9 +134,9 @@ function Index() {
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="mb-14 flex flex-col items-baseline justify-between gap-4 md:flex-row">
           <div>
-            <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">Collections</span>
+            <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">THE PROTEIN FOUNDATION</span>
             <h2 className="mt-3 font-display text-4xl font-medium text-charcoal md:text-5xl">
-              Built for how you actually eat.
+              30-Day Systems for Every Meal.
             </h2>
           </div>
           <Link to="/shop" className="text-sm font-medium text-charcoal/70 underline-offset-4 hover:text-sage hover:underline">
@@ -206,7 +206,7 @@ function Index() {
           <div className="mb-10 max-w-2xl">
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">What's Trending</span>
             <h2 className="mt-3 font-display text-3xl font-medium text-charcoal md:text-4xl">
-              Eat with intention.
+              Targeted Protocols for Every Health Goal.
             </h2>
           </div>
           <div className="flex flex-nowrap gap-2 md:gap-3">
