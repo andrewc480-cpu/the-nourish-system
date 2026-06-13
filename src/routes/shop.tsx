@@ -146,7 +146,7 @@ function Shop() {
           {tier3.map((p) => <ProductCard key={p.title} p={p} />)}
         </div>
 
-        <TierHeader eyebrow="Lifestyle Series" title="Meals for how you live." />
+        <TierHeader eyebrow="Lifestyle Frameworks" title="High-Performance Eating for Daily Life." />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {tier4.map((p) => <ProductCard key={p.title} p={p} />)}
         </div>
