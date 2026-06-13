@@ -58,7 +58,7 @@ function About() {
         <div className="mt-16 grid gap-8 border-t border-border pt-12 sm:grid-cols-3">
           {[
             { k: "180+", v: "Tested recipes" },
-            { k: "12", v: "Collections" },
+            { k: "18", v: "PROTOCOLS & FRAMEWORKS" },
             { k: "100%", v: "Whole food" },
           ].map((s) => (
             <div key={s.v}>
