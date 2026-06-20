@@ -68,7 +68,7 @@ const tier2: Product[] = [
 
 const tier3: Product[] = [
   { title: "GLP-1 Nutrition Protocol", desc: "Eat to support your medication, not against it.", price: "$49", imageUrl: glp1NutritionGuide.url, imageAlt: "Balanced grilled chicken plate" },
-  { title: "30-Day Gut Reset Protocol", desc: "21 days to a calmer, stronger gut.", price: "$39", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl" },
+  { title: "30-Day Gut Reset Protocol", desc: "30 days to a calmer, stronger gut.", price: "$39", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl" },
   { title: "Food as Medicine System", desc: "Anti-inflammatory meals backed by science.", price: "$44", imageUrl: turmericSalmon.url, imageAlt: "Turmeric salmon plate" },
   { title: "Real Food Reset Protocol", desc: "Strip the noise. Rebuild the basics.", price: "$34", imageUrl: realFoodReset.url, imageAlt: "Real food reset bowl" },
   { title: "Plant-Based Protein System", desc: "40g protein, zero animal products.", price: "$49", imageUrl: plantBasedBundle.url, imageAlt: "Tempeh and edamame bowl" },
