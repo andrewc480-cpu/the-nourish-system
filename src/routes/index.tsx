@@ -131,7 +131,7 @@ function Index() {
       </section>
 
       {/* CATEGORIES */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 pt-24 pb-16">
         <div className="mb-14 flex flex-col items-baseline justify-between gap-4 md:flex-row">
           <div>
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">THE PROTEIN FOUNDATION</span>
