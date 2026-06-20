@@ -35,10 +35,10 @@ export function Header() {
             </Link>
           ))}
           <div className="flex items-center gap-3 border-l border-border pl-5">
-            <a href="https://instagram.com/nourish.recipes" aria-label="Instagram" className="text-charcoal/70 transition-colors hover:text-sage">
+            <a href="https://www.instagram.com/nourish.recipes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-charcoal/70 transition-colors hover:text-sage">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="https://pinterest.com" aria-label="Pinterest" className="text-charcoal/70 transition-colors hover:text-sage">
+            <a href="https://www.pinterest.com/nourish_recipes/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-charcoal/70 transition-colors hover:text-sage">
               <PinterestIcon className="h-5 w-5" />
             </a>
           </div>
