@@ -168,7 +168,7 @@ function Index() {
           <div>
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">THE PROTEIN FOUNDATION</span>
             <h2 className="mt-3 font-display text-4xl font-medium text-charcoal md:text-5xl">
-              30-Day Systems for Every Meal.
+              30 High Protein Recipes for Every Meal.
             </h2>
           </div>
           <Link to="/shop" className="text-sm font-medium text-charcoal/70 underline-offset-4 hover:text-sage hover:underline">
@@ -206,8 +206,7 @@ function Index() {
       <section className="bg-linen py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 max-w-2xl">
-            <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">What's Trending</span>
-            <h2 className="mt-3 font-display text-3xl font-medium text-charcoal md:text-4xl">
+            <h2 className="font-display text-3xl font-medium text-charcoal md:text-4xl">
               Targeted Protocols for Every Health Goal.
             </h2>
           </div>
