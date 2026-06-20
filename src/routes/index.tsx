@@ -132,48 +132,8 @@ function Index() {
         </div>
       </section>
 
-      {/* CATEGORIES */}
-      <section className="mx-auto max-w-7xl px-6 pt-24 pb-16">
-        <div className="mb-14 flex flex-col items-baseline justify-between gap-4 md:flex-row">
-          <div>
-            <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">THE PROTEIN FOUNDATION</span>
-            <h2 className="mt-3 font-display text-4xl font-medium text-charcoal md:text-5xl">
-              30-Day Systems for Every Meal.
-            </h2>
-          </div>
-          <Link to="/shop" className="text-sm font-medium text-charcoal/70 underline-offset-4 hover:text-sage hover:underline">
-            Browse the full shop →
-          </Link>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {categories.map((c) => (
-            <a
-              key={c.name}
-              href="#"
-              className="group block"
-            >
-              <div className="aspect-[4/5] w-full overflow-hidden bg-linen">
-                <img
-                  src={c.image}
-                  alt={c.alt}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.01]"
-                  style={{ objectPosition: c.position }}
-                />
-              </div>
-              <div className="mt-5 flex items-baseline justify-between">
-                <h3 className="font-display text-2xl font-medium text-charcoal">{c.name}</h3>
-                <span className="font-sans text-xs uppercase tracking-[0.2em] text-charcoal/50 transition-colors group-hover:text-sage">
-                  Explore →
-                </span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
-
       {/* HOW IT WORKS */}
-      <section className="mx-auto max-w-7xl px-6 pt-16 pb-24">
+      <section className="mx-auto max-w-7xl px-6 pt-24 pb-16">
         <h2 className="mb-16 text-center font-display text-4xl font-medium text-charcoal md:text-5xl">
           Simple by design.
         </h2>
@@ -202,6 +162,46 @@ function Index() {
         </div>
       </section>
 
+      {/* CATEGORIES */}
+      <section className="mx-auto max-w-7xl px-6 pt-16 pb-24">
+        <div className="mb-14 flex flex-col items-baseline justify-between gap-4 md:flex-row">
+          <div>
+            <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">THE PROTEIN FOUNDATION</span>
+            <h2 className="mt-3 font-display text-4xl font-medium text-charcoal md:text-5xl">
+              30-Day Systems for Every Meal.
+            </h2>
+          </div>
+          <Link to="/shop" className="text-sm font-medium text-charcoal/70 underline-offset-4 hover:text-sage hover:underline">
+            Browse the full shop →
+          </Link>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {categories.map((c) => (
+            <Link
+              key={c.name}
+              to="/shop"
+              className="group block"
+            >
+              <div className="aspect-[4/5] w-full overflow-hidden bg-linen">
+                <img
+                  src={c.image}
+                  alt={c.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.01]"
+                  style={{ objectPosition: c.position }}
+                />
+              </div>
+              <div className="mt-5 flex items-baseline justify-between">
+                <h3 className="font-display text-2xl font-medium text-charcoal">{c.name}</h3>
+                <span className="font-sans text-xs uppercase tracking-[0.2em] text-charcoal/50 transition-colors group-hover:text-sage">
+                  Explore →
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* TRENDS */}
       <section className="bg-linen py-20">
         <div className="mx-auto max-w-7xl px-6">
@@ -213,14 +213,37 @@ function Index() {
           </div>
           <div className="flex flex-nowrap gap-2 md:gap-3">
             {trends.map((t) => (
-              <a key={t.name} href="#" className="block min-w-0">
+              <Link key={t.name} to="/shop" className="block min-w-0">
                 <span className="inline-block rounded-full px-3 py-2 font-display text-xs transition-all md:px-5 md:py-3 md:text-sm" style={{ backgroundColor: "#7D9B76", color: "#F7F5F1" }}>
                   {t.name}
                 </span>
                 <p className="mt-2 text-[11px] text-muted-foreground leading-relaxed md:text-xs">
                   {t.description}
                 </p>
-              </a>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="bg-linen py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="mb-14 max-w-2xl font-display text-3xl font-medium text-charcoal md:text-4xl">
+            From the kitchens of real people.
+          </h2>
+          <div className="grid gap-8 md:grid-cols-3">
+            {testimonials.map((t) => (
+              <figure key={t.name} className="border border-charcoal/10 bg-background p-8">
+                <div className="font-display text-4xl leading-none text-sage">"</div>
+                <blockquote className="mt-3 font-display text-lg leading-relaxed text-charcoal">
+                  {t.quote}
+                </blockquote>
+                <figcaption className="mt-6 border-t border-border pt-4">
+                  <div className="font-sans text-sm font-medium text-charcoal">{t.name}</div>
+                  <div className="text-xs text-muted-foreground">{t.role}</div>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>
@@ -252,29 +275,6 @@ function Index() {
             <a href="https://buy.stripe.com/00wbJ11wC9JEbFO7BV6Vq00" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
               Get Instant Access →
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="bg-linen py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="mb-14 max-w-2xl font-display text-3xl font-medium text-charcoal md:text-4xl">
-            From the kitchens of real people.
-          </h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <figure key={t.name} className="border border-charcoal/10 bg-background p-8">
-                <div className="font-display text-4xl leading-none text-sage">"</div>
-                <blockquote className="mt-3 font-display text-lg leading-relaxed text-charcoal">
-                  {t.quote}
-                </blockquote>
-                <figcaption className="mt-6 border-t border-border pt-4">
-                  <div className="font-sans text-sm font-medium text-charcoal">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
-                </figcaption>
-              </figure>
-            ))}
           </div>
         </div>
       </section>
