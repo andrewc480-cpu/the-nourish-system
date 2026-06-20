@@ -171,7 +171,7 @@ function Index() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 pt-16 pb-24">
         <h2 className="mb-16 text-center font-display text-4xl font-medium text-charcoal md:text-5xl">
           Simple by design.
         </h2>
