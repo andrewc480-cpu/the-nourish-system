@@ -43,7 +43,7 @@ export const Route = createFileRoute("/shop")({
           brand: { "@type": "Brand", name: "Nóurish." },
           offers: {
             "@type": "Offer",
-            price: "99",
+            price: "67",
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
             url: "/shop",
