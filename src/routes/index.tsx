@@ -240,7 +240,7 @@ function Index() {
               180 Recipes. One Complete Nutritional System.
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Every protocol. Every framework. Every meal. Organized by health goal, protein target, and prep time. Yours forever.
+              All 6 High Protein recipe books in one complete collection. Breakfast, Lunch, Dinner, Smoothies, Snacks, and Desserts. 180 tested recipes. One instant download. Yours forever.
             </p>
             <div className="mt-8 flex items-baseline gap-4">
               <span className="text-sm text-muted-foreground line-through">$114</span>
