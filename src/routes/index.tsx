@@ -120,7 +120,9 @@ function Index() {
               180 tested recipes for every meal, every craving, every lifestyle.
             </p>
             <a
-              href="#bundle"
+              href="https://buy.stripe.com/00wbJ11wC9JEbFO7BV6Vq00"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-10 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90"
             >
               Get the Complete Bundle — $67
@@ -247,7 +249,7 @@ function Index() {
               <span className="text-base text-gold">$67</span>
               <span className="text-sm text-sage">(save 41%)</span>
             </div>
-            <a href="#" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
+            <a href="https://buy.stripe.com/00wbJ11wC9JEbFO7BV6Vq00" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
               Get Instant Access →
             </a>
           </div>
