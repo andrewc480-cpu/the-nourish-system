@@ -51,7 +51,7 @@ function About() {
           </p>
           <p>Not a diet. Not a restriction. A smarter relationship with what ends up on your plate.</p>
           <p>
-            Every collection is built around a clear nutritional goal — more protein, better gut health, lower inflammation, or a full reset.
+            Every system is built around a clear nutritional goal — more protein, better gut health, lower inflammation, or a full reset.
           </p>
         </div>
 
