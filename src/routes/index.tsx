@@ -90,7 +90,7 @@ const trends = [
 
 const testimonials = [
   { quote: "These recipes completely changed how I think about weeknight dinners. Every single one is a keeper.", name: "Sarah K.", role: "Brooklyn, NY" },
-  { quote: "I went from ordering takeout 4 nights a week to cooking every day. The recipes are that approachable. Best $99 I've spent this year.", name: "David K.", role: "Austin, TX" },
+  { quote: "I went from ordering takeout 4 nights a week to cooking every day. The recipes are that approachable. Best $67 I've spent this year.", name: "David K.", role: "Austin, TX" },
   { quote: "The protein breakdowns are exactly what I needed. Real food. Real numbers. No nonsense.", name: "James T.", role: "Chicago, IL — GLP-1 patient" },
 ];
 
@@ -123,7 +123,7 @@ function Index() {
               href="#bundle"
               className="mt-10 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90"
             >
-              Get the Complete Bundle — $99
+              Get the Complete Bundle — $67
               <span aria-hidden>→</span>
             </a>
           </div>
@@ -243,8 +243,8 @@ function Index() {
               Every protocol. Every framework. Every meal. Organized by health goal, protein target, and prep time. Yours forever.
             </p>
             <div className="mt-8 flex items-baseline gap-4">
-              <span className="text-base text-gold">$99</span>
-              <span className="text-sm text-muted-foreground line-through">$240</span>
+              <span className="text-base text-gold">$67</span>
+              <span className="text-sm text-muted-foreground line-through">$114</span>
             </div>
             <a href="#" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
               Get Instant Access →
