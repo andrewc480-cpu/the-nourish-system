@@ -67,20 +67,20 @@ const tier2: Product[] = [
 ];
 
 const tier3: Product[] = [
-  { title: "GLP-1 Nutrition Protocol", desc: "Eat to support your medication, not against it.", price: "$49", imageUrl: glp1NutritionGuide.url, imageAlt: "Balanced grilled chicken plate" },
-  { title: "30-Day Gut Reset Protocol", desc: "30 days to a calmer, stronger gut.", price: "$39", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl" },
-  { title: "Food as Medicine System", desc: "Anti-inflammatory meals backed by science.", price: "$44", imageUrl: turmericSalmon.url, imageAlt: "Turmeric salmon plate" },
-  { title: "Real Food Reset Protocol", desc: "Strip the noise. Rebuild the basics.", price: "$34", imageUrl: realFoodReset.url, imageAlt: "Real food reset bowl" },
-  { title: "Plant-Based Protein System", desc: "40g protein, zero animal products.", price: "$49", imageUrl: plantBasedBundle.url, imageAlt: "Tempeh and edamame bowl" },
+  { title: "GLP-1 Nutrition Protocol", desc: "Eat to support your medication, not against it.", price: "$37", imageUrl: glp1NutritionGuide.url, imageAlt: "Balanced grilled chicken plate" },
+  { title: "30-Day Gut Reset Protocol", desc: "30 days to a calmer, stronger gut.", price: "$37", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl" },
+  { title: "Food as Medicine System", desc: "Anti-inflammatory meals backed by science.", price: "$37", imageUrl: turmericSalmon.url, imageAlt: "Turmeric salmon plate" },
+  { title: "Real Food Reset Protocol", desc: "Strip the noise. Rebuild the basics.", price: "$37", imageUrl: realFoodReset.url, imageAlt: "Real food reset bowl" },
+  { title: "Plant-Based Protein System", desc: "40g protein, zero animal products.", price: "$37", imageUrl: plantBasedBundle.url, imageAlt: "Tempeh and edamame bowl" },
 ];
 
 const tier4: Product[] = [
-  { title: "The $10 Meal Blueprint", desc: "Budget-friendly without sacrificing quality.", price: "$24", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup" },
-  { title: "The 20-Minute Meal", desc: "Weeknight-fast, restaurant-worthy.", price: "$24", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry" },
-  { title: "The Family Table: Kids-Approved Dinners", desc: "Picky-eater approved, parent approved.", price: "$24", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner" },
-  { title: "Men's Performance Nutrition Blueprint", desc: "Built for muscle, heart, and metabolism.", price: "$24", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak" },
-  { title: "The Sunday Prep System", desc: "Cook once. Eat well all week.", price: "$24", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers" },
-  { title: "Metabolic Reset Blueprint: 50+", desc: "Sustainable nutrition that respects your body.", price: "$24", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate" },
+  { title: "The $10 Meal Blueprint", desc: "Budget-friendly without sacrificing quality.", price: "$17", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup" },
+  { title: "The 20-Minute Meal", desc: "Weeknight-fast, restaurant-worthy.", price: "$17", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry" },
+  { title: "The Family Table: Kids-Approved Dinners", desc: "Picky-eater approved, parent approved.", price: "$17", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner" },
+  { title: "Men's Performance Nutrition Blueprint", desc: "Built for muscle, heart, and metabolism.", price: "$17", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak" },
+  { title: "The Sunday Prep System", desc: "Cook once. Eat well all week.", price: "$17", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers" },
+  { title: "Metabolic Reset Blueprint: 50+", desc: "Sustainable nutrition that respects your body.", price: "$17", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate" },
 ];
 
 function ProductCard({ p }: { p: Product }) {
