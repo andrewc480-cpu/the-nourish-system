@@ -123,7 +123,7 @@ function Index() {
               href="#bundle"
               className="mt-10 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90"
             >
-              Get the Complete Bundle — $99
+              Get the Complete Bundle — $67
               <span aria-hidden>→</span>
             </a>
           </div>
