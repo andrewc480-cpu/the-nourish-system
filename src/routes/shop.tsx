@@ -55,32 +55,32 @@ export const Route = createFileRoute("/shop")({
   component: Shop,
 });
 
-type Product = { title: string; desc: string; price: string; imageUrl: string; imageAlt: string };
+type Product = { title: string; desc: string; price: string; imageUrl: string; imageAlt: string; link: string };
 
 const tier2: Product[] = [
-  { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet" },
-  { title: "30 High Protein Lunch Ideas", desc: "Midday meals that keep you full till dinner.", price: "$19", imageUrl: grilledChickenBreast.url, imageAlt: "Grilled chicken breast lunch" },
-  { title: "30 High Protein Dinner Ideas", desc: "Family-tested, macro-balanced evenings.", price: "$19", imageUrl: searedSalmon.url, imageAlt: "Seared salmon dinner" },
-  { title: "30 High Protein Smoothie Ideas", desc: "Real ingredients. Real protein. No fillers.", price: "$19", imageUrl: mangoTurmericSmoothie.url, imageAlt: "Mango turmeric smoothie" },
-  { title: "30 High Protein Snack Ideas", desc: "Snacks engineered for steady energy.", price: "$19", imageUrl: eggsAndTurkeyBoard.url, imageAlt: "Slate board with eggs and turkey" },
-  { title: "30 High Protein Dessert Ideas", desc: "Sweet, satisfying, and macro-friendly.", price: "$19", imageUrl: chocolateDessert.url, imageAlt: "High protein dessert" },
+  { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet", link: "https://buy.stripe.com/bJe7sL5MS9JEh082hB6Vq01" },
+  { title: "30 High Protein Lunch Ideas", desc: "Midday meals that keep you full till dinner.", price: "$19", imageUrl: grilledChickenBreast.url, imageAlt: "Grilled chicken breast lunch", link: "https://buy.stripe.com/00w7sL1wC3lgbFOe0j6Vq02" },
+  { title: "30 High Protein Dinner Ideas", desc: "Family-tested, macro-balanced evenings.", price: "$19", imageUrl: searedSalmon.url, imageAlt: "Seared salmon dinner", link: "https://buy.stripe.com/14A14n4IO8FAh0809t6Vq03" },
+  { title: "30 High Protein Smoothie Ideas", desc: "Real ingredients. Real protein. No fillers.", price: "$19", imageUrl: mangoTurmericSmoothie.url, imageAlt: "Mango turmeric smoothie", link: "https://buy.stripe.com/14A14n4IO9JE11a6xR6Vq04" },
+  { title: "30 High Protein Snack Ideas", desc: "Snacks engineered for steady energy.", price: "$19", imageUrl: eggsAndTurkeyBoard.url, imageAlt: "Slate board with eggs and turkey", link: "https://buy.stripe.com/6oU14nejo7BweS04pJ6Vq05" },
+  { title: "30 High Protein Dessert Ideas", desc: "Sweet, satisfying, and macro-friendly.", price: "$19", imageUrl: chocolateDessert.url, imageAlt: "High protein dessert", link: "https://buy.stripe.com/00w5kDgrwcVQ11a2hB6Vq06" },
 ];
 
 const tier3: Product[] = [
-  { title: "GLP-1 Nutrition Protocol", desc: "Eat to support your medication, not against it.", price: "$37", imageUrl: glp1NutritionGuide.url, imageAlt: "Balanced grilled chicken plate" },
-  { title: "30-Day Gut Reset Protocol", desc: "30 days to a calmer, stronger gut.", price: "$37", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl" },
-  { title: "Food as Medicine System", desc: "Anti-inflammatory meals backed by science.", price: "$37", imageUrl: turmericSalmon.url, imageAlt: "Turmeric salmon plate" },
-  { title: "Real Food Reset Protocol", desc: "Strip the noise. Rebuild the basics.", price: "$37", imageUrl: realFoodReset.url, imageAlt: "Real food reset bowl" },
-  { title: "Plant-Based Protein System", desc: "40g protein, zero animal products.", price: "$37", imageUrl: plantBasedBundle.url, imageAlt: "Tempeh and edamame bowl" },
+  { title: "GLP-1 Nutrition Protocol", desc: "Eat to support your medication, not against it.", price: "$37", imageUrl: glp1NutritionGuide.url, imageAlt: "Balanced grilled chicken plate", link: "https://buy.stripe.com/7sYeVd3EK4pk9xGcWf6Vq07" },
+  { title: "30-Day Gut Reset Protocol", desc: "30 days to a calmer, stronger gut.", price: "$37", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl", link: "https://buy.stripe.com/28EeVd3EK3lg4dme0j6Vq08" },
+  { title: "Food as Medicine System", desc: "Anti-inflammatory meals backed by science.", price: "$37", imageUrl: turmericSalmon.url, imageAlt: "Turmeric salmon plate", link: "https://buy.stripe.com/6oU3cvejo3lgcJSe0j6Vq09" },
+  { title: "Real Food Reset Protocol", desc: "Strip the noise. Rebuild the basics.", price: "$37", imageUrl: realFoodReset.url, imageAlt: "Real food reset bowl", link: "https://buy.stripe.com/14A6oHb7c4pkeS009t6Vq0a" },
+  { title: "Plant-Based Protein System", desc: "40g protein, zero animal products.", price: "$37", imageUrl: plantBasedBundle.url, imageAlt: "Tempeh and edamame bowl", link: "https://buy.stripe.com/8x2fZh0sy7Bw5hqbSb6Vq0b" },
 ];
 
 const tier4: Product[] = [
-  { title: "The $10 Meal Blueprint", desc: "Budget-friendly without sacrificing quality.", price: "$17", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup" },
-  { title: "The 20-Minute Meal", desc: "Weeknight-fast, restaurant-worthy.", price: "$17", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry" },
-  { title: "The Family Table: Kids-Approved Dinners", desc: "Picky-eater approved, parent approved.", price: "$17", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner" },
-  { title: "Men's Performance Nutrition Blueprint", desc: "Built for muscle, heart, and metabolism.", price: "$17", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak" },
-  { title: "The Sunday Prep System", desc: "Cook once. Eat well all week.", price: "$17", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers" },
-  { title: "Metabolic Reset Blueprint: 50+", desc: "Sustainable nutrition that respects your body.", price: "$17", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate" },
+  { title: "The $10 Meal Blueprint", desc: "Budget-friendly without sacrificing quality.", price: "$17", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup", link: "https://buy.stripe.com/7sY5kDcbgcVQh083lF6Vq0c" },
+  { title: "The 20-Minute Meal", desc: "Weeknight-fast, restaurant-worthy.", price: "$17", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry", link: "https://buy.stripe.com/bJebJ1ejof3YeS07BV6Vq0d" },
+  { title: "The Family Table: Kids-Approved Dinners", desc: "Picky-eater approved, parent approved.", price: "$17", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner", link: "https://buy.stripe.com/bJe4gzejodZUeS0cWf6Vq0e" },
+  { title: "Men's Performance Nutrition Blueprint", desc: "Built for muscle, heart, and metabolism.", price: "$17", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak", link: "https://buy.stripe.com/8x2fZhejo2hceS009t6Vq0f" },
+  { title: "The Sunday Prep System", desc: "Cook once. Eat well all week.", price: "$17", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers", link: "https://buy.stripe.com/00w8wPb7c8FA39i3lF6Vq0g" },
+  { title: "Metabolic Reset Blueprint: 50+", desc: "Sustainable nutrition that respects your body.", price: "$17", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate", link: "https://buy.stripe.com/dRm7sL8Z43lg39icWf6Vq0h" },
 ];
 
 function ProductCard({ p }: { p: Product }) {
@@ -92,7 +92,7 @@ function ProductCard({ p }: { p: Product }) {
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
         <div className="mt-6 flex items-center justify-between">
           <span className="text-base text-gold">{p.price}</span>
-          <a href="#" className="bg-sage px-5 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-sage-foreground transition-all hover:bg-sage/90">
+          <a href={p.link} target="_blank" rel="noopener noreferrer" className="bg-sage px-5 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-sage-foreground transition-all hover:bg-sage/90">
             Get Instant Access
           </a>
         </div>
@@ -129,7 +129,7 @@ function Shop() {
               <span className="text-base text-gold">$67</span>
               <span className="text-sm text-sage">(save 41%)</span>
             </div>
-            <a href="#" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
+            <a href="https://buy.stripe.com/00wbJ11wC9JEbFO7BV6Vq00" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
               Get the Complete Bundle →
             </a>
           </div>
