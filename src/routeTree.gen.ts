@@ -9,13 +9,70 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SundayPrepRouteImport } from './routes/sunday-prep'
+import { Route as SnacksRouteImport } from './routes/snacks'
+import { Route as SmoothiesRouteImport } from './routes/smoothies'
+import { Route as RealFoodResetRouteImport } from './routes/real-food-reset'
+import { Route as PlantBasedRouteImport } from './routes/plant-based'
+import { Route as MetabolicResetRouteImport } from './routes/metabolic-reset'
+import { Route as MensPerformanceRouteImport } from './routes/mens-performance'
+import { Route as LunchRouteImport } from './routes/lunch'
 import { Route as HomeOldRouteImport } from './routes/home-old'
 import { Route as GutResetRouteImport } from './routes/gut-reset'
+import { Route as Glp1RouteImport } from './routes/glp1'
 import { Route as FreeRecipesRouteImport } from './routes/free-recipes'
+import { Route as FoodAsMedicineRouteImport } from './routes/food-as-medicine'
+import { Route as FamilyDinnersRouteImport } from './routes/family-dinners'
+import { Route as DinnerRouteImport } from './routes/dinner'
+import { Route as DessertsRouteImport } from './routes/desserts'
+import { Route as BundleRouteImport } from './routes/bundle'
+import { Route as BreakfastRouteImport } from './routes/breakfast'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as R20MinuteMealRouteImport } from './routes/20-minute-meal'
+import { Route as R10MealBlueprintRouteImport } from './routes/10-meal-blueprint'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SundayPrepRoute = SundayPrepRouteImport.update({
+  id: '/sunday-prep',
+  path: '/sunday-prep',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SnacksRoute = SnacksRouteImport.update({
+  id: '/snacks',
+  path: '/snacks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SmoothiesRoute = SmoothiesRouteImport.update({
+  id: '/smoothies',
+  path: '/smoothies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RealFoodResetRoute = RealFoodResetRouteImport.update({
+  id: '/real-food-reset',
+  path: '/real-food-reset',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlantBasedRoute = PlantBasedRouteImport.update({
+  id: '/plant-based',
+  path: '/plant-based',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MetabolicResetRoute = MetabolicResetRouteImport.update({
+  id: '/metabolic-reset',
+  path: '/metabolic-reset',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MensPerformanceRoute = MensPerformanceRouteImport.update({
+  id: '/mens-performance',
+  path: '/mens-performance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LunchRoute = LunchRouteImport.update({
+  id: '/lunch',
+  path: '/lunch',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HomeOldRoute = HomeOldRouteImport.update({
   id: '/home-old',
   path: '/home-old',
@@ -26,9 +83,44 @@ const GutResetRoute = GutResetRouteImport.update({
   path: '/gut-reset',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Glp1Route = Glp1RouteImport.update({
+  id: '/glp1',
+  path: '/glp1',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FreeRecipesRoute = FreeRecipesRouteImport.update({
   id: '/free-recipes',
   path: '/free-recipes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FoodAsMedicineRoute = FoodAsMedicineRouteImport.update({
+  id: '/food-as-medicine',
+  path: '/food-as-medicine',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FamilyDinnersRoute = FamilyDinnersRouteImport.update({
+  id: '/family-dinners',
+  path: '/family-dinners',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DinnerRoute = DinnerRouteImport.update({
+  id: '/dinner',
+  path: '/dinner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DessertsRoute = DessertsRouteImport.update({
+  id: '/desserts',
+  path: '/desserts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BundleRoute = BundleRouteImport.update({
+  id: '/bundle',
+  path: '/bundle',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BreakfastRoute = BreakfastRouteImport.update({
+  id: '/breakfast',
+  path: '/breakfast',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRoute = BlogRouteImport.update({
@@ -41,6 +133,16 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const R20MinuteMealRoute = R20MinuteMealRouteImport.update({
+  id: '/20-minute-meal',
+  path: '/20-minute-meal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const R10MealBlueprintRoute = R10MealBlueprintRouteImport.update({
+  id: '/10-meal-blueprint',
+  path: '/10-meal-blueprint',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -49,61 +151,242 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/10-meal-blueprint': typeof R10MealBlueprintRoute
+  '/20-minute-meal': typeof R20MinuteMealRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
+  '/breakfast': typeof BreakfastRoute
+  '/bundle': typeof BundleRoute
+  '/desserts': typeof DessertsRoute
+  '/dinner': typeof DinnerRoute
+  '/family-dinners': typeof FamilyDinnersRoute
+  '/food-as-medicine': typeof FoodAsMedicineRoute
   '/free-recipes': typeof FreeRecipesRoute
+  '/glp1': typeof Glp1Route
   '/gut-reset': typeof GutResetRoute
   '/home-old': typeof HomeOldRoute
+  '/lunch': typeof LunchRoute
+  '/mens-performance': typeof MensPerformanceRoute
+  '/metabolic-reset': typeof MetabolicResetRoute
+  '/plant-based': typeof PlantBasedRoute
+  '/real-food-reset': typeof RealFoodResetRoute
+  '/smoothies': typeof SmoothiesRoute
+  '/snacks': typeof SnacksRoute
+  '/sunday-prep': typeof SundayPrepRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/10-meal-blueprint': typeof R10MealBlueprintRoute
+  '/20-minute-meal': typeof R20MinuteMealRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
+  '/breakfast': typeof BreakfastRoute
+  '/bundle': typeof BundleRoute
+  '/desserts': typeof DessertsRoute
+  '/dinner': typeof DinnerRoute
+  '/family-dinners': typeof FamilyDinnersRoute
+  '/food-as-medicine': typeof FoodAsMedicineRoute
   '/free-recipes': typeof FreeRecipesRoute
+  '/glp1': typeof Glp1Route
   '/gut-reset': typeof GutResetRoute
   '/home-old': typeof HomeOldRoute
+  '/lunch': typeof LunchRoute
+  '/mens-performance': typeof MensPerformanceRoute
+  '/metabolic-reset': typeof MetabolicResetRoute
+  '/plant-based': typeof PlantBasedRoute
+  '/real-food-reset': typeof RealFoodResetRoute
+  '/smoothies': typeof SmoothiesRoute
+  '/snacks': typeof SnacksRoute
+  '/sunday-prep': typeof SundayPrepRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/10-meal-blueprint': typeof R10MealBlueprintRoute
+  '/20-minute-meal': typeof R20MinuteMealRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
+  '/breakfast': typeof BreakfastRoute
+  '/bundle': typeof BundleRoute
+  '/desserts': typeof DessertsRoute
+  '/dinner': typeof DinnerRoute
+  '/family-dinners': typeof FamilyDinnersRoute
+  '/food-as-medicine': typeof FoodAsMedicineRoute
   '/free-recipes': typeof FreeRecipesRoute
+  '/glp1': typeof Glp1Route
   '/gut-reset': typeof GutResetRoute
   '/home-old': typeof HomeOldRoute
+  '/lunch': typeof LunchRoute
+  '/mens-performance': typeof MensPerformanceRoute
+  '/metabolic-reset': typeof MetabolicResetRoute
+  '/plant-based': typeof PlantBasedRoute
+  '/real-food-reset': typeof RealFoodResetRoute
+  '/smoothies': typeof SmoothiesRoute
+  '/snacks': typeof SnacksRoute
+  '/sunday-prep': typeof SundayPrepRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/10-meal-blueprint'
+    | '/20-minute-meal'
     | '/about'
     | '/blog'
+    | '/breakfast'
+    | '/bundle'
+    | '/desserts'
+    | '/dinner'
+    | '/family-dinners'
+    | '/food-as-medicine'
     | '/free-recipes'
+    | '/glp1'
     | '/gut-reset'
     | '/home-old'
+    | '/lunch'
+    | '/mens-performance'
+    | '/metabolic-reset'
+    | '/plant-based'
+    | '/real-food-reset'
+    | '/smoothies'
+    | '/snacks'
+    | '/sunday-prep'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/blog' | '/free-recipes' | '/gut-reset' | '/home-old'
+  to:
+    | '/'
+    | '/10-meal-blueprint'
+    | '/20-minute-meal'
+    | '/about'
+    | '/blog'
+    | '/breakfast'
+    | '/bundle'
+    | '/desserts'
+    | '/dinner'
+    | '/family-dinners'
+    | '/food-as-medicine'
+    | '/free-recipes'
+    | '/glp1'
+    | '/gut-reset'
+    | '/home-old'
+    | '/lunch'
+    | '/mens-performance'
+    | '/metabolic-reset'
+    | '/plant-based'
+    | '/real-food-reset'
+    | '/smoothies'
+    | '/snacks'
+    | '/sunday-prep'
   id:
     | '__root__'
     | '/'
+    | '/10-meal-blueprint'
+    | '/20-minute-meal'
     | '/about'
     | '/blog'
+    | '/breakfast'
+    | '/bundle'
+    | '/desserts'
+    | '/dinner'
+    | '/family-dinners'
+    | '/food-as-medicine'
     | '/free-recipes'
+    | '/glp1'
     | '/gut-reset'
     | '/home-old'
+    | '/lunch'
+    | '/mens-performance'
+    | '/metabolic-reset'
+    | '/plant-based'
+    | '/real-food-reset'
+    | '/smoothies'
+    | '/snacks'
+    | '/sunday-prep'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  R10MealBlueprintRoute: typeof R10MealBlueprintRoute
+  R20MinuteMealRoute: typeof R20MinuteMealRoute
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
+  BreakfastRoute: typeof BreakfastRoute
+  BundleRoute: typeof BundleRoute
+  DessertsRoute: typeof DessertsRoute
+  DinnerRoute: typeof DinnerRoute
+  FamilyDinnersRoute: typeof FamilyDinnersRoute
+  FoodAsMedicineRoute: typeof FoodAsMedicineRoute
   FreeRecipesRoute: typeof FreeRecipesRoute
+  Glp1Route: typeof Glp1Route
   GutResetRoute: typeof GutResetRoute
   HomeOldRoute: typeof HomeOldRoute
+  LunchRoute: typeof LunchRoute
+  MensPerformanceRoute: typeof MensPerformanceRoute
+  MetabolicResetRoute: typeof MetabolicResetRoute
+  PlantBasedRoute: typeof PlantBasedRoute
+  RealFoodResetRoute: typeof RealFoodResetRoute
+  SmoothiesRoute: typeof SmoothiesRoute
+  SnacksRoute: typeof SnacksRoute
+  SundayPrepRoute: typeof SundayPrepRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sunday-prep': {
+      id: '/sunday-prep'
+      path: '/sunday-prep'
+      fullPath: '/sunday-prep'
+      preLoaderRoute: typeof SundayPrepRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/snacks': {
+      id: '/snacks'
+      path: '/snacks'
+      fullPath: '/snacks'
+      preLoaderRoute: typeof SnacksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/smoothies': {
+      id: '/smoothies'
+      path: '/smoothies'
+      fullPath: '/smoothies'
+      preLoaderRoute: typeof SmoothiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/real-food-reset': {
+      id: '/real-food-reset'
+      path: '/real-food-reset'
+      fullPath: '/real-food-reset'
+      preLoaderRoute: typeof RealFoodResetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plant-based': {
+      id: '/plant-based'
+      path: '/plant-based'
+      fullPath: '/plant-based'
+      preLoaderRoute: typeof PlantBasedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/metabolic-reset': {
+      id: '/metabolic-reset'
+      path: '/metabolic-reset'
+      fullPath: '/metabolic-reset'
+      preLoaderRoute: typeof MetabolicResetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mens-performance': {
+      id: '/mens-performance'
+      path: '/mens-performance'
+      fullPath: '/mens-performance'
+      preLoaderRoute: typeof MensPerformanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lunch': {
+      id: '/lunch'
+      path: '/lunch'
+      fullPath: '/lunch'
+      preLoaderRoute: typeof LunchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/home-old': {
       id: '/home-old'
       path: '/home-old'
@@ -118,11 +401,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GutResetRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/glp1': {
+      id: '/glp1'
+      path: '/glp1'
+      fullPath: '/glp1'
+      preLoaderRoute: typeof Glp1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/free-recipes': {
       id: '/free-recipes'
       path: '/free-recipes'
       fullPath: '/free-recipes'
       preLoaderRoute: typeof FreeRecipesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/food-as-medicine': {
+      id: '/food-as-medicine'
+      path: '/food-as-medicine'
+      fullPath: '/food-as-medicine'
+      preLoaderRoute: typeof FoodAsMedicineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/family-dinners': {
+      id: '/family-dinners'
+      path: '/family-dinners'
+      fullPath: '/family-dinners'
+      preLoaderRoute: typeof FamilyDinnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dinner': {
+      id: '/dinner'
+      path: '/dinner'
+      fullPath: '/dinner'
+      preLoaderRoute: typeof DinnerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/desserts': {
+      id: '/desserts'
+      path: '/desserts'
+      fullPath: '/desserts'
+      preLoaderRoute: typeof DessertsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bundle': {
+      id: '/bundle'
+      path: '/bundle'
+      fullPath: '/bundle'
+      preLoaderRoute: typeof BundleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/breakfast': {
+      id: '/breakfast'
+      path: '/breakfast'
+      fullPath: '/breakfast'
+      preLoaderRoute: typeof BreakfastRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog': {
@@ -139,6 +471,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/20-minute-meal': {
+      id: '/20-minute-meal'
+      path: '/20-minute-meal'
+      fullPath: '/20-minute-meal'
+      preLoaderRoute: typeof R20MinuteMealRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/10-meal-blueprint': {
+      id: '/10-meal-blueprint'
+      path: '/10-meal-blueprint'
+      fullPath: '/10-meal-blueprint'
+      preLoaderRoute: typeof R10MealBlueprintRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -151,11 +497,28 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  R10MealBlueprintRoute: R10MealBlueprintRoute,
+  R20MinuteMealRoute: R20MinuteMealRoute,
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
+  BreakfastRoute: BreakfastRoute,
+  BundleRoute: BundleRoute,
+  DessertsRoute: DessertsRoute,
+  DinnerRoute: DinnerRoute,
+  FamilyDinnersRoute: FamilyDinnersRoute,
+  FoodAsMedicineRoute: FoodAsMedicineRoute,
   FreeRecipesRoute: FreeRecipesRoute,
+  Glp1Route: Glp1Route,
   GutResetRoute: GutResetRoute,
   HomeOldRoute: HomeOldRoute,
+  LunchRoute: LunchRoute,
+  MensPerformanceRoute: MensPerformanceRoute,
+  MetabolicResetRoute: MetabolicResetRoute,
+  PlantBasedRoute: PlantBasedRoute,
+  RealFoodResetRoute: RealFoodResetRoute,
+  SmoothiesRoute: SmoothiesRoute,
+  SnacksRoute: SnacksRoute,
+  SundayPrepRoute: SundayPrepRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
