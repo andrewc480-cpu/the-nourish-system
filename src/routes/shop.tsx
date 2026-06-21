@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import roastedChicken from "@/assets/roasted-chicken.png.asset.json";
 import breakfastSkillet from "@/assets/nourish-breakfast.png.asset.json";
@@ -55,7 +55,7 @@ export const Route = createFileRoute("/shop")({
   component: Shop,
 });
 
-type Product = { title: string; desc: string; price: string; imageUrl: string; imageAlt: string; link: string };
+type Product = { title: string; desc: string; price: string; imageUrl: string; imageAlt: string; link: string; internalLink?: string };
 
 const tier2: Product[] = [
   { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet", link: "https://buy.stripe.com/bJe7sL5MS9JEh082hB6Vq01" },
@@ -68,7 +68,7 @@ const tier2: Product[] = [
 
 const tier3: Product[] = [
   { title: "GLP-1 Nutrition Protocol", desc: "Eat to support your medication, not against it.", price: "$37", imageUrl: glp1NutritionGuide.url, imageAlt: "Balanced grilled chicken plate", link: "https://buy.stripe.com/7sYeVd3EK4pk9xGcWf6Vq07" },
-  { title: "30-Day Gut Reset Protocol", desc: "30 days to a calmer, stronger gut.", price: "$37", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl", link: "https://buy.stripe.com/28EeVd3EK3lg4dme0j6Vq08" },
+  { title: "30-Day Gut Reset Protocol", desc: "30 days to a calmer, stronger gut.", price: "$37", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl", link: "https://buy.stripe.com/28EeVd3EK3lg4dme0j6Vq08", internalLink: "/gut-reset" },
   { title: "Food as Medicine System", desc: "Anti-inflammatory meals backed by science.", price: "$37", imageUrl: turmericSalmon.url, imageAlt: "Turmeric salmon plate", link: "https://buy.stripe.com/6oU3cvejo3lgcJSe0j6Vq09" },
   { title: "Real Food Reset Protocol", desc: "Strip the noise. Rebuild the basics.", price: "$37", imageUrl: realFoodReset.url, imageAlt: "Real food reset bowl", link: "https://buy.stripe.com/14A6oHb7c4pkeS009t6Vq0a" },
   { title: "Plant-Based Protein System", desc: "40g protein, zero animal products.", price: "$37", imageUrl: plantBasedBundle.url, imageAlt: "Tempeh and edamame bowl", link: "https://buy.stripe.com/8x2fZh0sy7Bw5hqbSb6Vq0b" },
@@ -84,11 +84,15 @@ const tier4: Product[] = [
 ];
 
 function ProductCard({ p }: { p: Product }) {
+  const image = (
+    <img src={p.imageUrl} alt={p.imageAlt} className="aspect-[4/3] w-full object-cover transition-opacity group-hover:opacity-90" loading="lazy" />
+  );
+  const title = <h3 className="font-display text-xl font-medium leading-snug text-charcoal">{p.title}</h3>;
   return (
     <article className="group flex flex-col bg-linen">
-      <img src={p.imageUrl} alt={p.imageAlt} className="aspect-[4/3] w-full object-cover" loading="lazy" />
+      {p.internalLink === "/gut-reset" ? <Link to="/gut-reset">{image}</Link> : image}
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-display text-xl font-medium leading-snug text-charcoal">{p.title}</h3>
+        {p.internalLink === "/gut-reset" ? <Link to="/gut-reset" className="hover:text-sage">{title}</Link> : title}
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
         <div className="mt-6 flex items-center justify-between">
           <span className="text-base text-gold">{p.price}</span>

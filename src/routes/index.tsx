@@ -81,11 +81,11 @@ const categories = [
 ];
 
 const trends = [
-  { name: "GLP-1", description: "High protein meals designed for Ozempic and Wegovy users" },
-  { name: "Gut Health", description: "Fiber-first recipes that support a healthier microbiome" },
-  { name: "Food as Medicine", description: "Anti-inflammatory meals that work as hard as you do" },
-  { name: "Real Food Reset", description: "30 days of clean eating with zero ultra-processed ingredients" },
-  { name: "Plant-Based", description: "Whole food plant-based meals with 30g or more of protein" },
+  { name: "GLP-1", description: "High protein meals designed for Ozempic and Wegovy users", to: "/shop" },
+  { name: "Gut Health", description: "Fiber-first recipes that support a healthier microbiome", to: "/gut-reset" },
+  { name: "Food as Medicine", description: "Anti-inflammatory meals that work as hard as you do", to: "/shop" },
+  { name: "Real Food Reset", description: "30 days of clean eating with zero ultra-processed ingredients", to: "/shop" },
+  { name: "Plant-Based", description: "Whole food plant-based meals with 30g or more of protein", to: "/shop" },
 ];
 
 const testimonials = [
@@ -211,16 +211,23 @@ function Index() {
             </h2>
           </div>
           <div className="flex flex-nowrap gap-2 md:gap-3">
-            {trends.map((t) => (
-              <Link key={t.name} to="/shop" className="block min-w-0">
-                <span className="inline-block rounded-full px-3 py-2 font-display text-xs transition-all md:px-5 md:py-3 md:text-sm" style={{ backgroundColor: "#7D9B76", color: "#F7F5F1" }}>
-                  {t.name}
-                </span>
-                <p className="mt-2 text-[11px] text-muted-foreground leading-relaxed md:text-xs">
-                  {t.description}
-                </p>
-              </Link>
-            ))}
+            {trends.map((t) => {
+              const inner = (
+                <>
+                  <span className="inline-block rounded-full px-3 py-2 font-display text-xs transition-all md:px-5 md:py-3 md:text-sm" style={{ backgroundColor: "#7D9B76", color: "#F7F5F1" }}>
+                    {t.name}
+                  </span>
+                  <p className="mt-2 text-[11px] text-muted-foreground leading-relaxed md:text-xs">
+                    {t.description}
+                  </p>
+                </>
+              );
+              return t.to === "/gut-reset" ? (
+                <Link key={t.name} to="/gut-reset" className="block min-w-0">{inner}</Link>
+              ) : (
+                <Link key={t.name} to="/shop" className="block min-w-0">{inner}</Link>
+              );
+            })}
           </div>
         </div>
       </section>

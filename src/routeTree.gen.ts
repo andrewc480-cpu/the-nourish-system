@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ShopRouteImport } from './routes/shop'
+import { Route as GutResetRouteImport } from './routes/gut-reset'
 import { Route as FreeRecipesRouteImport } from './routes/free-recipes'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const ShopRoute = ShopRouteImport.update({
   id: '/shop',
   path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GutResetRoute = GutResetRouteImport.update({
+  id: '/gut-reset',
+  path: '/gut-reset',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FreeRecipesRoute = FreeRecipesRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/free-recipes': typeof FreeRecipesRoute
+  '/gut-reset': typeof GutResetRoute
   '/shop': typeof ShopRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/free-recipes': typeof FreeRecipesRoute
+  '/gut-reset': typeof GutResetRoute
   '/shop': typeof ShopRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,22 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/free-recipes': typeof FreeRecipesRoute
+  '/gut-reset': typeof GutResetRoute
   '/shop': typeof ShopRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/blog' | '/free-recipes' | '/shop'
+  fullPaths: '/' | '/about' | '/blog' | '/free-recipes' | '/gut-reset' | '/shop'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/blog' | '/free-recipes' | '/shop'
-  id: '__root__' | '/' | '/about' | '/blog' | '/free-recipes' | '/shop'
+  to: '/' | '/about' | '/blog' | '/free-recipes' | '/gut-reset' | '/shop'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/free-recipes'
+    | '/gut-reset'
+    | '/shop'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +92,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
   FreeRecipesRoute: typeof FreeRecipesRoute
+  GutResetRoute: typeof GutResetRoute
   ShopRoute: typeof ShopRoute
 }
 
@@ -86,6 +103,13 @@ declare module '@tanstack/react-router' {
       path: '/shop'
       fullPath: '/shop'
       preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gut-reset': {
+      id: '/gut-reset'
+      path: '/gut-reset'
+      fullPath: '/gut-reset'
+      preLoaderRoute: typeof GutResetRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/free-recipes': {
@@ -124,18 +148,9 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
   FreeRecipesRoute: FreeRecipesRoute,
+  GutResetRoute: GutResetRoute,
   ShopRoute: ShopRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
