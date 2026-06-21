@@ -166,7 +166,8 @@ function GutReset() {
             <div className="max-w-3xl">
               <Eyebrow>The System</Eyebrow>
               <h2 className="mt-4 font-display text-4xl font-medium leading-tight md:text-5xl">
-                Thirty days. Three phases. One protocol.
+                Thirty days. Three phases.<br />
+                One protocol.
               </h2>
               <p className="mt-6 text-base leading-relaxed" style={{ color: MUTED }}>
                 Not a cleanse. Not an elimination diet with a vague reintroduction phase. A clinically-informed, food-sequenced 30-day system that works because it respects the biology of the gut microbiome.
@@ -250,7 +251,8 @@ function GutReset() {
             <div className="max-w-3xl">
               <Eyebrow color={GOLD}>What's Inside</Eyebrow>
               <h2 className="mt-4 font-display text-4xl font-medium leading-tight md:text-5xl" style={{ color: BG }}>
-                Everything you need. Nothing you don't.
+                Everything you need.<br />
+                Nothing you don't.
               </h2>
             </div>
             <div className="mt-14 grid gap-px md:grid-cols-2 lg:grid-cols-4" style={{ backgroundColor: "rgba(247,245,241,0.15)" }}>
@@ -305,7 +307,8 @@ function GutReset() {
                   className="block p-8 transition-opacity hover:opacity-80"
                   style={{ backgroundColor: BG }}
                 >
-                  <h3 className="font-display text-2xl font-medium">{r.t}</h3>
+                  <Eyebrow>Targeted Protocol</Eyebrow>
+                  <h3 className="mt-3 font-display text-2xl font-medium">{r.t}</h3>
                   <div className="mt-6 font-sans text-2xl" style={{ color: GOLD, fontWeight: 300 }}>{r.price}</div>
                   <div className="mt-4 font-sans text-xs uppercase tracking-[0.2em]" style={{ color: SAGE }}>
                     View Protocol →
@@ -316,20 +319,6 @@ function GutReset() {
           </div>
         </section>
 
-        {/* FOOTER */}
-        <footer style={{ backgroundColor: TEXT }}>
-          <div className="mx-auto max-w-7xl px-6 py-16 text-center">
-            <div className="font-display text-3xl font-medium" style={{ color: BG }}>
-              nóurish<span style={{ color: GOLD }}>.</span>
-            </div>
-            <p className="mt-3 font-sans text-sm" style={{ color: MUTED }}>
-              Eat Well. Every Single Day.
-            </p>
-            <p className="mt-8 font-sans text-xs" style={{ color: MUTED }}>
-              © 2026 Nóurish. All rights reserved.
-            </p>
-          </div>
-        </footer>
       </div>
     </SiteLayout>
   );
