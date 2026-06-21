@@ -55,7 +55,7 @@ export const Route = createFileRoute("/shop")({
   component: Shop,
 });
 
-type Product = { title: string; desc: string; price: string; imageUrl: string; imageAlt: string; link: string };
+type Product = { title: string; desc: string; price: string; imageUrl: string; imageAlt: string; link: string; internalLink?: string };
 
 const tier2: Product[] = [
   { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet", link: "https://buy.stripe.com/bJe7sL5MS9JEh082hB6Vq01" },
