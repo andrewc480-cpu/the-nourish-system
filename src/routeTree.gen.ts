@@ -9,16 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ShopRouteImport } from './routes/shop'
+import { Route as HomeOldRouteImport } from './routes/home-old'
 import { Route as GutResetRouteImport } from './routes/gut-reset'
 import { Route as FreeRecipesRouteImport } from './routes/free-recipes'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
-const ShopRoute = ShopRouteImport.update({
-  id: '/shop',
-  path: '/shop',
+const HomeOldRoute = HomeOldRouteImport.update({
+  id: '/home-old',
+  path: '/home-old',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GutResetRoute = GutResetRouteImport.update({
@@ -53,7 +53,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/free-recipes': typeof FreeRecipesRoute
   '/gut-reset': typeof GutResetRoute
-  '/shop': typeof ShopRoute
+  '/home-old': typeof HomeOldRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -61,7 +61,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/free-recipes': typeof FreeRecipesRoute
   '/gut-reset': typeof GutResetRoute
-  '/shop': typeof ShopRoute
+  '/home-old': typeof HomeOldRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -70,13 +70,19 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/free-recipes': typeof FreeRecipesRoute
   '/gut-reset': typeof GutResetRoute
-  '/shop': typeof ShopRoute
+  '/home-old': typeof HomeOldRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/blog' | '/free-recipes' | '/gut-reset' | '/shop'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/free-recipes'
+    | '/gut-reset'
+    | '/home-old'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/blog' | '/free-recipes' | '/gut-reset' | '/shop'
+  to: '/' | '/about' | '/blog' | '/free-recipes' | '/gut-reset' | '/home-old'
   id:
     | '__root__'
     | '/'
@@ -84,7 +90,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/free-recipes'
     | '/gut-reset'
-    | '/shop'
+    | '/home-old'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -93,16 +99,16 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   FreeRecipesRoute: typeof FreeRecipesRoute
   GutResetRoute: typeof GutResetRoute
-  ShopRoute: typeof ShopRoute
+  HomeOldRoute: typeof HomeOldRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/shop': {
-      id: '/shop'
-      path: '/shop'
-      fullPath: '/shop'
-      preLoaderRoute: typeof ShopRouteImport
+    '/home-old': {
+      id: '/home-old'
+      path: '/home-old'
+      fullPath: '/home-old'
+      preLoaderRoute: typeof HomeOldRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gut-reset': {
@@ -149,8 +155,18 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   FreeRecipesRoute: FreeRecipesRoute,
   GutResetRoute: GutResetRoute,
-  ShopRoute: ShopRoute,
+  HomeOldRoute: HomeOldRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
