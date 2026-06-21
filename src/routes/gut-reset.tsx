@@ -299,9 +299,9 @@ function GutReset() {
             </h2>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {related.map((r) => (
-                <Link
+                <a
                   key={r.t}
-                  to={r.to}
+                  href={r.to}
                   className="block p-8 transition-opacity hover:opacity-80"
                   style={{ backgroundColor: BG }}
                 >
@@ -310,7 +310,7 @@ function GutReset() {
                   <div className="mt-4 font-sans text-xs uppercase tracking-[0.2em]" style={{ color: SAGE }}>
                     View Protocol →
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
