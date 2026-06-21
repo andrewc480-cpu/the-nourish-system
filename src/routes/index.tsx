@@ -211,16 +211,23 @@ function Index() {
             </h2>
           </div>
           <div className="flex flex-nowrap gap-2 md:gap-3">
-            {trends.map((t) => (
-              <Link key={t.name} to="/shop" className="block min-w-0">
-                <span className="inline-block rounded-full px-3 py-2 font-display text-xs transition-all md:px-5 md:py-3 md:text-sm" style={{ backgroundColor: "#7D9B76", color: "#F7F5F1" }}>
-                  {t.name}
-                </span>
-                <p className="mt-2 text-[11px] text-muted-foreground leading-relaxed md:text-xs">
-                  {t.description}
-                </p>
-              </Link>
-            ))}
+            {trends.map((t) => {
+              const inner = (
+                <>
+                  <span className="inline-block rounded-full px-3 py-2 font-display text-xs transition-all md:px-5 md:py-3 md:text-sm" style={{ backgroundColor: "#7D9B76", color: "#F7F5F1" }}>
+                    {t.name}
+                  </span>
+                  <p className="mt-2 text-[11px] text-muted-foreground leading-relaxed md:text-xs">
+                    {t.description}
+                  </p>
+                </>
+              );
+              return t.to === "/gut-reset" ? (
+                <Link key={t.name} to="/gut-reset" className="block min-w-0">{inner}</Link>
+              ) : (
+                <Link key={t.name} to="/shop" className="block min-w-0">{inner}</Link>
+              );
+            })}
           </div>
         </div>
       </section>
