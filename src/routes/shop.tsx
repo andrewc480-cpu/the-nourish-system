@@ -84,11 +84,15 @@ const tier4: Product[] = [
 ];
 
 function ProductCard({ p }: { p: Product }) {
+  const image = (
+    <img src={p.imageUrl} alt={p.imageAlt} className="aspect-[4/3] w-full object-cover transition-opacity group-hover:opacity-90" loading="lazy" />
+  );
+  const title = <h3 className="font-display text-xl font-medium leading-snug text-charcoal">{p.title}</h3>;
   return (
     <article className="group flex flex-col bg-linen">
-      <img src={p.imageUrl} alt={p.imageAlt} className="aspect-[4/3] w-full object-cover" loading="lazy" />
+      {p.internalLink === "/gut-reset" ? <Link to="/gut-reset">{image}</Link> : image}
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-display text-xl font-medium leading-snug text-charcoal">{p.title}</h3>
+        {p.internalLink === "/gut-reset" ? <Link to="/gut-reset" className="hover:text-sage">{title}</Link> : title}
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
         <div className="mt-6 flex items-center justify-between">
           <span className="text-base text-gold">{p.price}</span>
