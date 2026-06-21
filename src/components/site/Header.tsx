@@ -11,7 +11,7 @@ const PinterestIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export function Header() {
   const [open, setOpen] = useState(false);
   const navLinks = [
-    { to: "/shop", label: "Shop" },
+    { to: "/", label: "Shop" },
     { to: "/free-recipes", label: "Free Recipes" },
     { to: "/blog", label: "Blog" },
     { to: "/about", label: "About" },
