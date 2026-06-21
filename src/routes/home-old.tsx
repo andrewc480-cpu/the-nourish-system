@@ -81,11 +81,11 @@ const categories = [
 ];
 
 const trends = [
-  { name: "GLP-1", description: "High protein meals designed for Ozempic and Wegovy users", to: "/shop" },
+  { name: "GLP-1", description: "High protein meals designed for Ozempic and Wegovy users", to: "/" },
   { name: "Gut Health", description: "Fiber-first recipes that support a healthier microbiome", to: "/gut-reset" },
-  { name: "Food as Medicine", description: "Anti-inflammatory meals that work as hard as you do", to: "/shop" },
-  { name: "Real Food Reset", description: "30 days of clean eating with zero ultra-processed ingredients", to: "/shop" },
-  { name: "Plant-Based", description: "Whole food plant-based meals with 30g or more of protein", to: "/shop" },
+  { name: "Food as Medicine", description: "Anti-inflammatory meals that work as hard as you do", to: "/" },
+  { name: "Real Food Reset", description: "30 days of clean eating with zero ultra-processed ingredients", to: "/" },
+  { name: "Plant-Based", description: "Whole food plant-based meals with 30g or more of protein", to: "/" },
 ];
 
 const testimonials = [
@@ -171,7 +171,7 @@ function Index() {
               30 High Protein Recipes for Every Meal.
             </h2>
           </div>
-          <Link to="/shop" className="text-sm font-medium text-charcoal/70 underline-offset-4 hover:text-sage hover:underline">
+          <Link to="/" className="text-sm font-medium text-charcoal/70 underline-offset-4 hover:text-sage hover:underline">
             Browse the full shop →
           </Link>
         </div>
@@ -179,7 +179,7 @@ function Index() {
           {categories.map((c) => (
             <Link
               key={c.name}
-              to="/shop"
+              to="/"
               className="group block"
             >
               <div className="aspect-[4/5] w-full overflow-hidden bg-linen">
@@ -225,7 +225,7 @@ function Index() {
               return t.to === "/gut-reset" ? (
                 <Link key={t.name} to="/gut-reset" className="block min-w-0">{inner}</Link>
               ) : (
-                <Link key={t.name} to="/shop" className="block min-w-0">{inner}</Link>
+                <Link key={t.name} to="/" className="block min-w-0">{inner}</Link>
               );
             })}
           </div>
