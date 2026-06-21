@@ -81,11 +81,11 @@ const categories = [
 ];
 
 const trends = [
-  { name: "GLP-1", description: "High protein meals designed for Ozempic and Wegovy users" },
-  { name: "Gut Health", description: "Fiber-first recipes that support a healthier microbiome" },
-  { name: "Food as Medicine", description: "Anti-inflammatory meals that work as hard as you do" },
-  { name: "Real Food Reset", description: "30 days of clean eating with zero ultra-processed ingredients" },
-  { name: "Plant-Based", description: "Whole food plant-based meals with 30g or more of protein" },
+  { name: "GLP-1", description: "High protein meals designed for Ozempic and Wegovy users", to: "/shop" },
+  { name: "Gut Health", description: "Fiber-first recipes that support a healthier microbiome", to: "/gut-reset" },
+  { name: "Food as Medicine", description: "Anti-inflammatory meals that work as hard as you do", to: "/shop" },
+  { name: "Real Food Reset", description: "30 days of clean eating with zero ultra-processed ingredients", to: "/shop" },
+  { name: "Plant-Based", description: "Whole food plant-based meals with 30g or more of protein", to: "/shop" },
 ];
 
 const testimonials = [
