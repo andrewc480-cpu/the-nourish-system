@@ -59,29 +59,29 @@ export const Route = createFileRoute("/")({
 type Product = { title: string; desc: string; price: string; imageUrl: string; imageAlt: string; link: string; internalLink?: string };
 
 const tier2: Product[] = [
-  { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet", link: "https://buy.stripe.com/bJe7sL5MS9JEh082hB6Vq01" },
-  { title: "30 High Protein Lunch Ideas", desc: "Midday meals that keep you full till dinner.", price: "$19", imageUrl: grilledChickenBreast.url, imageAlt: "Grilled chicken breast lunch", link: "https://buy.stripe.com/00w7sL1wC3lgbFOe0j6Vq02" },
-  { title: "30 High Protein Dinner Ideas", desc: "Family-tested, macro-balanced evenings.", price: "$19", imageUrl: searedSalmon.url, imageAlt: "Seared salmon dinner", link: "https://buy.stripe.com/14A14n4IO8FAh0809t6Vq03" },
-  { title: "30 High Protein Smoothie Ideas", desc: "Real ingredients. Real protein. No fillers.", price: "$19", imageUrl: mangoTurmericSmoothie.url, imageAlt: "Mango turmeric smoothie", link: "https://buy.stripe.com/14A14n4IO9JE11a6xR6Vq04" },
-  { title: "30 High Protein Snack Ideas", desc: "Snacks engineered for steady energy.", price: "$19", imageUrl: eggsAndTurkeyBoard.url, imageAlt: "Slate board with eggs and turkey", link: "https://buy.stripe.com/6oU14nejo7BweS04pJ6Vq05" },
-  { title: "30 High Protein Dessert Ideas", desc: "Sweet, satisfying, and macro-friendly.", price: "$19", imageUrl: chocolateDessert.url, imageAlt: "High protein dessert", link: "https://buy.stripe.com/00w5kDgrwcVQ11a2hB6Vq06" },
+  { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet", link: "https://buy.stripe.com/bJe7sL5MS9JEh082hB6Vq01", internalLink: "/breakfast" },
+  { title: "30 High Protein Lunch Ideas", desc: "Midday meals that keep you full till dinner.", price: "$19", imageUrl: grilledChickenBreast.url, imageAlt: "Grilled chicken breast lunch", link: "https://buy.stripe.com/00w7sL1wC3lgbFOe0j6Vq02", internalLink: "/lunch" },
+  { title: "30 High Protein Dinner Ideas", desc: "Family-tested, macro-balanced evenings.", price: "$19", imageUrl: searedSalmon.url, imageAlt: "Seared salmon dinner", link: "https://buy.stripe.com/14A14n4IO8FAh0809t6Vq03", internalLink: "/dinner" },
+  { title: "30 High Protein Smoothie Ideas", desc: "Real ingredients. Real protein. No fillers.", price: "$19", imageUrl: mangoTurmericSmoothie.url, imageAlt: "Mango turmeric smoothie", link: "https://buy.stripe.com/14A14n4IO9JE11a6xR6Vq04", internalLink: "/smoothies" },
+  { title: "30 High Protein Snack Ideas", desc: "Snacks engineered for steady energy.", price: "$19", imageUrl: eggsAndTurkeyBoard.url, imageAlt: "Slate board with eggs and turkey", link: "https://buy.stripe.com/6oU14nejo7BweS04pJ6Vq05", internalLink: "/snacks" },
+  { title: "30 High Protein Dessert Ideas", desc: "Sweet, satisfying, and macro-friendly.", price: "$19", imageUrl: chocolateDessert.url, imageAlt: "High protein dessert", link: "https://buy.stripe.com/00w5kDgrwcVQ11a2hB6Vq06", internalLink: "/desserts" },
 ];
 
 const tier3: Product[] = [
-  { title: "GLP-1 Nutrition Protocol", desc: "Eat to support your medication, not against it.", price: "$37", imageUrl: glp1NutritionGuide.url, imageAlt: "Balanced grilled chicken plate", link: "https://buy.stripe.com/7sYeVd3EK4pk9xGcWf6Vq07" },
+  { title: "GLP-1 Nutrition Protocol", desc: "Eat to support your medication, not against it.", price: "$37", imageUrl: glp1NutritionGuide.url, imageAlt: "Balanced grilled chicken plate", link: "https://buy.stripe.com/7sYeVd3EK4pk9xGcWf6Vq07", internalLink: "/glp1" },
   { title: "30-Day Gut Reset Protocol", desc: "30 days to a calmer, stronger gut.", price: "$37", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl", link: "https://buy.stripe.com/28EeVd3EK3lg4dme0j6Vq08", internalLink: "/gut-reset" },
-  { title: "Food as Medicine System", desc: "Anti-inflammatory meals backed by science.", price: "$37", imageUrl: turmericSalmon.url, imageAlt: "Turmeric salmon plate", link: "https://buy.stripe.com/6oU3cvejo3lgcJSe0j6Vq09" },
-  { title: "Real Food Reset Protocol", desc: "Strip the noise. Rebuild the basics.", price: "$37", imageUrl: realFoodReset.url, imageAlt: "Real food reset bowl", link: "https://buy.stripe.com/14A6oHb7c4pkeS009t6Vq0a" },
-  { title: "Plant-Based Protein System", desc: "40g protein, zero animal products.", price: "$37", imageUrl: plantBasedBundle.url, imageAlt: "Tempeh and edamame bowl", link: "https://buy.stripe.com/8x2fZh0sy7Bw5hqbSb6Vq0b" },
+  { title: "Food as Medicine System", desc: "Anti-inflammatory meals backed by science.", price: "$37", imageUrl: turmericSalmon.url, imageAlt: "Turmeric salmon plate", link: "https://buy.stripe.com/6oU3cvejo3lgcJSe0j6Vq09", internalLink: "/food-as-medicine" },
+  { title: "Real Food Reset Protocol", desc: "Strip the noise. Rebuild the basics.", price: "$37", imageUrl: realFoodReset.url, imageAlt: "Real food reset bowl", link: "https://buy.stripe.com/14A6oHb7c4pkeS009t6Vq0a", internalLink: "/real-food-reset" },
+  { title: "Plant-Based Protein System", desc: "40g protein, zero animal products.", price: "$37", imageUrl: plantBasedBundle.url, imageAlt: "Tempeh and edamame bowl", link: "https://buy.stripe.com/8x2fZh0sy7Bw5hqbSb6Vq0b", internalLink: "/plant-based" },
 ];
 
 const tier4: Product[] = [
-  { title: "The $10 Meal Blueprint", desc: "Budget-friendly without sacrificing quality.", price: "$17", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup", link: "https://buy.stripe.com/7sY5kDcbgcVQh083lF6Vq0c" },
-  { title: "The 20-Minute Meal", desc: "Weeknight-fast, restaurant-worthy.", price: "$17", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry", link: "https://buy.stripe.com/bJebJ1ejof3YeS07BV6Vq0d" },
-  { title: "The Family Table: Kids-Approved Dinners", desc: "Picky-eater approved, parent approved.", price: "$17", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner", link: "https://buy.stripe.com/bJe4gzejodZUeS0cWf6Vq0e" },
-  { title: "Men's Performance Nutrition Blueprint", desc: "Built for muscle, heart, and metabolism.", price: "$17", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak", link: "https://buy.stripe.com/8x2fZhejo2hceS009t6Vq0f" },
-  { title: "The Sunday Prep System", desc: "Cook once. Eat well all week.", price: "$17", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers", link: "https://buy.stripe.com/00w8wPb7c8FA39i3lF6Vq0g" },
-  { title: "Metabolic Reset Blueprint: 50+", desc: "Sustainable nutrition that respects your body.", price: "$17", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate", link: "https://buy.stripe.com/dRm7sL8Z43lg39icWf6Vq0h" },
+  { title: "The $10 Meal Blueprint", desc: "Budget-friendly without sacrificing quality.", price: "$17", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup", link: "https://buy.stripe.com/7sY5kDcbgcVQh083lF6Vq0c", internalLink: "/10-meal-blueprint" },
+  { title: "The 20-Minute Meal", desc: "Weeknight-fast, restaurant-worthy.", price: "$17", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry", link: "https://buy.stripe.com/bJebJ1ejof3YeS07BV6Vq0d", internalLink: "/20-minute-meal" },
+  { title: "The Family Table: Kids-Approved Dinners", desc: "Picky-eater approved, parent approved.", price: "$17", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner", link: "https://buy.stripe.com/bJe4gzejodZUeS0cWf6Vq0e", internalLink: "/family-dinners" },
+  { title: "Men's Performance Nutrition Blueprint", desc: "Built for muscle, heart, and metabolism.", price: "$17", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak", link: "https://buy.stripe.com/8x2fZhejo2hceS009t6Vq0f", internalLink: "/mens-performance" },
+  { title: "The Sunday Prep System", desc: "Cook once. Eat well all week.", price: "$17", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers", link: "https://buy.stripe.com/00w8wPb7c8FA39i3lF6Vq0g", internalLink: "/sunday-prep" },
+  { title: "Metabolic Reset Blueprint: 50+", desc: "Sustainable nutrition that respects your body.", price: "$17", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate", link: "https://buy.stripe.com/dRm7sL8Z43lg39icWf6Vq0h", internalLink: "/metabolic-reset" },
 ];
 
 const testimonials = [
@@ -91,24 +91,28 @@ const testimonials = [
 ];
 
 function ProductCard({ p }: { p: Product }) {
-  const image = (
-    <img src={p.imageUrl} alt={p.imageAlt} className="aspect-[4/3] w-full object-cover transition-opacity group-hover:opacity-90" loading="lazy" />
-  );
-  const title = <h3 className="font-display text-xl font-medium leading-snug text-charcoal">{p.title}</h3>;
+  const href = p.internalLink ?? "#";
   return (
-    <article className="group flex flex-col bg-linen">
-      {p.internalLink === "/gut-reset" ? <Link to="/gut-reset">{image}</Link> : image}
+    <a
+      href={href}
+      className="group flex flex-col bg-linen shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+    >
+      <img
+        src={p.imageUrl}
+        alt={p.imageAlt}
+        className="aspect-[4/3] w-full object-cover transition-opacity group-hover:opacity-95"
+        loading="lazy"
+      />
       <div className="flex flex-1 flex-col p-6">
-        {p.internalLink === "/gut-reset" ? <Link to="/gut-reset" className="hover:text-sage">{title}</Link> : title}
+        <h3 className="font-display text-xl font-medium leading-snug text-charcoal transition-colors group-hover:text-sage">
+          {p.title}
+        </h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
-        <div className="mt-6 flex items-center justify-between">
-          <span className="text-base text-gold">{p.price}</span>
-          <a href={p.link} target="_blank" rel="noopener noreferrer" className="bg-sage px-5 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-sage-foreground transition-all hover:bg-sage/90">
-            Get Instant Access
-          </a>
+        <div className="mt-6">
+          <span className="font-sans text-base font-light text-gold">{p.price}</span>
         </div>
       </div>
-    </article>
+    </a>
   );
 }
 
