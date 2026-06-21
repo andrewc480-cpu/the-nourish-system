@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import roastedChicken from "@/assets/roasted-chicken.png.asset.json";
 import breakfastSkillet from "@/assets/nourish-breakfast.png.asset.json";
@@ -22,15 +23,15 @@ import weightLossAfter50 from "@/assets/18-Meals-for-Weight-Loss-After-50.png.as
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Shop — Nóurish." },
+      { title: "Nóurish. — Eat Well. Every Single Day." },
       { name: "description", content: "Recipe collections built around clear nutritional goals. Instant download, lifetime access." },
-      { property: "og:title", content: "Shop — Nóurish." },
+      { property: "og:title", content: "Nóurish. — Eat Well. Every Single Day." },
       { property: "og:description", content: "Recipe collections built around clear nutritional goals. Instant download, lifetime access." },
-      { property: "og:url", content: "/shop" },
+      { property: "og:url", content: "/" },
       { property: "og:image", content: roastedChicken.url },
       { name: "twitter:image", content: roastedChicken.url },
     ],
-    links: [{ rel: "canonical", href: "/shop" }],
+    links: [{ rel: "canonical", href: "/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -46,7 +47,7 @@ export const Route = createFileRoute("/")({
             price: "67",
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
-            url: "/shop",
+            url: "/",
           },
         }),
       },
@@ -83,6 +84,12 @@ const tier4: Product[] = [
   { title: "Metabolic Reset Blueprint: 50+", desc: "Sustainable nutrition that respects your body.", price: "$17", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate", link: "https://buy.stripe.com/dRm7sL8Z43lg39icWf6Vq0h" },
 ];
 
+const testimonials = [
+  { quote: "These recipes completely changed how I think about weeknight dinners. Every single one is a keeper.", name: "Sarah K.", role: "Brooklyn, NY" },
+  { quote: "I went from ordering takeout 4 nights a week to cooking every day. The recipes are that approachable. Best $67 I've spent this year.", name: "David K.", role: "Austin, TX" },
+  { quote: "The protein breakdowns are exactly what I needed. Real food. Real numbers. No nonsense.", name: "James T.", role: "Chicago, IL — GLP-1 patient" },
+];
+
 function ProductCard({ p }: { p: Product }) {
   const image = (
     <img src={p.imageUrl} alt={p.imageAlt} className="aspect-[4/3] w-full object-cover transition-opacity group-hover:opacity-90" loading="lazy" />
@@ -115,6 +122,9 @@ function TierHeader({ eyebrow, title }: { eyebrow: string; title: string }) {
 }
 
 function Shop() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <SiteLayout>
       <section className="border-b border-border bg-linen">
@@ -156,7 +166,90 @@ function Shop() {
           {tier4.map((p) => <ProductCard key={p.title} p={p} />)}
         </div>
       </div>
+
+      {/* HOW IT WORKS */}
+      <section className="mx-auto max-w-7xl px-6 pt-24 pb-16">
+        <h2 className="mb-16 text-center font-display text-4xl font-medium text-charcoal md:text-5xl">
+          Simple by design.
+        </h2>
+        <div className="grid gap-12 md:grid-cols-3">
+          <div className="text-center">
+            <span className="font-sans text-xs uppercase tracking-[0.2em] text-sage">01</span>
+            <h3 className="mt-3 font-display text-2xl font-medium text-charcoal">Choose Your Collection</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Browse by meal type, diet goal, or lifestyle. There is something for every way you eat.
+            </p>
+          </div>
+          <div className="text-center">
+            <span className="font-sans text-xs uppercase tracking-[0.2em] text-sage">02</span>
+            <h3 className="mt-3 font-display text-2xl font-medium text-charcoal">Instant Download</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Purchase once. Download immediately to any device. No subscriptions. No waiting.
+            </p>
+          </div>
+          <div className="text-center">
+            <span className="font-sans text-xs uppercase tracking-[0.2em] text-sage">03</span>
+            <h3 className="mt-3 font-display text-2xl font-medium text-charcoal">Start Cooking</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              180 tested recipes organized by goal, protein, and prep time. Open and cook.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="bg-linen py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="mb-14 max-w-2xl font-display text-3xl font-medium text-charcoal md:text-4xl">
+            From the kitchens of real people.
+          </h2>
+          <div className="grid gap-8 md:grid-cols-3">
+            {testimonials.map((t) => (
+              <figure key={t.name} className="border border-charcoal/10 bg-background p-8">
+                <div className="font-display text-4xl leading-none text-sage">"</div>
+                <blockquote className="mt-3 font-display text-lg leading-relaxed text-charcoal">
+                  {t.quote}
+                </blockquote>
+                <figcaption className="mt-6 border-t border-border pt-4">
+                  <div className="font-sans text-sm font-medium text-charcoal">{t.name}</div>
+                  <div className="text-xs text-muted-foreground">{t.role}</div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EMAIL */}
+      <section className="mx-auto max-w-3xl px-6 py-24 text-center">
+        <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">Free Download</span>
+        <h2 className="mt-4 font-display text-4xl font-medium leading-tight text-charcoal md:text-5xl">
+          Get 7 Free Recipes
+        </h2>
+        <p className="mt-3 text-muted-foreground">— straight to your inbox.</p>
+        <form
+          onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
+          className="mx-auto mt-10 flex max-w-lg flex-col gap-3 sm:flex-row"
+        >
+          <input
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="your@email.com"
+            className="flex-1 border border-charcoal/20 bg-background px-5 py-4 font-sans text-sm text-charcoal placeholder:text-charcoal/40 focus:border-sage focus:outline-none"
+          />
+          <button
+            type="submit"
+            className="bg-sage px-7 py-4 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-sage-foreground transition-all hover:bg-sage/90"
+          >
+            Send Me Recipes
+          </button>
+        </form>
+        {submitted && (
+          <p className="mt-4 text-sm text-sage">Check your inbox — your recipes are on the way.</p>
+        )}
+      </section>
     </SiteLayout>
   );
 }
-
