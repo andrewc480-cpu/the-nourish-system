@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import salmonImage from "@/assets/gut-reset-salmon-fennel.png.asset.json";
 import risottoImage from "@/assets/gut-reset-mushroom-risotto.png.asset.json";
