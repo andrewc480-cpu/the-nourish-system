@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteLayout } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
