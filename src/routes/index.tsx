@@ -25,11 +25,11 @@ export const Route = createFileRoute("/")({
 
 const pillars = [
   { n: "01", name: "GLP-1 Nutrition", promise: "Eat to protect your muscle and stabilise your energy.", href: "/glp1" },
-  { n: "02", name: "Gut Health", promise: "Restore the gut. Everything else follows.", href: "/gut-reset" },
-  { n: "03", name: "Metabolic Health", promise: "Stable blood sugar is the foundation of everything.", href: "/metabolic-reset" },
-  { n: "04", name: "Cognitive Performance", promise: "Feed your brain. Protect it for life.", href: "#" },
-  { n: "05", name: "Longevity & Healthspan", promise: "Not longer. Better. For as long as possible.", href: "#" },
-  { n: "06", name: "Hormonal Health", promise: "Restore from the inside. Every meal.", href: "#" },
+  { n: "02", name: "Gut Health", promise: "Restore the gut. Everything else follows.", href: "/gut-health" },
+  { n: "03", name: "Metabolic Health", promise: "Stable blood sugar is the foundation of everything.", href: "/metabolic-health" },
+  { n: "04", name: "Cognitive Performance", promise: "Feed your brain. Protect it for life.", href: "/cognitive-performance" },
+  { n: "05", name: "Longevity & Healthspan", promise: "Not longer. Better. For as long as possible.", href: "/longevity" },
+  { n: "06", name: "Hormonal Health", promise: "Restore from the inside. Every meal.", href: "/hormonal-health" },
 ];
 
 const eyebrow = "font-sans uppercase text-[10px] tracking-[0.2em] text-sage";
