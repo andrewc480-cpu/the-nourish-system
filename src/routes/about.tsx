@@ -293,7 +293,7 @@ function AboutPage() {
             </div>
             <div style={{ background: "#F2EDE4", borderRadius: "4px", padding: "24px", borderTop: "2px solid #C9A84C", display: "flex", flexDirection: "column", gap: "12px" }}>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#1C1C1C" }}>The Complete Bundle</div>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 300, color: "#9A9590", lineHeight: 1.7, flex: 1 , fontVariantNumeric: "lining-nums" }}>
+              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 300, color: "#9A9590", lineHeight: 1.7, flex: 1 }}>
                 All seven books. Save $62 versus buying individually.
               </div>
               <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "22px", fontWeight: 300, color: "#C9A84C" }}>$147</div>

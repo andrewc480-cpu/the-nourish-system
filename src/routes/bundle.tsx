@@ -172,7 +172,7 @@ function BundlePage() {
             </div>
             <p
               className="mt-2 font-sans uppercase"
-              style={{ fontSize: 11, color: SAGE, letterSpacing: "0.08em" , fontVariantNumeric: "lining-nums" }}
+              style={{ fontSize: 11, color: SAGE, letterSpacing: "0.08em" }}
             >
               You save $62
             </p>
@@ -327,7 +327,7 @@ function BundlePage() {
             className="mx-auto mt-0 flex max-w-4xl items-center justify-between px-6 py-5 md:px-8"
             style={{ backgroundColor: TEXT }}
           >
-            <span className="font-sans font-light" style={{ fontSize: 13, color: MUTED , fontVariantNumeric: "lining-nums" }}>
+            <span className="font-sans font-light" style={{ fontSize: 13, color: MUTED }}>
               Total individual value: $209
             </span>
             <span className="font-display font-semibold" style={{ fontSize: 16, color: BG }}>
@@ -448,7 +448,7 @@ function BundlePage() {
             </h2>
             <p
               className="mt-3 font-display italic"
-              style={{ fontSize: 24, color: SAGE , fontVariantNumeric: "lining-nums" }}
+              style={{ fontSize: 24, color: SAGE }}
             >
               One decision. $147.
             </p>
@@ -485,7 +485,7 @@ function BundlePage() {
             >
               $147
             </div>
-            <p className="mt-2 font-sans" style={{ fontSize: 11, color: MUTED , fontVariantNumeric: "lining-nums" }}>
+            <p className="mt-2 font-sans" style={{ fontSize: 11, color: MUTED }}>
               Individual value $209 · You save $62
             </p>
             <a

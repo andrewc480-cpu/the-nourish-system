@@ -473,7 +473,7 @@ function SystemPage() {
                 </div>
                 <p
                   className="mt-2 font-sans"
-                  style={{ fontSize: 11, color: MUTED , fontVariantNumeric: "lining-nums" }}
+                  style={{ fontSize: 11, color: MUTED }}
                 >
                   Save $62 versus buying individually
                 </p>
