@@ -74,7 +74,7 @@ function HomePage() {
               style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "13px 28px" }}
             >
               <span>Get The Nourish System</span>
-              <span className="font-sans font-light" style={{ fontSize: 12, marginTop: 2 }}>
+              <span className="font-sans font-light" style={{ fontSize: 12, marginTop: 2 , fontVariantNumeric: "lining-nums" }}>
                 $47 · Digital PDF
               </span>
             </Link>
@@ -232,7 +232,7 @@ function HomePage() {
             <div className="flex flex-col items-start gap-4 md:items-end">
               <div
                 className="font-sans font-light text-[28px]"
-                style={{ color: "#C9A84C" }}
+                style={{ color: "#C9A84C" , fontVariantNumeric: "lining-nums" }}
               >
                 $47
               </div>
@@ -271,7 +271,7 @@ function HomePage() {
                 </h4>
                 <div
                   className="mt-4 font-sans font-light text-[20px]"
-                  style={{ color: "#C9A84C" }}
+                  style={{ color: "#C9A84C" , fontVariantNumeric: "lining-nums" }}
                 >
                   $27
                 </div>
@@ -314,13 +314,13 @@ function HomePage() {
             <div className="flex flex-col items-start gap-2 md:items-end">
               <div
                 className="font-sans font-light text-[28px]"
-                style={{ color: "#F7F5F1" }}
+                style={{ color: "#F7F5F1" , fontVariantNumeric: "lining-nums" }}
               >
                 $147
               </div>
               <p
                 className="font-sans text-[12px]"
-                style={{ color: "rgba(247,245,241,0.6)" }}
+                style={{ color: "rgba(247,245,241,0.6)" , fontVariantNumeric: "lining-nums" }}
               >
                 Save $62 versus buying individually
               </p>

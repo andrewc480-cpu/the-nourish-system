@@ -443,7 +443,7 @@ function FreeRecipesPage() {
               </p>
               <p
                 className="mt-4 font-sans font-light"
-                style={{ fontSize: 20, color: GOLD }}
+                style={{ fontSize: 20, color: GOLD , fontVariantNumeric: "lining-nums" }}
               >
                 $47
               </p>
@@ -478,7 +478,7 @@ function FreeRecipesPage() {
               </p>
               <p
                 className="mt-4 font-sans font-light"
-                style={{ fontSize: 20, color: GOLD }}
+                style={{ fontSize: 20, color: GOLD , fontVariantNumeric: "lining-nums" }}
               >
                 $27 each
               </p>
@@ -513,7 +513,7 @@ function FreeRecipesPage() {
               </p>
               <p
                 className="mt-4 font-sans font-light"
-                style={{ fontSize: 20, color: GOLD }}
+                style={{ fontSize: 20, color: GOLD , fontVariantNumeric: "lining-nums" }}
               >
                 $147
               </p>

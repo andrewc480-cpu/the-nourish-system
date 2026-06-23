@@ -282,7 +282,7 @@ function GutReset() {
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-3 px-10 py-4 font-sans text-sm font-medium uppercase tracking-[0.18em] transition-opacity hover:opacity-90"
-              style={{ backgroundColor: SAGE, color: BG }}
+              style={{ backgroundColor: SAGE, color: BG , fontVariantNumeric: "lining-nums" }}
             >
               Get Instant Access — $37
             </a>

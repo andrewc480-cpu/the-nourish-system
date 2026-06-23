@@ -114,7 +114,7 @@ function SystemPage() {
             />
             <div
               className="mt-10 font-sans"
-              style={{ fontSize: 40, fontWeight: 300, color: GOLD }}
+              style={{ fontSize: 40, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
             >
               $47
             </div>
@@ -372,7 +372,7 @@ function SystemPage() {
                 </p>
                 <div
                   className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD }}
+                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
                 >
                   $47
                 </div>
@@ -418,7 +418,7 @@ function SystemPage() {
                 </p>
                 <div
                   className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD }}
+                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
                 >
                   $67
                 </div>
@@ -467,13 +467,13 @@ function SystemPage() {
                 </p>
                 <div
                   className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD }}
+                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
                 >
                   $147
                 </div>
                 <p
                   className="mt-2 font-sans"
-                  style={{ fontSize: 11, color: MUTED }}
+                  style={{ fontSize: 11, color: MUTED , fontVariantNumeric: "lining-nums" }}
                 >
                   Save $62 versus buying individually
                 </p>

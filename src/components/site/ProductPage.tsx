@@ -53,9 +53,9 @@ export function ProductPage(p: ProductPageProps) {
             </p>
             <div className="mt-8 flex items-baseline gap-4">
               {p.oldPrice && (
-                <span className="font-sans text-lg line-through" style={{ color: MUTED }}>{p.oldPrice}</span>
+                <span className="font-sans text-lg line-through" style={{ color: MUTED, fontVariantNumeric: "lining-nums" }}>{p.oldPrice}</span>
               )}
-              <span className="font-sans text-3xl" style={{ color: GOLD, fontWeight: 300 }}>{p.price}</span>
+              <span className="font-sans text-3xl" style={{ color: GOLD, fontWeight: 300, fontVariantNumeric: "lining-nums" }}>{p.price}</span>
               {p.saveLabel && (
                 <span className="font-sans text-xs uppercase tracking-[0.2em]" style={{ color: SAGE }}>{p.saveLabel}</span>
               )}
@@ -117,9 +117,9 @@ export function ProductPage(p: ProductPageProps) {
             </h2>
             <div className="mt-8 flex items-baseline justify-center gap-4">
               {p.oldPrice && (
-                <span className="font-sans text-xl line-through" style={{ color: MUTED }}>{p.oldPrice}</span>
+                <span className="font-sans text-xl line-through" style={{ color: MUTED, fontVariantNumeric: "lining-nums" }}>{p.oldPrice}</span>
               )}
-              <span className="font-sans text-4xl" style={{ color: GOLD, fontWeight: 300 }}>{p.price}</span>
+              <span className="font-sans text-4xl" style={{ color: GOLD, fontWeight: 300, fontVariantNumeric: "lining-nums" }}>{p.price}</span>
               {p.saveLabel && (
                 <span className="font-sans text-xs uppercase tracking-[0.2em]" style={{ color: SAGE }}>{p.saveLabel}</span>
               )}
