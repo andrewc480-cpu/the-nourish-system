@@ -69,7 +69,7 @@ function HomePage() {
           />
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             <Link
-              to="/bundle"
+              to="/system"
               className="rounded-[2px] font-sans font-medium flex flex-col items-center leading-tight"
               style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "13px 28px" }}
             >
