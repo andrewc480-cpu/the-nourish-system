@@ -615,102 +615,7 @@ function BlogPage() {
       </section>
       )}
 
-      {/* SECTION 3 — ARTICLE CTA */}
-      <section
-        style={{
-          background: "#F2EDE4",
-          padding: "72px 24px",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-          <div
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: "10px",
-              textTransform: "uppercase",
-              letterSpacing: "0.2em",
-              color: "#7D9B76",
-              marginBottom: "16px",
-            }}
-          >
-            Go Deeper
-          </div>
-          <h2
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "32px",
-              fontWeight: 700,
-              color: "#1C1C1C",
-              lineHeight: 1.2,
-              marginBottom: "20px",
-            }}
-          >
-            The full GLP-1 protocol.
-            <br />
-            <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
-              20 recipes. Three windows. One system.
-            </em>
-          </h2>
-          <p
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: "14px",
-              fontWeight: 300,
-              color: "#3a3a3a",
-              maxWidth: "480px",
-              margin: "0 auto 32px",
-              lineHeight: 1.8,
-            }}
-          >
-            Everything in this article — plus 20 complete recipes, full
-            ingredient guides, the five protocol principles, and a MidJourney
-            photography prompt for every recipe.
-          </p>
-          <div
-            style={{
-              display: "flex",
-              gap: "16px",
-              justifyContent: "center",
-              flexWrap: "wrap",
-            }}
-          >
-            <Link
-              to="/glp1"
-              style={{
-                background: "#1C1C1C",
-                color: "#F7F5F1",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 500,
-                padding: "14px 32px",
-                textDecoration: "none",
-                borderRadius: "2px",
-                fontVariantNumeric: "lining-nums",
-              }}
-            >
-              Get The GLP-1 Protocol — $27
-            </Link>
-            <Link
-              to="/bundle"
-              style={{
-                background: "transparent",
-                border: "1px solid #1C1C1C",
-                color: "#1C1C1C",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 400,
-                padding: "14px 32px",
-                textDecoration: "none",
-                borderRadius: "2px",
-                fontVariantNumeric: "lining-nums",
-              }}
-            >
-              Get The Complete Bundle — $147
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4 — MORE FROM THE JOURNAL */}
+      {/* SECTION 3 — MORE FROM THE JOURNAL */}
       <section
         style={{
           background: "#F7F5F1",
@@ -814,6 +719,101 @@ function BlogPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 — ARTICLE CTA */}
+      <section
+        style={{
+          background: "#F2EDE4",
+          padding: "72px 24px",
+          textAlign: "center",
+        }}
+      >
+        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
+          <div
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "10px",
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              color: "#7D9B76",
+              marginBottom: "16px",
+            }}
+          >
+            Go Deeper
+          </div>
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "32px",
+              fontWeight: 700,
+              color: "#1C1C1C",
+              lineHeight: 1.2,
+              marginBottom: "20px",
+            }}
+          >
+            The full GLP-1 protocol.
+            <br />
+            <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
+              20 recipes. Three windows. One system.
+            </em>
+          </h2>
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "14px",
+              fontWeight: 300,
+              color: "#3a3a3a",
+              maxWidth: "480px",
+              margin: "0 auto 32px",
+              lineHeight: 1.8,
+            }}
+          >
+            Everything in this article — plus 20 complete recipes, full
+            ingredient guides, the five protocol principles, and a MidJourney
+            photography prompt for every recipe.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              gap: "16px",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <Link
+              to="/glp1"
+              style={{
+                background: "#1C1C1C",
+                color: "#F7F5F1",
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 500,
+                padding: "14px 32px",
+                textDecoration: "none",
+                borderRadius: "2px",
+                fontVariantNumeric: "lining-nums",
+              }}
+            >
+              Get The GLP-1 Protocol — $27
+            </Link>
+            <Link
+              to="/bundle"
+              style={{
+                background: "transparent",
+                border: "1px solid #1C1C1C",
+                color: "#1C1C1C",
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 400,
+                padding: "14px 32px",
+                textDecoration: "none",
+                borderRadius: "2px",
+                fontVariantNumeric: "lining-nums",
+              }}
+            >
+              Get The Complete Bundle — $147
+            </Link>
           </div>
         </div>
       </section>
