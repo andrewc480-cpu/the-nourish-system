@@ -320,7 +320,7 @@ function HomePage() {
               </div>
               <p
                 className="font-sans text-[12px]"
-                style={{ color: "rgba(247,245,241,0.6)" , fontVariantNumeric: "lining-nums" }}
+                style={{ color: "rgba(247,245,241,0.6)" }}
               >
                 Save $62 versus buying individually
               </p>

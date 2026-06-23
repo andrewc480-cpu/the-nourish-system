@@ -286,17 +286,17 @@ function AboutPage() {
               <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 300, color: "#9A9590", lineHeight: 1.7, flex: 1 }}>
                 The complete Nourish System methodology. 120 recipes. Seven sections.
               </div>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "22px", fontWeight: 300, color: "#C9A84C" }}>$47</div>
+              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "22px", fontWeight: 300, color: "#C9A84C", fontVariantNumeric: "lining-nums" }}>$47</div>
               <Link to="/system" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 500, color: "#7D9B76", textDecoration: "none" }}>
                 Get The System →
               </Link>
             </div>
             <div style={{ background: "#F2EDE4", borderRadius: "4px", padding: "24px", borderTop: "2px solid #C9A84C", display: "flex", flexDirection: "column", gap: "12px" }}>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#1C1C1C" }}>The Complete Bundle</div>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 300, color: "#9A9590", lineHeight: 1.7, flex: 1 , fontVariantNumeric: "lining-nums" }}>
+              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 300, color: "#9A9590", lineHeight: 1.7, flex: 1 }}>
                 All seven books. Save $62 versus buying individually.
               </div>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "22px", fontWeight: 300, color: "#C9A84C" }}>$147</div>
+              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "22px", fontWeight: 300, color: "#C9A84C", fontVariantNumeric: "lining-nums" }}>$147</div>
               <Link to="/bundle" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 500, color: "#7D9B76", textDecoration: "none" }}>
                 Get Everything →
               </Link>
