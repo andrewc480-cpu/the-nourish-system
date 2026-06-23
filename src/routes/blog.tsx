@@ -168,6 +168,7 @@ const upcoming = [
 ];
 
 function BlogPage() {
+  const [showArticle, setShowArticle] = useState(false);
   return (
     <SiteLayout>
     <div style={{ background: "#F7F5F1" }}>
