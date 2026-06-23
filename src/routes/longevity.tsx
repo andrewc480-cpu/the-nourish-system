@@ -80,7 +80,7 @@ const also = [
   { n: "02", name: "Gut Health", to: "/gut-health" },
   { n: "03", name: "Metabolic Health", to: "/metabolic-health" },
   { n: "04", name: "Cognitive Performance", to: "/cognitive-performance" },
-  { n: "06", name: "Hormonal Health", to: "#" },
+  { n: "06", name: "Hormonal Health", to: "/hormonal-health" },
 ];
 
 export const Route = createFileRoute("/longevity")({
@@ -154,7 +154,7 @@ function LongevityPage() {
               Digital PDF · Instant download
             </p>
             <a
-              href="#"
+              href="/longevity"
               className="mt-8 inline-flex items-center font-sans font-medium"
               style={{
                 backgroundColor: GOLD,
@@ -517,7 +517,7 @@ function LongevityPage() {
                   $27
                 </div>
                 <a
-                  href="#"
+                  href="/longevity"
                   className="mt-6 inline-flex items-center font-sans font-medium"
                   style={{
                     backgroundColor: TEXT,
@@ -566,7 +566,7 @@ function LongevityPage() {
                   Save $62 versus buying individually
                 </p>
                 <a
-                  href="#"
+                  href="/bundle"
                   className="mt-6 inline-flex items-center font-sans font-medium"
                   style={{
                     backgroundColor: GOLD,
