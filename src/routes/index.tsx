@@ -70,10 +70,13 @@ function HomePage() {
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             <Link
               to="/bundle"
-              className="rounded-[2px] font-sans font-medium"
-              style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "14px 32px" }}
+              className="rounded-[2px] font-sans font-medium flex flex-col items-center leading-tight"
+              style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "13px 28px" }}
             >
-              Get The System — $47
+              <span>Get The Nourish System</span>
+              <span className="font-sans font-light" style={{ fontSize: 12, marginTop: 2 }}>
+                $47 · Digital PDF
+              </span>
             </Link>
             <Link
               to="/free-recipes"

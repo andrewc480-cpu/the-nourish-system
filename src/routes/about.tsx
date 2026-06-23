@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteLayout } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -62,7 +63,7 @@ function P({ children }: { children: React.ReactNode }) {
 
 function AboutPage() {
   return (
-    <div>
+    <SiteLayout>
       {/* HERO */}
       <section style={{ background: "#1C1C1C", minHeight: "60vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "80px 24px", textAlign: "center" }}>
         <div style={{ maxWidth: "720px" }}>
@@ -306,6 +307,6 @@ function AboutPage() {
           </div>
         </div>
       </section>
-    </div>
+    </SiteLayout>
   );
 }

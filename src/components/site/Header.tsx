@@ -5,7 +5,6 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const navLinks = [
     { to: "/", label: "Home", hash: undefined },
-    { to: "/", label: "The System", hash: "system" },
     { to: "/free-recipes", label: "Free Recipes", hash: undefined },
     { to: "/blog", label: "Blog", hash: undefined },
     { to: "/about", label: "About", hash: undefined },

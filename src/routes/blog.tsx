@@ -755,8 +755,25 @@ function BlogPage() {
                   display: "flex",
                   flexDirection: "column",
                   gap: "12px",
+                  opacity: 0.6,
                 }}
               >
+                <span
+                  style={{
+                    display: "inline-block",
+                    alignSelf: "flex-start",
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: "9px",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.14em",
+                    background: "rgba(28,28,28,0.06)",
+                    color: "#9A9590",
+                    borderRadius: "12px",
+                    padding: "3px 10px",
+                  }}
+                >
+                  Coming Soon
+                </span>
                 <div
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
@@ -779,17 +796,6 @@ function BlogPage() {
                   }}
                 >
                   {c.title}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: "10px",
-                    color: "#9A9590",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Coming Soon
                 </div>
               </div>
             ))}

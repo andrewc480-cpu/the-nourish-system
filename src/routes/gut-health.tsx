@@ -587,7 +587,7 @@ function GutHealthPage() {
                   </h3>
                   <p
                     className="mt-2 font-sans"
-                    style={{ fontSize: 13, fontWeight: 300, color: GOLD }}
+                    style={{ fontSize: 22, fontWeight: 700, color: GOLD, fontFamily: "'Playfair Display', serif" }}
                   >
                     $27
                   </p>
