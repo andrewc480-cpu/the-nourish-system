@@ -183,7 +183,7 @@ function BundlePage() {
               Digital PDF · Instant download · All seven books
             </p>
             <a
-              href="#"
+              href="/bundle"
               className="mt-8 inline-flex items-center font-sans font-medium"
               style={{
                 backgroundColor: GOLD,
@@ -489,7 +489,7 @@ function BundlePage() {
               Individual value $209 · You save $62
             </p>
             <a
-              href="#"
+              href="/bundle"
               className="mt-8 inline-flex w-full items-center justify-center font-sans font-medium"
               style={{
                 backgroundColor: GOLD,
