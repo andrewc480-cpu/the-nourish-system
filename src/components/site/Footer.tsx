@@ -65,7 +65,7 @@ export function Footer() {
         className="mx-auto max-w-7xl px-6"
         style={{ borderTop: "1px solid rgba(28,28,28,0.09)" }}
       >
-        <p className="py-6 text-center font-sans text-[11px] text-[#9A9590]">
+        <p className="py-6 text-center font-display italic text-[11px] text-[#9A9590]">
           Food is information. Every meal sends a signal.
         </p>
       </div>

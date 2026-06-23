@@ -156,16 +156,16 @@ function BundlePage() {
               className="mt-10"
               style={{ width: 1, height: 48, backgroundColor: GOLD, opacity: 0.5 }}
             />
-            <div className="mt-10 flex items-center gap-4">
+            <div className="mt-10 flex flex-col items-start gap-1">
               <span
                 className="font-sans"
-                style={{ fontSize: 20, fontWeight: 300, color: MUTED, textDecoration: "line-through" }}
+                style={{ fontSize: 16, fontWeight: 400, color: MUTED, textDecoration: "line-through", opacity: 0.8 }}
               >
                 $209
               </span>
               <span
-                className="font-sans"
-                style={{ fontSize: 48, fontWeight: 300, color: GOLD }}
+                className="font-display font-bold"
+                style={{ fontSize: 48, color: GOLD }}
               >
                 $147
               </span>
