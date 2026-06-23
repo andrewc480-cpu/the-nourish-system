@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteLayout } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -167,6 +168,7 @@ const upcoming = [
 
 function BlogPage() {
   return (
+    <SiteLayout>
     <div style={{ background: "#F7F5F1" }}>
       {/* HERO */}
       <section
@@ -805,5 +807,6 @@ function BlogPage() {
         </div>
       </section>
     </div>
+    </SiteLayout>
   );
 }

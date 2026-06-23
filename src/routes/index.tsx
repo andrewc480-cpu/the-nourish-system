@@ -25,11 +25,11 @@ export const Route = createFileRoute("/")({
 
 const pillars = [
   { n: "01", name: "GLP-1 Nutrition", promise: "Eat to protect your muscle and stabilise your energy.", href: "/glp1" },
-  { n: "02", name: "Gut Health", promise: "Restore the gut. Everything else follows.", href: "/gut-reset" },
-  { n: "03", name: "Metabolic Health", promise: "Stable blood sugar is the foundation of everything.", href: "/metabolic-reset" },
-  { n: "04", name: "Cognitive Performance", promise: "Feed your brain. Protect it for life.", href: "#" },
-  { n: "05", name: "Longevity & Healthspan", promise: "Not longer. Better. For as long as possible.", href: "#" },
-  { n: "06", name: "Hormonal Health", promise: "Restore from the inside. Every meal.", href: "#" },
+  { n: "02", name: "Gut Health", promise: "Restore the gut. Everything else follows.", href: "/gut-health" },
+  { n: "03", name: "Metabolic Health", promise: "Stable blood sugar is the foundation of everything.", href: "/metabolic-health" },
+  { n: "04", name: "Cognitive Performance", promise: "Feed your brain. Protect it for life.", href: "/cognitive-performance" },
+  { n: "05", name: "Longevity & Healthspan", promise: "Not longer. Better. For as long as possible.", href: "/longevity" },
+  { n: "06", name: "Hormonal Health", promise: "Restore from the inside. Every meal.", href: "/hormonal-health" },
 ];
 
 const eyebrow = "font-sans uppercase text-[10px] tracking-[0.2em] text-sage";
@@ -69,7 +69,7 @@ function HomePage() {
           />
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             <Link
-              to="/bundle"
+              to="/system"
               className="rounded-[2px] font-sans font-medium flex flex-col items-center leading-tight"
               style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "13px 28px" }}
             >
@@ -237,7 +237,7 @@ function HomePage() {
                 $47
               </div>
               <Link
-                to="/bundle"
+                to="/system"
                 className="rounded-[2px] font-sans font-medium"
                 style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "14px 28px" }}
               >
