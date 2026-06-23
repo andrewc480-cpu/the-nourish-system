@@ -19,6 +19,7 @@ import { Route as MetabolicResetRouteImport } from './routes/metabolic-reset'
 import { Route as MetabolicHealthRouteImport } from './routes/metabolic-health'
 import { Route as MensPerformanceRouteImport } from './routes/mens-performance'
 import { Route as LunchRouteImport } from './routes/lunch'
+import { Route as LongevityRouteImport } from './routes/longevity'
 import { Route as HomeOldRouteImport } from './routes/home-old'
 import { Route as GutResetRouteImport } from './routes/gut-reset'
 import { Route as GutHealthRouteImport } from './routes/gut-health'
@@ -85,6 +86,11 @@ const MensPerformanceRoute = MensPerformanceRouteImport.update({
 const LunchRoute = LunchRouteImport.update({
   id: '/lunch',
   path: '/lunch',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LongevityRoute = LongevityRouteImport.update({
+  id: '/longevity',
+  path: '/longevity',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HomeOldRoute = HomeOldRouteImport.update({
@@ -191,6 +197,7 @@ export interface FileRoutesByFullPath {
   '/gut-health': typeof GutHealthRoute
   '/gut-reset': typeof GutResetRoute
   '/home-old': typeof HomeOldRoute
+  '/longevity': typeof LongevityRoute
   '/lunch': typeof LunchRoute
   '/mens-performance': typeof MensPerformanceRoute
   '/metabolic-health': typeof MetabolicHealthRoute
@@ -220,6 +227,7 @@ export interface FileRoutesByTo {
   '/gut-health': typeof GutHealthRoute
   '/gut-reset': typeof GutResetRoute
   '/home-old': typeof HomeOldRoute
+  '/longevity': typeof LongevityRoute
   '/lunch': typeof LunchRoute
   '/mens-performance': typeof MensPerformanceRoute
   '/metabolic-health': typeof MetabolicHealthRoute
@@ -250,6 +258,7 @@ export interface FileRoutesById {
   '/gut-health': typeof GutHealthRoute
   '/gut-reset': typeof GutResetRoute
   '/home-old': typeof HomeOldRoute
+  '/longevity': typeof LongevityRoute
   '/lunch': typeof LunchRoute
   '/mens-performance': typeof MensPerformanceRoute
   '/metabolic-health': typeof MetabolicHealthRoute
@@ -281,6 +290,7 @@ export interface FileRouteTypes {
     | '/gut-health'
     | '/gut-reset'
     | '/home-old'
+    | '/longevity'
     | '/lunch'
     | '/mens-performance'
     | '/metabolic-health'
@@ -310,6 +320,7 @@ export interface FileRouteTypes {
     | '/gut-health'
     | '/gut-reset'
     | '/home-old'
+    | '/longevity'
     | '/lunch'
     | '/mens-performance'
     | '/metabolic-health'
@@ -339,6 +350,7 @@ export interface FileRouteTypes {
     | '/gut-health'
     | '/gut-reset'
     | '/home-old'
+    | '/longevity'
     | '/lunch'
     | '/mens-performance'
     | '/metabolic-health'
@@ -369,6 +381,7 @@ export interface RootRouteChildren {
   GutHealthRoute: typeof GutHealthRoute
   GutResetRoute: typeof GutResetRoute
   HomeOldRoute: typeof HomeOldRoute
+  LongevityRoute: typeof LongevityRoute
   LunchRoute: typeof LunchRoute
   MensPerformanceRoute: typeof MensPerformanceRoute
   MetabolicHealthRoute: typeof MetabolicHealthRoute
@@ -451,6 +464,13 @@ declare module '@tanstack/react-router' {
       path: '/lunch'
       fullPath: '/lunch'
       preLoaderRoute: typeof LunchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/longevity': {
+      id: '/longevity'
+      path: '/longevity'
+      fullPath: '/longevity'
+      preLoaderRoute: typeof LongevityRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/home-old': {
@@ -593,6 +613,7 @@ const rootRouteChildren: RootRouteChildren = {
   GutHealthRoute: GutHealthRoute,
   GutResetRoute: GutResetRoute,
   HomeOldRoute: HomeOldRoute,
+  LongevityRoute: LongevityRoute,
   LunchRoute: LunchRoute,
   MensPerformanceRoute: MensPerformanceRoute,
   MetabolicHealthRoute: MetabolicHealthRoute,
