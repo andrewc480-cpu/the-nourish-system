@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SystemRouteImport } from './routes/system'
 import { Route as SundayPrepRouteImport } from './routes/sunday-prep'
 import { Route as SnacksRouteImport } from './routes/snacks'
 import { Route as SmoothiesRouteImport } from './routes/smoothies'
@@ -33,6 +34,11 @@ import { Route as R20MinuteMealRouteImport } from './routes/20-minute-meal'
 import { Route as R10MealBlueprintRouteImport } from './routes/10-meal-blueprint'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SystemRoute = SystemRouteImport.update({
+  id: '/system',
+  path: '/system',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SundayPrepRoute = SundayPrepRouteImport.update({
   id: '/sunday-prep',
   path: '/sunday-prep',
@@ -173,6 +179,7 @@ export interface FileRoutesByFullPath {
   '/smoothies': typeof SmoothiesRoute
   '/snacks': typeof SnacksRoute
   '/sunday-prep': typeof SundayPrepRoute
+  '/system': typeof SystemRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -198,6 +205,7 @@ export interface FileRoutesByTo {
   '/smoothies': typeof SmoothiesRoute
   '/snacks': typeof SnacksRoute
   '/sunday-prep': typeof SundayPrepRoute
+  '/system': typeof SystemRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -224,6 +232,7 @@ export interface FileRoutesById {
   '/smoothies': typeof SmoothiesRoute
   '/snacks': typeof SnacksRoute
   '/sunday-prep': typeof SundayPrepRoute
+  '/system': typeof SystemRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -251,6 +260,7 @@ export interface FileRouteTypes {
     | '/smoothies'
     | '/snacks'
     | '/sunday-prep'
+    | '/system'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -276,6 +286,7 @@ export interface FileRouteTypes {
     | '/smoothies'
     | '/snacks'
     | '/sunday-prep'
+    | '/system'
   id:
     | '__root__'
     | '/'
@@ -301,6 +312,7 @@ export interface FileRouteTypes {
     | '/smoothies'
     | '/snacks'
     | '/sunday-prep'
+    | '/system'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -327,10 +339,18 @@ export interface RootRouteChildren {
   SmoothiesRoute: typeof SmoothiesRoute
   SnacksRoute: typeof SnacksRoute
   SundayPrepRoute: typeof SundayPrepRoute
+  SystemRoute: typeof SystemRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/system': {
+      id: '/system'
+      path: '/system'
+      fullPath: '/system'
+      preLoaderRoute: typeof SystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sunday-prep': {
       id: '/sunday-prep'
       path: '/sunday-prep'
@@ -519,7 +539,18 @@ const rootRouteChildren: RootRouteChildren = {
   SmoothiesRoute: SmoothiesRoute,
   SnacksRoute: SnacksRoute,
   SundayPrepRoute: SundayPrepRoute,
+  SystemRoute: SystemRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
