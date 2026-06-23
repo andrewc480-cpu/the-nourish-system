@@ -255,7 +255,14 @@ function HomePage() {
 
           {/* Tier 2 — Satellites */}
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {pillars.map((p) => (
+            {([
+              { n: "01", name: "GLP-1 Nutrition", href: "/glp1" },
+              { n: "02", name: "Gut Health", href: "/gut-health" },
+              { n: "03", name: "Metabolic Health", href: "/metabolic-health" },
+              { n: "04", name: "Cognitive Performance", href: "/cognitive-performance" },
+              { n: "05", name: "Longevity & Healthspan", href: "/longevity" },
+              { n: "06", name: "Hormonal Health", href: "/hormonal-health" },
+            ] as const).map((p) => (
               <a
                 key={p.n}
                 href={p.href}
