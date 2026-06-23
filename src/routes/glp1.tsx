@@ -560,7 +560,7 @@ function Glp1Page() {
             >
               One for every pillar.
             </p>
-            <div className="mt-10 grid gap-4 md:grid-cols-5">
+            <div className="mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
               {also.map((p) => (
                 <div
                   key={p.n}
@@ -585,7 +585,7 @@ function Glp1Page() {
                   </h3>
                   <div
                     className="mt-3 font-sans"
-                    style={{ fontSize: 13, fontWeight: 300, color: GOLD }}
+                    style={{ fontSize: 22, fontWeight: 700, color: GOLD, fontFamily: "'Playfair Display', serif" }}
                   >
                     $27
                   </div>
