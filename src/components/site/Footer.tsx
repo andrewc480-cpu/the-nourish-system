@@ -1,13 +1,3 @@
-const systemLinks = [
-  { href: "/system", label: "The Nourish System" },
-  { href: "/glp1", label: "GLP-1 Nutrition" },
-  { href: "/gut-health", label: "Gut Health" },
-  { href: "/metabolic-health", label: "Metabolic Health" },
-  { href: "/cognitive-performance", label: "Cognitive Performance" },
-  { href: "/longevity", label: "Longevity & Healthspan" },
-  { href: "/hormonal-health", label: "Hormonal Health" },
-  { href: "/bundle", label: "The Complete Bundle" },
-];
 
 const exploreLinks = [
   { href: "/free-recipes", label: "Free Recipes" },
