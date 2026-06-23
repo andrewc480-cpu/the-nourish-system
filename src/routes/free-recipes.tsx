@@ -245,6 +245,10 @@ function FreeRecipesPage() {
                   borderRadius: 4,
                   padding: 32,
                   borderTop: `3px solid ${SAGE}`,
+                  minHeight: 520,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
                 }}
               >
                 <p
