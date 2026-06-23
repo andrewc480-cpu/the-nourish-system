@@ -27,13 +27,14 @@ export function Footer() {
         <div>
           <h4 className={headingClass}>The System</h4>
           <ul className="space-y-2.5 font-sans text-sm font-light text-charcoal">
-            {systemLinks.map((l) => (
-              <li key={l.label}>
-                <a href={l.href} className="transition-colors hover:text-sage">
-                  {l.label}
-                </a>
-              </li>
-            ))}
+            <li><a href="/system" className="transition-colors hover:text-sage">The Nourish System</a></li>
+            <li><a href="/glp1" className="transition-colors hover:text-sage">GLP-1 Nutrition</a></li>
+            <li><a href="/gut-health" className="transition-colors hover:text-sage">Gut Health</a></li>
+            <li><a href="/metabolic-health" className="transition-colors hover:text-sage">Metabolic Health</a></li>
+            <li><a href="/cognitive-performance" className="transition-colors hover:text-sage">Cognitive Performance</a></li>
+            <li><a href="/longevity" className="transition-colors hover:text-sage">Longevity & Healthspan</a></li>
+            <li><a href="/hormonal-health" className="transition-colors hover:text-sage">Hormonal Health</a></li>
+            <li><a href="/bundle" className="transition-colors hover:text-sage">The Complete Bundle</a></li>
           </ul>
         </div>
 
