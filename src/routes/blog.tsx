@@ -807,5 +807,6 @@ function BlogPage() {
         </div>
       </section>
     </div>
+    </SiteLayout>
   );
 }
