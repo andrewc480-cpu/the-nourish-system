@@ -16,6 +16,7 @@ import { Route as SmoothiesRouteImport } from './routes/smoothies'
 import { Route as RealFoodResetRouteImport } from './routes/real-food-reset'
 import { Route as PlantBasedRouteImport } from './routes/plant-based'
 import { Route as MetabolicResetRouteImport } from './routes/metabolic-reset'
+import { Route as MetabolicHealthRouteImport } from './routes/metabolic-health'
 import { Route as MensPerformanceRouteImport } from './routes/mens-performance'
 import { Route as LunchRouteImport } from './routes/lunch'
 import { Route as HomeOldRouteImport } from './routes/home-old'
@@ -68,6 +69,11 @@ const PlantBasedRoute = PlantBasedRouteImport.update({
 const MetabolicResetRoute = MetabolicResetRouteImport.update({
   id: '/metabolic-reset',
   path: '/metabolic-reset',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MetabolicHealthRoute = MetabolicHealthRouteImport.update({
+  id: '/metabolic-health',
+  path: '/metabolic-health',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MensPerformanceRoute = MensPerformanceRouteImport.update({
@@ -180,6 +186,7 @@ export interface FileRoutesByFullPath {
   '/home-old': typeof HomeOldRoute
   '/lunch': typeof LunchRoute
   '/mens-performance': typeof MensPerformanceRoute
+  '/metabolic-health': typeof MetabolicHealthRoute
   '/metabolic-reset': typeof MetabolicResetRoute
   '/plant-based': typeof PlantBasedRoute
   '/real-food-reset': typeof RealFoodResetRoute
@@ -207,6 +214,7 @@ export interface FileRoutesByTo {
   '/home-old': typeof HomeOldRoute
   '/lunch': typeof LunchRoute
   '/mens-performance': typeof MensPerformanceRoute
+  '/metabolic-health': typeof MetabolicHealthRoute
   '/metabolic-reset': typeof MetabolicResetRoute
   '/plant-based': typeof PlantBasedRoute
   '/real-food-reset': typeof RealFoodResetRoute
@@ -235,6 +243,7 @@ export interface FileRoutesById {
   '/home-old': typeof HomeOldRoute
   '/lunch': typeof LunchRoute
   '/mens-performance': typeof MensPerformanceRoute
+  '/metabolic-health': typeof MetabolicHealthRoute
   '/metabolic-reset': typeof MetabolicResetRoute
   '/plant-based': typeof PlantBasedRoute
   '/real-food-reset': typeof RealFoodResetRoute
@@ -264,6 +273,7 @@ export interface FileRouteTypes {
     | '/home-old'
     | '/lunch'
     | '/mens-performance'
+    | '/metabolic-health'
     | '/metabolic-reset'
     | '/plant-based'
     | '/real-food-reset'
@@ -291,6 +301,7 @@ export interface FileRouteTypes {
     | '/home-old'
     | '/lunch'
     | '/mens-performance'
+    | '/metabolic-health'
     | '/metabolic-reset'
     | '/plant-based'
     | '/real-food-reset'
@@ -318,6 +329,7 @@ export interface FileRouteTypes {
     | '/home-old'
     | '/lunch'
     | '/mens-performance'
+    | '/metabolic-health'
     | '/metabolic-reset'
     | '/plant-based'
     | '/real-food-reset'
@@ -346,6 +358,7 @@ export interface RootRouteChildren {
   HomeOldRoute: typeof HomeOldRoute
   LunchRoute: typeof LunchRoute
   MensPerformanceRoute: typeof MensPerformanceRoute
+  MetabolicHealthRoute: typeof MetabolicHealthRoute
   MetabolicResetRoute: typeof MetabolicResetRoute
   PlantBasedRoute: typeof PlantBasedRoute
   RealFoodResetRoute: typeof RealFoodResetRoute
@@ -404,6 +417,13 @@ declare module '@tanstack/react-router' {
       path: '/metabolic-reset'
       fullPath: '/metabolic-reset'
       preLoaderRoute: typeof MetabolicResetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/metabolic-health': {
+      id: '/metabolic-health'
+      path: '/metabolic-health'
+      fullPath: '/metabolic-health'
+      preLoaderRoute: typeof MetabolicHealthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mens-performance': {
@@ -554,6 +574,7 @@ const rootRouteChildren: RootRouteChildren = {
   HomeOldRoute: HomeOldRoute,
   LunchRoute: LunchRoute,
   MensPerformanceRoute: MensPerformanceRoute,
+  MetabolicHealthRoute: MetabolicHealthRoute,
   MetabolicResetRoute: MetabolicResetRoute,
   PlantBasedRoute: PlantBasedRoute,
   RealFoodResetRoute: RealFoodResetRoute,
@@ -565,3 +586,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
