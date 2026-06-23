@@ -237,7 +237,7 @@ function HomePage() {
                 $47
               </div>
               <Link
-                to="/bundle"
+                to="/system"
                 className="rounded-[2px] font-sans font-medium"
                 style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "14px 28px" }}
               >
