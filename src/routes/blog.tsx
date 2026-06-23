@@ -338,6 +338,7 @@ function BlogPage() {
       </section>
 
       {/* SECTION 2 — FULL ARTICLE */}
+      {showArticle && (
       <section
         id="article"
         style={{
