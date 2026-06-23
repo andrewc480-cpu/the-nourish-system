@@ -49,10 +49,10 @@ const inside = [
 
 const also = [
   { n: "01", name: "GLP-1 Nutrition", to: "/glp1" },
-  { n: "03", name: "Metabolic Health", to: "/metabolic-reset" },
-  { n: "04", name: "Cognitive Performance", to: "#" },
-  { n: "05", name: "Longevity & Healthspan", to: "#" },
-  { n: "06", name: "Hormonal Health", to: "#" },
+  { n: "03", name: "Metabolic Health", to: "/metabolic-health" },
+  { n: "04", name: "Cognitive Performance", to: "/cognitive-performance" },
+  { n: "05", name: "Longevity & Healthspan", to: "/longevity" },
+  { n: "06", name: "Hormonal Health", to: "/hormonal-health" },
 ];
 
 export const Route = createFileRoute("/gut-health")({
@@ -126,7 +126,7 @@ function GutHealthPage() {
               Digital PDF · Instant download
             </p>
             <a
-              href="#"
+              href="/gut-health"
               className="mt-8 inline-flex items-center font-sans font-medium"
               style={{
                 backgroundColor: GOLD,
@@ -468,7 +468,7 @@ function GutHealthPage() {
                   $27
                 </div>
                 <a
-                  href="#"
+                  href="/gut-health"
                   className="mt-6 inline-flex items-center font-sans font-medium"
                   style={{
                     backgroundColor: TEXT,
@@ -519,7 +519,7 @@ function GutHealthPage() {
                   Save $62 versus buying individually
                 </p>
                 <a
-                  href="#"
+                  href="/bundle"
                   className="mt-6 inline-flex items-center font-sans font-medium"
                   style={{
                     backgroundColor: GOLD,

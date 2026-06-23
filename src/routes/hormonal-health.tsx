@@ -149,7 +149,7 @@ function HormonalHealthPage() {
               Digital PDF · Instant download
             </p>
             <a
-              href="#"
+              href="/hormonal-health"
               className="mt-8 inline-flex items-center font-sans font-medium"
               style={{
                 backgroundColor: GOLD,
@@ -476,7 +476,7 @@ function HormonalHealthPage() {
                   $27
                 </div>
                 <a
-                  href="#"
+                  href="/hormonal-health"
                   className="mt-6 inline-flex items-center font-sans font-medium"
                   style={{
                     backgroundColor: TEXT,
@@ -528,7 +528,7 @@ function HormonalHealthPage() {
                   Save $62 versus buying individually
                 </p>
                 <a
-                  href="#"
+                  href="/bundle"
                   className="mt-6 inline-flex items-center font-sans font-medium"
                   style={{
                     backgroundColor: GOLD,
