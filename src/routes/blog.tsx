@@ -672,7 +672,7 @@ function BlogPage() {
                 padding: "14px 32px",
                 textDecoration: "none",
                 borderRadius: "2px",
-              , fontVariantNumeric: "lining-nums" , fontVariantNumeric: "lining-nums" }}
+              }}
             >
               Get The GLP-1 Protocol — $27
             </Link>
@@ -687,7 +687,7 @@ function BlogPage() {
                 padding: "14px 32px",
                 textDecoration: "none",
                 borderRadius: "2px",
-              , fontVariantNumeric: "lining-nums" , fontVariantNumeric: "lining-nums" }}
+              }}
             >
               Get The Complete Bundle — $147
             </Link>

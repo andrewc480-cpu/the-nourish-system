@@ -132,7 +132,7 @@ function BundlePage() {
                 border: "1px solid rgba(201,168,76,0.25)",
                 borderRadius: 20,
                 padding: "6px 16px",
-              , fontVariantNumeric: "lining-nums" , fontVariantNumeric: "lining-nums" }}
+              }}
             >
               Best Value · Save $62
             </span>
