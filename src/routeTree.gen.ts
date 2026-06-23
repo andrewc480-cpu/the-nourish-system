@@ -28,6 +28,7 @@ import { Route as FoodAsMedicineRouteImport } from './routes/food-as-medicine'
 import { Route as FamilyDinnersRouteImport } from './routes/family-dinners'
 import { Route as DinnerRouteImport } from './routes/dinner'
 import { Route as DessertsRouteImport } from './routes/desserts'
+import { Route as CognitivePerformanceRouteImport } from './routes/cognitive-performance'
 import { Route as BundleRouteImport } from './routes/bundle'
 import { Route as BreakfastRouteImport } from './routes/breakfast'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -131,6 +132,11 @@ const DessertsRoute = DessertsRouteImport.update({
   path: '/desserts',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CognitivePerformanceRoute = CognitivePerformanceRouteImport.update({
+  id: '/cognitive-performance',
+  path: '/cognitive-performance',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BundleRoute = BundleRouteImport.update({
   id: '/bundle',
   path: '/bundle',
@@ -175,6 +181,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/breakfast': typeof BreakfastRoute
   '/bundle': typeof BundleRoute
+  '/cognitive-performance': typeof CognitivePerformanceRoute
   '/desserts': typeof DessertsRoute
   '/dinner': typeof DinnerRoute
   '/family-dinners': typeof FamilyDinnersRoute
@@ -203,6 +210,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/breakfast': typeof BreakfastRoute
   '/bundle': typeof BundleRoute
+  '/cognitive-performance': typeof CognitivePerformanceRoute
   '/desserts': typeof DessertsRoute
   '/dinner': typeof DinnerRoute
   '/family-dinners': typeof FamilyDinnersRoute
@@ -232,6 +240,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/breakfast': typeof BreakfastRoute
   '/bundle': typeof BundleRoute
+  '/cognitive-performance': typeof CognitivePerformanceRoute
   '/desserts': typeof DessertsRoute
   '/dinner': typeof DinnerRoute
   '/family-dinners': typeof FamilyDinnersRoute
@@ -262,6 +271,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/breakfast'
     | '/bundle'
+    | '/cognitive-performance'
     | '/desserts'
     | '/dinner'
     | '/family-dinners'
@@ -290,6 +300,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/breakfast'
     | '/bundle'
+    | '/cognitive-performance'
     | '/desserts'
     | '/dinner'
     | '/family-dinners'
@@ -318,6 +329,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/breakfast'
     | '/bundle'
+    | '/cognitive-performance'
     | '/desserts'
     | '/dinner'
     | '/family-dinners'
@@ -347,6 +359,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   BreakfastRoute: typeof BreakfastRoute
   BundleRoute: typeof BundleRoute
+  CognitivePerformanceRoute: typeof CognitivePerformanceRoute
   DessertsRoute: typeof DessertsRoute
   DinnerRoute: typeof DinnerRoute
   FamilyDinnersRoute: typeof FamilyDinnersRoute
@@ -503,6 +516,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DessertsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cognitive-performance': {
+      id: '/cognitive-performance'
+      path: '/cognitive-performance'
+      fullPath: '/cognitive-performance'
+      preLoaderRoute: typeof CognitivePerformanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bundle': {
       id: '/bundle'
       path: '/bundle'
@@ -563,6 +583,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   BreakfastRoute: BreakfastRoute,
   BundleRoute: BundleRoute,
+  CognitivePerformanceRoute: CognitivePerformanceRoute,
   DessertsRoute: DessertsRoute,
   DinnerRoute: DinnerRoute,
   FamilyDinnersRoute: FamilyDinnersRoute,
