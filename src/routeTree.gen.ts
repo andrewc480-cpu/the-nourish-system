@@ -20,6 +20,7 @@ import { Route as MensPerformanceRouteImport } from './routes/mens-performance'
 import { Route as LunchRouteImport } from './routes/lunch'
 import { Route as HomeOldRouteImport } from './routes/home-old'
 import { Route as GutResetRouteImport } from './routes/gut-reset'
+import { Route as GutHealthRouteImport } from './routes/gut-health'
 import { Route as Glp1RouteImport } from './routes/glp1'
 import { Route as FreeRecipesRouteImport } from './routes/free-recipes'
 import { Route as FoodAsMedicineRouteImport } from './routes/food-as-medicine'
@@ -87,6 +88,11 @@ const HomeOldRoute = HomeOldRouteImport.update({
 const GutResetRoute = GutResetRouteImport.update({
   id: '/gut-reset',
   path: '/gut-reset',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GutHealthRoute = GutHealthRouteImport.update({
+  id: '/gut-health',
+  path: '/gut-health',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Glp1Route = Glp1RouteImport.update({
@@ -169,6 +175,7 @@ export interface FileRoutesByFullPath {
   '/food-as-medicine': typeof FoodAsMedicineRoute
   '/free-recipes': typeof FreeRecipesRoute
   '/glp1': typeof Glp1Route
+  '/gut-health': typeof GutHealthRoute
   '/gut-reset': typeof GutResetRoute
   '/home-old': typeof HomeOldRoute
   '/lunch': typeof LunchRoute
@@ -195,6 +202,7 @@ export interface FileRoutesByTo {
   '/food-as-medicine': typeof FoodAsMedicineRoute
   '/free-recipes': typeof FreeRecipesRoute
   '/glp1': typeof Glp1Route
+  '/gut-health': typeof GutHealthRoute
   '/gut-reset': typeof GutResetRoute
   '/home-old': typeof HomeOldRoute
   '/lunch': typeof LunchRoute
@@ -222,6 +230,7 @@ export interface FileRoutesById {
   '/food-as-medicine': typeof FoodAsMedicineRoute
   '/free-recipes': typeof FreeRecipesRoute
   '/glp1': typeof Glp1Route
+  '/gut-health': typeof GutHealthRoute
   '/gut-reset': typeof GutResetRoute
   '/home-old': typeof HomeOldRoute
   '/lunch': typeof LunchRoute
@@ -250,6 +259,7 @@ export interface FileRouteTypes {
     | '/food-as-medicine'
     | '/free-recipes'
     | '/glp1'
+    | '/gut-health'
     | '/gut-reset'
     | '/home-old'
     | '/lunch'
@@ -276,6 +286,7 @@ export interface FileRouteTypes {
     | '/food-as-medicine'
     | '/free-recipes'
     | '/glp1'
+    | '/gut-health'
     | '/gut-reset'
     | '/home-old'
     | '/lunch'
@@ -302,6 +313,7 @@ export interface FileRouteTypes {
     | '/food-as-medicine'
     | '/free-recipes'
     | '/glp1'
+    | '/gut-health'
     | '/gut-reset'
     | '/home-old'
     | '/lunch'
@@ -329,6 +341,7 @@ export interface RootRouteChildren {
   FoodAsMedicineRoute: typeof FoodAsMedicineRoute
   FreeRecipesRoute: typeof FreeRecipesRoute
   Glp1Route: typeof Glp1Route
+  GutHealthRoute: typeof GutHealthRoute
   GutResetRoute: typeof GutResetRoute
   HomeOldRoute: typeof HomeOldRoute
   LunchRoute: typeof LunchRoute
@@ -419,6 +432,13 @@ declare module '@tanstack/react-router' {
       path: '/gut-reset'
       fullPath: '/gut-reset'
       preLoaderRoute: typeof GutResetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gut-health': {
+      id: '/gut-health'
+      path: '/gut-health'
+      fullPath: '/gut-health'
+      preLoaderRoute: typeof GutHealthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/glp1': {
@@ -529,6 +549,7 @@ const rootRouteChildren: RootRouteChildren = {
   FoodAsMedicineRoute: FoodAsMedicineRoute,
   FreeRecipesRoute: FreeRecipesRoute,
   Glp1Route: Glp1Route,
+  GutHealthRoute: GutHealthRoute,
   GutResetRoute: GutResetRoute,
   HomeOldRoute: HomeOldRoute,
   LunchRoute: LunchRoute,
