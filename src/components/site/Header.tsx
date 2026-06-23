@@ -30,7 +30,7 @@ export function Header() {
             </Link>
           ))}
           <Link
-            to="/bundle"
+            to="/system"
             className="ml-2 inline-flex items-center rounded-[2px] bg-charcoal px-4 py-2 font-sans text-sm font-medium text-background transition-opacity hover:opacity-90"
           >
             Get The System
@@ -58,7 +58,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              to="/bundle"
+              to="/system"
               onClick={() => setOpen(false)}
               className="mt-3 inline-flex w-fit items-center rounded-[2px] bg-charcoal px-4 py-2 font-sans text-sm font-medium text-background"
             >
