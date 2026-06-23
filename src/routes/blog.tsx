@@ -613,6 +613,7 @@ function BlogPage() {
           </P>
         </article>
       </section>
+      )}
 
       {/* SECTION 3 — ARTICLE CTA */}
       <section
