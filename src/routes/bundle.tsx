@@ -572,7 +572,7 @@ function BundlePage() {
                 <h3 className="mt-2 font-display font-semibold" style={{ fontSize: 15, color: TEXT }}>
                   {a.name}
                 </h3>
-                <p className="mt-2 font-sans" style={{ fontSize: 14, fontWeight: 300, color: GOLD }}>
+                <p className="mt-2 font-sans" style={{ fontSize: 14, fontWeight: 300, color: GOLD, fontVariantNumeric: "lining-nums" }}>
                   {a.price}
                 </p>
                 <Link
