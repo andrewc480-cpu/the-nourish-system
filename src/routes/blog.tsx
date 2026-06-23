@@ -168,6 +168,7 @@ const upcoming = [
 
 function BlogPage() {
   return (
+    <SiteLayout>
     <div style={{ background: "#F7F5F1" }}>
       {/* HERO */}
       <section
