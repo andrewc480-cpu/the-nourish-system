@@ -23,14 +23,8 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const pillars = [
-  { n: "01", name: "GLP-1 Nutrition", promise: "Eat to protect your muscle and stabilise your energy.", href: "/glp1" },
-  { n: "02", name: "Gut Health", promise: "Restore the gut. Everything else follows.", href: "/gut-health" },
-  { n: "03", name: "Metabolic Health", promise: "Stable blood sugar is the foundation of everything.", href: "/metabolic-health" },
-  { n: "04", name: "Cognitive Performance", promise: "Feed your brain. Protect it for life.", href: "/cognitive-performance" },
-  { n: "05", name: "Longevity & Healthspan", promise: "Not longer. Better. For as long as possible.", href: "/longevity" },
-  { n: "06", name: "Hormonal Health", promise: "Restore from the inside. Every meal.", href: "/hormonal-health" },
-];
+
+
 
 const eyebrow = "font-sans uppercase text-[10px] tracking-[0.2em] text-sage";
 const eyebrowTight = "font-sans uppercase text-[10px] tracking-[0.22em] text-sage";
@@ -154,7 +148,14 @@ function HomePage() {
           </h2>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {pillars.map((p) => (
+            {([
+              { n: "01", name: "GLP-1 Nutrition", promise: "Eat to protect your muscle and stabilise your energy.", href: "/glp1" },
+              { n: "02", name: "Gut Health", promise: "Restore the gut. Everything else follows.", href: "/gut-health" },
+              { n: "03", name: "Metabolic Health", promise: "Stable blood sugar is the foundation of everything.", href: "/metabolic-health" },
+              { n: "04", name: "Cognitive Performance", promise: "Feed your brain. Protect it for life.", href: "/cognitive-performance" },
+              { n: "05", name: "Longevity & Healthspan", promise: "Not longer. Better. For as long as possible.", href: "/longevity" },
+              { n: "06", name: "Hormonal Health", promise: "Restore from the inside. Every meal.", href: "/hormonal-health" },
+            ] as const).map((p) => (
               <a
                 key={p.n}
                 href={p.href}
@@ -248,7 +249,14 @@ function HomePage() {
 
           {/* Tier 2 — Satellites */}
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {pillars.map((p) => (
+            {([
+              { n: "01", name: "GLP-1 Nutrition", href: "/glp1" },
+              { n: "02", name: "Gut Health", href: "/gut-health" },
+              { n: "03", name: "Metabolic Health", href: "/metabolic-health" },
+              { n: "04", name: "Cognitive Performance", href: "/cognitive-performance" },
+              { n: "05", name: "Longevity & Healthspan", href: "/longevity" },
+              { n: "06", name: "Hormonal Health", href: "/hormonal-health" },
+            ] as const).map((p) => (
               <a
                 key={p.n}
                 href={p.href}
