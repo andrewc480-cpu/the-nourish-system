@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/blog")({
@@ -167,6 +168,7 @@ const upcoming = [
 ];
 
 function BlogPage() {
+  const [showArticle, setShowArticle] = useState(false);
   return (
     <SiteLayout>
     <div style={{ background: "#F7F5F1" }}>
@@ -299,8 +301,14 @@ function BlogPage() {
               fibre strategy that prevents the most common nutritional
               mistakes made on these medications.
             </p>
-            <a
-              href="#article"
+            <button
+              type="button"
+              onClick={() => {
+                setShowArticle(true);
+                setTimeout(() => {
+                  document.getElementById("article")?.scrollIntoView({ behavior: "smooth" });
+                }, 0);
+              }}
               style={{
                 display: "inline-block",
                 background: "#C9A84C",
@@ -308,12 +316,13 @@ function BlogPage() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 500,
                 padding: "12px 28px",
-                textDecoration: "none",
+                border: "none",
+                cursor: "pointer",
                 borderRadius: "2px",
               }}
             >
-              Read The Article
-            </a>
+              {showArticle ? "Article Open Below" : "Read The Article"}
+            </button>
             <div
               style={{
                 fontFamily: "'DM Sans', sans-serif",
@@ -329,6 +338,7 @@ function BlogPage() {
       </section>
 
       {/* SECTION 2 — FULL ARTICLE */}
+      {showArticle && (
       <section
         id="article"
         style={{
@@ -603,6 +613,7 @@ function BlogPage() {
           </P>
         </article>
       </section>
+      )}
 
       {/* SECTION 3 — ARTICLE CTA */}
       <section
