@@ -1,258 +1,386 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
-import roastedChicken from "@/assets/roasted-chicken.png.asset.json";
-import breakfastSkillet from "@/assets/nourish-breakfast.png.asset.json";
-import grilledChickenBreast from "@/assets/nourish-lunch.png.asset.json";
-import searedSalmon from "@/assets/nourish-dinner.png.asset.json";
-import mangoTurmericSmoothie from "@/assets/nourish-smoothie.png.asset.json";
-import eggsAndTurkeyBoard from "@/assets/nourish-snacks-v2.png.asset.json";
-import chocolateDessert from "@/assets/nourish-desserts.png.asset.json";
-import glp1NutritionGuide from "@/assets/glp1-nutrition-guide.png.asset.json";
-import fermentedKimchiBowl from "@/assets/gut-reset-meal-plan.png.asset.json";
-import turmericSalmon from "@/assets/food-as-medicine.png.asset.json";
-import realFoodReset from "@/assets/11-Real-Food-Reset.png.asset.json";
-import plantBasedBundle from "@/assets/12-High-Protein-Plant-Based.png.asset.json";
-import mealsUnder10 from "@/assets/13-Meals-Under-10.png.asset.json";
-import meals20Less from "@/assets/14-Meals-20-Less.png.asset.json";
-import familyDinners from "@/assets/15-Family-Dinners-Kids-Eat.png.asset.json";
-import mealsForMen40 from "@/assets/16-Meals-for-Men-Over-40.png.asset.json";
-import mealPrepSunday from "@/assets/17-Meal-Prep-Sunday-Plans.png.asset.json";
-import weightLossAfter50 from "@/assets/18-Meals-for-Weight-Loss-After-50.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nóurish. — Eat Well. Every Single Day." },
-      { name: "description", content: "Recipe collections built around clear nutritional goals. Instant download, lifetime access." },
-      { property: "og:title", content: "Nóurish. — Eat Well. Every Single Day." },
-      { property: "og:description", content: "Recipe collections built around clear nutritional goals. Instant download, lifetime access." },
+      { title: "The Nourish System — Eat Well. Every Single Day." },
+      {
+        name: "description",
+        content:
+          "A food-first biological optimization methodology built around the six systems that food controls most directly.",
+      },
+      { property: "og:title", content: "The Nourish System — Eat Well. Every Single Day." },
+      {
+        property: "og:description",
+        content:
+          "A food-first biological optimization methodology built around the six systems that food controls most directly.",
+      },
       { property: "og:url", content: "/" },
-      { property: "og:image", content: roastedChicken.url },
-      { name: "twitter:image", content: roastedChicken.url },
     ],
     links: [{ rel: "canonical", href: "/" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Product",
-          name: "The Complete Bundle — 180 Recipes",
-          description: "Every protocol. Every framework. Every meal. Organized by health goal, protein target, and prep time. Yours forever.",
-          image: roastedChicken.url,
-          brand: { "@type": "Brand", name: "Nóurish." },
-          offers: {
-            "@type": "Offer",
-            price: "67",
-            priceCurrency: "USD",
-            availability: "https://schema.org/InStock",
-            url: "/",
-          },
-        }),
-      },
-    ],
   }),
-  component: Shop,
+  component: HomePage,
 });
 
-type Product = { title: string; desc: string; price: string; imageUrl: string; imageAlt: string; link: string; internalLink?: string };
-
-const tier2: Product[] = [
-  { title: "30 High Protein Breakfast Ideas", desc: "Start every morning with 30g+ of protein.", price: "$19", imageUrl: breakfastSkillet.url, imageAlt: "High protein breakfast skillet", link: "https://buy.stripe.com/bJe7sL5MS9JEh082hB6Vq01", internalLink: "/breakfast" },
-  { title: "30 High Protein Lunch Ideas", desc: "Midday meals that keep you full till dinner.", price: "$19", imageUrl: grilledChickenBreast.url, imageAlt: "Grilled chicken breast lunch", link: "https://buy.stripe.com/00w7sL1wC3lgbFOe0j6Vq02", internalLink: "/lunch" },
-  { title: "30 High Protein Dinner Ideas", desc: "Family-tested, macro-balanced evenings.", price: "$19", imageUrl: searedSalmon.url, imageAlt: "Seared salmon dinner", link: "https://buy.stripe.com/14A14n4IO8FAh0809t6Vq03", internalLink: "/dinner" },
-  { title: "30 High Protein Smoothie Ideas", desc: "Real ingredients. Real protein. No fillers.", price: "$19", imageUrl: mangoTurmericSmoothie.url, imageAlt: "Mango turmeric smoothie", link: "https://buy.stripe.com/14A14n4IO9JE11a6xR6Vq04", internalLink: "/smoothies" },
-  { title: "30 High Protein Snack Ideas", desc: "Snacks engineered for steady energy.", price: "$19", imageUrl: eggsAndTurkeyBoard.url, imageAlt: "Slate board with eggs and turkey", link: "https://buy.stripe.com/6oU14nejo7BweS04pJ6Vq05", internalLink: "/snacks" },
-  { title: "30 High Protein Dessert Ideas", desc: "Sweet, satisfying, and macro-friendly.", price: "$19", imageUrl: chocolateDessert.url, imageAlt: "High protein dessert", link: "https://buy.stripe.com/00w5kDgrwcVQ11a2hB6Vq06", internalLink: "/desserts" },
+const pillars = [
+  { n: "01", name: "GLP-1 Nutrition", promise: "Eat to protect your muscle and stabilise your energy.", href: "/glp1" },
+  { n: "02", name: "Gut Health", promise: "Restore the gut. Everything else follows.", href: "/gut-reset" },
+  { n: "03", name: "Metabolic Health", promise: "Stable blood sugar is the foundation of everything.", href: "/metabolic-reset" },
+  { n: "04", name: "Cognitive Performance", promise: "Feed your brain. Protect it for life.", href: "#" },
+  { n: "05", name: "Longevity & Healthspan", promise: "Not longer. Better. For as long as possible.", href: "#" },
+  { n: "06", name: "Hormonal Health", promise: "Restore from the inside. Every meal.", href: "#" },
 ];
 
-const tier3: Product[] = [
-  { title: "GLP-1 Nutrition Protocol", desc: "Eat to support your medication, not against it.", price: "$37", imageUrl: glp1NutritionGuide.url, imageAlt: "Balanced grilled chicken plate", link: "https://buy.stripe.com/7sYeVd3EK4pk9xGcWf6Vq07", internalLink: "/glp1" },
-  { title: "30-Day Gut Reset Protocol", desc: "30 days to a calmer, stronger gut.", price: "$37", imageUrl: fermentedKimchiBowl.url, imageAlt: "Fermented kimchi bowl", link: "https://buy.stripe.com/28EeVd3EK3lg4dme0j6Vq08", internalLink: "/gut-reset" },
-  { title: "Food as Medicine System", desc: "Anti-inflammatory meals backed by science.", price: "$37", imageUrl: turmericSalmon.url, imageAlt: "Turmeric salmon plate", link: "https://buy.stripe.com/6oU3cvejo3lgcJSe0j6Vq09", internalLink: "/food-as-medicine" },
-  { title: "Real Food Reset Protocol", desc: "Strip the noise. Rebuild the basics.", price: "$37", imageUrl: realFoodReset.url, imageAlt: "Real food reset bowl", link: "https://buy.stripe.com/14A6oHb7c4pkeS009t6Vq0a", internalLink: "/real-food-reset" },
-  { title: "Plant-Based Protein System", desc: "40g protein, zero animal products.", price: "$37", imageUrl: plantBasedBundle.url, imageAlt: "Tempeh and edamame bowl", link: "https://buy.stripe.com/8x2fZh0sy7Bw5hqbSb6Vq0b", internalLink: "/plant-based" },
-];
+const eyebrow = "font-sans uppercase text-[10px] tracking-[0.2em] text-sage";
+const eyebrowTight = "font-sans uppercase text-[10px] tracking-[0.22em] text-sage";
+const sectionHeadline = "font-display text-[40px] font-bold leading-[1.1] text-charcoal";
 
-const tier4: Product[] = [
-  { title: "The $10 Meal Blueprint", desc: "Budget-friendly without sacrificing quality.", price: "$17", imageUrl: mealsUnder10.url, imageAlt: "Lentil soup", link: "https://buy.stripe.com/7sY5kDcbgcVQh083lF6Vq0c", internalLink: "/10-meal-blueprint" },
-  { title: "The 20-Minute Meal", desc: "Weeknight-fast, restaurant-worthy.", price: "$17", imageUrl: meals20Less.url, imageAlt: "Garlic shrimp stir fry", link: "https://buy.stripe.com/bJebJ1ejof3YeS07BV6Vq0d", internalLink: "/20-minute-meal" },
-  { title: "The Family Table: Kids-Approved Dinners", desc: "Picky-eater approved, parent approved.", price: "$17", imageUrl: familyDinners.url, imageAlt: "Sheet pan chicken dinner", link: "https://buy.stripe.com/bJe4gzejodZUeS0cWf6Vq0e", internalLink: "/family-dinners" },
-  { title: "Men's Performance Nutrition Blueprint", desc: "Built for muscle, heart, and metabolism.", price: "$17", imageUrl: mealsForMen40.url, imageAlt: "Ribeye steak", link: "https://buy.stripe.com/8x2fZhejo2hceS009t6Vq0f", internalLink: "/mens-performance" },
-  { title: "The Sunday Prep System", desc: "Cook once. Eat well all week.", price: "$17", imageUrl: mealPrepSunday.url, imageAlt: "Meal prep containers", link: "https://buy.stripe.com/00w8wPb7c8FA39i3lF6Vq0g", internalLink: "/sunday-prep" },
-  { title: "Metabolic Reset Blueprint: 50+", desc: "Sustainable nutrition that respects your body.", price: "$17", imageUrl: weightLossAfter50.url, imageAlt: "Sea bass fillet plate", link: "https://buy.stripe.com/dRm7sL8Z43lg39icWf6Vq0h", internalLink: "/metabolic-reset" },
-];
-
-const testimonials = [
-  { quote: "These recipes completely changed how I think about weeknight dinners. Every single one is a keeper.", name: "Sarah K.", role: "Brooklyn, NY" },
-  { quote: "I went from ordering takeout 4 nights a week to cooking every day. The recipes are that approachable. Best $67 I've spent this year.", name: "David K.", role: "Austin, TX" },
-  { quote: "The protein breakdowns are exactly what I needed. Real food. Real numbers. No nonsense.", name: "James T.", role: "Chicago, IL — GLP-1 patient" },
-];
-
-function ProductCard({ p }: { p: Product }) {
-  const href = p.internalLink ?? "#";
-  return (
-    <a
-      href={href}
-      className="group flex flex-col bg-linen shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-    >
-      <img
-        src={p.imageUrl}
-        alt={p.imageAlt}
-        className="aspect-[4/3] w-full object-cover transition-opacity group-hover:opacity-95"
-        loading="lazy"
-      />
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-display text-xl font-medium leading-snug text-charcoal transition-colors group-hover:text-sage">
-          {p.title}
-        </h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
-        <div className="mt-6">
-          <span className="font-sans text-base font-light text-gold">{p.price}</span>
-        </div>
-      </div>
-    </a>
-  );
-}
-
-function TierHeader({ eyebrow, title }: { eyebrow: string; title: string }) {
-  return (
-    <div className="mb-10 mt-20 border-b border-border pb-6">
-      <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">{eyebrow}</span>
-      <h2 className="mt-3 font-display text-3xl font-medium text-charcoal md:text-4xl">{title}</h2>
-    </div>
-  );
-}
-
-function Shop() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
+function HomePage() {
   return (
     <SiteLayout>
-      <section className="border-b border-border bg-linen">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2">
-          <img src={roastedChicken.url} alt="The Complete Bundle" className="aspect-[5/6] w-full object-cover" />
-          <div>
-            <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">The Complete Bundle</span>
-            <h1 className="mt-4 font-display text-5xl font-medium leading-[1.05] text-charcoal md:text-6xl">
-              180 Recipes.<br />One Complete Nutritional System.
-            </h1>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              All 6 High Protein recipe books in one complete collection. Breakfast, Lunch, Dinner, Smoothies, Snacks, and Desserts. 180 tested recipes. One instant download. Yours forever.
-            </p>
-            <div className="mt-8 flex items-baseline gap-4">
-              <span className="text-sm text-muted-foreground line-through">$114</span>
-              <span className="text-base text-gold">$67</span>
-              <span className="text-sm text-sage">(save 41%)</span>
-            </div>
-            <a href="https://buy.stripe.com/00wbJ11wC9JEbFO7BV6Vq00" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-3 bg-sage px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-sage-foreground transition-all hover:bg-sage/90">
-              Get the Complete Bundle →
-            </a>
+      {/* SECTION 1 — HERO */}
+      <section
+        className="flex w-full items-center justify-center px-6 py-24"
+        style={{ backgroundColor: "#1C1C1C", minHeight: "90vh" }}
+      >
+        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+          <p className={eyebrowTight}>The Complete Methodology</p>
+          <h1
+            className="mt-6 font-display font-bold leading-[1.1] text-[38px] md:text-[64px]"
+            style={{ color: "#F7F5F1" }}
+          >
+            Eat Well.
+            <br />
+            <span className="italic" style={{ color: "#7D9B76" }}>
+              Every Single Day.
+            </span>
+          </h1>
+          <p
+            className="mt-8 font-display italic text-[18px]"
+            style={{ color: "#9A9590", maxWidth: 520 }}
+          >
+            A food-first biological optimization methodology built around the six systems
+            that food controls most directly.
+          </p>
+          <div
+            className="mt-10"
+            style={{ width: 1, height: 48, backgroundColor: "#C9A84C", opacity: 0.5 }}
+          />
+          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+            <Link
+              to="/bundle"
+              className="rounded-[2px] font-sans font-medium"
+              style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "14px 32px" }}
+            >
+              Get The System — $47
+            </Link>
+            <Link
+              to="/free-recipes"
+              className="rounded-[2px] font-sans font-normal"
+              style={{
+                border: "1px solid rgba(247,245,241,0.25)",
+                color: "#F7F5F1",
+                padding: "14px 32px",
+              }}
+            >
+              Explore Free Recipes
+            </Link>
           </div>
+          <p className="mt-8 font-sans text-[11px]" style={{ color: "#9A9590" }}>
+            One flagship. Six satellite protocols. One complete system.
+          </p>
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-6 pb-24">
-        <TierHeader eyebrow="The Protein Foundation" title="30-Day Systems for Every Meal." />
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {tier2.map((p) => <ProductCard key={p.title} p={p} />)}
-        </div>
+      {/* SECTION 2 — THE SYSTEM OVERVIEW */}
+      <section id="system" className="w-full px-6" style={{ backgroundColor: "#F7F5F1", paddingTop: 96, paddingBottom: 96 }}>
+        <div className="mx-auto max-w-3xl">
+          <p className={eyebrow}>The Nourish System</p>
+          <h2 className={`mt-5 ${sectionHeadline}`}>Food is information.</h2>
+          <p className="mt-4 font-display italic text-[18px]" style={{ color: "#9A9590" }}>
+            Every meal sends a signal. The question is whether it is saying the right thing.
+          </p>
+          <div className="mt-6" style={{ width: 40, height: 2, backgroundColor: "#C9A84C" }} />
+          <p
+            className="mt-10 font-sans font-light text-[15px] leading-[1.85]"
+            style={{ color: "#3a3a3a", maxWidth: 640 }}
+          >
+            Most food content teaches you what to eat. The Nourish System teaches you why
+            food does what it does — and gives you the exact meals that put that knowledge
+            to work. Built around six biological systems that food directly controls, this
+            is not a diet, not a meal plan, and not a recipe collection. It is a
+            methodology for using food the way your body actually needs it.
+          </p>
 
-        <TierHeader eyebrow="Targeted Protocols" title="Solutions for Specific Health Goals." />
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {tier3.map((p) => <ProductCard key={p.title} p={p} />)}
-        </div>
-
-        <TierHeader eyebrow="Lifestyle Frameworks" title="High-Performance Eating for Daily Life." />
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {tier4.map((p) => <ProductCard key={p.title} p={p} />)}
-        </div>
-      </div>
-
-      {/* HOW IT WORKS */}
-      <section className="mx-auto max-w-7xl px-6 pt-24 pb-16">
-        <h2 className="mb-16 text-center font-display text-4xl font-medium text-charcoal md:text-5xl">
-          Simple by design.
-        </h2>
-        <div className="grid gap-12 md:grid-cols-3">
-          <div className="text-center">
-            <span className="font-sans text-xs uppercase tracking-[0.2em] text-sage">01</span>
-            <h3 className="mt-3 font-display text-2xl font-medium text-charcoal">Choose Your Collection</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Browse by meal type, diet goal, or lifestyle. There is something for every way you eat.
-            </p>
-          </div>
-          <div className="text-center">
-            <span className="font-sans text-xs uppercase tracking-[0.2em] text-sage">02</span>
-            <h3 className="mt-3 font-display text-2xl font-medium text-charcoal">Instant Download</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Purchase once. Download immediately to any device. No subscriptions. No waiting.
-            </p>
-          </div>
-          <div className="text-center">
-            <span className="font-sans text-xs uppercase tracking-[0.2em] text-sage">03</span>
-            <h3 className="mt-3 font-display text-2xl font-medium text-charcoal">Start Cooking</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              180 tested recipes organized by goal, protein, and prep time. Open and cook.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="bg-linen py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="mb-14 max-w-2xl font-display text-3xl font-medium text-charcoal md:text-4xl">
-            From the kitchens of real people.
-          </h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <figure key={t.name} className="border border-charcoal/10 bg-background p-8">
-                <div className="font-display text-4xl leading-none text-sage">"</div>
-                <blockquote className="mt-3 font-display text-lg leading-relaxed text-charcoal">
-                  {t.quote}
-                </blockquote>
-                <figcaption className="mt-6 border-t border-border pt-4">
-                  <div className="font-sans text-sm font-medium text-charcoal">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
-                </figcaption>
-              </figure>
+          <div className="mt-14 grid grid-cols-2 md:grid-cols-4">
+            {[
+              { n: "120", l: "Recipes" },
+              { n: "6", l: "Biological Pillars" },
+              { n: "7", l: "Complete Books" },
+              { n: "1", l: "Unified System" },
+            ].map((s, i) => (
+              <div
+                key={s.l}
+                className="px-6 py-4"
+                style={{
+                  borderLeft: i === 0 ? "none" : "1px solid rgba(28,28,28,0.09)",
+                }}
+              >
+                <div className="font-display text-[32px] font-bold text-charcoal">{s.n}</div>
+                <div
+                  className="mt-2 font-sans uppercase text-[10px]"
+                  style={{ letterSpacing: "0.16em", color: "#9A9590" }}
+                >
+                  {s.l}
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* EMAIL */}
-      <section className="mx-auto max-w-3xl px-6 py-24 text-center">
-        <span className="font-sans text-xs uppercase tracking-[0.3em] text-sage">Free Download</span>
-        <h2 className="mt-4 font-display text-4xl font-medium leading-tight text-charcoal md:text-5xl">
-          Get 7 Free Recipes
-        </h2>
-        <p className="mt-3 text-muted-foreground">— straight to your inbox.</p>
-        <form
-          onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
-          className="mx-auto mt-10 flex max-w-lg flex-col gap-3 sm:flex-row"
-        >
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="your@email.com"
-            className="flex-1 border border-charcoal/20 bg-background px-5 py-4 font-sans text-sm text-charcoal placeholder:text-charcoal/40 focus:border-sage focus:outline-none"
-          />
-          <button
-            type="submit"
-            className="bg-sage px-7 py-4 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-sage-foreground transition-all hover:bg-sage/90"
+      {/* SECTION 3 — THE SIX PILLARS */}
+      <section className="w-full px-6" style={{ backgroundColor: "#F2EDE4", paddingTop: 96, paddingBottom: 96 }}>
+        <div className="mx-auto max-w-6xl">
+          <p className={eyebrow}>Six Biological Pillars</p>
+          <h2 className={`mt-5 ${sectionHeadline}`}>
+            Six systems.
+            <br />
+            <span className="italic" style={{ color: "#7D9B76" }}>All controlled by food.</span>
+          </h2>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {pillars.map((p) => (
+              <a
+                key={p.n}
+                href={p.href}
+                className="block transition-transform hover:-translate-y-0.5"
+                style={{
+                  backgroundColor: "#F7F5F1",
+                  borderRadius: 4,
+                  padding: 28,
+                  borderTop: "3px solid #7D9B76",
+                }}
+              >
+                <div
+                  className="font-display uppercase text-[11px]"
+                  style={{ letterSpacing: "0.2em", color: "#C9A84C" }}
+                >
+                  Pillar {p.n}
+                </div>
+                <h3 className="mt-3 font-display text-[22px] font-semibold text-charcoal">
+                  {p.name}
+                </h3>
+                <p
+                  className="mt-2 font-sans font-light italic text-[13px]"
+                  style={{ color: "#9A9590" }}
+                >
+                  {p.promise}
+                </p>
+                <div
+                  className="mt-5 font-sans font-medium text-[12px]"
+                  style={{ color: "#7D9B76" }}
+                >
+                  Explore Protocol →
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 — THE PRODUCTS */}
+      <section className="w-full px-6" style={{ backgroundColor: "#F7F5F1", paddingTop: 96, paddingBottom: 96 }}>
+        <div className="mx-auto max-w-6xl">
+          <p className={eyebrow}>The Complete Library</p>
+          <h2 className={`mt-5 ${sectionHeadline}`}>
+            One system.
+            <br />
+            <span className="italic" style={{ color: "#7D9B76" }}>Seven books.</span>
+          </h2>
+
+          {/* Tier 1 — Flagship */}
+          <div
+            className="mt-12 flex flex-col gap-6 p-10 md:flex-row md:items-center md:justify-between md:p-14"
+            style={{ backgroundColor: "#1C1C1C", borderRadius: 4 }}
           >
-            Send Me Recipes
-          </button>
-        </form>
-        {submitted && (
-          <p className="mt-4 text-sm text-sage">Check your inbox — your recipes are on the way.</p>
-        )}
+            <div className="max-w-2xl">
+              <div
+                className="font-sans uppercase text-[10px]"
+                style={{ letterSpacing: "0.16em", color: "#7D9B76" }}
+              >
+                The Complete Methodology
+              </div>
+              <h3
+                className="mt-3 font-display text-[32px] font-bold"
+                style={{ color: "#F7F5F1" }}
+              >
+                The Nourish System
+              </h3>
+              <p
+                className="mt-4 font-sans font-light text-[14px]"
+                style={{ color: "#9A9590" }}
+              >
+                The complete food-first biological optimization methodology. Six pillars.
+                120 recipes. The full system.
+              </p>
+            </div>
+            <div className="flex flex-col items-start gap-4 md:items-end">
+              <div
+                className="font-sans font-light text-[28px]"
+                style={{ color: "#C9A84C" }}
+              >
+                $47
+              </div>
+              <Link
+                to="/bundle"
+                className="rounded-[2px] font-sans font-medium"
+                style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "14px 28px" }}
+              >
+                Get The Flagship
+              </Link>
+            </div>
+          </div>
+
+          {/* Tier 2 — Satellites */}
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {pillars.map((p) => (
+              <a
+                key={p.n}
+                href={p.href}
+                className="block transition-transform hover:-translate-y-0.5"
+                style={{
+                  backgroundColor: "#F2EDE4",
+                  borderRadius: 4,
+                  padding: 24,
+                  borderTop: "3px solid #7D9B76",
+                }}
+              >
+                <div
+                  className="font-sans uppercase text-[9px]"
+                  style={{ letterSpacing: "0.16em", color: "#9A9590" }}
+                >
+                  Satellite Protocol {p.n}
+                </div>
+                <h4 className="mt-3 font-display text-[18px] font-semibold text-charcoal">
+                  {p.name}
+                </h4>
+                <div
+                  className="mt-4 font-sans font-light text-[20px]"
+                  style={{ color: "#C9A84C" }}
+                >
+                  $27
+                </div>
+                <div
+                  className="mt-4 font-sans font-medium text-[12px]"
+                  style={{ color: "#7D9B76" }}
+                >
+                  Get This Protocol →
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Tier 3 — Bundle */}
+          <div
+            className="mt-8 flex flex-col gap-6 p-10 md:flex-row md:items-center md:justify-between md:p-14"
+            style={{ backgroundColor: "#7D9B76", borderRadius: 4 }}
+          >
+            <div className="max-w-2xl">
+              <div
+                className="font-sans uppercase text-[10px]"
+                style={{ letterSpacing: "0.16em", color: "rgba(247,245,241,0.7)" }}
+              >
+                Best Value
+              </div>
+              <h3
+                className="mt-3 font-display text-[28px] font-bold"
+                style={{ color: "#F7F5F1" }}
+              >
+                The Complete Nourish Bundle
+              </h3>
+              <p
+                className="mt-4 font-sans font-light text-[14px]"
+                style={{ color: "rgba(247,245,241,0.8)" }}
+              >
+                Every book in The Nourish System. The flagship plus all six satellite
+                protocols. The complete biological optimization library.
+              </p>
+            </div>
+            <div className="flex flex-col items-start gap-2 md:items-end">
+              <div
+                className="font-sans font-light text-[28px]"
+                style={{ color: "#F7F5F1" }}
+              >
+                $147
+              </div>
+              <p
+                className="font-sans text-[12px]"
+                style={{ color: "rgba(247,245,241,0.6)" }}
+              >
+                Save $62 versus buying individually
+              </p>
+              <Link
+                to="/bundle"
+                className="mt-2 rounded-[2px] font-sans font-medium"
+                style={{ backgroundColor: "#1C1C1C", color: "#F7F5F1", padding: "14px 28px" }}
+              >
+                Get The Complete Bundle
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5 — PULL QUOTE */}
+      <section
+        className="w-full px-6 text-center"
+        style={{ backgroundColor: "#1C1C1C", paddingTop: 80, paddingBottom: 80 }}
+      >
+        <div className="mx-auto" style={{ maxWidth: 640 }}>
+          <p
+            className="font-display italic leading-[1.6] text-[20px] md:text-[26px]"
+            style={{ color: "#F7F5F1" }}
+          >
+            "Above the diet. Below the clinic. Food that actually understands what your
+            body is doing."
+          </p>
+          <div
+            className="mx-auto mt-8"
+            style={{ width: 40, height: 1, backgroundColor: "#C9A84C" }}
+          />
+          <p
+            className="mt-6 font-sans uppercase text-[11px]"
+            style={{ letterSpacing: "0.16em", color: "#9A9590" }}
+          >
+            — The Nourish System
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 6 — FREE RECIPES TEASER */}
+      <section
+        className="w-full px-6 text-center"
+        style={{ backgroundColor: "#F2EDE4", paddingTop: 96, paddingBottom: 96 }}
+      >
+        <div className="mx-auto max-w-2xl">
+          <p className={eyebrow}>Start Here</p>
+          <h2 className={`mt-5 ${sectionHeadline}`}>Try the system.</h2>
+          <p className="mt-4 font-display italic text-[18px]" style={{ color: "#9A9590" }}>
+            Six free recipes. One from each pillar. No email required.
+          </p>
+          <Link
+            to="/free-recipes"
+            className="mt-10 inline-block rounded-[2px] font-sans font-medium"
+            style={{ backgroundColor: "#1C1C1C", color: "#F7F5F1", padding: "14px 32px" }}
+          >
+            Explore Free Recipes
+          </Link>
+          <p className="mt-6 font-sans text-[12px]" style={{ color: "#9A9590" }}>
+            Real food. Real biology. No restriction.
+          </p>
+        </div>
       </section>
     </SiteLayout>
   );
