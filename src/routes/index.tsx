@@ -230,7 +230,7 @@ function HomePage() {
               </p>
             </div>
             <div className="flex flex-col items-start gap-4 md:items-end">
-              <div className="text-[28px] price">
+            <div className="text-[28px] price" style={{ color: "#F7F5F1" }}>
                 $47</div>
               <Link
                 to="/system"
@@ -311,7 +311,7 @@ function HomePage() {
               </p>
             </div>
             <div className="flex flex-col items-start gap-2 md:items-end">
-              <div className="text-[28px] price">
+              <div className="text-[28px] price" style={{ color: "#F7F5F1" }}>
                 $147</div>
               <p
                 className="font-sans text-[12px]"
