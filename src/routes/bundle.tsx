@@ -157,7 +157,7 @@ function BundlePage() {
               style={{ width: 1, height: 48, backgroundColor: GOLD, opacity: 0.5 }}
             />
             <div className="mt-10 flex flex-col items-start gap-1">
-              <span className="price price" style={{ fontSize: 16, textDecoration: "line-through", opacity: 0.8 }}>
+              <span className="price" style={{ fontSize: 16, textDecoration: "line-through", opacity: 0.8 }}>
                 $209</span>
               <span className="price" style={{ fontSize: 48 }}>
                 $147</span>
