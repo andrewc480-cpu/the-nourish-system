@@ -105,3 +105,10 @@
   }
   h1, h2, h3, h4, h5 { font-family: var(--font-display); letter-spacing: -0.01em; }
 }
+
+@utility price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #C9A84C;
+  font-variant-numeric: lining-nums;
+}

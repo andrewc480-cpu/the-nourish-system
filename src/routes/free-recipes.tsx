@@ -441,12 +441,8 @@ function FreeRecipesPage() {
               >
                 120 recipes across all six pillars. The complete methodology. The Symptoms to Solution Index. The daily protocols.
               </p>
-              <p
-                className="mt-4 font-sans font-light"
-                style={{ fontSize: 20, color: GOLD , fontVariantNumeric: "lining-nums" }}
-              >
-                $47
-              </p>
+              <p className="mt-4 price" style={{ fontSize: 20 }}>
+                $47</p>
               <Link
                 to="/system"
                 className="mt-2 inline-block font-sans"
@@ -476,12 +472,8 @@ function FreeRecipesPage() {
               >
                 20 recipes per pillar. Full educational framework. Complete biological methodology. One focused protocol per biological system.
               </p>
-              <p
-                className="mt-4 font-sans font-light"
-                style={{ fontSize: 20, color: GOLD , fontVariantNumeric: "lining-nums" }}
-              >
-                $27 each
-              </p>
+              <p className="mt-4 price" style={{ fontSize: 20 }}>
+                $27 each</p>
               <Link
                 to="/bundle"
                 className="mt-2 inline-block font-sans"
@@ -511,12 +503,8 @@ function FreeRecipesPage() {
               >
                 All seven books. The flagship plus all six satellites. The complete biological optimization library.
               </p>
-              <p
-                className="mt-4 font-sans font-light"
-                style={{ fontSize: 20, color: GOLD , fontVariantNumeric: "lining-nums" }}
-              >
-                $147
-              </p>
+              <p className="mt-4 price" style={{ fontSize: 20 }}>
+                $147</p>
               <Link
                 to="/bundle"
                 className="mt-2 inline-block font-sans"

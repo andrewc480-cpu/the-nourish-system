@@ -796,7 +796,7 @@ function BlogPage() {
                 fontVariantNumeric: "lining-nums",
               }}
             >
-              Get The GLP-1 Protocol — $27
+              Get The GLP-1 Protocol — <span className="price">$27</span>
             </Link>
             <Link
               to="/bundle"
@@ -812,7 +812,7 @@ function BlogPage() {
                 fontVariantNumeric: "lining-nums",
               }}
             >
-              Get The Complete Bundle — $147
+              Get The Complete Bundle — <span className="price">$147</span>
             </Link>
           </div>
         </div>

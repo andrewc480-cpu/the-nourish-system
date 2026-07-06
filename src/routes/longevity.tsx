@@ -141,12 +141,8 @@ function LongevityPage() {
               className="mt-10"
               style={{ width: 1, height: 48, backgroundColor: GOLD, opacity: 0.5 }}
             />
-            <div
-              className="mt-10 font-sans"
-              style={{ fontSize: 40, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-            >
-              $27
-            </div>
+            <div className="mt-10 price" style={{ fontSize: 40 }}>
+              $27</div>
             <p
               className="mt-2 font-sans uppercase"
               style={{ fontSize: 11, color: MUTED, letterSpacing: "0.08em" }}
@@ -510,12 +506,8 @@ function LongevityPage() {
                 >
                   The complete longevity satellite protocol. Six sections. 20 recipes. Five longevity pathways.
                 </p>
-                <div
-                  className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-                >
-                  $27
-                </div>
+                <div className="mt-6 price" style={{ fontSize: 28 }}>
+                  $27</div>
                 <a
                   href="/longevity"
                   className="mt-6 inline-flex items-center font-sans font-medium"
@@ -553,12 +545,8 @@ function LongevityPage() {
                 >
                   This protocol plus the flagship and all five remaining satellites.
                 </p>
-                <div
-                  className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-                >
-                  $147
-                </div>
+                <div className="mt-6 price" style={{ fontSize: 28 }}>
+                  $147</div>
                 <p
                   className="mt-2 font-sans"
                   style={{ fontSize: 11, color: MUTED }}
@@ -632,12 +620,8 @@ function LongevityPage() {
                   >
                     {p.name}
                   </h3>
-                  <p
-                    className="mt-2 font-sans"
-                    style={{ fontSize: 14, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-                  >
-                    $27
-                  </p>
+                  <p className="mt-2 price" style={{ fontSize: 14 }}>
+                    $27</p>
                   {p.to.startsWith("/") ? (
                     <Link
                       to={p.to}
