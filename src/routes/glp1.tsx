@@ -113,12 +113,8 @@ function Glp1Page() {
               className="mt-10"
               style={{ width: 1, height: 48, backgroundColor: GOLD, opacity: 0.5 }}
             />
-            <div
-              className="mt-10 font-sans"
-              style={{ fontSize: 40, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-            >
-              $27
-            </div>
+            <div className="mt-10 price" style={{ fontSize: 40 }}>
+              $27</div>
             <p
               className="mt-2 font-sans uppercase"
               style={{ fontSize: 11, color: MUTED, letterSpacing: "0.08em" }}
@@ -461,12 +457,8 @@ function Glp1Page() {
                 >
                   The complete GLP-1 satellite protocol. Seven sections. 20 recipes. Full injection cycle framework.
                 </p>
-                <div
-                  className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-                >
-                  $27
-                </div>
+                <div className="mt-6 price" style={{ fontSize: 28 }}>
+                  $27</div>
                 <a
                   href="/glp1"
                   className="mt-6 inline-flex items-center font-sans font-medium"
@@ -504,12 +496,8 @@ function Glp1Page() {
                 >
                   This protocol plus the flagship and all five remaining satellites.
                 </p>
-                <div
-                  className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-                >
-                  $147
-                </div>
+                <div className="mt-6 price" style={{ fontSize: 28 }}>
+                  $147</div>
                 <p
                   className="mt-2 font-sans"
                   style={{ fontSize: 11, color: MUTED }}
@@ -583,12 +571,8 @@ function Glp1Page() {
                   >
                     {p.name}
                   </h3>
-                  <div
-                    className="mt-3 font-sans"
-                    style={{ fontSize: 22, fontWeight: 700, color: GOLD, fontFamily: "'Playfair Display', serif" , fontVariantNumeric: "lining-nums" }}
-                  >
-                    $27
-                  </div>
+                  <div className="mt-3 price" style={{ fontSize: 22,  }}>
+                    $27</div>
                   <Link
                     to={p.to as any}
                     className="mt-4 font-sans"

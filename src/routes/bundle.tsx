@@ -157,18 +157,10 @@ function BundlePage() {
               style={{ width: 1, height: 48, backgroundColor: GOLD, opacity: 0.5 }}
             />
             <div className="mt-10 flex flex-col items-start gap-1">
-              <span
-                className="font-sans"
-                style={{ fontSize: 16, fontWeight: 400, color: MUTED, textDecoration: "line-through", opacity: 0.8 , fontVariantNumeric: "lining-nums" }}
-              >
-                $209
-              </span>
-              <span
-                className="font-display font-bold"
-                style={{ fontSize: 48, color: GOLD , fontVariantNumeric: "lining-nums" }}
-              >
-                $147
-              </span>
+              <span className="price price" style={{ fontSize: 16, textDecoration: "line-through", opacity: 0.8 }}>
+                $209</span>
+              <span className="price" style={{ fontSize: 48 }}>
+                $147</span>
             </div>
             <p
               className="mt-2 font-sans uppercase"
@@ -306,8 +298,8 @@ function BundlePage() {
                 </div>
                 <div className="flex shrink-0 flex-col items-end gap-1">
                   <span
-                    className="font-sans"
-                    style={{ fontSize: 12, color: MUTED, textDecoration: "line-through" }}
+                    className="price"
+                    style={{ fontSize: 12, textDecoration: "line-through" }}
                   >
                     {b.individual}
                   </span>
@@ -328,14 +320,13 @@ function BundlePage() {
             style={{ backgroundColor: TEXT }}
           >
             <span className="font-sans font-light" style={{ fontSize: 13, color: MUTED }}>
-              Total individual value: $209
+              Total individual value: <span className="price">$209</span>
             </span>
             <span className="font-display font-semibold" style={{ fontSize: 16, color: BG }}>
               The Complete Bundle
             </span>
-            <span className="font-sans font-light" style={{ fontSize: 18, color: GOLD , fontVariantNumeric: "lining-nums" }}>
-              $147 — Save $62
-            </span>
+            <span className="price" style={{ fontSize: 18 }}>
+              $147 — Save $62</span>
           </div>
         </section>
 
@@ -479,14 +470,10 @@ function BundlePage() {
               className="mt-6 w-full"
               style={{ height: 1, backgroundColor: "rgba(247,245,241,0.1)" }}
             />
-            <div
-              className="mt-6 font-sans"
-              style={{ fontSize: 56, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-            >
-              $147
-            </div>
+            <div className="mt-6 price" style={{ fontSize: 56 }}>
+              $147</div>
             <p className="mt-2 font-sans" style={{ fontSize: 11, color: MUTED }}>
-              Individual value $209 · You save $62
+              Individual value <span className="price">$209</span> · You save <span className="price">$62</span>
             </p>
             <a
               href="/bundle"
@@ -544,9 +531,8 @@ function BundlePage() {
               <h3 className="mt-2 font-display font-semibold" style={{ fontSize: 15, color: TEXT }}>
                 The Nourish System
               </h3>
-              <p className="mt-2 font-sans" style={{ fontSize: 14, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}>
-                $47
-              </p>
+              <p className="mt-2 price" style={{ fontSize: 14 }}>
+                $47</p>
               <Link
                 to="/"
                 className="mt-2 inline-block font-sans"

@@ -112,12 +112,8 @@ function SystemPage() {
               className="mt-10"
               style={{ width: 1, height: 48, backgroundColor: GOLD, opacity: 0.5 }}
             />
-            <div
-              className="mt-10 font-sans"
-              style={{ fontSize: 40, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-            >
-              $47
-            </div>
+            <div className="mt-10 price" style={{ fontSize: 40 }}>
+              $47</div>
             <p
               className="mt-2 font-sans uppercase"
               style={{ fontSize: 11, color: MUTED, letterSpacing: "0.08em" }}
@@ -370,12 +366,8 @@ function SystemPage() {
                 >
                   The complete flagship methodology. Seven sections. 120 recipes.
                 </p>
-                <div
-                  className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-                >
-                  $47
-                </div>
+                <div className="mt-6 price" style={{ fontSize: 28 }}>
+                  $47</div>
                 <a
                   href="/system"
                   className="mt-6 inline-flex items-center font-sans font-medium"
@@ -416,12 +408,8 @@ function SystemPage() {
                 >
                   The flagship plus the satellite protocol that addresses your most pressing concern.
                 </p>
-                <div
-                  className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-                >
-                  $67
-                </div>
+                <div className="mt-6 price" style={{ fontSize: 28 }}>
+                  $67</div>
                 <p
                   className="mt-2 font-sans"
                   style={{ fontSize: 12, color: MUTED }}
@@ -465,12 +453,8 @@ function SystemPage() {
                 >
                   Every book. The complete system.
                 </p>
-                <div
-                  className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-                >
-                  $147
-                </div>
+                <div className="mt-6 price" style={{ fontSize: 28 }}>
+                  $147</div>
                 <p
                   className="mt-2 font-sans"
                   style={{ fontSize: 11, color: MUTED }}

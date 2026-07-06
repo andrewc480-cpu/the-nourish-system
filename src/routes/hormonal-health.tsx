@@ -136,12 +136,8 @@ function HormonalHealthPage() {
               className="mt-10"
               style={{ width: 1, height: 48, backgroundColor: GOLD, opacity: 0.5 }}
             />
-            <div
-              className="mt-10 font-sans"
-              style={{ fontSize: 40, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-            >
-              $27
-            </div>
+            <div className="mt-10 price" style={{ fontSize: 40 }}>
+              $27</div>
             <p
               className="mt-2 font-sans uppercase"
               style={{ fontSize: 11, color: MUTED, letterSpacing: "0.08em" }}
@@ -469,12 +465,8 @@ function HormonalHealthPage() {
                 >
                   The complete hormonal health satellite protocol. Six sections. 20 recipes. Four hormonal targets.
                 </p>
-                <div
-                  className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-                >
-                  $27
-                </div>
+                <div className="mt-6 price" style={{ fontSize: 28 }}>
+                  $27</div>
                 <a
                   href="/hormonal-health"
                   className="mt-6 inline-flex items-center font-sans font-medium"
@@ -515,12 +507,8 @@ function HormonalHealthPage() {
                 >
                   This protocol plus the flagship and all five remaining satellites.
                 </p>
-                <div
-                  className="mt-6 font-sans"
-                  style={{ fontSize: 28, fontWeight: 300, color: GOLD , fontVariantNumeric: "lining-nums" }}
-                >
-                  $147
-                </div>
+                <div className="mt-6 price" style={{ fontSize: 28 }}>
+                  $147</div>
                 <p
                   className="mt-2 font-sans"
                   style={{ fontSize: 11, color: MUTED }}
@@ -594,12 +582,8 @@ function HormonalHealthPage() {
                   >
                     {a.name}
                   </h4>
-                  <p
-                    className="mt-2 font-sans"
-                    style={{ fontSize: 22, fontWeight: 700, color: GOLD, fontFamily: "'Playfair Display', serif" , fontVariantNumeric: "lining-nums" }}
-                  >
-                    $27
-                  </p>
+                  <p className="mt-2 price" style={{ fontSize: 22,  }}>
+                    $27</p>
                   <Link
                     to={a.to as any}
                     className="mt-3 inline-block font-sans font-medium"

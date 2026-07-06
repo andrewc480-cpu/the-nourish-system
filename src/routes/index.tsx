@@ -68,9 +68,8 @@ function HomePage() {
               style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "13px 28px" }}
             >
               <span>Get The Nourish System</span>
-              <span className="font-sans font-light" style={{ fontSize: 12, marginTop: 2 , fontVariantNumeric: "lining-nums" }}>
-                $47 · Digital PDF
-              </span>
+              <span className="price" style={{ fontSize: 12, marginTop: 2  }}>
+                $47 · Digital PDF</span>
             </Link>
             <Link
               to="/free-recipes"
@@ -231,12 +230,8 @@ function HomePage() {
               </p>
             </div>
             <div className="flex flex-col items-start gap-4 md:items-end">
-              <div
-                className="font-sans font-light text-[28px]"
-                style={{ color: "#C9A84C" , fontVariantNumeric: "lining-nums" }}
-              >
-                $47
-              </div>
+              <div className="text-[28px] price">
+                $47</div>
               <Link
                 to="/system"
                 className="rounded-[2px] font-sans font-medium"
@@ -277,12 +272,8 @@ function HomePage() {
                 <h4 className="mt-3 font-display text-[18px] font-semibold text-charcoal">
                   {p.name}
                 </h4>
-                <div
-                  className="mt-4 font-sans font-light text-[20px]"
-                  style={{ color: "#C9A84C" , fontVariantNumeric: "lining-nums" }}
-                >
-                  $27
-                </div>
+                <div className="mt-4 text-[20px] price">
+                  $27</div>
                 <div
                   className="mt-4 font-sans font-medium text-[12px]"
                   style={{ color: "#7D9B76" }}
@@ -320,12 +311,8 @@ function HomePage() {
               </p>
             </div>
             <div className="flex flex-col items-start gap-2 md:items-end">
-              <div
-                className="font-sans font-light text-[28px]"
-                style={{ color: "#F7F5F1" , fontVariantNumeric: "lining-nums" }}
-              >
-                $147
-              </div>
+              <div className="text-[28px] price">
+                $147</div>
               <p
                 className="font-sans text-[12px]"
                 style={{ color: "rgba(247,245,241,0.6)" }}
