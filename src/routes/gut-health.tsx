@@ -573,7 +573,7 @@ function GutHealthPage() {
                   >
                     {a.name}
                   </h3>
-                  <p className="mt-2 price" style={{ fontSize: 22,  }}>
+                  <p className="mt-2 price" style={{ fontSize: 22 }}>
                     $27</p>
                   <Link
                     to={a.to as any}

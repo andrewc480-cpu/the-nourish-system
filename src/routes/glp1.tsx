@@ -571,7 +571,7 @@ function Glp1Page() {
                   >
                     {p.name}
                   </h3>
-                  <div className="mt-3 price" style={{ fontSize: 22,  }}>
+                  <div className="mt-3 price" style={{ fontSize: 22 }}>
                     $27</div>
                   <Link
                     to={p.to as any}
