@@ -64,8 +64,8 @@ function HomePage() {
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
             <Link
               to="/system"
-              className="rounded-[2px] font-sans font-medium flex flex-col items-center leading-tight"
-              style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "13px 28px" }}
+              className="rounded-[2px] font-sans font-medium flex flex-col items-center leading-tight bg-[#C9A84C] hover:bg-[#BE9A3D] transition-colors duration-150"
+              style={{ color: "#1C1C1C", padding: "13px 28px" }}
             >
               <span>Get The Nourish System</span>
               <span className="price" style={{ fontSize: 12, marginTop: 2, color: "#1C1C1C" }}>
@@ -73,7 +73,7 @@ function HomePage() {
             </Link>
             <Link
               to="/free-recipes"
-              className="rounded-[2px] font-sans font-normal"
+              className="rounded-[2px] font-sans font-normal transition-colors duration-150 hover:bg-[rgba(247,245,241,0.08)]"
               style={{
                 border: "1px solid rgba(247,245,241,0.25)",
                 color: "#F7F5F1",
@@ -235,8 +235,8 @@ function HomePage() {
               </div>
               <Link
                 to="/system"
-                className="rounded-[2px] font-sans font-medium whitespace-nowrap"
-                style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "14px 28px" }}
+                className="rounded-[2px] font-sans font-medium whitespace-nowrap bg-[#C9A84C] hover:bg-[#BE9A3D] transition-colors duration-150"
+                style={{ color: "#1C1C1C", padding: "14px 28px" }}
               >
                 Get The Flagship
               </Link>
@@ -322,8 +322,8 @@ function HomePage() {
               </p>
               <Link
                 to="/bundle"
-                className="mt-2 rounded-[2px] font-sans font-medium"
-                style={{ backgroundColor: "#1C1C1C", color: "#F7F5F1", padding: "14px 28px" }}
+                className="mt-2 rounded-[2px] font-sans font-medium bg-[#1C1C1C] hover:bg-[#2A2A2A] transition-colors duration-150"
+                style={{ color: "#F7F5F1", padding: "14px 28px" }}
               >
                 Get The Complete Bundle
               </Link>
@@ -371,8 +371,8 @@ function HomePage() {
           </p>
           <Link
             to="/free-recipes"
-            className="mt-10 inline-block rounded-[2px] font-sans font-medium"
-            style={{ backgroundColor: "#1C1C1C", color: "#F7F5F1", padding: "14px 32px" }}
+            className="mt-10 inline-block rounded-[2px] font-sans font-medium bg-[#1C1C1C] hover:bg-[#2A2A2A] transition-colors duration-150"
+            style={{ color: "#F7F5F1", padding: "14px 32px" }}
           >
             Explore Free Recipes
           </Link>
