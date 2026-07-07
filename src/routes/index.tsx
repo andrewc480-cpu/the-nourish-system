@@ -90,7 +90,7 @@ function HomePage() {
       </section>
 
       {/* SECTION 2 — THE SYSTEM OVERVIEW */}
-      <section id="system" className="w-full px-6" style={{ backgroundColor: "#F7F5F1", paddingTop: 96, paddingBottom: 96 }}>
+      <section id="system" className="w-full px-6 py-16 md:py-24" style={{ backgroundColor: "#F7F5F1" }}>
         <div className="mx-auto max-w-3xl">
           <p className={eyebrow}>The Nourish System</p>
           <h2 className={`mt-5 ${sectionHeadline}`}>Food is information.</h2>
