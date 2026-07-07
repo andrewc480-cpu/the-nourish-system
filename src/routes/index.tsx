@@ -334,8 +334,8 @@ function HomePage() {
 
       {/* SECTION 5 — PULL QUOTE */}
       <section
-        className="w-full px-6 text-center"
-        style={{ backgroundColor: "#1C1C1C", paddingTop: 80, paddingBottom: 80 }}
+        className="w-full px-6 text-center py-14 md:py-20"
+        style={{ backgroundColor: "#1C1C1C" }}
       >
         <div className="mx-auto" style={{ maxWidth: 640 }}>
           <p
