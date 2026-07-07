@@ -31,7 +31,7 @@ export function Header() {
           ))}
           <Link
             to="/system"
-            className="ml-2 inline-flex items-center rounded-[2px] bg-[#C9A84C] px-4 py-2 font-sans text-sm font-medium text-[#1C1C1C] transition-opacity hover:opacity-90"
+            className="ml-2 inline-flex items-center rounded-[2px] bg-[#C9A84C] px-4 py-2 font-sans text-sm font-medium text-[#1C1C1C] transition-colors hover:bg-[#BE9A3D]"
           >
             Get The System
           </Link>
