@@ -90,7 +90,7 @@ function HomePage() {
       </section>
 
       {/* SECTION 2 — THE SYSTEM OVERVIEW */}
-      <section id="system" className="w-full px-6" style={{ backgroundColor: "#F7F5F1", paddingTop: 96, paddingBottom: 96 }}>
+      <section id="system" className="w-full px-6 py-16 md:py-24" style={{ backgroundColor: "#F7F5F1" }}>
         <div className="mx-auto max-w-3xl">
           <p className={eyebrow}>The Nourish System</p>
           <h2 className={`mt-5 ${sectionHeadline}`}>Food is information.</h2>
@@ -137,7 +137,7 @@ function HomePage() {
       </section>
 
       {/* SECTION 3 — THE SIX PILLARS */}
-      <section className="w-full px-6" style={{ backgroundColor: "#F2EDE4", paddingTop: 96, paddingBottom: 96 }}>
+      <section className="w-full px-6 py-16 md:py-24" style={{ backgroundColor: "#F2EDE4" }}>
         <div className="mx-auto max-w-6xl">
           <p className={eyebrow}>Six Biological Pillars</p>
           <h2 className={`mt-5 ${sectionHeadline}`}>
@@ -194,7 +194,7 @@ function HomePage() {
       </section>
 
       {/* SECTION 4 — THE PRODUCTS */}
-      <section className="w-full px-6" style={{ backgroundColor: "#F7F5F1", paddingTop: 96, paddingBottom: 96 }}>
+      <section className="w-full px-6 py-16 md:py-24" style={{ backgroundColor: "#F7F5F1" }}>
         <div className="mx-auto max-w-6xl">
           <p className={eyebrow}>The Complete Library</p>
           <h2 className={`mt-5 ${sectionHeadline}`}>
@@ -334,8 +334,8 @@ function HomePage() {
 
       {/* SECTION 5 — PULL QUOTE */}
       <section
-        className="w-full px-6 text-center"
-        style={{ backgroundColor: "#1C1C1C", paddingTop: 80, paddingBottom: 80 }}
+        className="w-full px-6 text-center py-14 md:py-20"
+        style={{ backgroundColor: "#1C1C1C" }}
       >
         <div className="mx-auto" style={{ maxWidth: 640 }}>
           <p
@@ -360,8 +360,8 @@ function HomePage() {
 
       {/* SECTION 6 — FREE RECIPES TEASER */}
       <section
-        className="w-full px-6 text-center"
-        style={{ backgroundColor: "#F2EDE4", paddingTop: 96, paddingBottom: 96 }}
+        className="w-full px-6 text-center py-16 md:py-24"
+        style={{ backgroundColor: "#F2EDE4" }}
       >
         <div className="mx-auto max-w-2xl">
           <p className={eyebrow}>Start Here</p>
