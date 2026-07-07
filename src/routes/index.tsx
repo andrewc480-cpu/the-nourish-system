@@ -360,8 +360,8 @@ function HomePage() {
 
       {/* SECTION 6 — FREE RECIPES TEASER */}
       <section
-        className="w-full px-6 text-center"
-        style={{ backgroundColor: "#F2EDE4", paddingTop: 96, paddingBottom: 96 }}
+        className="w-full px-6 text-center py-16 md:py-24"
+        style={{ backgroundColor: "#F2EDE4" }}
       >
         <div className="mx-auto max-w-2xl">
           <p className={eyebrow}>Start Here</p>
