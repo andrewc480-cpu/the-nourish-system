@@ -194,7 +194,7 @@ function HomePage() {
       </section>
 
       {/* SECTION 4 — THE PRODUCTS */}
-      <section className="w-full px-6" style={{ backgroundColor: "#F7F5F1", paddingTop: 96, paddingBottom: 96 }}>
+      <section className="w-full px-6 py-16 md:py-24" style={{ backgroundColor: "#F7F5F1" }}>
         <div className="mx-auto max-w-6xl">
           <p className={eyebrow}>The Complete Library</p>
           <h2 className={`mt-5 ${sectionHeadline}`}>
