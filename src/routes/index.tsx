@@ -68,7 +68,7 @@ function HomePage() {
               style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "13px 28px" }}
             >
               <span>Get The Nourish System</span>
-              <span className="price" style={{ fontSize: 12, marginTop: 2  }}>
+              <span className="price" style={{ fontSize: 12, marginTop: 2, color: "#1C1C1C" }}>
                 $47 · Digital PDF</span>
             </Link>
             <Link
@@ -230,11 +230,12 @@ function HomePage() {
               </p>
             </div>
             <div className="flex flex-col items-start gap-4 md:items-end">
-            <div className="text-[28px] price" style={{ color: "#F7F5F1" }}>
-                $47</div>
+              <div className="text-[28px] price self-end text-right" style={{ color: "#F7F5F1" }}>
+                $47
+              </div>
               <Link
                 to="/system"
-                className="rounded-[2px] font-sans font-medium"
+                className="rounded-[2px] font-sans font-medium whitespace-nowrap"
                 style={{ backgroundColor: "#C9A84C", color: "#1C1C1C", padding: "14px 28px" }}
               >
                 Get The Flagship
