@@ -310,7 +310,7 @@ function HomePage() {
                 protocols. The complete biological optimization library.
               </p>
             </div>
-            <div className="flex flex-col items-start gap-2 md:items-end">
+            <div className="flex flex-col items-start gap-2 md:items-start">
               <div className="text-[28px] price" style={{ color: "#F7F5F1" }}>
                 $147</div>
               <p
