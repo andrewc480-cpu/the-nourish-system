@@ -137,7 +137,7 @@ function HomePage() {
       </section>
 
       {/* SECTION 3 — THE SIX PILLARS */}
-      <section className="w-full px-6" style={{ backgroundColor: "#F2EDE4", paddingTop: 96, paddingBottom: 96 }}>
+      <section className="w-full px-6 py-16 md:py-24" style={{ backgroundColor: "#F2EDE4" }}>
         <div className="mx-auto max-w-6xl">
           <p className={eyebrow}>Six Biological Pillars</p>
           <h2 className={`mt-5 ${sectionHeadline}`}>
