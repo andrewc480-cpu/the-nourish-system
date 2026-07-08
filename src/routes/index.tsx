@@ -279,62 +279,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3 — THE SIX PILLARS */}
-      <section className="w-full px-6 py-9 md:py-12 lg:py-16" style={{ backgroundColor: "#F2EDE4" }}>
-        <div className="mx-auto max-w-6xl">
-          <p className={eyebrow}>Six Biological Pillars</p>
-          <h2 className={`mt-5 ${sectionHeadline}`}>
-            Six systems.
-            <br />
-            <span className="italic" style={{ color: "#7D9B76" }}>All controlled by food.</span>
-          </h2>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {([
-              { n: "01", name: "GLP-1 Nutrition", promise: "Eat to protect your muscle and stabilise your energy.", href: "/glp1" },
-              { n: "02", name: "Gut Health", promise: "Restore the gut. Everything else follows.", href: "/gut-health" },
-              { n: "03", name: "Metabolic Health", promise: "Stable blood sugar is the foundation of everything.", href: "/metabolic-health" },
-              { n: "04", name: "Cognitive Performance", promise: "Feed your brain. Protect it for life.", href: "/cognitive-performance" },
-              { n: "05", name: "Longevity & Healthspan", promise: "Not longer. Better. For as long as possible.", href: "/longevity" },
-              { n: "06", name: "Hormonal Health", promise: "Restore from the inside. Every meal.", href: "/hormonal-health" },
-            ] as const).map((p) => (
-              <a
-                key={p.n}
-                href={p.href}
-                className="block transition-transform hover:-translate-y-0.5"
-                style={{
-                  backgroundColor: "#F7F5F1",
-                  borderRadius: 4,
-                  padding: 28,
-                  borderTop: "3px solid #7D9B76",
-                }}
-              >
-                <div
-                  className="font-display uppercase text-[11px]"
-                  style={{ letterSpacing: "0.2em", color: "#C9A84C" }}
-                >
-                  Pillar {p.n}
-                </div>
-                <h3 className="mt-3 font-display text-[22px] font-semibold text-charcoal">
-                  {p.name}
-                </h3>
-                <p
-                  className="mt-2 font-sans font-light italic text-[13px]"
-                  style={{ color: "#9A9590" }}
-                >
-                  {p.promise}
-                </p>
-                <div
-                  className="mt-5 font-sans font-medium text-[12px]"
-                  style={{ color: "#7D9B76" }}
-                >
-                  Explore Protocol →
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* SECTION 4 — THE PRODUCTS */}
       <section className="w-full px-6 py-9 md:py-12 lg:py-16" style={{ backgroundColor: "#F7F5F1" }}>
