@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiteLayout } from "@/components/site/Layout";
+import { Footer } from "@/components/site/Footer";
+import heroAsset from "@/assets/H1_Pomegranate_Salmon_Power_Plate.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,66 +28,204 @@ export const Route = createFileRoute("/")({
 
 
 const eyebrow = "font-sans uppercase text-[10px] tracking-[0.2em] text-sage";
-const eyebrowTight = "font-sans uppercase text-[10px] tracking-[0.22em] text-sage";
 const sectionHeadline = "font-display text-[40px] font-bold leading-[1.1] text-charcoal";
+
+const playfair = { fontFamily: '"Playfair Display", serif' };
+const dmsans = { fontFamily: '"DM Sans", sans-serif' };
+const archivo = { fontFamily: '"Archivo", sans-serif', fontVariantNumeric: "tabular-nums lining-nums" as const };
+
+const navLinks = ["Shop", "Free Recipes", "Blog", "About"];
+const pillars = [
+  { n: "01", label: "GLP-1" },
+  { n: "02", label: "Gut Health" },
+  { n: "03", label: "Metabolic" },
+  { n: "04", label: "Cognitive" },
+  { n: "05", label: "Longevity" },
+  { n: "06", label: "Hormonal" },
+];
 
 function HomePage() {
   return (
-    <SiteLayout>
-      {/* SECTION 1 — HERO */}
+    <div className="min-h-screen bg-background">
+      <main>
+      {/* SECTION 1 — HERO (approved preview hero) */}
       <section
-        className="flex w-full items-center justify-center px-6 py-24"
-        style={{ backgroundColor: "#1C1C1C", minHeight: "90vh" }}
+        className="relative w-full overflow-hidden"
+        style={{
+          aspectRatio: "16 / 9",
+          minHeight: 520,
+          backgroundImage: `url(${heroAsset.url})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <p className={eyebrowTight}>The Complete Methodology</p>
+        {/* Overlay 1 */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(100deg, rgba(20,20,19,0.90) 0%, rgba(20,20,19,0.62) 38%, rgba(20,20,19,0.10) 66%, rgba(20,20,19,0) 100%)",
+          }}
+        />
+        {/* Overlay 2 */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(20,20,19,0.55) 0%, rgba(20,20,19,0) 22%)",
+          }}
+        />
+
+        {/* Nav */}
+        <nav
+          className="absolute inset-x-0 top-0 z-20 flex items-center justify-between"
+          style={{ padding: "26px 44px" }}
+        >
+          <div style={{ ...playfair, fontWeight: 700, fontSize: 27, color: "#F7F5F1", lineHeight: 1 }}>
+            nóurish<span style={{ color: "#C9A84C" }}>.</span>
+          </div>
+          <div className="hidden md:flex items-center" style={{ gap: 34 }}>
+            {navLinks.map((l) => (
+              <a
+                key={l}
+                href="#"
+                style={{
+                  ...dmsans,
+                  fontSize: 13,
+                  letterSpacing: "0.05em",
+                  color: "rgba(247,245,241,0.85)",
+                  textDecoration: "none",
+                }}
+              >
+                {l}
+              </a>
+            ))}
+          </div>
+        </nav>
+
+        {/* Hero content */}
+        <div
+          className="absolute inset-y-0 left-0 z-20 flex flex-col justify-center hero-content"
+          style={{ padding: "0 44px", maxWidth: 680 }}
+        >
           <h1
-            className="mt-6 font-display font-bold leading-[1.1] text-[38px] md:text-[64px]"
-            style={{ color: "#F7F5F1" }}
+            className="hero-h1"
+            style={{
+              ...playfair,
+              fontWeight: 700,
+              fontSize: 62,
+              lineHeight: 1.04,
+              letterSpacing: "-0.01em",
+              color: "#F7F5F1",
+              margin: 0,
+            }}
           >
-            Eat Well.
-            <br />
-            <span className="italic" style={{ color: "#7D9B76" }}>
-              Every Single Day.
-            </span>
+            Food Your Body<br />Understands.
           </h1>
           <p
-            className="mt-8 font-display italic text-[18px]"
-            style={{ color: "#9A9590", maxWidth: 520 }}
+            style={{
+              ...dmsans,
+              fontSize: 17,
+              lineHeight: 1.62,
+              color: "rgba(247,245,241,0.80)",
+              maxWidth: 452,
+              marginTop: 22,
+            }}
           >
-            A food-first biological optimization methodology built around the six systems
-            that food controls most directly.
+            A food-first system built around six biological pillars, engineered for how your body actually works. Eat well. Every single day.
           </p>
-          <div
-            className="mt-10"
-            style={{ width: 1, height: 48, backgroundColor: "#C9A84C", opacity: 0.5 }}
-          />
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-            <Link
-              to="/system"
-              className="rounded-[2px] font-sans font-medium flex flex-col items-center leading-tight bg-[#C9A84C] hover:bg-[#BE9A3D] transition-colors duration-150"
-              style={{ color: "#1C1C1C", padding: "13px 28px" }}
-            >
-              <span>Get The Nourish System</span>
-              <span className="price" style={{ fontSize: 12, marginTop: 2, color: "#1C1C1C" }}>
-                $47 · Digital PDF</span>
-            </Link>
-            <Link
-              to="/free-recipes"
-              className="rounded-[2px] font-sans font-normal transition-colors duration-150 hover:bg-[rgba(247,245,241,0.08)]"
+          <div className="flex flex-wrap items-center" style={{ gap: 12, marginTop: 30 }}>
+            <a
+              href="#"
               style={{
-                border: "1px solid rgba(247,245,241,0.25)",
+                ...dmsans,
+                fontSize: 12,
+                fontWeight: 500,
+                letterSpacing: "0.13em",
+                textTransform: "uppercase",
+                background: "#C9A84C",
+                color: "#1C1C1C",
+                padding: "16px 32px",
+                borderRadius: 2,
+                textDecoration: "none",
+                display: "inline-block",
+              }}
+            >
+              Get The System
+            </a>
+            <a
+              href="#"
+              style={{
+                ...dmsans,
+                fontSize: 12,
+                fontWeight: 500,
+                letterSpacing: "0.13em",
+                textTransform: "uppercase",
+                background: "transparent",
+                border: "1px solid rgba(247,245,241,0.42)",
                 color: "#F7F5F1",
-                padding: "14px 32px",
+                padding: "15px 28px",
+                borderRadius: 2,
+                textDecoration: "none",
+                display: "inline-block",
               }}
             >
               Explore Free Recipes
-            </Link>
+            </a>
           </div>
-          <p className="mt-8 font-sans text-[11px]" style={{ color: "#9A9590" }}>
-            One flagship. Six satellite protocols. One complete system.
-          </p>
+          <div
+            style={{
+              ...dmsans,
+              fontSize: 13,
+              color: "rgba(247,245,241,0.74)",
+              marginTop: 18,
+            }}
+          >
+            The complete system — from{" "}
+            <span style={{ ...archivo, fontWeight: 600, fontSize: 16 }}>$47</span>
+          </div>
         </div>
+
+        {/* Pillar index */}
+        <div
+          className="absolute inset-x-0 bottom-0 z-20 grid pillar-grid"
+          style={{
+            padding: "14px 44px",
+            borderTop: "1px solid rgba(247,245,241,0.16)",
+            gridTemplateColumns: "repeat(6, minmax(0, 1fr))",
+            gap: 16,
+          }}
+        >
+          {pillars.map((p, i) => (
+            <div
+              key={p.n}
+              className={i >= 3 ? "pillar-item pillar-hide-mobile" : "pillar-item"}
+              style={{ display: "flex", alignItems: "baseline", gap: 10 }}
+            >
+              <span style={{ ...archivo, fontWeight: 800, fontSize: 15, color: "#F7F5F1" }}>{p.n}</span>
+              <span
+                style={{
+                  ...dmsans,
+                  fontSize: 10.5,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.10em",
+                  color: "rgba(247,245,241,0.74)",
+                }}
+              >
+                {p.label}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <style>{`
+          @media (max-width: 767px) {
+            .hero-h1 { font-size: 38px !important; }
+            .hero-content { padding: 0 24px !important; }
+            .pillar-grid { grid-template-columns: repeat(3, minmax(0,1fr)) !important; padding: 14px 24px !important; }
+            .pillar-hide-mobile { display: none !important; }
+          }
+        `}</style>
       </section>
 
       {/* SECTION 2 — THE SYSTEM OVERVIEW */}
@@ -381,6 +520,8 @@ function HomePage() {
           </p>
         </div>
       </section>
-    </SiteLayout>
+      </main>
+      <Footer />
+    </div>
   );
 }
