@@ -337,46 +337,108 @@ function HomePage() {
           </div>
 
           {/* Tier 2 — Satellites */}
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-[18px] grid-cols-2 md:grid-cols-3 pillar-tile-grid">
             {([
-              { n: "01", name: "GLP-1 Nutrition", href: "/glp1" },
-              { n: "02", name: "Gut Health", href: "/gut-health" },
-              { n: "03", name: "Metabolic Health", href: "/metabolic-health" },
-              { n: "04", name: "Cognitive Performance", href: "/cognitive-performance" },
-              { n: "05", name: "Longevity & Healthspan", href: "/longevity" },
-              { n: "06", name: "Hormonal Health", href: "/hormonal-health" },
+              { n: "01", name: "GLP-1 Nutrition", href: "/glp1", img: lib01.url },
+              { n: "02", name: "Gut Health", href: "/gut-health", img: lib02.url },
+              { n: "03", name: "Metabolic Health", href: "/metabolic-health", img: lib03.url },
+              { n: "04", name: "Cognitive Performance", href: "/cognitive-performance", img: lib04.url },
+              { n: "05", name: "Longevity & Healthspan", href: "/longevity", img: lib05.url },
+              { n: "06", name: "Hormonal Health", href: "/hormonal-health", img: lib06.url },
             ] as const).map((p) => (
               <a
                 key={p.n}
                 href={p.href}
-                className="block transition-transform hover:-translate-y-0.5"
+                className="pillar-tile group"
                 style={{
-                  backgroundColor: "#F2EDE4",
+                  position: "relative",
+                  display: "block",
+                  height: 310,
                   borderRadius: 4,
-                  padding: 24,
-                  borderTop: "3px solid #7D9B76",
+                  overflow: "hidden",
+                  textDecoration: "none",
                 }}
               >
+                <img
+                  src={p.img}
+                  alt={p.name}
+                  className="pillar-tile-img"
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    transition: "transform 0.5s ease",
+                  }}
+                />
                 <div
-                  className="font-sans uppercase text-[9px]"
-                  style={{ letterSpacing: "0.16em", color: "#9A9590" }}
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background:
+                      "linear-gradient(to top, rgba(20,20,19,0.82) 0%, rgba(20,20,19,0.08) 55%, rgba(20,20,19,0.22) 100%)",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: 18,
+                    left: 20,
+                    fontFamily: '"Archivo", sans-serif',
+                    fontWeight: 800,
+                    fontSize: 21,
+                    color: "#F7F5F1",
+                    fontVariantNumeric: "tabular-nums",
+                  }}
                 >
-                  Satellite Protocol {p.n}
+                  {p.n}
                 </div>
-                <h4 className="mt-3 font-display text-[18px] font-semibold text-charcoal">
-                  {p.name}
-                </h4>
-                <div className="mt-4 text-[20px] price">
-                  $27</div>
                 <div
-                  className="mt-4 font-sans font-medium text-[12px]"
-                  style={{ color: "#7D9B76" }}
+                  style={{
+                    position: "absolute",
+                    left: 20,
+                    right: 20,
+                    bottom: 18,
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-end",
+                    gap: 12,
+                  }}
                 >
-                  Get This Protocol →
+                  <div
+                    style={{
+                      fontFamily: '"Playfair Display", serif',
+                      fontWeight: 600,
+                      fontSize: 20,
+                      lineHeight: 1.14,
+                      color: "#F7F5F1",
+                      maxWidth: "72%",
+                    }}
+                  >
+                    {p.name}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: '"Archivo", sans-serif',
+                      fontWeight: 600,
+                      fontSize: 18,
+                      color: "#F7F5F1",
+                      fontVariantNumeric: "tabular-nums lining-nums",
+                    }}
+                  >
+                    $27
+                  </div>
                 </div>
               </a>
             ))}
           </div>
+          <style>{`
+            .pillar-tile:hover .pillar-tile-img { transform: scale(1.04); }
+            @media (max-width: 767px) {
+              .pillar-tile { height: 210px !important; }
+            }
+          `}</style>
 
           {/* Tier 3 — Bundle */}
           <div
