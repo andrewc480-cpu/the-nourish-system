@@ -1,6 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Footer } from "@/components/site/Footer";
 import heroAsset from "@/assets/H1_Pomegranate_Salmon_Power_Plate.png.asset.json";
+import lib01 from "@/assets/nourish-lib-01-glp1.jpg.asset.json";
+import lib02 from "@/assets/nourish-lib-02-gut.jpg.asset.json";
+import lib03 from "@/assets/nourish-lib-03-metabolic.jpg.asset.json";
+import lib04 from "@/assets/nourish-lib-04-cognitive.jpg.asset.json";
+import lib05 from "@/assets/nourish-lib-05-longevity.jpg.asset.json";
+import lib06 from "@/assets/nourish-lib-06-hormonal.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
