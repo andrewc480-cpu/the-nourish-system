@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SystemRouteImport } from './routes/system'
+import { Route as PreviewRouteImport } from './routes/preview'
 import { Route as MetabolicHealthRouteImport } from './routes/metabolic-health'
 import { Route as LongevityRouteImport } from './routes/longevity'
 import { Route as HormonalHealthRouteImport } from './routes/hormonal-health'
@@ -26,6 +27,11 @@ import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/
 const SystemRoute = SystemRouteImport.update({
   id: '/system',
   path: '/system',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PreviewRoute = PreviewRouteImport.update({
+  id: '/preview',
+  path: '/preview',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MetabolicHealthRoute = MetabolicHealthRouteImport.update({
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/hormonal-health': typeof HormonalHealthRoute
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
+  '/preview': typeof PreviewRoute
   '/system': typeof SystemRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
@@ -116,6 +123,7 @@ export interface FileRoutesByTo {
   '/hormonal-health': typeof HormonalHealthRoute
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
+  '/preview': typeof PreviewRoute
   '/system': typeof SystemRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
@@ -132,6 +140,7 @@ export interface FileRoutesById {
   '/hormonal-health': typeof HormonalHealthRoute
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
+  '/preview': typeof PreviewRoute
   '/system': typeof SystemRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
@@ -149,6 +158,7 @@ export interface FileRouteTypes {
     | '/hormonal-health'
     | '/longevity'
     | '/metabolic-health'
+    | '/preview'
     | '/system'
     | '/api/public/stripe-webhook'
   fileRoutesByTo: FileRoutesByTo
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
     | '/hormonal-health'
     | '/longevity'
     | '/metabolic-health'
+    | '/preview'
     | '/system'
     | '/api/public/stripe-webhook'
   id:
@@ -179,6 +190,7 @@ export interface FileRouteTypes {
     | '/hormonal-health'
     | '/longevity'
     | '/metabolic-health'
+    | '/preview'
     | '/system'
     | '/api/public/stripe-webhook'
   fileRoutesById: FileRoutesById
@@ -195,6 +207,7 @@ export interface RootRouteChildren {
   HormonalHealthRoute: typeof HormonalHealthRoute
   LongevityRoute: typeof LongevityRoute
   MetabolicHealthRoute: typeof MetabolicHealthRoute
+  PreviewRoute: typeof PreviewRoute
   SystemRoute: typeof SystemRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
@@ -206,6 +219,13 @@ declare module '@tanstack/react-router' {
       path: '/system'
       fullPath: '/system'
       preLoaderRoute: typeof SystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/preview': {
+      id: '/preview'
+      path: '/preview'
+      fullPath: '/preview'
+      preLoaderRoute: typeof PreviewRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/metabolic-health': {
@@ -307,6 +327,7 @@ const rootRouteChildren: RootRouteChildren = {
   HormonalHealthRoute: HormonalHealthRoute,
   LongevityRoute: LongevityRoute,
   MetabolicHealthRoute: MetabolicHealthRoute,
+  PreviewRoute: PreviewRoute,
   SystemRoute: SystemRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }
