@@ -238,15 +238,19 @@ function HomePage() {
           </p>
           <div className="mt-6" style={{ width: 40, height: 2, backgroundColor: "#C9A84C" }} />
           <p
-            className="mt-10 font-sans font-light text-[15px] leading-[1.85]"
-            style={{ color: "#3a3a3a", maxWidth: 640 }}
+            style={{
+              ...dmsans,
+              fontWeight: 400,
+              fontSize: "16.5px",
+              lineHeight: 1.72,
+              color: "#3a3a3a",
+              maxWidth: 660,
+              marginTop: 30,
+            }}
           >
-            Most food content teaches you what to eat. The Nourish System teaches you why
-            food does what it does — and gives you the exact meals that put that knowledge
-            to work. Built around six biological systems that food directly controls, this
-            is not a diet, not a meal plan, and not a recipe collection. It is a
-            methodology for using food the way your body actually needs it.
+            Most food content tells you what to eat. The Nourish System tells you <em>why</em> — why food does what it does inside your body, and which meals actually put that to work. It's built around six systems your food shapes every day: your gut, your metabolism, your hormones, and more. Learn how it works once, and you'll stop reaching for the next plan.
           </p>
+
 
           <div className="mt-14 grid grid-cols-2 md:grid-cols-4">
             {[
@@ -262,7 +266,7 @@ function HomePage() {
                   borderLeft: i === 0 ? "none" : "1px solid rgba(28,28,28,0.09)",
                 }}
               >
-                <div className="font-display text-[32px] font-bold text-charcoal">{s.n}</div>
+                <div style={{ fontFamily: '"Archivo", sans-serif', fontWeight: 800, fontSize: 40, fontVariantNumeric: "tabular-nums lining-nums", color: "#1C1C1C", lineHeight: 1 }}>{s.n}</div>
                 <div
                   className="mt-2 font-sans uppercase text-[10px]"
                   style={{ letterSpacing: "0.16em", color: "#9A9590" }}
