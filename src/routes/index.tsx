@@ -142,7 +142,7 @@ function HomePage() {
           </p>
           <div className="flex flex-wrap items-center" style={{ gap: 12, marginTop: 30 }}>
             <a
-              href="#"
+href="/system"
               style={{
                 ...dmsans,
                 fontSize: 12,
@@ -187,8 +187,8 @@ function HomePage() {
               marginTop: 18,
             }}
           >
-            The complete system — from{" "}
-            <span style={{ ...archivo, fontWeight: 600, fontSize: 16 }}>$47</span>
+            The complete system —{" "}
+            <span style={{ ...archivo, fontWeight: 600, fontSize: 16 }}>$97</span>
           </div>
         </div>
 
