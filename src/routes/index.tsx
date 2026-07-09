@@ -189,37 +189,6 @@ href="/system"
           </div>
         </div>
 
-        {/* Pillar index */}
-        <div
-          className="absolute inset-x-0 bottom-0 z-20 grid pillar-grid"
-          style={{
-            padding: "14px 44px",
-            borderTop: "1px solid rgba(247,245,241,0.16)",
-            gridTemplateColumns: "repeat(6, minmax(0, 1fr))",
-            gap: 16,
-          }}
-        >
-          {pillars.map((p, i) => (
-            <div
-              key={p.n}
-              className={i >= 3 ? "pillar-item pillar-hide-mobile" : "pillar-item"}
-              style={{ display: "flex", alignItems: "baseline", gap: 10 }}
-            >
-              <span style={{ ...archivo, fontWeight: 800, fontSize: 15, color: "#F7F5F1" }}>{p.n}</span>
-              <span
-                style={{
-                  ...dmsans,
-                  fontSize: 10.5,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.10em",
-                  color: "rgba(247,245,241,0.74)",
-                }}
-              >
-                {p.label}
-              </span>
-            </div>
-          ))}
-        </div>
 
         <style>{`
           @media (max-width: 767px) {
