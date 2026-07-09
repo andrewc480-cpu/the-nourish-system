@@ -519,26 +519,90 @@ function HomePage() {
       </section>
 
 
-      {/* SECTION 6 — FREE RECIPES TEASER */}
+      {/* SECTION 6 — EMAIL CAPTURE */}
       <section
-        className="w-full px-6 text-center py-9 md:py-12 lg:py-16"
-        style={{ backgroundColor: "#F2EDE4" }}
+        className="w-full"
+        style={{ backgroundColor: "#7D9B76", padding: "78px 44px" }}
       >
-        <div className="mx-auto max-w-2xl">
-          <p className={eyebrow}>Start Here</p>
-          <h2 className={`mt-5 ${sectionHeadline}`}>Try the system.</h2>
-          <p className="mt-4 font-display italic text-[18px]" style={{ color: "#9A9590" }}>
-            Six free recipes. One from each pillar. No email required.
-          </p>
-          <Link
-            to="/free-recipes"
-            className="mt-10 inline-block rounded-[2px] font-sans font-medium bg-[#1C1C1C] hover:bg-[#2A2A2A] transition-colors duration-150"
-            style={{ color: "#F7F5F1", padding: "14px 32px" }}
+        <div className="mx-auto text-center" style={{ maxWidth: 600 }}>
+          <p
+            style={{
+              ...dmsans,
+              fontSize: 10,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "rgba(247,245,241,0.85)",
+              marginBottom: 18,
+            }}
           >
-            Explore Free Recipes
-          </Link>
-          <p className="mt-6 font-sans text-[12px]" style={{ color: "#9A9590" }}>
-            Real food. Real biology. No restriction.
+            Start Free · No Card Required
+          </p>
+          <h2
+            className="font-display"
+            style={{ fontWeight: 700, fontSize: 36, color: "#F7F5F1" }}
+          >
+            Try 7 days on the system.
+          </h2>
+          <p
+            style={{
+              ...dmsans,
+              fontSize: 16,
+              lineHeight: 1.6,
+              color: "rgba(247,245,241,0.92)",
+              maxWidth: 500,
+              margin: "16px auto 0",
+            }}
+          >
+            A full week of meals, one built from each pillar. Enter your email and we'll send the plan straight to your inbox.
+          </p>
+          <div
+            className="mx-auto mt-7 flex flex-col md:flex-row"
+            style={{ maxWidth: 470, gap: 10 }}
+          >
+            <input
+              type="email"
+              placeholder="you@email.com"
+              className="flex-1"
+              style={{
+                background: "#F7F5F1",
+                border: "none",
+                borderRadius: 2,
+                padding: "15px 18px",
+                ...dmsans,
+                fontSize: 15,
+                color: "#1C1C1C",
+                outline: "none",
+              }}
+            />
+            <button
+              type="button"
+              style={{
+                background: "#1C1C1C",
+                color: "#F7F5F1",
+                ...dmsans,
+                fontSize: 12,
+                fontWeight: 500,
+                letterSpacing: "0.13em",
+                textTransform: "uppercase",
+                padding: "15px 26px",
+                borderRadius: 2,
+                whiteSpace: "nowrap",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              Send Me The Plan
+            </button>
+          </div>
+          <p
+            style={{
+              ...dmsans,
+              fontSize: 12,
+              color: "rgba(247,245,241,0.78)",
+              marginTop: 16,
+            }}
+          >
+            No spam. Unsubscribe anytime.
           </p>
         </div>
       </section>
