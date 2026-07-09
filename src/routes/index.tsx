@@ -126,7 +126,7 @@ function HomePage() {
               margin: 0,
             }}
           >
-            Food Your Body<br />Understands.
+            Built for how you<br />actually eat.
           </h1>
           <p
             style={{
@@ -138,7 +138,7 @@ function HomePage() {
               marginTop: 22,
             }}
           >
-            A food-first system built around six biological pillars, engineered for how your body actually works. Eat well. Every single day.
+            Six food protocols, each shaped around a real situation — GLP-1, gut, metabolism, and more. A system your body understands.
           </p>
           <div className="flex flex-wrap items-center" style={{ gap: 12, marginTop: 30 }}>
             <a
