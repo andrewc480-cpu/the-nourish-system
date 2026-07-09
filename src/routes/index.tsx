@@ -518,31 +518,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 5 — PULL QUOTE */}
-      <section
-        className="w-full px-6 text-center py-9 md:py-12 lg:py-16"
-        style={{ backgroundColor: "#1C1C1C" }}
-      >
-        <div className="mx-auto" style={{ maxWidth: 640 }}>
-          <p
-            className="font-display italic leading-[1.6] text-[20px] md:text-[26px]"
-            style={{ color: "#F7F5F1" }}
-          >
-            "Above the diet. Below the clinic. Food that actually understands what your
-            body is doing."
-          </p>
-          <div
-            className="mx-auto mt-8"
-            style={{ width: 40, height: 1, backgroundColor: "#C9A84C" }}
-          />
-          <p
-            className="mt-6 font-sans uppercase text-[11px]"
-            style={{ letterSpacing: "0.16em", color: "#9A9590" }}
-          >
-            — The Nourish System
-          </p>
-        </div>
-      </section>
 
       {/* SECTION 6 — FREE RECIPES TEASER */}
       <section
