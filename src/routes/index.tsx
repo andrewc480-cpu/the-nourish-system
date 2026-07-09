@@ -126,7 +126,7 @@ function HomePage() {
               margin: 0,
             }}
           >
-            Food Your Body<br />Understands.
+            Built for how you<br />actually eat.
           </h1>
           <p
             style={{
