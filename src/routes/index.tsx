@@ -15,13 +15,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "A food-first biological optimization methodology built around the six systems that food controls most directly.",
+          "Six food protocols for the situations your body is actually in — GLP-1, gut health, metabolism, and more. Real recipes, clear rules, built to actually use.",
       },
       { property: "og:title", content: "The Nourish System — Eat Well. Every Single Day." },
       {
         property: "og:description",
         content:
-          "A food-first biological optimization methodology built around the six systems that food controls most directly.",
+          "Six food protocols for the situations your body is actually in — GLP-1, gut health, metabolism, and more. Real recipes, clear rules, built to actually use.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -40,7 +40,12 @@ const playfair = { fontFamily: '"Playfair Display", serif' };
 const dmsans = { fontFamily: '"DM Sans", sans-serif' };
 const archivo = { fontFamily: '"Archivo", sans-serif', fontVariantNumeric: "tabular-nums lining-nums" as const };
 
-const navLinks = ["Shop", "Free Recipes", "Blog", "About"];
+const navLinks = [
+  { label: "Shop", href: "#library" },
+  { label: "Free Recipes", href: "/free-recipes" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+];
 const pillars = [
   { n: "01", label: "GLP-1" },
   { n: "02", label: "Gut Health" },
@@ -93,8 +98,8 @@ function HomePage() {
           <div className="hidden md:flex items-center" style={{ gap: 34 }}>
             {navLinks.map((l) => (
               <a
-                key={l}
-                href="#"
+                key={l.label}
+                href={l.href}
                 style={{
                   ...dmsans,
                   fontSize: 13,
@@ -103,7 +108,7 @@ function HomePage() {
                   textDecoration: "none",
                 }}
               >
-                {l}
+                {l.label}
               </a>
             ))}
           </div>
@@ -160,7 +165,7 @@ href="/system"
               Get The System
             </a>
             <a
-              href="#"
+              href="/free-recipes"
               style={{
                 ...dmsans,
                 fontSize: 12,
@@ -261,9 +266,9 @@ href="/system"
           <div className="mt-14 grid grid-cols-2 md:grid-cols-4">
             {[
               { n: "120", l: "Recipes" },
-              { n: "6", l: "Biological Pillars" },
-              { n: "7", l: "Complete Books" },
-              { n: "1", l: "Unified System" },
+              { n: "6", l: "Protocols" },
+              { n: "7", l: "Day Meal Plans" },
+              { n: "1", l: "Complete System" },
             ].map((s, i) => (
               <div
                 key={s.l}
@@ -287,7 +292,7 @@ href="/system"
 
 
       {/* SECTION 4 — THE PRODUCTS */}
-      <section className="w-full px-6 py-9 md:py-12 lg:py-16" style={{ backgroundColor: "#F7F5F1" }}>
+      <section id="library" className="w-full px-6 py-9 md:py-12 lg:py-16" style={{ backgroundColor: "#F7F5F1" }}>
         <div className="mx-auto max-w-6xl">
           <p className={eyebrow}>The Library</p>
           <h2 className={`mt-5 ${sectionHeadline}`}>
@@ -553,7 +558,7 @@ href="/system"
               margin: "16px auto 0",
             }}
           >
-            A full week of meals, one built from each pillar. Enter your email and we'll send the plan straight to your inbox.
+            A full week of meals, one from each protocol. Enter your email and we'll send the plan straight to your inbox.
           </p>
           <div
             className="mx-auto mt-7 flex flex-col md:flex-row"
