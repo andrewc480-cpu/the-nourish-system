@@ -289,52 +289,25 @@ function HomePage() {
       {/* SECTION 4 — THE PRODUCTS */}
       <section className="w-full px-6 py-9 md:py-12 lg:py-16" style={{ backgroundColor: "#F7F5F1" }}>
         <div className="mx-auto max-w-6xl">
-          <p className={eyebrow}>The Complete Library</p>
+          <p className={eyebrow}>The Library</p>
           <h2 className={`mt-5 ${sectionHeadline}`}>
-            One system.
+            Six protocols.
             <br />
-            <span className="italic" style={{ color: "#7D9B76" }}>Seven books.</span>
+            <span className="italic" style={{ color: "#7D9B76" }}>Pick one, or take them all.</span>
           </h2>
-
-          {/* Tier 1 — Flagship */}
-          <div
-            className="mt-12 flex flex-col gap-6 p-10 md:flex-row md:items-center md:justify-between md:p-14"
-            style={{ backgroundColor: "#1C1C1C", borderRadius: 4 }}
+          <p
+            style={{
+              ...dmsans,
+              fontSize: 16,
+              lineHeight: 1.7,
+              color: "#3a3a3a",
+              maxWidth: 640,
+              marginTop: 20,
+            }}
           >
-            <div className="max-w-2xl">
-              <div
-                className="font-sans uppercase text-[10px]"
-                style={{ letterSpacing: "0.16em", color: "#7D9B76" }}
-              >
-                The Complete Methodology
-              </div>
-              <h3
-                className="mt-3 font-display text-[32px] font-bold"
-                style={{ color: "#F7F5F1" }}
-              >
-                The Nourish System
-              </h3>
-              <p
-                className="mt-4 font-sans font-light text-[14px]"
-                style={{ color: "#9A9590" }}
-              >
-                The complete food-first biological optimization methodology. Six pillars.
-                120 recipes. The full system.
-              </p>
-            </div>
-            <div className="flex flex-col items-start gap-4 md:items-end">
-              <div className="text-[28px] price self-end text-right" style={{ color: "#F7F5F1" }}>
-                $47
-              </div>
-              <Link
-                to="/system"
-                className="rounded-[2px] font-sans font-medium whitespace-nowrap bg-[#C9A84C] hover:bg-[#BE9A3D] transition-colors duration-150"
-                style={{ color: "#1C1C1C", padding: "14px 28px" }}
-              >
-                Get The Flagship
-              </Link>
-            </div>
-          </div>
+            Each protocol is a complete guide to one situation — the rules, a 7-day plan, a one-page cheat sheet, and 20 recipes built for it. Buy the one you need most, or get all six together as the complete system. Click any protocol to see exactly what's inside.
+          </p>
+
 
           {/* Tier 2 — Satellites */}
           <div className="mt-8 grid gap-[18px] grid-cols-2 md:grid-cols-3 pillar-tile-grid">
@@ -440,99 +413,196 @@ function HomePage() {
             }
           `}</style>
 
-          {/* Tier 3 — Bundle */}
+          {/* Complete System */}
           <div
-            className="mt-8 flex flex-col gap-6 p-10 md:flex-row md:items-center md:justify-between md:p-14"
-            style={{ backgroundColor: "#7D9B76", borderRadius: 4 }}
+            className="mt-8"
+            style={{ backgroundColor: "#1C1C1C", borderRadius: 4, padding: "52px 48px", textAlign: "center" }}
           >
-            <div className="max-w-2xl">
-              <div
-                className="font-sans uppercase text-[10px]"
-                style={{ letterSpacing: "0.16em", color: "rgba(247,245,241,0.7)" }}
-              >
-                Best Value
-              </div>
-              <h3
-                className="mt-3 font-display text-[28px] font-bold"
-                style={{ color: "#F7F5F1" }}
-              >
-                The Complete Nourish Bundle
-              </h3>
-              <p
-                className="mt-4 font-sans font-light text-[14px]"
-                style={{ color: "rgba(247,245,241,0.8)" }}
-              >
-                Every book in The Nourish System. The flagship plus all six satellite
-                protocols. The complete biological optimization library.
-              </p>
+            <div
+              style={{
+                ...dmsans,
+                fontSize: 10,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "#7D9B76",
+              }}
+            >
+              Best Value · Save $65
             </div>
-            <div className="flex flex-col items-start gap-2 md:items-start">
-              <div className="text-[28px] price" style={{ color: "#F7F5F1" }}>
-                $147</div>
-              <p
-                className="font-sans text-[12px]"
-                style={{ color: "rgba(247,245,241,0.6)" }}
+            <h3
+              className="font-display"
+              style={{ fontWeight: 700, fontSize: 34, color: "#F7F5F1", marginTop: 16 }}
+            >
+              The Complete System
+            </h3>
+            <p
+              style={{
+                ...dmsans,
+                fontSize: 15,
+                lineHeight: 1.65,
+                color: "#9A9590",
+                maxWidth: 560,
+                margin: "16px auto 0",
+              }}
+            >
+              All six protocols in one. Every situation, every rule, every weekly plan, and all 120 recipes — the whole library, one price.
+            </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "baseline",
+                gap: 14,
+                marginTop: 28,
+              }}
+            >
+              <span
+                style={{
+                  ...archivo,
+                  fontWeight: 600,
+                  fontSize: 20,
+                  color: "#6b6862",
+                  textDecoration: "line-through",
+                }}
               >
-                Save $62 versus buying individually
-              </p>
-              <Link
-                to="/bundle"
-                className="mt-2 rounded-[2px] font-sans font-medium bg-[#1C1C1C] hover:bg-[#2A2A2A] transition-colors duration-150"
-                style={{ color: "#F7F5F1", padding: "14px 28px" }}
+                $162
+              </span>
+              <span
+                style={{
+                  ...archivo,
+                  fontWeight: 800,
+                  fontSize: 44,
+                  color: "#F7F5F1",
+                }}
               >
-                Get The Complete Bundle
-              </Link>
+                $97
+              </span>
             </div>
+            <p
+              style={{
+                ...dmsans,
+                fontSize: 12,
+                color: "#7D9B76",
+                marginTop: 8,
+              }}
+            >
+              You save $65 versus buying each protocol on its own
+            </p>
+            <Link
+              to="/system"
+              className="mt-7 inline-block rounded-[2px] font-sans font-medium"
+              style={{
+                background: "#C9A84C",
+                color: "#1C1C1C",
+                fontSize: 12,
+                fontWeight: 500,
+                letterSpacing: "0.13em",
+                textTransform: "uppercase",
+                padding: "17px 40px",
+                textDecoration: "none",
+              }}
+            >
+              Get Everything
+            </Link>
+            <p
+              style={{
+                ...dmsans,
+                fontSize: 11,
+                color: "#6b6862",
+                marginTop: 18,
+              }}
+            >
+              Digital PDF · Instant download · Yours to keep
+            </p>
           </div>
         </div>
       </section>
 
-      {/* SECTION 5 — PULL QUOTE */}
+
+      {/* SECTION 6 — EMAIL CAPTURE */}
       <section
-        className="w-full px-6 text-center py-9 md:py-12 lg:py-16"
-        style={{ backgroundColor: "#1C1C1C" }}
+        className="w-full"
+        style={{ backgroundColor: "#7D9B76", padding: "78px 44px" }}
       >
-        <div className="mx-auto" style={{ maxWidth: 640 }}>
+        <div className="mx-auto text-center" style={{ maxWidth: 600 }}>
           <p
-            className="font-display italic leading-[1.6] text-[20px] md:text-[26px]"
-            style={{ color: "#F7F5F1" }}
+            style={{
+              ...dmsans,
+              fontSize: 10,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "rgba(247,245,241,0.85)",
+              marginBottom: 18,
+            }}
           >
-            "Above the diet. Below the clinic. Food that actually understands what your
-            body is doing."
+            Start Free · No Card Required
+          </p>
+          <h2
+            className="font-display"
+            style={{ fontWeight: 700, fontSize: 36, color: "#F7F5F1" }}
+          >
+            Try 7 days on the system.
+          </h2>
+          <p
+            style={{
+              ...dmsans,
+              fontSize: 16,
+              lineHeight: 1.6,
+              color: "rgba(247,245,241,0.92)",
+              maxWidth: 500,
+              margin: "16px auto 0",
+            }}
+          >
+            A full week of meals, one built from each pillar. Enter your email and we'll send the plan straight to your inbox.
           </p>
           <div
-            className="mx-auto mt-8"
-            style={{ width: 40, height: 1, backgroundColor: "#C9A84C" }}
-          />
+            className="mx-auto mt-7 flex flex-col md:flex-row"
+            style={{ maxWidth: 470, gap: 10 }}
+          >
+            <input
+              type="email"
+              placeholder="you@email.com"
+              className="flex-1"
+              style={{
+                background: "#F7F5F1",
+                border: "none",
+                borderRadius: 2,
+                padding: "15px 18px",
+                ...dmsans,
+                fontSize: 15,
+                color: "#1C1C1C",
+                outline: "none",
+              }}
+            />
+            <button
+              type="button"
+              style={{
+                background: "#1C1C1C",
+                color: "#F7F5F1",
+                ...dmsans,
+                fontSize: 12,
+                fontWeight: 500,
+                letterSpacing: "0.13em",
+                textTransform: "uppercase",
+                padding: "15px 26px",
+                borderRadius: 2,
+                whiteSpace: "nowrap",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              Send Me The Plan
+            </button>
+          </div>
           <p
-            className="mt-6 font-sans uppercase text-[11px]"
-            style={{ letterSpacing: "0.16em", color: "#9A9590" }}
+            style={{
+              ...dmsans,
+              fontSize: 12,
+              color: "rgba(247,245,241,0.78)",
+              marginTop: 16,
+            }}
           >
-            — The Nourish System
-          </p>
-        </div>
-      </section>
-
-      {/* SECTION 6 — FREE RECIPES TEASER */}
-      <section
-        className="w-full px-6 text-center py-9 md:py-12 lg:py-16"
-        style={{ backgroundColor: "#F2EDE4" }}
-      >
-        <div className="mx-auto max-w-2xl">
-          <p className={eyebrow}>Start Here</p>
-          <h2 className={`mt-5 ${sectionHeadline}`}>Try the system.</h2>
-          <p className="mt-4 font-display italic text-[18px]" style={{ color: "#9A9590" }}>
-            Six free recipes. One from each pillar. No email required.
-          </p>
-          <Link
-            to="/free-recipes"
-            className="mt-10 inline-block rounded-[2px] font-sans font-medium bg-[#1C1C1C] hover:bg-[#2A2A2A] transition-colors duration-150"
-            style={{ color: "#F7F5F1", padding: "14px 32px" }}
-          >
-            Explore Free Recipes
-          </Link>
-          <p className="mt-6 font-sans text-[12px]" style={{ color: "#9A9590" }}>
-            Real food. Real biology. No restriction.
+            No spam. Unsubscribe anytime.
           </p>
         </div>
       </section>
