@@ -9,7 +9,7 @@ const headingClass =
 
 export function Footer() {
   return (
-    <footer className="mt-24 bg-[#1C1C1C] border-t border-[rgba(247,245,241,0.08)]">
+    <footer className="bg-[#1C1C1C] border-t border-[rgba(247,245,241,0.08)]">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-3">
         <div>
           <div className="font-display text-3xl font-semibold text-[#F7F5F1]">
