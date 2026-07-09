@@ -46,14 +46,6 @@ const navLinks = [
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
-const pillars = [
-  { n: "01", label: "GLP-1" },
-  { n: "02", label: "Gut Health" },
-  { n: "03", label: "Metabolic" },
-  { n: "04", label: "Cognitive" },
-  { n: "05", label: "Longevity" },
-  { n: "06", label: "Hormonal" },
-];
 
 function HomePage() {
   return (
