@@ -413,49 +413,107 @@ function HomePage() {
             }
           `}</style>
 
-          {/* Tier 3 — Bundle */}
+          {/* Complete System */}
           <div
-            className="mt-8 flex flex-col gap-6 p-10 md:flex-row md:items-center md:justify-between md:p-14"
-            style={{ backgroundColor: "#7D9B76", borderRadius: 4 }}
+            className="mt-8"
+            style={{ backgroundColor: "#1C1C1C", borderRadius: 4, padding: "52px 48px", textAlign: "center" }}
           >
-            <div className="max-w-2xl">
-              <div
-                className="font-sans uppercase text-[10px]"
-                style={{ letterSpacing: "0.16em", color: "rgba(247,245,241,0.7)" }}
-              >
-                Best Value
-              </div>
-              <h3
-                className="mt-3 font-display text-[28px] font-bold"
-                style={{ color: "#F7F5F1" }}
-              >
-                The Complete Nourish Bundle
-              </h3>
-              <p
-                className="mt-4 font-sans font-light text-[14px]"
-                style={{ color: "rgba(247,245,241,0.8)" }}
-              >
-                Every book in The Nourish System. The flagship plus all six satellite
-                protocols. The complete biological optimization library.
-              </p>
+            <div
+              style={{
+                ...dmsans,
+                fontSize: 10,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "#7D9B76",
+              }}
+            >
+              Best Value · Save $65
             </div>
-            <div className="flex flex-col items-start gap-2 md:items-start">
-              <div className="text-[28px] price" style={{ color: "#F7F5F1" }}>
-                $147</div>
-              <p
-                className="font-sans text-[12px]"
-                style={{ color: "rgba(247,245,241,0.6)" }}
+            <h3
+              className="font-display"
+              style={{ fontWeight: 700, fontSize: 34, color: "#F7F5F1", marginTop: 16 }}
+            >
+              The Complete System
+            </h3>
+            <p
+              style={{
+                ...dmsans,
+                fontSize: 15,
+                lineHeight: 1.65,
+                color: "#9A9590",
+                maxWidth: 560,
+                margin: "16px auto 0",
+              }}
+            >
+              All six protocols in one. Every situation, every rule, every weekly plan, and all 120 recipes — the whole library, one price.
+            </p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "baseline",
+                gap: 14,
+                marginTop: 28,
+              }}
+            >
+              <span
+                style={{
+                  ...archivo,
+                  fontWeight: 600,
+                  fontSize: 20,
+                  color: "#6b6862",
+                  textDecoration: "line-through",
+                }}
               >
-                Save $62 versus buying individually
-              </p>
-              <Link
-                to="/bundle"
-                className="mt-2 rounded-[2px] font-sans font-medium bg-[#1C1C1C] hover:bg-[#2A2A2A] transition-colors duration-150"
-                style={{ color: "#F7F5F1", padding: "14px 28px" }}
+                $162
+              </span>
+              <span
+                style={{
+                  ...archivo,
+                  fontWeight: 800,
+                  fontSize: 44,
+                  color: "#F7F5F1",
+                }}
               >
-                Get The Complete Bundle
-              </Link>
+                $97
+              </span>
             </div>
+            <p
+              style={{
+                ...dmsans,
+                fontSize: 12,
+                color: "#7D9B76",
+                marginTop: 8,
+              }}
+            >
+              You save $65 versus buying each protocol on its own
+            </p>
+            <Link
+              to="/system"
+              className="mt-7 inline-block rounded-[2px] font-sans font-medium"
+              style={{
+                background: "#C9A84C",
+                color: "#1C1C1C",
+                fontSize: 12,
+                fontWeight: 500,
+                letterSpacing: "0.13em",
+                textTransform: "uppercase",
+                padding: "17px 40px",
+                textDecoration: "none",
+              }}
+            >
+              Get Everything
+            </Link>
+            <p
+              style={{
+                ...dmsans,
+                fontSize: 11,
+                color: "#6b6862",
+                marginTop: 18,
+              }}
+            >
+              Digital PDF · Instant download · Yours to keep
+            </p>
           </div>
         </div>
       </section>
