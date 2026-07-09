@@ -194,8 +194,6 @@ href="/system"
           @media (max-width: 767px) {
             .hero-h1 { font-size: 38px !important; }
             .hero-content { padding: 0 24px !important; }
-            .pillar-grid { grid-template-columns: repeat(3, minmax(0,1fr)) !important; padding: 14px 24px !important; }
-            .pillar-hide-mobile { display: none !important; }
           }
         `}</style>
       </section>
