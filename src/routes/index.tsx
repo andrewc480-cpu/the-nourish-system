@@ -308,45 +308,6 @@ function HomePage() {
             Each protocol is a complete guide to one situation — the rules, a 7-day plan, a one-page cheat sheet, and 20 recipes built for it. Buy the one you need most, or get all six together as the complete system. Click any protocol to see exactly what's inside.
           </p>
 
-          {/* Tier 1 — Flagship */}
-          <div
-            className="mt-12 flex flex-col gap-6 p-10 md:flex-row md:items-center md:justify-between md:p-14"
-            style={{ backgroundColor: "#1C1C1C", borderRadius: 4 }}
-          >
-            <div className="max-w-2xl">
-              <div
-                className="font-sans uppercase text-[10px]"
-                style={{ letterSpacing: "0.16em", color: "#7D9B76" }}
-              >
-                The Complete Methodology
-              </div>
-              <h3
-                className="mt-3 font-display text-[32px] font-bold"
-                style={{ color: "#F7F5F1" }}
-              >
-                The Nourish System
-              </h3>
-              <p
-                className="mt-4 font-sans font-light text-[14px]"
-                style={{ color: "#9A9590" }}
-              >
-                The complete food-first biological optimization methodology. Six pillars.
-                120 recipes. The full system.
-              </p>
-            </div>
-            <div className="flex flex-col items-start gap-4 md:items-end">
-              <div className="text-[28px] price self-end text-right" style={{ color: "#F7F5F1" }}>
-                $47
-              </div>
-              <Link
-                to="/system"
-                className="rounded-[2px] font-sans font-medium whitespace-nowrap bg-[#C9A84C] hover:bg-[#BE9A3D] transition-colors duration-150"
-                style={{ color: "#1C1C1C", padding: "14px 28px" }}
-              >
-                Get The Flagship
-              </Link>
-            </div>
-          </div>
 
           {/* Tier 2 — Satellites */}
           <div className="mt-8 grid gap-[18px] grid-cols-2 md:grid-cols-3 pillar-tile-grid">
