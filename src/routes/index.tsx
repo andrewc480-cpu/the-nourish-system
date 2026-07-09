@@ -289,12 +289,24 @@ function HomePage() {
       {/* SECTION 4 — THE PRODUCTS */}
       <section className="w-full px-6 py-9 md:py-12 lg:py-16" style={{ backgroundColor: "#F7F5F1" }}>
         <div className="mx-auto max-w-6xl">
-          <p className={eyebrow}>The Complete Library</p>
+          <p className={eyebrow}>The Library</p>
           <h2 className={`mt-5 ${sectionHeadline}`}>
-            One system.
+            Six protocols.
             <br />
-            <span className="italic" style={{ color: "#7D9B76" }}>Seven books.</span>
+            <span className="italic" style={{ color: "#7D9B76" }}>Pick one, or take them all.</span>
           </h2>
+          <p
+            style={{
+              ...dmsans,
+              fontSize: 16,
+              lineHeight: 1.7,
+              color: "#3a3a3a",
+              maxWidth: 640,
+              marginTop: 20,
+            }}
+          >
+            Each protocol is a complete guide to one situation — the rules, a 7-day plan, a one-page cheat sheet, and 20 recipes built for it. Buy the one you need most, or get all six together as the complete system. Click any protocol to see exactly what's inside.
+          </p>
 
           {/* Tier 1 — Flagship */}
           <div
