@@ -466,7 +466,7 @@ href="/system"
                 textDecoration: "none",
               }}
             >
-              Get Everything
+              Get The System
             </Link>
             <p
               style={{
