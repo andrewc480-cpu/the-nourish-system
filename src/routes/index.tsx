@@ -274,7 +274,7 @@ href="/system"
 
 
           {/* Tier 2 — Satellites */}
-          <div className="mt-8 grid gap-[18px] grid-cols-2 md:grid-cols-3 pillar-tile-grid">
+          <div className="mt-8 grid gap-[18px] grid-cols-1 md:grid-cols-3 pillar-tile-grid">
             {([
               { n: "01", name: "GLP-1 Nutrition", href: "/glp1", img: lib01.url },
               { n: "02", name: "Gut Health", href: "/gut-health", img: lib02.url },
@@ -332,6 +332,7 @@ href="/system"
                   {p.n}
                 </div>
                 <div
+                  className="pillar-tile-bottom"
                   style={{
                     position: "absolute",
                     left: 20,
@@ -344,6 +345,7 @@ href="/system"
                   }}
                 >
                   <div
+                    className="pillar-tile-title"
                     style={{
                       fontFamily: '"Playfair Display", serif',
                       fontWeight: 600,
@@ -374,6 +376,8 @@ href="/system"
             .pillar-tile:hover .pillar-tile-img { transform: scale(1.04); }
             @media (max-width: 767px) {
               .pillar-tile { height: 210px !important; }
+              .pillar-tile-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; }
+              .pillar-tile-title { max-width: none !important; }
             }
           `}</style>
 
