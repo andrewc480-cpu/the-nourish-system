@@ -46,6 +46,19 @@ function verifyStripeSignature(
   return { ok: false, reason: "no matching v1 signature" };
 }
 
+const BUCKET = "protocols";
+const LINK_TTL_SECONDS = 7 * 24 * 60 * 60;
+
+const DISPLAY: Record<string, string> = {
+  "Nourish_GLP-1_Nutrition.pdf": "GLP-1 Nutrition Protocol",
+  "Nourish_Gut_Health.pdf": "Gut Health Protocol",
+  "Nourish_Metabolic_Health.pdf": "Metabolic Health Protocol",
+  "Nourish_Cognitive_Performance.pdf": "Cognitive Performance Protocol",
+  "Nourish_Longevity_Healthspan.pdf": "Longevity & Healthspan Protocol",
+  "Nourish_Hormonal_Health.pdf": "Hormonal Health Protocol",
+  "Nourish_Complete_Drinks_Collection.pdf": "The Complete Drinks Collection",
+};
+
 function escapeHtml(value: string): string {
   return value
     .replace(/&/g, "&amp;")
@@ -57,18 +70,19 @@ function escapeHtml(value: string): string {
 
 function buildEmailHtml(opts: {
   customerName: string;
-  items: Array<{ description: string; quantity: number; amount: string }>;
-  total: string;
+  links: Array<{ name: string; url: string }>;
 }) {
-  const rows = opts.items
+  const rows = opts.links
     .map(
-      (item) => `
+      (link) => `
         <tr>
-          <td style="padding:12px 0;border-bottom:1px solid #EAE6DD;font-family:Georgia,serif;color:#1C1C1C;font-size:15px;">
-            ${escapeHtml(item.description)}${item.quantity > 1 ? ` &times; ${item.quantity}` : ""}
+          <td style="padding:14px 0;border-bottom:1px solid #EAE6DD;font-family:Georgia,serif;color:#1C1C1C;font-size:15px;">
+            <a href="${escapeHtml(link.url)}" style="color:#1C1C1C;text-decoration:none;font-weight:600;">
+              ${escapeHtml(link.name)}
+            </a>
           </td>
-          <td style="padding:12px 0;border-bottom:1px solid #EAE6DD;font-family:Georgia,serif;color:#1C1C1C;font-size:15px;text-align:right;">
-            ${escapeHtml(item.amount)}
+          <td style="padding:14px 0;border-bottom:1px solid #EAE6DD;text-align:right;">
+            <a href="${escapeHtml(link.url)}" style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#C9A84C;text-decoration:none;">Download &rarr;</a>
           </td>
         </tr>`,
     )
@@ -84,14 +98,11 @@ function buildEmailHtml(opts: {
             <p style="margin:0 0 24px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#7D9B76;">nóurish.</p>
             <h1 style="margin:0 0 16px;font-family:Georgia,serif;font-weight:700;font-size:28px;color:#1C1C1C;line-height:1.2;">Your order is confirmed.</h1>
             <p style="margin:0 0 28px;font-family:Georgia,serif;font-style:italic;font-size:16px;color:#7D9B76;">Thank you, ${escapeHtml(opts.customerName)}.</p>
-            <p style="margin:0 0 32px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:1.7;color:#3a3a3a;">Your digital protocol is ready. You'll receive a separate email with your download link shortly.</p>
+            <p style="margin:0 0 24px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:1.7;color:#3a3a3a;">${opts.links.length > 1 ? "All of your files are below." : "Your download is below."}</p>
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
               ${rows}
-              <tr>
-                <td style="padding:16px 0 0;font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9590;">Total</td>
-                <td style="padding:16px 0 0;font-family:Georgia,serif;font-weight:700;font-size:20px;color:#C9A84C;text-align:right;">${escapeHtml(opts.total)}</td>
-              </tr>
             </table>
+            <p style="margin:32px 0 0;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;line-height:1.7;color:#6b6862;">These links stay active for 7 days. Save the files somewhere safe once you've downloaded them.</p>
             <p style="margin:40px 0 0;font-family:Georgia,serif;font-style:italic;font-size:13px;color:#9A9590;">Eat with intention. — The Nourish System</p>
           </td></tr>
         </table>
@@ -101,14 +112,60 @@ function buildEmailHtml(opts: {
 </html>`;
 }
 
-function formatAmount(amount: number | null | undefined, currency: string | null | undefined): string {
-  if (amount == null) return "";
-  const cur = (currency ?? "usd").toUpperCase();
-  const value = amount / 100;
+async function sendResendEmail(opts: {
+  resendKey: string;
+  fromEmail: string;
+  to: string;
+  subject: string;
+  html: string;
+}): Promise<{ ok: boolean; detail?: string }> {
   try {
-    return new Intl.NumberFormat("en-US", { style: "currency", currency: cur }).format(value);
-  } catch {
-    return `${value.toFixed(2)} ${cur}`;
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${opts.resendKey}`,
+      },
+      body: JSON.stringify({
+        from: `Nourish System <${opts.fromEmail}>`,
+        to: [opts.to],
+        subject: opts.subject,
+        html: opts.html,
+      }),
+    });
+    if (!res.ok) {
+      const text = await res.text();
+      return { ok: false, detail: `resend ${res.status}: ${text}` };
+    }
+    return { ok: true };
+  } catch (err) {
+    return { ok: false, detail: `resend error: ${String(err)}` };
+  }
+}
+
+async function sendAlert(opts: {
+  resendKey: string;
+  fromEmail: string;
+  alertEmail: string;
+  message: string;
+}) {
+  if (!opts.alertEmail) return;
+  try {
+    await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${opts.resendKey}`,
+      },
+      body: JSON.stringify({
+        from: `Nourish System <${opts.fromEmail}>`,
+        to: [opts.alertEmail],
+        subject: "⚠️ Nourish delivery needs attention",
+        html: `<p>${escapeHtml(opts.message)}</p><p>Check the orders table for delivery_status = 'failed'.</p>`,
+      }),
+    });
+  } catch (err) {
+    console.error("stripe-webhook: alert email failed", err);
   }
 }
 
@@ -119,6 +176,7 @@ export const Route = createFileRoute("/api/public/stripe-webhook")({
         const secret = process.env.STRIPE_WEBHOOK_SECRET;
         const resendKey = process.env.RESEND_API_KEY;
         const fromEmail = process.env.FROM_EMAIL;
+        const alertEmail = process.env.ALERT_EMAIL ?? "";
 
         if (!secret || !resendKey || !fromEmail) {
           console.error("stripe-webhook: missing env", {
@@ -145,79 +203,147 @@ export const Route = createFileRoute("/api/public/stripe-webhook")({
         }
 
         if (event?.type !== "checkout.session.completed") {
-          // Ack other event types so Stripe stops retrying.
           return new Response("ok", { status: 200 });
         }
 
         const session = event.data?.object ?? {};
-        const customerEmail: string | undefined =
-          session.customer_details?.email ?? session.customer_email ?? undefined;
+        const email: string =
+          session.customer_details?.email ?? session.customer_email ?? "";
         const customerName: string =
           session.customer_details?.name ?? session.metadata?.customer_name ?? "there";
+        const metadata = session.metadata ?? {};
+        const sku: string = metadata.sku ?? "";
 
-        if (!customerEmail) {
-          console.warn("stripe-webhook: session missing customer email", session.id);
-          return new Response("ok", { status: 200 });
-        }
+        const files: string[] = metadata.files
+          ? String(metadata.files)
+              .split(",")
+              .map((f: string) => f.trim())
+              .filter(Boolean)
+          : metadata.file
+            ? [String(metadata.file)]
+            : [];
 
-        // Build a line-item summary. line_items isn't included by default on
-        // checkout.session.completed unless expanded — fall back to metadata
-        // or a generic line if absent.
-        const lineItems: Array<{ description: string; quantity: number; amount: string }> = [];
-        const rawItems = session.line_items?.data;
-        if (Array.isArray(rawItems) && rawItems.length > 0) {
-          for (const li of rawItems) {
-            lineItems.push({
-              description:
-                li.description ?? li.price?.product?.name ?? "Nourish System Protocol",
-              quantity: li.quantity ?? 1,
-              amount: formatAmount(li.amount_total, li.currency ?? session.currency),
-            });
-          }
-        } else {
-          lineItems.push({
-            description:
-              session.metadata?.product_name ?? "Nourish System — Digital Protocol",
-            quantity: 1,
-            amount: formatAmount(session.amount_total, session.currency),
+        const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+
+        // Missing email or empty file list — record failure + alert, ack 200.
+        if (!email || files.length === 0) {
+          const missing = !email ? "email" : "files";
+          const errMsg = `Missing ${missing} on checkout ${session.id}`;
+          await supabaseAdmin.from("orders").insert({
+            stripe_event_id: event.id,
+            checkout_session: session.id ?? "unknown",
+            customer_email: email || "unknown",
+            sku,
+            file_count: files.length,
+            amount_total: session.amount_total ?? null,
+            currency: session.currency ?? null,
+            delivery_status: "failed",
+            delivery_error: errMsg,
           });
+          await sendAlert({
+            resendKey,
+            fromEmail,
+            alertEmail,
+            message: `Delivery could not run: missing ${missing} on ${session.id}`,
+          });
+          return new Response("missing data", { status: 200 });
         }
 
-        const total = formatAmount(session.amount_total, session.currency);
-
-        const html = buildEmailHtml({
-          customerName,
-          items: lineItems,
-          total,
+        // Duplicate guard via unique stripe_event_id.
+        const { error: insertErr } = await supabaseAdmin.from("orders").insert({
+          stripe_event_id: event.id,
+          checkout_session: session.id,
+          customer_email: email,
+          sku,
+          file_count: files.length,
+          amount_total: session.amount_total ?? null,
+          currency: session.currency ?? null,
+          delivery_status: "processing",
         });
 
-        try {
-          const resendRes = await fetch("https://api.resend.com/emails", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${resendKey}`,
-            },
-            body: JSON.stringify({
-              from: `Nourish System <${fromEmail}>`,
-              to: [customerEmail],
-              subject: "Your Nourish System order is confirmed",
-              html,
-            }),
-          });
-
-          if (!resendRes.ok) {
-            const text = await resendRes.text();
-            console.error("stripe-webhook: resend send failed", resendRes.status, text);
-            // Return 500 so Stripe retries the webhook.
-            return new Response("Email send failed", { status: 500 });
+        if (insertErr) {
+          if ((insertErr as any).code === "23505") {
+            return new Response("already processed", { status: 200 });
           }
-        } catch (err) {
-          console.error("stripe-webhook: resend request error", err);
-          return new Response("Email send error", { status: 500 });
+          console.error("stripe-webhook: db insert failed", insertErr);
+          await sendAlert({
+            resendKey,
+            fromEmail,
+            alertEmail,
+            message: `DB insert failed for ${session.id}: ${insertErr.message}`,
+          });
+          return new Response("db error", { status: 500 });
         }
 
-        return new Response("ok", { status: 200 });
+        try {
+          const links: Array<{ name: string; url: string }> = [];
+          const expiresAt = new Date(Date.now() + LINK_TTL_SECONDS * 1000).toISOString();
+
+          for (const file of files) {
+            const { data, error } = await supabaseAdmin.storage
+              .from(BUCKET)
+              .createSignedUrl(file, LINK_TTL_SECONDS, { download: true });
+
+            if (error || !data?.signedUrl) {
+              throw new Error(`Could not sign ${file}: ${error?.message ?? "no url"}`);
+            }
+
+            links.push({ name: DISPLAY[file] ?? file, url: data.signedUrl });
+
+            await supabaseAdmin.from("download_tokens").insert({
+              stripe_event_id: event.id,
+              customer_email: email,
+              file_name: file,
+              expires_at: expiresAt,
+            });
+          }
+
+          const isBundle = links.length > 1;
+          const subject = isBundle
+            ? "Your Complete System is ready to download"
+            : `Your ${links[0].name} is ready to download`;
+
+          const html = buildEmailHtml({ customerName, links });
+
+          const sendRes = await sendResendEmail({
+            resendKey,
+            fromEmail,
+            to: email,
+            subject,
+            html,
+          });
+
+          if (!sendRes.ok) {
+            throw new Error(sendRes.detail ?? "email send failed");
+          }
+
+          await supabaseAdmin
+            .from("orders")
+            .update({
+              delivery_status: "delivered",
+              delivered_at: new Date().toISOString(),
+            })
+            .eq("stripe_event_id", event.id);
+
+          return new Response("delivered", { status: 200 });
+        } catch (err) {
+          const errText = String(err);
+          console.error("stripe-webhook: delivery failed", errText);
+          await supabaseAdmin
+            .from("orders")
+            .update({
+              delivery_status: "failed",
+              delivery_error: errText,
+            })
+            .eq("stripe_event_id", event.id);
+          await sendAlert({
+            resendKey,
+            fromEmail,
+            alertEmail,
+            message: `DELIVERY FAILED for ${email} (${session.id}): ${errText}`,
+          });
+          return new Response("delivery failed - alerted", { status: 200 });
+        }
       },
     },
   },
