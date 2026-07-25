@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UploadRouteImport } from './routes/upload'
 import { Route as SystemRouteImport } from './routes/system'
 import { Route as MetabolicHealthRouteImport } from './routes/metabolic-health'
 import { Route as LongevityRouteImport } from './routes/longevity'
@@ -23,6 +24,11 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 
+const UploadRoute = UploadRouteImport.update({
+  id: '/upload',
+  path: '/upload',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SystemRoute = SystemRouteImport.update({
   id: '/system',
   path: '/system',
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
   '/system': typeof SystemRoute
+  '/upload': typeof UploadRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
 export interface FileRoutesByTo {
@@ -117,6 +124,7 @@ export interface FileRoutesByTo {
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
   '/system': typeof SystemRoute
+  '/upload': typeof UploadRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
 export interface FileRoutesById {
@@ -133,6 +141,7 @@ export interface FileRoutesById {
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
   '/system': typeof SystemRoute
+  '/upload': typeof UploadRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
 export interface FileRouteTypes {
@@ -150,6 +159,7 @@ export interface FileRouteTypes {
     | '/longevity'
     | '/metabolic-health'
     | '/system'
+    | '/upload'
     | '/api/public/stripe-webhook'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -165,6 +175,7 @@ export interface FileRouteTypes {
     | '/longevity'
     | '/metabolic-health'
     | '/system'
+    | '/upload'
     | '/api/public/stripe-webhook'
   id:
     | '__root__'
@@ -180,6 +191,7 @@ export interface FileRouteTypes {
     | '/longevity'
     | '/metabolic-health'
     | '/system'
+    | '/upload'
     | '/api/public/stripe-webhook'
   fileRoutesById: FileRoutesById
 }
@@ -196,11 +208,19 @@ export interface RootRouteChildren {
   LongevityRoute: typeof LongevityRoute
   MetabolicHealthRoute: typeof MetabolicHealthRoute
   SystemRoute: typeof SystemRoute
+  UploadRoute: typeof UploadRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/upload': {
+      id: '/upload'
+      path: '/upload'
+      fullPath: '/upload'
+      preLoaderRoute: typeof UploadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/system': {
       id: '/system'
       path: '/system'
@@ -308,18 +328,9 @@ const rootRouteChildren: RootRouteChildren = {
   LongevityRoute: LongevityRoute,
   MetabolicHealthRoute: MetabolicHealthRoute,
   SystemRoute: SystemRoute,
+  UploadRoute: UploadRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
