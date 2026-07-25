@@ -23,6 +23,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
+import { Route as ApiPublicResendLinksRouteImport } from './routes/api/public/resend-links'
 
 const UploadRoute = UploadRouteImport.update({
   id: '/upload',
@@ -94,6 +95,11 @@ const ApiPublicStripeWebhookRoute = ApiPublicStripeWebhookRouteImport.update({
   path: '/api/public/stripe-webhook',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicResendLinksRoute = ApiPublicResendLinksRouteImport.update({
+  id: '/api/public/resend-links',
+  path: '/api/public/resend-links',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -109,6 +115,7 @@ export interface FileRoutesByFullPath {
   '/metabolic-health': typeof MetabolicHealthRoute
   '/system': typeof SystemRoute
   '/upload': typeof UploadRoute
+  '/api/public/resend-links': typeof ApiPublicResendLinksRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
 export interface FileRoutesByTo {
@@ -125,6 +132,7 @@ export interface FileRoutesByTo {
   '/metabolic-health': typeof MetabolicHealthRoute
   '/system': typeof SystemRoute
   '/upload': typeof UploadRoute
+  '/api/public/resend-links': typeof ApiPublicResendLinksRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
 export interface FileRoutesById {
@@ -142,6 +150,7 @@ export interface FileRoutesById {
   '/metabolic-health': typeof MetabolicHealthRoute
   '/system': typeof SystemRoute
   '/upload': typeof UploadRoute
+  '/api/public/resend-links': typeof ApiPublicResendLinksRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
 export interface FileRouteTypes {
@@ -160,6 +169,7 @@ export interface FileRouteTypes {
     | '/metabolic-health'
     | '/system'
     | '/upload'
+    | '/api/public/resend-links'
     | '/api/public/stripe-webhook'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -176,6 +186,7 @@ export interface FileRouteTypes {
     | '/metabolic-health'
     | '/system'
     | '/upload'
+    | '/api/public/resend-links'
     | '/api/public/stripe-webhook'
   id:
     | '__root__'
@@ -192,6 +203,7 @@ export interface FileRouteTypes {
     | '/metabolic-health'
     | '/system'
     | '/upload'
+    | '/api/public/resend-links'
     | '/api/public/stripe-webhook'
   fileRoutesById: FileRoutesById
 }
@@ -209,6 +221,7 @@ export interface RootRouteChildren {
   MetabolicHealthRoute: typeof MetabolicHealthRoute
   SystemRoute: typeof SystemRoute
   UploadRoute: typeof UploadRoute
+  ApiPublicResendLinksRoute: typeof ApiPublicResendLinksRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
 
@@ -312,6 +325,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicStripeWebhookRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/resend-links': {
+      id: '/api/public/resend-links'
+      path: '/api/public/resend-links'
+      fullPath: '/api/public/resend-links'
+      preLoaderRoute: typeof ApiPublicResendLinksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -329,6 +349,7 @@ const rootRouteChildren: RootRouteChildren = {
   MetabolicHealthRoute: MetabolicHealthRoute,
   SystemRoute: SystemRoute,
   UploadRoute: UploadRoute,
+  ApiPublicResendLinksRoute: ApiPublicResendLinksRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }
 export const routeTree = rootRouteImport
