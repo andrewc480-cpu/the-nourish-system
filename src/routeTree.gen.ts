@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UploadRouteImport } from './routes/upload'
 import { Route as SystemRouteImport } from './routes/system'
+import { Route as ResendRouteImport } from './routes/resend'
 import { Route as MetabolicHealthRouteImport } from './routes/metabolic-health'
 import { Route as LongevityRouteImport } from './routes/longevity'
 import { Route as HormonalHealthRouteImport } from './routes/hormonal-health'
@@ -33,6 +34,11 @@ const UploadRoute = UploadRouteImport.update({
 const SystemRoute = SystemRouteImport.update({
   id: '/system',
   path: '/system',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResendRoute = ResendRouteImport.update({
+  id: '/resend',
+  path: '/resend',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MetabolicHealthRoute = MetabolicHealthRouteImport.update({
@@ -113,6 +119,7 @@ export interface FileRoutesByFullPath {
   '/hormonal-health': typeof HormonalHealthRoute
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
+  '/resend': typeof ResendRoute
   '/system': typeof SystemRoute
   '/upload': typeof UploadRoute
   '/api/public/resend-links': typeof ApiPublicResendLinksRoute
@@ -130,6 +137,7 @@ export interface FileRoutesByTo {
   '/hormonal-health': typeof HormonalHealthRoute
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
+  '/resend': typeof ResendRoute
   '/system': typeof SystemRoute
   '/upload': typeof UploadRoute
   '/api/public/resend-links': typeof ApiPublicResendLinksRoute
@@ -148,6 +156,7 @@ export interface FileRoutesById {
   '/hormonal-health': typeof HormonalHealthRoute
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
+  '/resend': typeof ResendRoute
   '/system': typeof SystemRoute
   '/upload': typeof UploadRoute
   '/api/public/resend-links': typeof ApiPublicResendLinksRoute
@@ -167,6 +176,7 @@ export interface FileRouteTypes {
     | '/hormonal-health'
     | '/longevity'
     | '/metabolic-health'
+    | '/resend'
     | '/system'
     | '/upload'
     | '/api/public/resend-links'
@@ -184,6 +194,7 @@ export interface FileRouteTypes {
     | '/hormonal-health'
     | '/longevity'
     | '/metabolic-health'
+    | '/resend'
     | '/system'
     | '/upload'
     | '/api/public/resend-links'
@@ -201,6 +212,7 @@ export interface FileRouteTypes {
     | '/hormonal-health'
     | '/longevity'
     | '/metabolic-health'
+    | '/resend'
     | '/system'
     | '/upload'
     | '/api/public/resend-links'
@@ -219,6 +231,7 @@ export interface RootRouteChildren {
   HormonalHealthRoute: typeof HormonalHealthRoute
   LongevityRoute: typeof LongevityRoute
   MetabolicHealthRoute: typeof MetabolicHealthRoute
+  ResendRoute: typeof ResendRoute
   SystemRoute: typeof SystemRoute
   UploadRoute: typeof UploadRoute
   ApiPublicResendLinksRoute: typeof ApiPublicResendLinksRoute
@@ -239,6 +252,13 @@ declare module '@tanstack/react-router' {
       path: '/system'
       fullPath: '/system'
       preLoaderRoute: typeof SystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resend': {
+      id: '/resend'
+      path: '/resend'
+      fullPath: '/resend'
+      preLoaderRoute: typeof ResendRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/metabolic-health': {
@@ -347,6 +367,7 @@ const rootRouteChildren: RootRouteChildren = {
   HormonalHealthRoute: HormonalHealthRoute,
   LongevityRoute: LongevityRoute,
   MetabolicHealthRoute: MetabolicHealthRoute,
+  ResendRoute: ResendRoute,
   SystemRoute: SystemRoute,
   UploadRoute: UploadRoute,
   ApiPublicResendLinksRoute: ApiPublicResendLinksRoute,
