@@ -1,0 +1,3 @@
+CREATE POLICY "Anon can upload to protocols" ON storage.objects FOR INSERT TO anon, authenticated WITH CHECK (bucket_id = 'protocols');
+CREATE POLICY "Anon can update protocols" ON storage.objects FOR UPDATE TO anon, authenticated USING (bucket_id = 'protocols') WITH CHECK (bucket_id = 'protocols');
+CREATE POLICY "Anon can read protocols" ON storage.objects FOR SELECT TO anon, authenticated USING (bucket_id = 'protocols');
