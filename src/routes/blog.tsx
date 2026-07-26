@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
+import gutHero from "@/assets/gut-health-hero.png.asset.json";
+import metabolicHero from "@/assets/metabolic-hero.png.asset.json";
+import cognitiveHero from "@/assets/cognitive-hero.png.asset.json";
+import longevityHero from "@/assets/longevity-hero.png.asset.json";
+import hormonalHero from "@/assets/hormonal-hero.png.asset.json";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -166,6 +171,14 @@ const upcoming = [
       "The Mineral Trio: The Three Nutrients Your Hormones Cannot Function Without",
   },
 ];
+
+const UPCOMING_IMAGES: Record<string, string> = {
+  "Pillar 02 · Gut Health": gutHero.url,
+  "Pillar 03 · Metabolic Health": metabolicHero.url,
+  "Pillar 04 · Cognitive Performance": cognitiveHero.url,
+  "Pillar 05 · Longevity & Healthspan": longevityHero.url,
+  "Pillar 06 · Hormonal Health": hormonalHero.url,
+};
 
 function BlogPage() {
   const [showArticle, setShowArticle] = useState(false);
@@ -668,14 +681,16 @@ function BlogPage() {
               <div
                 key={c.pillar}
                 style={{
-                  background: "#F2EDE4",
+                  position: "relative",
                   borderRadius: "4px",
                   padding: "20px",
-                  borderTop: "2px solid rgba(28,28,28,0.09)",
+                  minHeight: "220px",
                   display: "flex",
                   flexDirection: "column",
                   gap: "12px",
-                  opacity: 0.6,
+                  backgroundImage: `linear-gradient(rgba(28,28,28,0.6), rgba(28,28,28,0.6)), url(${UPCOMING_IMAGES[c.pillar]})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}
               >
                 <span
@@ -686,8 +701,8 @@ function BlogPage() {
                     fontSize: "9px",
                     textTransform: "uppercase",
                     letterSpacing: "0.14em",
-                    background: "rgba(28,28,28,0.06)",
-                    color: "#9A9590",
+                    background: "rgba(28,28,28,0.35)",
+                    color: "#F7F5F1",
                     borderRadius: "12px",
                     padding: "3px 10px",
                   }}
@@ -710,9 +725,10 @@ function BlogPage() {
                     fontFamily: "'Playfair Display', serif",
                     fontSize: "15px",
                     fontWeight: 600,
-                    color: "#1C1C1C",
+                    color: "#F7F5F1",
                     lineHeight: 1.3,
                     flex: 1,
+                    textShadow: "0 1px 3px rgba(0,0,0,0.5)",
                   }}
                 >
                   {c.title}
