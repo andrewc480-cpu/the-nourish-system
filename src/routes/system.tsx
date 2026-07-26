@@ -49,7 +49,7 @@ const sections = [
     n: "07",
     label: "The Entry Point",
     title: "Your Next Step",
-    desc: "A short diagnostic that identifies which of the six satellite protocols you should read next based on your most pressing biological concern. The system is designed to grow with you.",
+    desc: "A short diagnostic that identifies which of the six protocols you should read next based on your most pressing biological concern. The system is designed to grow with you.",
   },
 ];
 
