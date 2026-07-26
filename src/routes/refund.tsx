@@ -89,7 +89,7 @@ function RefundPage() {
                 <a href="/free-recipes" className="text-[#7D9B76] hover:underline">
                   15-Minute Week
                 </a>
-                . It's a quick, email-free way to sample the style, structure,
+                . It's a quick way to sample the style, structure,
                 and recipes before committing to a full protocol.
               </p>
             </section>
