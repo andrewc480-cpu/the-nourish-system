@@ -109,13 +109,6 @@ function ThankYouPage() {
               className="font-semibold text-[#7D9B76] hover:underline"
             >
               Complete System
-            </a>{" "}
-            or explore the free{" "}
-            <a
-              href="/free-recipes"
-              className="font-semibold text-[#7D9B76] hover:underline"
-            >
-              15-Minute Week
             </a>
             .
           </p>

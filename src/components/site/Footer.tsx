@@ -1,5 +1,5 @@
 const exploreLinks = [
-  { href: "/free-recipes", label: "Free Recipes" },
+  { href: "/system", label: "The Complete System" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
 ];
