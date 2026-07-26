@@ -4,8 +4,7 @@ import { useState } from "react";
 export function Header() {
   const [open, setOpen] = useState(false);
   const navLinks = [
-    { to: "/", label: "Home", hash: undefined },
-    { to: "/free-recipes", label: "Free Recipes", hash: undefined },
+    { to: "/", label: "Shop", hash: undefined },
     { to: "/blog", label: "Blog", hash: undefined },
     { to: "/about", label: "About", hash: undefined },
   ] as const;
@@ -29,12 +28,6 @@ export function Header() {
               {l.label}
             </Link>
           ))}
-          <Link
-            to="/system"
-            className="ml-2 inline-flex items-center rounded-[2px] bg-[#C9A84C] px-4 py-2 font-sans text-sm font-medium text-[#1C1C1C] transition-colors hover:bg-[#BE9A3D]"
-          >
-            Get The System
-          </Link>
         </nav>
         <button onClick={() => setOpen(!open)} aria-label="Menu" className="md:hidden">
           <div className="space-y-1.5">
@@ -57,13 +50,6 @@ export function Header() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              to="/system"
-              onClick={() => setOpen(false)}
-              className="mt-3 inline-flex w-fit items-center rounded-[2px] bg-charcoal px-4 py-2 font-sans text-sm font-medium text-background"
-            >
-              Get The System
-            </Link>
           </div>
         </div>
       )}
