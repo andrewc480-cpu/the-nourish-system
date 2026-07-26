@@ -6,7 +6,6 @@ import metabolicHero from "@/assets/metabolic-hero.png.asset.json";
 import cognitiveHero from "@/assets/cognitive-hero.png.asset.json";
 import longevityHero from "@/assets/longevity-hero.png.asset.json";
 import hormonalHero from "@/assets/hormonal-hero.png.asset.json";
-import featuredImg from "@/assets/blog-featured-glp1.png.asset.json";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -151,140 +150,202 @@ function PullQuote({ children }: { children: React.ReactNode }) {
 
 const upcoming = [
   {
-    pillar: "Gut Health",
+    pillar: "Pillar 02 · Gut Health",
     title: "The 30-Day Gut Reset: Why Phase Order Changes Everything",
-    blurb:
-      "Remove, repair, rebuild — in that order. Skip a phase and the whole thing fails.",
-    meta: "Coming soon · 7 min read",
   },
   {
-    pillar: "Metabolic Health",
-    title: "The Sequencing Protocol: How Eating Order Flattens Your Glucose",
-    blurb:
-      "Same meal, different order, dramatically different blood sugar response.",
-    meta: "Coming soon · 6 min read",
+    pillar: "Pillar 03 · Metabolic Health",
+    title: "The Sequencing Protocol: How Eating Order Reduces Glucose by 40%",
   },
   {
-    pillar: "Cognitive Performance",
-    title: "Why Your Breakfast Decides Your 3pm",
-    blurb:
-      "What you eat at 7am determines whether you can think at three in the afternoon.",
-    meta: "Coming soon · 6 min read",
+    pillar: "Pillar 04 · Cognitive Performance",
+    title: "The Morning Brain Protocol: Why Your Breakfast Determines Your 3pm",
   },
   {
-    pillar: "Longevity & Healthspan",
-    title: "What the Longest-Lived People Actually Eat",
-    blurb:
-      "Not exotic. Not expensive. Boring, repeatable, and almost nobody does it.",
-    meta: "Coming soon · 8 min read",
+    pillar: "Pillar 05 · Longevity & Healthspan",
+    title: "What the Blue Zones Actually Eat — And What We Got Wrong",
   },
   {
-    pillar: "Hormonal Health",
-    title: "The Three Nutrients Your Hormones Can't Work Without",
-    blurb:
-      "Magnesium, zinc, and healthy fat — and why low-fat advice broke a generation.",
-    meta: "Coming soon · 7 min read",
+    pillar: "Pillar 06 · Hormonal Health",
+    title:
+      "The Mineral Trio: The Three Nutrients Your Hormones Cannot Function Without",
   },
 ];
 
 const UPCOMING_IMAGES: Record<string, string> = {
-  "Gut Health": gutHero.url,
-  "Metabolic Health": metabolicHero.url,
-  "Cognitive Performance": cognitiveHero.url,
-  "Longevity & Healthspan": longevityHero.url,
-  "Hormonal Health": hormonalHero.url,
+  "Pillar 02 · Gut Health": gutHero.url,
+  "Pillar 03 · Metabolic Health": metabolicHero.url,
+  "Pillar 04 · Cognitive Performance": cognitiveHero.url,
+  "Pillar 05 · Longevity & Healthspan": longevityHero.url,
+  "Pillar 06 · Hormonal Health": hormonalHero.url,
 };
-
-const blogCss = `
-.bv3-head{max-width:1100px;margin:0 auto;padding:70px 24px 10px}
-.bv3-head h1{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.015em;font-size:52px;line-height:1.05;margin-top:14px;color:#1C1C1C}
-.bv3-head p{font-family:'DM Sans',sans-serif;font-size:17px;color:#6b6862;margin-top:18px;max-width:520px;line-height:1.6}
-.bv3-it{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:#7D9B76}
-.bv3-feat{max-width:1100px;margin:44px auto 0;padding:0 24px}
-.bv3-feat-in{display:grid;grid-template-columns:1.15fr .85fr;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px rgba(28,28,28,.12)}
-.bv3-fimg{background-size:cover;background-position:center;min-height:420px}
-.bv3-ftxt{background:#1C1C1C;padding:48px 44px;display:flex;flex-direction:column;justify-content:center}
-.bv3-ftag{font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#C9A84C}
-.bv3-ftxt h2{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.015em;color:#F7F5F1;font-size:34px;line-height:1.14;margin-top:14px}
-.bv3-fd{font-family:'DM Sans',sans-serif;color:#9A9590;font-size:15px;line-height:1.7;margin-top:16px}
-.bv3-fm{font-family:'DM Sans',sans-serif;color:#6b6862;font-size:12px;margin-top:18px;letter-spacing:.05em}
-.bv3-gold{margin-top:26px;align-self:flex-start;background:#C9A84C;color:#1C1C1C;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;padding:16px 34px;border-radius:2px;border:none;cursor:pointer;text-decoration:none;display:inline-block}
-.bv3-more{max-width:1100px;margin:0 auto;padding:70px 24px 30px}
-.bv3-more-h{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.015em;font-size:32px;color:#1C1C1C}
-.bv3-pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
-.bv3-pc{position:relative;color:#F7F5F1;background-size:cover;background-position:center;border-radius:8px;overflow:hidden;display:block;transition:transform .3s,box-shadow .3s;min-height:320px}
-.bv3-pc::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(28,28,28,0.82) 0%,rgba(28,28,28,0.35) 50%,rgba(28,28,28,0.52) 100%);z-index:1}
-.bv3-pc:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(28,28,28,.12)}
-.bv3-pw{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;padding:0 16px}
-.bv3-pw span{font-family:'DM Sans',sans-serif;font-size:28px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#F7F5F1;text-shadow:0 2px 10px rgba(0,0,0,.45),0 1px 4px rgba(0,0,0,.3);text-align:center;line-height:1.1}
-.bv3-pb{position:absolute;bottom:0;left:0;right:0;padding:22px;z-index:2}
-.bv3-ptag{font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C9A84C}
-.bv3-pt{font-family:'Playfair Display',serif;font-weight:600;font-size:19px;margin-top:10px;line-height:1.25;color:#F7F5F1}
-.bv3-pd{font-family:'DM Sans',sans-serif;font-size:13.5px;color:#D8D4CE;margin-top:8px;line-height:1.5}
-.bv3-band{background:#F2EDE4;padding:70px 24px;text-align:center;margin-top:40px}
-.bv3-band-h{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.015em;font-size:32px;color:#1C1C1C;margin-top:12px}
-.bv3-band-p{font-family:'DM Sans',sans-serif;color:#6b6862;font-size:16px;margin-top:14px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.6}
-.bv3-band-b{margin-top:24px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.bv3-dark{background:#1C1C1C;color:#F7F5F1;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;padding:16px 34px;border-radius:2px;text-decoration:none;display:inline-block;font-variant-numeric:lining-nums}
-.bv3-outline{background:transparent;border:1px solid #1C1C1C;color:#1C1C1C;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;padding:15px 33px;border-radius:2px;text-decoration:none;display:inline-block;font-variant-numeric:lining-nums}
-@media(max-width:820px){
-.bv3-head h1{font-size:34px}
-.bv3-feat-in{grid-template-columns:1fr}
-.bv3-fimg{min-height:220px}
-.bv3-ftxt{padding:32px 26px}
-.bv3-ftxt h2{font-size:26px}
-.bv3-pgrid{grid-template-columns:1fr}
-}
-`;
 
 function BlogPage() {
   const [showArticle, setShowArticle] = useState(false);
   return (
     <SiteLayout>
     <div style={{ background: "#F7F5F1" }}>
-      <style dangerouslySetInnerHTML={{ __html: blogCss }} />
       {/* HERO */}
-      <section className="bv3-head">
-        <div style={eyebrowStyle}>The Journal</div>
-        <h1>
-          Food that works. <span className="bv3-it">Explained.</span>
-        </h1>
-        <p>
-          The reasoning behind the system — written for people who'd rather
-          understand what they're doing than just follow a plan.
-        </p>
+      <section
+        style={{
+          background: "#F7F5F1",
+          padding: "80px 24px",
+          textAlign: "center",
+        }}
+      >
+        <div style={{ maxWidth: "720px", margin: "0 auto" }}>
+          <div style={eyebrowStyle}>The Nourish Journal</div>
+          <h1
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 700,
+              color: "#1C1C1C",
+              lineHeight: 1.1,
+              margin: "20px 0 0",
+              fontSize: "clamp(36px, 6vw, 56px)",
+            }}
+          >
+            Food that works.
+            <br />
+            <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
+              Explained.
+            </em>
+          </h1>
+          <div
+            style={{
+              width: "40px",
+              height: "2px",
+              background: "#C9A84C",
+              margin: "32px auto",
+            }}
+          />
+          <p
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontStyle: "italic",
+              fontSize: "18px",
+              color: "#9A9590",
+              maxWidth: "520px",
+              margin: "0 auto",
+              lineHeight: 1.5,
+            }}
+          >
+            The science behind the system. One article per pillar. Written for
+            people who want to understand their biology — not just follow a
+            meal plan.
+          </p>
+        </div>
       </section>
 
       {/* SECTION 1 — FEATURED */}
-      <section className="bv3-feat">
-        <div className="bv3-feat-in">
+      <section
+        style={{
+          background: "#1C1C1C",
+          padding: "80px 24px",
+        }}
+      >
+        <div style={{ maxWidth: "960px", margin: "0 auto" }}>
           <div
-            className="bv3-fimg"
-            style={{ backgroundImage: `url(${featuredImg.url})` }}
-          />
-          <div className="bv3-ftxt">
-            <div className="bv3-ftag">GLP-1 Nutrition · Latest</div>
-            <h2>The GLP-1 meal prep guide nobody's talking about.</h2>
-            <div className="bv3-fd">
-              One in five adults has used a GLP-1. Almost none of them have a
-              food system built for how their body now works. Here's how to
-              build one around the injection cycle.
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "10px",
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              color: "#7D9B76",
+              marginBottom: "24px",
+            }}
+          >
+            Latest Article
+          </div>
+          <div
+            style={{
+              background: "rgba(247,245,241,0.04)",
+              border: "1px solid rgba(247,245,241,0.08)",
+              borderRadius: "4px",
+              padding: "48px",
+            }}
+          >
+            <div style={{ ...pillarTagStyle, marginBottom: "16px" }}>
+              Pillar 01 · GLP-1 Nutrition
             </div>
-            <div className="bv3-fm">8 min read</div>
+            <h2
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                fontWeight: 700,
+                color: "#F7F5F1",
+                lineHeight: 1.15,
+                marginBottom: "12px",
+                fontSize: "clamp(28px, 4.5vw, 40px)",
+              }}
+            >
+              The GLP-1 Meal Prep Guide
+              <br />
+              <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
+                No One Is Talking About.
+              </em>
+            </h2>
+            <div
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "11px",
+                color: "#9A9590",
+                letterSpacing: "0.08em",
+                marginBottom: "24px",
+              }}
+            >
+              June 2026 · 8 min read · GLP-1 Nutrition
+            </div>
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "15px",
+                fontWeight: 300,
+                color: "#9A9590",
+                maxWidth: "640px",
+                lineHeight: 1.85,
+                marginBottom: "32px",
+              }}
+            >
+              One in five adults has now used a GLP-1 medication. Almost none
+              of them have a meal prep system built for how their body is now
+              functioning. Most GLP-1 content focuses on what to avoid. This
+              guide focuses on what to build — a weekly food system engineered
+              around the injection cycle, the protein imperative, and the
+              fibre strategy that prevents the most common nutritional
+              mistakes made on these medications.
+            </p>
             <button
               type="button"
-              className="bv3-gold"
               onClick={() => {
                 setShowArticle(true);
                 setTimeout(() => {
-                  document
-                    .getElementById("article")
-                    ?.scrollIntoView({ behavior: "smooth" });
+                  document.getElementById("article")?.scrollIntoView({ behavior: "smooth" });
                 }, 0);
+              }}
+              style={{
+                display: "inline-block",
+                background: "#C9A84C",
+                color: "#1C1C1C",
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 500,
+                padding: "12px 28px",
+                border: "none",
+                cursor: "pointer",
+                borderRadius: "2px",
               }}
             >
               {showArticle ? "Article Open Below" : "Read The Article"}
             </button>
+            <div
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "11px",
+                color: "#9A9590",
+                marginTop: "16px",
+              }}
+            >
+              Part of The Nourish System · GLP-1 Nutrition Protocol
+            </div>
           </div>
         </div>
       </section>
@@ -568,43 +629,220 @@ function BlogPage() {
       )}
 
       {/* SECTION 3 — MORE FROM THE JOURNAL */}
-      <section className="bv3-more">
-        <h2 className="bv3-more-h">More from the journal.</h2>
-        <div className="bv3-pgrid">
-          {upcoming.map((c) => (
+      <section
+        style={{
+          background: "#F7F5F1",
+          padding: "72px 24px",
+        }}
+      >
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <div
+            style={{
+              textAlign: "center",
+              marginBottom: "48px",
+            }}
+          >
             <div
-              className="bv3-pc"
-              key={c.pillar}
-              style={{ backgroundImage: `url(${UPCOMING_IMAGES[c.pillar]})` }}
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: "10px",
+                textTransform: "uppercase",
+                letterSpacing: "0.2em",
+                color: "#7D9B76",
+                marginBottom: "16px",
+              }}
             >
-              <div className="bv3-pw">
-                <span>COMING SOON</span>
-              </div>
-              <div className="bv3-pb">
-                <div className="bv3-ptag">{c.pillar}</div>
-                <div className="bv3-pt">{c.title}</div>
-                <div className="bv3-pd">{c.blurb}</div>
-              </div>
+              Coming Soon
             </div>
-          ))}
+            <h2
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                fontSize: "32px",
+                fontWeight: 700,
+                color: "#1C1C1C",
+                lineHeight: 1.2,
+              }}
+            >
+              Five more articles.
+              <br />
+              <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
+                One for every remaining pillar.
+              </em>
+            </h2>
+          </div>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+              gap: "16px",
+            }}
+          >
+            {upcoming.map((c) => (
+              <div
+                key={c.pillar}
+                style={{
+                  position: "relative",
+                  borderRadius: "4px",
+                  padding: "20px",
+                  minHeight: "220px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "12px",
+                  backgroundImage: `linear-gradient(rgba(28,28,28,0.6), rgba(28,28,28,0.6)), url(${UPCOMING_IMAGES[c.pillar]})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "0 12px",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: "22px",
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.2em",
+                      color: "#F7F5F1",
+                      textAlign: "center",
+                      lineHeight: 1.1,
+                      textShadow:
+                        "0 2px 10px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.3)",
+                    }}
+                  >
+                    Coming Soon
+                  </span>
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: "9px",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.14em",
+                    color: "#C9A84C",
+                  }}
+                >
+                  {c.pillar}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontSize: "15px",
+                    fontWeight: 600,
+                    color: "#F7F5F1",
+                    lineHeight: 1.3,
+                    flex: 1,
+                    textShadow: "0 1px 3px rgba(0,0,0,0.5)",
+                  }}
+                >
+                  {c.title}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* SECTION 4 — ARTICLE CTA */}
-      <section className="bv3-band">
-        <div style={eyebrowStyle}>Go deeper</div>
-        <h2 className="bv3-band-h">The articles are the free part.</h2>
-        <p className="bv3-band-p">
-          The protocols are where it gets specific — a 30-day meal plan, a
-          cheat sheet, and 20 recipes built for your situation.
-        </p>
-        <div className="bv3-band-b">
-          <Link to="/system" className="bv3-dark">
-            See The Complete System — <span className="price">$97</span>
-          </Link>
-          <Link to="/glp1" className="bv3-outline">
-            Get The GLP-1 Protocol — <span className="price">$27</span>
-          </Link>
+      <section
+        style={{
+          background: "#F2EDE4",
+          padding: "72px 24px",
+          textAlign: "center",
+        }}
+      >
+        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
+          <div
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "10px",
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              color: "#7D9B76",
+              marginBottom: "16px",
+            }}
+          >
+            Go Deeper
+          </div>
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "32px",
+              fontWeight: 700,
+              color: "#1C1C1C",
+              lineHeight: 1.2,
+              marginBottom: "20px",
+            }}
+          >
+            The full GLP-1 protocol.
+            <br />
+            <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
+              20 recipes. Three windows. One system.
+            </em>
+          </h2>
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: "14px",
+              fontWeight: 300,
+              color: "#3a3a3a",
+              maxWidth: "480px",
+              margin: "0 auto 32px",
+              lineHeight: 1.8,
+            }}
+          >
+            Everything in this article — plus 20 complete recipes, full
+            ingredient guides, the five protocol principles, and a MidJourney
+            photography prompt for every recipe.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              gap: "16px",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <Link
+              to="/glp1"
+              style={{
+                background: "#1C1C1C",
+                color: "#F7F5F1",
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 500,
+                padding: "14px 32px",
+                textDecoration: "none",
+                borderRadius: "2px",
+                fontVariantNumeric: "lining-nums",
+              }}
+            >
+              Get The GLP-1 Protocol — <span className="price">$27</span>
+            </Link>
+            <Link
+              to="/system"
+              style={{
+                background: "transparent",
+                border: "1px solid #1C1C1C",
+                color: "#1C1C1C",
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 400,
+                padding: "14px 32px",
+                textDecoration: "none",
+                borderRadius: "2px",
+                fontVariantNumeric: "lining-nums",
+              }}
+            >
+              Get The Complete System — <span className="price">$97</span>
+            </Link>
+          </div>
         </div>
       </section>
     </div>
