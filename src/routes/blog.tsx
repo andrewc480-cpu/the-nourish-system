@@ -152,23 +152,38 @@ const upcoming = [
   {
     pillar: "Pillar 02 · Gut Health",
     title: "The 30-Day Gut Reset: Why Phase Order Changes Everything",
+    blurb:
+      "The complete phase-by-phase gut reset, from soothing soups to fibre reintroduction.",
+    readTime: 8,
   },
   {
     pillar: "Pillar 03 · Metabolic Health",
     title: "The Sequencing Protocol: How Eating Order Reduces Glucose by 40%",
+    blurb:
+      "How the order of what you eat changes your blood sugar curve all day.",
+    readTime: 10,
   },
   {
     pillar: "Pillar 04 · Cognitive Performance",
     title: "The Morning Brain Protocol: Why Your Breakfast Determines Your 3pm",
+    blurb:
+      "The breakfast-to-dinner stack for steady focus without the afternoon crash.",
+    readTime: 9,
   },
   {
     pillar: "Pillar 05 · Longevity & Healthspan",
     title: "What the Blue Zones Actually Eat — And What We Got Wrong",
+    blurb:
+      "What the longest-lived populations eat — and what modern life gets wrong.",
+    readTime: 11,
   },
   {
     pillar: "Pillar 06 · Hormonal Health",
     title:
       "The Mineral Trio: The Three Nutrients Your Hormones Cannot Function Without",
+    blurb:
+      "The mineral, protein, and cycle-aware strategy behind hormonal balance.",
+    readTime: 9,
   },
 ];
 
@@ -673,7 +688,7 @@ function BlogPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
               gap: "16px",
             }}
           >
@@ -681,55 +696,52 @@ function BlogPage() {
               <div
                 key={c.pillar}
                 style={{
-                  position: "relative",
-                  borderRadius: "4px",
-                  minHeight: "300px",
+                  background: "#F2EDE4",
+                  borderRadius: "8px",
                   overflow: "hidden",
-                  backgroundImage: `linear-gradient(rgba(28,28,28,0.6), rgba(28,28,28,0.6)), url(${UPCOMING_IMAGES[c.pillar]})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
                 <div
                   style={{
-                    position: "absolute",
-                    inset: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "0 12px",
-                    pointerEvents: "none",
+                    position: "relative",
+                    height: "180px",
+                    backgroundImage: `linear-gradient(rgba(28,28,28,0.45), rgba(28,28,28,0.45)), url(${UPCOMING_IMAGES[c.pillar]})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
                   }}
                 >
-                  <span
+                  <div
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: "22px",
-                      fontWeight: 700,
-                      textTransform: "uppercase",
-                      letterSpacing: "0.2em",
-                      color: "#F7F5F1",
-                      textAlign: "center",
-                      lineHeight: 1.1,
-                      textShadow:
-                        "0 2px 10px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.3)",
+                      position: "absolute",
+                      inset: 0,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      padding: "0 12px",
+                      pointerEvents: "none",
                     }}
                   >
-                    Coming Soon
-                  </span>
+                    <span
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: "20px",
+                        fontWeight: 700,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.18em",
+                        color: "#F7F5F1",
+                        textAlign: "center",
+                        lineHeight: 1.1,
+                        textShadow:
+                          "0 2px 10px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.3)",
+                      }}
+                    >
+                      Coming Soon
+                    </span>
+                  </div>
                 </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    padding: "20px",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "8px",
-                  }}
-                >
+                <div style={{ padding: "20px" }}>
                   <div
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
@@ -737,6 +749,7 @@ function BlogPage() {
                       textTransform: "uppercase",
                       letterSpacing: "0.14em",
                       color: "#C9A84C",
+                      marginBottom: "8px",
                     }}
                   >
                     {c.pillar}
@@ -744,14 +757,36 @@ function BlogPage() {
                   <div
                     style={{
                       fontFamily: "'Playfair Display', serif",
-                      fontSize: "15px",
+                      fontSize: "16px",
                       fontWeight: 600,
-                      color: "#F7F5F1",
+                      color: "#1C1C1C",
                       lineHeight: 1.3,
-                      textShadow: "0 1px 3px rgba(0,0,0,0.5)",
+                      marginBottom: "10px",
                     }}
                   >
                     {c.title}
+                  </div>
+                  <p
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: "13px",
+                      fontWeight: 300,
+                      color: "#6b6862",
+                      lineHeight: 1.6,
+                      margin: "0 0 12px",
+                    }}
+                  >
+                    {c.blurb}
+                  </p>
+                  <div
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: "11px",
+                      color: "#9A9590",
+                      letterSpacing: "0.06em",
+                    }}
+                  >
+                    {c.readTime} min read
                   </div>
                 </div>
               </div>
