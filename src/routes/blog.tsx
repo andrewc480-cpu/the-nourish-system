@@ -6,6 +6,7 @@ import metabolicHero from "@/assets/metabolic-hero.png.asset.json";
 import cognitiveHero from "@/assets/cognitive-hero.png.asset.json";
 import longevityHero from "@/assets/longevity-hero.png.asset.json";
 import hormonalHero from "@/assets/hormonal-hero.png.asset.json";
+import featuredImg from "@/assets/blog-featured-glp1.png.asset.json";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
