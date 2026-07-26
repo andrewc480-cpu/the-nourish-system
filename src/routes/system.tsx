@@ -66,9 +66,9 @@ export const Route = createFileRoute("/system")({
   head: () => ({
     meta: [
       { title: "The Nourish System — The Complete Methodology | nóurish." },
-      { name: "description", content: "One flagship methodology. Six biological pillars. 120 recipes. The complete food-first biological optimization system." },
+      { name: "description", content: "All six protocols, 120 recipes, and the Complete Drinks Collection — one price, $97." },
       { property: "og:title", content: "The Nourish System — The Complete Methodology | nóurish." },
-      { property: "og:description", content: "One flagship methodology. Six biological pillars. 120 recipes. The complete food-first biological optimization system." },
+      { property: "og:description", content: "All six protocols, 120 recipes, and the Complete Drinks Collection — one price, $97." },
       { property: "og:url", content: "https://thenourishsystem.com/system" },
     ],
     links: [{ rel: "canonical", href: "https://thenourishsystem.com/system" }],
@@ -106,14 +106,14 @@ function SystemPage() {
               className="mt-8 font-display italic"
               style={{ fontSize: 18, color: MUTED, maxWidth: 500 }}
             >
-              One flagship methodology. Six biological pillars. 120 recipes. The complete food-first biological optimization system.
+              All six protocols, 120 recipes, and the Complete Drinks Collection — one price, $97.
             </p>
             <div
               className="mt-10"
               style={{ width: 1, height: 48, backgroundColor: GOLD, opacity: 0.5 }}
             />
             <div className="mt-10 price" style={{ fontSize: 40 }}>
-              $47</div>
+              $97</div>
             <p
               className="mt-2 font-sans uppercase"
               style={{ fontSize: 11, color: MUTED, letterSpacing: "0.08em" }}
@@ -121,7 +121,7 @@ function SystemPage() {
               Digital PDF · Instant download
             </p>
             <a
-              href="/system"
+              href="#buy"
               className="mt-8 inline-flex items-center font-sans font-medium"
               style={{
                 backgroundColor: GOLD,
@@ -136,7 +136,7 @@ function SystemPage() {
               className="mt-6 font-sans"
               style={{ fontSize: 11, color: MUTED }}
             >
-              Includes all 7 sections · 120 recipes · Symptoms to Solution Index · Daily Protocols · Six Pillar Framework
+              All six protocols · 120 recipes · Six 30-day plans · The Complete Drinks Collection
             </p>
           </div>
         </section>
@@ -321,166 +321,97 @@ function SystemPage() {
         </section>
 
         {/* SECTION 5 — PRICING & CTA */}
-        <section className="w-full px-6" style={{ backgroundColor: LINEN, paddingTop: 80, paddingBottom: 80 }}>
-          <div className="mx-auto max-w-5xl text-center">
-            <p
-              className="font-sans font-medium uppercase"
-              style={{ fontSize: 10, letterSpacing: "0.2em", color: SAGE }}
+        <section id="buy" className="w-full px-6" style={{ backgroundColor: LINEN, paddingTop: 80, paddingBottom: 80 }}>
+          <div className="mx-auto max-w-2xl">
+            <div
+              className="flex flex-col items-center p-10 text-center"
+              style={{ backgroundColor: BG, border: "1px solid rgba(28,28,28,0.09)" }}
             >
-              Get Started
-            </p>
-            <h2
-              className="mt-5 font-display font-bold"
-              style={{ fontSize: 36, color: TEXT, lineHeight: 1.1 }}
-            >
-              The complete system.
-              <br />
-              <span className="italic" style={{ color: SAGE }}>
-                One decision.
-              </span>
-            </h2>
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
-              {/* Card 1 */}
+              <p
+                className="font-sans font-medium uppercase"
+                style={{ fontSize: 10, letterSpacing: "0.2em", color: SAGE }}
+              >
+                Best Value · Save $65
+              </p>
+              <h2
+                className="mt-5 font-display font-bold"
+                style={{ fontSize: 36, color: TEXT, lineHeight: 1.1 }}
+              >
+                The Complete System
+              </h2>
+              <p
+                className="mt-5 font-sans font-light"
+                style={{ fontSize: 15, color: "#4a4a4a", lineHeight: 1.75, maxWidth: 480 }}
+              >
+                Every protocol, every plan, every recipe — whatever your body needs next, you already have it.
+              </p>
+              <ul
+                className="mt-8 w-full max-w-sm space-y-3 text-left font-sans"
+                style={{ fontSize: 14, color: TEXT }}
+              >
+                {[
+                  "All six protocols",
+                  "120 recipes, tested and photographed",
+                  "Six 30-day meal plans",
+                  "Six one-page cheat sheets",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span style={{ color: SAGE, fontWeight: 600 }}>✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
               <div
-                className="flex flex-col items-start p-8 text-left"
+                className="mt-8 w-full max-w-sm p-5 text-left"
+                style={{ backgroundColor: LINEN, borderLeft: `3px solid ${GOLD}` }}
+              >
+                <p
+                  className="font-sans font-medium uppercase"
+                  style={{ fontSize: 9, letterSpacing: "0.16em", color: GOLD }}
+                >
+                  Bonus — Included Free
+                </p>
+                <p
+                  className="mt-2 font-sans font-light"
+                  style={{ fontSize: 13, color: "#3a3a3a", lineHeight: 1.7 }}
+                >
+                  The Complete Drinks Collection — 20 functional coffees, matchas, teas and refreshers, each built to do a job. Yours with the system.
+                </p>
+              </div>
+              <div className="mt-10 flex items-baseline gap-4">
+                <span
+                  className="font-display"
+                  style={{ fontSize: 22, color: MUTED, textDecoration: "line-through" }}
+                >
+                  $162
+                </span>
+                <span className="price" style={{ fontSize: 44 }}>$97</span>
+              </div>
+              <p
+                className="mt-2 font-sans"
+                style={{ fontSize: 12, color: SAGE, fontWeight: 500 }}
+              >
+                You save $65 — more than two protocols, free
+              </p>
+              <a
+                href="#"
+                className="mt-8 inline-flex items-center font-sans font-medium"
                 style={{
-                  backgroundColor: BG,
-                  border: "1px solid rgba(28,28,28,0.09)",
+                  backgroundColor: GOLD,
+                  color: TEXT,
+                  padding: "16px 44px",
+                  fontSize: 15,
                 }}
               >
-                <p
-                  className="font-sans font-medium uppercase"
-                  style={{ fontSize: 9, color: MUTED }}
-                >
-                  Start Here
-                </p>
-                <h3
-                  className="mt-3 font-display font-semibold"
-                  style={{ fontSize: 20, color: TEXT }}
-                >
-                  The Nourish System
-                </h3>
-                <p
-                  className="mt-4 font-sans font-light"
-                  style={{ fontSize: 14, color: "#4a4a4a", lineHeight: 1.75 }}
-                >
-                  The complete flagship methodology. Seven sections. 120 recipes.
-                </p>
-                <div className="mt-6 price" style={{ fontSize: 28 }}>
-                  $47</div>
-                <a
-                  href="/system"
-                  className="mt-6 inline-flex items-center font-sans font-medium"
-                  style={{
-                    backgroundColor: TEXT,
-                    color: BG,
-                    padding: "14px 28px",
-                    fontSize: 14,
-                  }}
-                >
-                  Get The Flagship
-                </a>
-              </div>
-
-              {/* Card 2 */}
-              <div
-                className="flex flex-col items-start p-8 text-left"
-                style={{
-                  backgroundColor: BG,
-                  border: "1px solid rgba(28,28,28,0.09)",
-                }}
+                Get The System
+              </a>
+              <p
+                className="mt-6 font-sans"
+                style={{ fontSize: 11, color: MUTED }}
               >
-                <p
-                  className="font-sans font-medium uppercase"
-                  style={{ fontSize: 9, color: SAGE }}
-                >
-                  Most Popular
-                </p>
-                <h3
-                  className="mt-3 font-display font-semibold"
-                  style={{ fontSize: 20, color: TEXT }}
-                >
-                  Flagship + Your Pillar
-                </h3>
-                <p
-                  className="mt-4 font-sans font-light"
-                  style={{ fontSize: 14, color: "#4a4a4a", lineHeight: 1.75 }}
-                >
-                  The flagship plus the satellite protocol that addresses your most pressing concern.
-                </p>
-                <div className="mt-6 price" style={{ fontSize: 28 }}>
-                  $67</div>
-                <p
-                  className="mt-2 font-sans"
-                  style={{ fontSize: 12, color: MUTED }}
-                >
-                  Choose your pillar at checkout
-                </p>
-                <a
-                  href="/bundle"
-                  className="mt-6 inline-flex items-center font-sans font-medium"
-                  style={{
-                    backgroundColor: TEXT,
-                    color: BG,
-                    padding: "14px 28px",
-                    fontSize: 14,
-                  }}
-                >
-                  Build Your Bundle
-                </a>
-              </div>
-
-              {/* Card 3 */}
-              <div
-                className="flex flex-col items-start p-8 text-left"
-                style={{ backgroundColor: TEXT }}
-              >
-                <p
-                  className="font-sans font-medium uppercase"
-                  style={{ fontSize: 9, color: SAGE }}
-                >
-                  Best Value
-                </p>
-                <h3
-                  className="mt-3 font-display font-semibold"
-                  style={{ fontSize: 20, color: BG }}
-                >
-                  The Complete Bundle
-                </h3>
-                <p
-                  className="mt-4 font-sans font-light"
-                  style={{ fontSize: 13, color: "#9A9590", lineHeight: 1.75 }}
-                >
-                  Every book. The complete system.
-                </p>
-                <div className="mt-6 price" style={{ fontSize: 28 }}>
-                  $147</div>
-                <p
-                  className="mt-2 font-sans"
-                  style={{ fontSize: 11, color: MUTED }}
-                >
-                  Save $62 versus buying individually
-                </p>
-                <a
-                  href="/bundle"
-                  className="mt-6 inline-flex items-center font-sans font-medium"
-                  style={{
-                    backgroundColor: GOLD,
-                    color: TEXT,
-                    padding: "14px 28px",
-                    fontSize: 14,
-                  }}
-                >
-                  Get Everything
-                </a>
-              </div>
+                Instant download · No subscription · Yours to keep
+              </p>
             </div>
-            <p
-              className="mt-10 font-sans"
-              style={{ fontSize: 11, color: MUTED }}
-            >
-              Digital PDF delivery · Instant download · No subscription · Yours to keep
-            </p>
           </div>
         </section>
       </div>
