@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Footer } from "@/components/site/Footer";
 import heroAsset from "@/assets/H1_Pomegranate_Salmon_Power_Plate.png.asset.json";
 import storyImg from "@/assets/Rainbow_Vegetable_Grain_Bowl-vertical.png.asset.json";
@@ -47,11 +49,15 @@ const CSS = `
 /* HERO */
 .nh .hero{position:relative;min-height:640px;display:flex;align-items:center;background-size:cover;background-position:center}
 .nh .hov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,20,19,.93),rgba(20,20,19,.66) 42%,rgba(20,20,19,.15) 70%,rgba(20,20,19,0) 100%)}
-.nh .nav{position:absolute;inset-inline:0;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:24px 44px}
+.nh .nav{position:absolute;inset-inline:0;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:24px 44px}
 .nh .logo{font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:#F7F5F1}
 .nh .logo span{color:#C9A84C}
 .nh .nl{display:flex;gap:30px}
 .nh .nl a{color:#F7F5F1;opacity:.85;font-size:13px;text-decoration:none;letter-spacing:.04em}
+.nh .menu-btn{display:none;background:none;border:none;color:#F7F5F1;cursor:pointer;padding:4px}
+.nh .menu-panel{display:none;position:absolute;right:24px;top:64px;z-index:4;background:#1C1C1C;border:1px solid rgba(247,245,241,.12);border-radius:4px;padding:10px 0;min-width:160px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.nh .menu-panel a{display:block;color:#F7F5F1;opacity:.9;font-size:13px;text-decoration:none;padding:10px 18px;letter-spacing:.04em}
+.nh .menu-panel a:hover{background:rgba(247,245,241,.08);opacity:1}
 .nh .hc{position:relative;z-index:3;padding:80px 44px;max-width:720px}
 .nh .hc h1{font-size:58px;line-height:1.04;color:#F7F5F1}
 .nh .hc .sub{font-size:18px;line-height:1.6;color:rgba(247,245,241,.88);margin-top:22px;max-width:500px}
@@ -138,8 +144,10 @@ const CSS = `
   .nh .hc h1{font-size:36px}
   .nh .nl{display:none}
   .nh .hc{padding:64px 24px}
-  .nh .hero{min-height:560px}
+  .nh .hero{min-height:560px;background-position:center 75%}
   .nh .nav{padding:20px 24px}
+  .nh .menu-btn{display:flex;align-items:center;justify-content:center;width:40px;height:40px}
+  .nh .menu-panel{display:block}
   .nh .story{padding:60px 24px}
   .nh .story-grid{grid-template-columns:1fr;gap:30px}
   .nh .story-img{height:300px;order:-1}
@@ -170,6 +178,7 @@ const CSS = `
 `;
 
 function HomePage() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="nh">
       <style>{CSS}</style>
@@ -187,6 +196,22 @@ function HomePage() {
               <a href="/blog">Blog</a>
               <a href="/about">About</a>
             </div>
+            <button
+              className="menu-btn"
+              aria-label="Open menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+            {menuOpen && (
+              <div className="menu-panel">
+                <a href="#library" onClick={() => setMenuOpen(false)}>Shop</a>
+                <a href="/free-recipes" onClick={() => setMenuOpen(false)}>Free Recipes</a>
+                <a href="/blog" onClick={() => setMenuOpen(false)}>Blog</a>
+                <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
+              </div>
+            )}
           </nav>
           <div className="hc">
             <h1>
