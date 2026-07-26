@@ -212,14 +212,15 @@ const blogCss = `
 .bv3-more{max-width:1100px;margin:0 auto;padding:70px 24px 30px}
 .bv3-more-h{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.015em;font-size:32px;color:#1C1C1C}
 .bv3-pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
-.bv3-pc{color:#1C1C1C;background:#F2EDE4;border-radius:8px;overflow:hidden;display:block;transition:transform .3s,box-shadow .3s}
+.bv3-pc{position:relative;color:#F7F5F1;background-size:cover;background-position:center;border-radius:8px;overflow:hidden;display:block;transition:transform .3s,box-shadow .3s;min-height:320px}
+.bv3-pc::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(28,28,28,0.82) 0%,rgba(28,28,28,0.35) 50%,rgba(28,28,28,0.52) 100%);z-index:1}
 .bv3-pc:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(28,28,28,.12)}
-.bv3-pimg{height:180px;background-size:cover;background-position:center}
-.bv3-pb{padding:20px}
+.bv3-pw{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;padding:0 16px}
+.bv3-pw span{font-family:'DM Sans',sans-serif;font-size:28px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#F7F5F1;text-shadow:0 2px 10px rgba(0,0,0,.45),0 1px 4px rgba(0,0,0,.3);text-align:center;line-height:1.1}
+.bv3-pb{position:absolute;bottom:0;left:0;right:0;padding:22px;z-index:2}
 .bv3-ptag{font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C9A84C}
-.bv3-pt{font-family:'Playfair Display',serif;font-weight:600;font-size:19px;margin-top:10px;line-height:1.25}
-.bv3-pd{font-family:'DM Sans',sans-serif;font-size:13.5px;color:#6b6862;margin-top:8px;line-height:1.5}
-.bv3-pm{font-family:'DM Sans',sans-serif;font-size:11px;color:#9A9590;margin-top:12px;letter-spacing:.05em}
+.bv3-pt{font-family:'Playfair Display',serif;font-weight:600;font-size:19px;margin-top:10px;line-height:1.25;color:#F7F5F1}
+.bv3-pd{font-family:'DM Sans',sans-serif;font-size:13.5px;color:#D8D4CE;margin-top:8px;line-height:1.5}
 .bv3-band{background:#F2EDE4;padding:70px 24px;text-align:center;margin-top:40px}
 .bv3-band-h{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.015em;font-size:32px;color:#1C1C1C;margin-top:12px}
 .bv3-band-p{font-family:'DM Sans',sans-serif;color:#6b6862;font-size:16px;margin-top:14px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.6}
