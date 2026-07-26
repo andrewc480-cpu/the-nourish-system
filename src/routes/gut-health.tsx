@@ -197,7 +197,7 @@ function GutHealthPage() {
               <span className="per">· digital PDF, yours to keep</span>
             </div>
             <div className="cta">
-              <a href="#buy" className="gold">
+              <a href="https://buy.stripe.com/4gMdR92AGf3Y5hq4pJ6Vq0j" className="gold" target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>
@@ -450,7 +450,7 @@ function GutHealthPage() {
               <span className="now">$27</span>
             </div>
             <div className="cta">
-              <a href="#buy" className="gold">
+              <a href="https://buy.stripe.com/4gMdR92AGf3Y5hq4pJ6Vq0j" className="gold" target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>
