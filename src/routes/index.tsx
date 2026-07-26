@@ -1,7 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { Footer } from "@/components/site/Footer";
+import { SiteLayout } from "@/components/site/Layout";
 import heroAsset from "@/assets/H1_Pomegranate_Salmon_Power_Plate.png.asset.json";
 import storyImg from "@/assets/Rainbow_Vegetable_Grain_Bowl-vertical.png.asset.json";
 import lookCheat from "@/assets/glp1-cheat-sheet.png.asset.json";
