@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SystemRouteImport } from './routes/system'
 import { Route as ResendRouteImport } from './routes/resend'
@@ -27,6 +28,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 import { Route as ApiPublicResendLinksRouteImport } from './routes/api/public/resend-links'
 
+const ThankYouRoute = ThankYouRouteImport.update({
+  id: '/thank-you',
+  path: '/thank-you',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
@@ -129,6 +135,7 @@ export interface FileRoutesByFullPath {
   '/resend': typeof ResendRoute
   '/system': typeof SystemRoute
   '/terms': typeof TermsRoute
+  '/thank-you': typeof ThankYouRoute
   '/api/public/resend-links': typeof ApiPublicResendLinksRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
@@ -148,6 +155,7 @@ export interface FileRoutesByTo {
   '/resend': typeof ResendRoute
   '/system': typeof SystemRoute
   '/terms': typeof TermsRoute
+  '/thank-you': typeof ThankYouRoute
   '/api/public/resend-links': typeof ApiPublicResendLinksRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
@@ -168,6 +176,7 @@ export interface FileRoutesById {
   '/resend': typeof ResendRoute
   '/system': typeof SystemRoute
   '/terms': typeof TermsRoute
+  '/thank-you': typeof ThankYouRoute
   '/api/public/resend-links': typeof ApiPublicResendLinksRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
@@ -189,6 +198,7 @@ export interface FileRouteTypes {
     | '/resend'
     | '/system'
     | '/terms'
+    | '/thank-you'
     | '/api/public/resend-links'
     | '/api/public/stripe-webhook'
   fileRoutesByTo: FileRoutesByTo
@@ -208,6 +218,7 @@ export interface FileRouteTypes {
     | '/resend'
     | '/system'
     | '/terms'
+    | '/thank-you'
     | '/api/public/resend-links'
     | '/api/public/stripe-webhook'
   id:
@@ -227,6 +238,7 @@ export interface FileRouteTypes {
     | '/resend'
     | '/system'
     | '/terms'
+    | '/thank-you'
     | '/api/public/resend-links'
     | '/api/public/stripe-webhook'
   fileRoutesById: FileRoutesById
@@ -247,12 +259,20 @@ export interface RootRouteChildren {
   ResendRoute: typeof ResendRoute
   SystemRoute: typeof SystemRoute
   TermsRoute: typeof TermsRoute
+  ThankYouRoute: typeof ThankYouRoute
   ApiPublicResendLinksRoute: typeof ApiPublicResendLinksRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/thank-you': {
+      id: '/thank-you'
+      path: '/thank-you'
+      fullPath: '/thank-you'
+      preLoaderRoute: typeof ThankYouRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
@@ -391,6 +411,7 @@ const rootRouteChildren: RootRouteChildren = {
   ResendRoute: ResendRoute,
   SystemRoute: SystemRoute,
   TermsRoute: TermsRoute,
+  ThankYouRoute: ThankYouRoute,
   ApiPublicResendLinksRoute: ApiPublicResendLinksRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }
