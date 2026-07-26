@@ -159,29 +159,28 @@ const upcoming = [
   },
   {
     pillar: "Metabolic Health",
-    title: "The Sequencing Protocol: How Eating Order Reduces Glucose by 40%",
+    title: "The Sequencing Protocol: How Eating Order Flattens Your Glucose",
     blurb:
       "Same meal, different order, dramatically different blood sugar response.",
     readTime: 6,
   },
   {
     pillar: "Cognitive Performance",
-    title: "The Morning Brain Protocol: Why Your Breakfast Determines Your 3pm",
+    title: "Why Your Breakfast Decides Your 3pm",
     blurb:
       "What you eat at 7am determines whether you can think at three in the afternoon.",
     readTime: 6,
   },
   {
     pillar: "Longevity & Healthspan",
-    title: "What the Blue Zones Actually Eat — And What We Got Wrong",
+    title: "What the Longest-Lived People Actually Eat",
     blurb:
       "Not exotic. Not expensive. Boring, repeatable, and almost nobody does it.",
     readTime: 8,
   },
   {
     pillar: "Hormonal Health",
-    title:
-      "The Mineral Trio: The Three Nutrients Your Hormones Cannot Function Without",
+    title: "The Three Nutrients Your Hormones Can't Work Without",
     blurb:
       "Magnesium, zinc, and healthy fat — and why low-fat advice broke a generation.",
     readTime: 7,
@@ -189,12 +188,13 @@ const upcoming = [
 ];
 
 const UPCOMING_IMAGES: Record<string, string> = {
-  "Gut Health": gutHero.url,
-  "Metabolic Health": metabolicHero.url,
-  "Cognitive Performance": cognitiveHero.url,
-  "Longevity & Healthspan": longevityHero.url,
-  "Hormonal Health": hormonalHero.url,
+  "Gut Health": cardGut.url,
+  "Metabolic Health": cardMetabolic.url,
+  "Cognitive Performance": cardCognitive.url,
+  "Longevity & Healthspan": cardLongevity.url,
+  "Hormonal Health": cardHormonal.url,
 };
+
 
 function BlogPage() {
   const [showArticle, setShowArticle] = useState(false);
