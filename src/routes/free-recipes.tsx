@@ -475,11 +475,11 @@ function FreeRecipesPage() {
               <p className="mt-4 price" style={{ fontSize: 20 }}>
                 $27 each</p>
               <Link
-                to="/bundle"
+                to="/system"
                 className="mt-2 inline-block font-sans"
                 style={{ fontSize: 12, color: SAGE }}
               >
-                Explore Protocols →
+                Get The Complete System →
               </Link>
             </div>
             <div
@@ -506,11 +506,11 @@ function FreeRecipesPage() {
               <p className="mt-4 price" style={{ fontSize: 20 }}>
                 $147</p>
               <Link
-                to="/bundle"
+                to="/system"
                 className="mt-2 inline-block font-sans"
                 style={{ fontSize: 12, color: SAGE }}
               >
-                Get Everything →
+                Get The Complete System →
               </Link>
             </div>
           </div>
@@ -552,7 +552,7 @@ function FreeRecipesPage() {
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
-              to="/bundle"
+              to="/system"
               className="inline-block font-sans font-medium"
               style={{
                 backgroundColor: TEXT,
@@ -561,7 +561,7 @@ function FreeRecipesPage() {
                 fontSize: 14,
               }}
             >
-              Explore All Protocols
+              Get The Complete System
             </Link>
             <Link
               to="/system"

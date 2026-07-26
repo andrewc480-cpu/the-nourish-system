@@ -21,7 +21,6 @@ import { Route as GutHealthRouteImport } from './routes/gut-health'
 import { Route as Glp1RouteImport } from './routes/glp1'
 import { Route as FreeRecipesRouteImport } from './routes/free-recipes'
 import { Route as CognitivePerformanceRouteImport } from './routes/cognitive-performance'
-import { Route as BundleRouteImport } from './routes/bundle'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -88,11 +87,6 @@ const CognitivePerformanceRoute = CognitivePerformanceRouteImport.update({
   path: '/cognitive-performance',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BundleRoute = BundleRouteImport.update({
-  id: '/bundle',
-  path: '/bundle',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const BlogRoute = BlogRouteImport.update({
   id: '/blog',
   path: '/blog',
@@ -123,7 +117,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
-  '/bundle': typeof BundleRoute
   '/cognitive-performance': typeof CognitivePerformanceRoute
   '/free-recipes': typeof FreeRecipesRoute
   '/glp1': typeof Glp1Route
@@ -143,7 +136,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
-  '/bundle': typeof BundleRoute
   '/cognitive-performance': typeof CognitivePerformanceRoute
   '/free-recipes': typeof FreeRecipesRoute
   '/glp1': typeof Glp1Route
@@ -164,7 +156,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
-  '/bundle': typeof BundleRoute
   '/cognitive-performance': typeof CognitivePerformanceRoute
   '/free-recipes': typeof FreeRecipesRoute
   '/glp1': typeof Glp1Route
@@ -186,7 +177,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
-    | '/bundle'
     | '/cognitive-performance'
     | '/free-recipes'
     | '/glp1'
@@ -206,7 +196,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
-    | '/bundle'
     | '/cognitive-performance'
     | '/free-recipes'
     | '/glp1'
@@ -226,7 +215,6 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/blog'
-    | '/bundle'
     | '/cognitive-performance'
     | '/free-recipes'
     | '/glp1'
@@ -247,7 +235,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
-  BundleRoute: typeof BundleRoute
   CognitivePerformanceRoute: typeof CognitivePerformanceRoute
   FreeRecipesRoute: typeof FreeRecipesRoute
   Glp1Route: typeof Glp1Route
@@ -350,13 +337,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CognitivePerformanceRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/bundle': {
-      id: '/bundle'
-      path: '/bundle'
-      fullPath: '/bundle'
-      preLoaderRoute: typeof BundleRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/blog': {
       id: '/blog'
       path: '/blog'
@@ -399,7 +379,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
-  BundleRoute: BundleRoute,
   CognitivePerformanceRoute: CognitivePerformanceRoute,
   FreeRecipesRoute: FreeRecipesRoute,
   Glp1Route: Glp1Route,
