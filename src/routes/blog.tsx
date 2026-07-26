@@ -152,23 +152,38 @@ const upcoming = [
   {
     pillar: "Pillar 02 · Gut Health",
     title: "The 30-Day Gut Reset: Why Phase Order Changes Everything",
+    blurb:
+      "The complete phase-by-phase gut reset, from soothing soups to fibre reintroduction.",
+    readTime: 8,
   },
   {
     pillar: "Pillar 03 · Metabolic Health",
     title: "The Sequencing Protocol: How Eating Order Reduces Glucose by 40%",
+    blurb:
+      "How the order of what you eat changes your blood sugar curve all day.",
+    readTime: 10,
   },
   {
     pillar: "Pillar 04 · Cognitive Performance",
     title: "The Morning Brain Protocol: Why Your Breakfast Determines Your 3pm",
+    blurb:
+      "The breakfast-to-dinner stack for steady focus without the afternoon crash.",
+    readTime: 9,
   },
   {
     pillar: "Pillar 05 · Longevity & Healthspan",
     title: "What the Blue Zones Actually Eat — And What We Got Wrong",
+    blurb:
+      "What the longest-lived populations eat — and what modern life gets wrong.",
+    readTime: 11,
   },
   {
     pillar: "Pillar 06 · Hormonal Health",
     title:
       "The Mineral Trio: The Three Nutrients Your Hormones Cannot Function Without",
+    blurb:
+      "The mineral, protein, and cycle-aware strategy behind hormonal balance.",
+    readTime: 9,
   },
 ];
 
