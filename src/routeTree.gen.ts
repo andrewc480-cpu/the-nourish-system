@@ -19,7 +19,6 @@ import { Route as LongevityRouteImport } from './routes/longevity'
 import { Route as HormonalHealthRouteImport } from './routes/hormonal-health'
 import { Route as GutHealthRouteImport } from './routes/gut-health'
 import { Route as Glp1RouteImport } from './routes/glp1'
-import { Route as FreeRecipesRouteImport } from './routes/free-recipes'
 import { Route as CognitivePerformanceRouteImport } from './routes/cognitive-performance'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
@@ -77,11 +76,6 @@ const Glp1Route = Glp1RouteImport.update({
   path: '/glp1',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FreeRecipesRoute = FreeRecipesRouteImport.update({
-  id: '/free-recipes',
-  path: '/free-recipes',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const CognitivePerformanceRoute = CognitivePerformanceRouteImport.update({
   id: '/cognitive-performance',
   path: '/cognitive-performance',
@@ -118,7 +112,6 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/cognitive-performance': typeof CognitivePerformanceRoute
-  '/free-recipes': typeof FreeRecipesRoute
   '/glp1': typeof Glp1Route
   '/gut-health': typeof GutHealthRoute
   '/hormonal-health': typeof HormonalHealthRoute
@@ -137,7 +130,6 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/cognitive-performance': typeof CognitivePerformanceRoute
-  '/free-recipes': typeof FreeRecipesRoute
   '/glp1': typeof Glp1Route
   '/gut-health': typeof GutHealthRoute
   '/hormonal-health': typeof HormonalHealthRoute
@@ -157,7 +149,6 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/cognitive-performance': typeof CognitivePerformanceRoute
-  '/free-recipes': typeof FreeRecipesRoute
   '/glp1': typeof Glp1Route
   '/gut-health': typeof GutHealthRoute
   '/hormonal-health': typeof HormonalHealthRoute
@@ -178,7 +169,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/cognitive-performance'
-    | '/free-recipes'
     | '/glp1'
     | '/gut-health'
     | '/hormonal-health'
@@ -197,7 +187,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/cognitive-performance'
-    | '/free-recipes'
     | '/glp1'
     | '/gut-health'
     | '/hormonal-health'
@@ -216,7 +205,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/cognitive-performance'
-    | '/free-recipes'
     | '/glp1'
     | '/gut-health'
     | '/hormonal-health'
@@ -236,7 +224,6 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
   CognitivePerformanceRoute: typeof CognitivePerformanceRoute
-  FreeRecipesRoute: typeof FreeRecipesRoute
   Glp1Route: typeof Glp1Route
   GutHealthRoute: typeof GutHealthRoute
   HormonalHealthRoute: typeof HormonalHealthRoute
@@ -323,13 +310,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Glp1RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/free-recipes': {
-      id: '/free-recipes'
-      path: '/free-recipes'
-      fullPath: '/free-recipes'
-      preLoaderRoute: typeof FreeRecipesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/cognitive-performance': {
       id: '/cognitive-performance'
       path: '/cognitive-performance'
@@ -380,7 +360,6 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
   CognitivePerformanceRoute: CognitivePerformanceRoute,
-  FreeRecipesRoute: FreeRecipesRoute,
   Glp1Route: Glp1Route,
   GutHealthRoute: GutHealthRoute,
   HormonalHealthRoute: HormonalHealthRoute,
@@ -397,3 +376,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
