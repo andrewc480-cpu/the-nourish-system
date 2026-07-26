@@ -8,51 +8,6 @@ const GOLD = "#C9A84C";
 const MUTED = "#9A9590";
 const LINEN = "#F2EDE4";
 
-const sections = [
-  {
-    n: "01",
-    label: "The Philosophy",
-    title: "The Nourish Philosophy",
-    desc: "The foundational idea: food is information. Every meal sends a signal. This section explains the shift from random eating to intentional eating — and why it changes everything.",
-  },
-  {
-    n: "02",
-    label: "The Framework",
-    title: "The Six Biological Systems",
-    desc: "An accessible explanation of the six systems food directly controls — gut, metabolism, brain, hormones, longevity, and GLP-1 nutrition — and how they connect to each other.",
-  },
-  {
-    n: "03",
-    label: "The Method",
-    title: "The Nourish Plate Framework",
-    desc: "The foundational plate-building method. Protein + Fibre + Healthy Fat — the combination that sends the most coherent biological signal of any food pairing available.",
-  },
-  {
-    n: "04",
-    label: "The Navigation Tool",
-    title: "The Symptoms to Solution Index",
-    desc: "Start with how you feel. Afternoon crash, brain fog, bloating, poor sleep, hormonal disruption — navigate directly to the protocol that addresses it. The feature that makes this different from every other food system.",
-  },
-  {
-    n: "05",
-    label: "The Recipes",
-    title: "120 Recipes Across Six Pillars",
-    desc: "Every recipe engineered for a specific biological outcome. Filtered by pillar, tagged by biological signal, with functional headnotes that explain what the food is doing and why.",
-  },
-  {
-    n: "06",
-    label: "The Rhythm",
-    title: "The Nourish Daily Protocols",
-    desc: "Three time-based daily frameworks — morning, midday, and evening — aligned with your cortisol, insulin, and recovery cycles. Not a meal plan. A biological rhythm.",
-  },
-  {
-    n: "07",
-    label: "The Entry Point",
-    title: "Your Next Step",
-    desc: "A short diagnostic that identifies which of the six protocols you should read next based on your most pressing biological concern. The system is designed to grow with you.",
-  },
-];
-
 const pillars = [
   { n: "01", name: "GLP-1 Nutrition", promise: "Eat to protect your muscle and energy." },
   { n: "02", name: "Gut Health", promise: "Restore the gut. Everything follows." },
@@ -188,15 +143,21 @@ function SystemPage() {
               className="mt-5 font-display font-bold"
               style={{ fontSize: 36, color: TEXT, lineHeight: 1.1 }}
             >
-              Seven sections.
+              Six protocols.
               <br />
               <span className="italic" style={{ color: SAGE }}>
-                One complete framework.
+                One connected system.
               </span>
             </h2>
+            <p
+              className="mt-8 font-sans font-light"
+              style={{ fontSize: 15, color: "#4a4a4a", lineHeight: 1.85, maxWidth: 600 }}
+            >
+              The system is built as six focused digital protocols, each covering a single biological system that food directly controls. Buy one, or get the full system and move between them as your needs change.
+            </p>
             <div className="mt-14 space-y-0">
-              {sections.map((s, i) => (
-                <div key={s.n}>
+              {pillars.map((p, i) => (
+                <div key={p.n}>
                   <div className="py-8">
                     <div
                       className="font-display font-bold"
@@ -206,32 +167,55 @@ function SystemPage() {
                         lineHeight: 1,
                       }}
                     >
-                      {s.n}
+                      {p.n}
                     </div>
                     <p
                       className="mt-3 font-sans font-medium uppercase"
                       style={{ fontSize: 9, letterSpacing: "0.16em", color: SAGE }}
                     >
-                      {s.label}
+                      Protocol
                     </p>
                     <h3
                       className="mt-3 font-display font-semibold"
                       style={{ fontSize: 20, color: TEXT }}
                     >
-                      {s.title}
+                      {p.name}
                     </h3>
                     <p
                       className="mt-3 font-sans font-light"
                       style={{ fontSize: 13, color: "#4a4a4a", lineHeight: 1.75 }}
                     >
-                      {s.desc}
+                      30-day plan, cheat sheet, and 20 recipes.
                     </p>
                   </div>
-                  {i < sections.length - 1 && (
+                  {i < pillars.length - 1 && (
                     <div style={{ height: 1, backgroundColor: "rgba(28,28,28,0.09)" }} />
                   )}
                 </div>
               ))}
+            </div>
+            <div
+              className="mt-14 p-6"
+              style={{ backgroundColor: BG, borderLeft: `3px solid ${GOLD}` }}
+            >
+              <p
+                className="font-sans font-medium uppercase"
+                style={{ fontSize: 9, letterSpacing: "0.16em", color: GOLD }}
+              >
+                Bonus — Included Free
+              </p>
+              <p
+                className="mt-3 font-display font-semibold"
+                style={{ fontSize: 18, color: TEXT }}
+              >
+                The Complete Drinks Collection
+              </p>
+              <p
+                className="mt-2 font-sans font-light"
+                style={{ fontSize: 13, color: "#4a4a4a", lineHeight: 1.75 }}
+              >
+                20 functional coffees, matchas, teas and refreshers — each built to support a specific protocol outcome. Yours with the full system.
+              </p>
             </div>
           </div>
         </section>
@@ -394,7 +378,9 @@ function SystemPage() {
                 You save $65 — more than two protocols, free
               </p>
               <a
-                href="#"
+                href="https://buy.stripe.com/fZueVd2AG6xsfW4f4n6Vq0o"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center font-sans font-medium"
                 style={{
                   backgroundColor: GOLD,
