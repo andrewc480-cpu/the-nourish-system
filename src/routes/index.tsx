@@ -47,16 +47,7 @@ const CSS = `
 /* HERO */
 .nh .hero{position:relative;min-height:640px;display:flex;align-items:center;background-size:cover;background-position:center}
 .nh .hov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,20,19,.93),rgba(20,20,19,.66) 42%,rgba(20,20,19,.15) 70%,rgba(20,20,19,0) 100%)}
-.nh .nav{position:absolute;inset-inline:0;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:24px 44px}
-.nh .logo{font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:#F7F5F1}
-.nh .logo span{color:#C9A84C}
-.nh .nl{display:flex;gap:30px}
-.nh .nl a{color:#F7F5F1;opacity:.85;font-size:13px;text-decoration:none;letter-spacing:.04em}
-.nh .menu-btn{display:none;background:none;border:none;color:#F7F5F1;cursor:pointer;padding:4px}
-.nh .menu-panel{display:none;position:absolute;right:24px;top:64px;z-index:4;background:#1C1C1C;border:1px solid rgba(247,245,241,.12);border-radius:4px;padding:10px 0;min-width:160px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
-.nh .menu-panel a{display:block;color:#F7F5F1;opacity:.9;font-size:13px;text-decoration:none;padding:10px 18px;letter-spacing:.04em}
-.nh .menu-panel a:hover{background:rgba(247,245,241,.08);opacity:1}
-.nh .hc{position:relative;z-index:3;padding:80px 44px;max-width:720px}
+.nh .hc{position:relative;z-index:3;padding:96px 44px;max-width:720px}
 .nh .hc h1{font-size:58px;line-height:1.04;color:#F7F5F1}
 .nh .hc .sub{font-size:18px;line-height:1.6;color:rgba(247,245,241,.88);margin-top:22px;max-width:500px}
 .nh .hc .bens{margin-top:26px;display:flex;flex-direction:column;gap:9px}
