@@ -99,7 +99,7 @@ function AboutPage() {
               The wellness industry has spent decades teaching people to think about food in terms of restriction — what to cut, what to avoid, what to count. The result is a population that is more confused about eating than at any point in human history, despite having access to more nutritional information than ever before. The Nourish System was built on a different premise entirely. Food is not the enemy. Food is not a reward. Food is biological information — and every meal you eat sends a direct signal to six critical systems inside your body.
             </P>
             <P>
-              Most people are sending mixed signals without knowing it. They eat in ways that are working against their gut while trying to help their metabolism. They optimise for energy at the expense of hormonal balance. They chase short-term satiety while accelerating long-term cellular aging. Not because they are making bad choices — because they do not have a system. The Nourish System gives you that system. Built around six biological pillars — six systems that food directly controls — and organised so that you can enter through the topic that matters most to you right now, then build outward into the complete methodology over time.
+              Most people are sending mixed signals without knowing it. They eat in ways that are working against their gut while trying to help their metabolism. They optimise for energy at the expense of hormonal balance. They chase short-term satiety while accelerating long-term cellular aging. Not because they are making bad choices — because they do not have a system. The Nourish System gives you that system. Built around six biological pillars — six systems that food directly controls — and organised so that you can enter through the topic that matters most to you right now, then build outward into the complete system over time.
             </P>
             <P>
               This is not a diet. It does not restrict food groups, assign point values, mandate fasting windows, or promise a number on a scale. It does not require supplements, powders, or any product beyond whole food. It is a methodology — a way of understanding and using food — that works within your life as it actually exists. Above the diet. Below the clinic. Practical enough to use on a Tuesday night. Authoritative enough to trust for the long term.
@@ -269,35 +269,35 @@ function AboutPage() {
             <em style={{ color: "#7D9B76", fontStyle: "italic" }}>what food is actually doing?</em>
           </h2>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", fontWeight: 300, color: "#3a3a3a", maxWidth: "480px", margin: "0 auto 48px", lineHeight: 1.85 }}>
-            Start with the flagship to understand the complete system. Or go directly to the pillar that speaks most directly to where you are right now. Either way, the system meets you there.
+            Start with the system to understand the complete methodology. Or go directly to the pillar that speaks most directly to where you are right now. Either way, the system meets you there.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "20px", textAlign: "center" }}>
             <div style={{ background: "#F2EDE4", borderRadius: "4px", padding: "24px", borderTop: "2px solid #7D9B76", display: "flex", flexDirection: "column", gap: "12px" }}>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#1C1C1C" }}>Try It Free</div>
               <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 300, color: "#9A9590", lineHeight: 1.7, flex: 1 }}>
-                Six complete recipes. One per pillar. No email required.
+                The 15-Minute Week — ten pages of fast meals, one from each protocol. Free with your email.
               </div>
               <Link to="/free-recipes" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 500, color: "#7D9B76", textDecoration: "none" }}>
                 Free Recipes →
               </Link>
             </div>
             <div style={{ background: "#1C1C1C", borderRadius: "4px", padding: "24px", borderTop: "2px solid #1C1C1C", display: "flex", flexDirection: "column", gap: "12px" }}>
-              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#F7F5F1" }}>The Flagship</div>
+              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#F7F5F1" }}>One Protocol</div>
               <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 300, color: "#9A9590", lineHeight: 1.7, flex: 1 }}>
-                The complete Nourish System methodology. 120 recipes. Seven sections.
+                Any single protocol — the 30-day plan, cheat sheet, and 20 recipes for your situation.
               </div>
-              <div className="price" style={{ fontSize: "22px" }}>$47</div>
+              <div className="price" style={{ fontSize: "22px" }}>$27</div>
               <Link to="/system" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 500, color: "#7D9B76", textDecoration: "none" }}>
                 Get The System →
               </Link>
             </div>
             <div style={{ background: "#F2EDE4", borderRadius: "4px", padding: "24px", borderTop: "2px solid #C9A84C", display: "flex", flexDirection: "column", gap: "12px" }}>
-              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#1C1C1C" }}>The Complete Bundle</div>
+              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#1C1C1C" }}>The Complete System</div>
               <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "13px", fontWeight: 300, color: "#9A9590", lineHeight: 1.7, flex: 1 }}>
-                All seven books. Save $62 versus buying individually.
+                All six protocols plus the Complete Drinks Collection. Save $65 versus buying individually.
               </div>
-              <div className="price" style={{ fontSize: "22px" }}>$147</div>
-              <Link to="/bundle" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 500, color: "#7D9B76", textDecoration: "none" }}>
+              <div className="price" style={{ fontSize: "22px" }}>$97</div>
+              <Link to="/system" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "12px", fontWeight: 500, color: "#7D9B76", textDecoration: "none" }}>
                 Get Everything →
               </Link>
             </div>
