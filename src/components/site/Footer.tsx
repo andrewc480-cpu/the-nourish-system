@@ -4,6 +4,11 @@ const exploreLinks = [
   { href: "/about", label: "About" },
 ];
 
+const legalLinks = [
+  { href: "/terms", label: "Terms of Service" },
+  { href: "/refund", label: "Refund Policy" },
+];
+
 const headingClass =
   "mb-5 font-sans uppercase text-[10px] tracking-[0.16em] text-[#7D9B76]";
 

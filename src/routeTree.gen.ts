@@ -9,8 +9,10 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SystemRouteImport } from './routes/system'
 import { Route as ResendRouteImport } from './routes/resend'
+import { Route as RefundRouteImport } from './routes/refund'
 import { Route as MetabolicHealthRouteImport } from './routes/metabolic-health'
 import { Route as LongevityRouteImport } from './routes/longevity'
 import { Route as HormonalHealthRouteImport } from './routes/hormonal-health'
@@ -25,6 +27,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe-webhook'
 import { Route as ApiPublicResendLinksRouteImport } from './routes/api/public/resend-links'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SystemRoute = SystemRouteImport.update({
   id: '/system',
   path: '/system',
@@ -33,6 +40,11 @@ const SystemRoute = SystemRouteImport.update({
 const ResendRoute = ResendRouteImport.update({
   id: '/resend',
   path: '/resend',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundRoute = RefundRouteImport.update({
+  id: '/refund',
+  path: '/refund',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MetabolicHealthRoute = MetabolicHealthRouteImport.update({
@@ -113,8 +125,10 @@ export interface FileRoutesByFullPath {
   '/hormonal-health': typeof HormonalHealthRoute
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
+  '/refund': typeof RefundRoute
   '/resend': typeof ResendRoute
   '/system': typeof SystemRoute
+  '/terms': typeof TermsRoute
   '/api/public/resend-links': typeof ApiPublicResendLinksRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
@@ -130,8 +144,10 @@ export interface FileRoutesByTo {
   '/hormonal-health': typeof HormonalHealthRoute
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
+  '/refund': typeof RefundRoute
   '/resend': typeof ResendRoute
   '/system': typeof SystemRoute
+  '/terms': typeof TermsRoute
   '/api/public/resend-links': typeof ApiPublicResendLinksRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
@@ -148,8 +164,10 @@ export interface FileRoutesById {
   '/hormonal-health': typeof HormonalHealthRoute
   '/longevity': typeof LongevityRoute
   '/metabolic-health': typeof MetabolicHealthRoute
+  '/refund': typeof RefundRoute
   '/resend': typeof ResendRoute
   '/system': typeof SystemRoute
+  '/terms': typeof TermsRoute
   '/api/public/resend-links': typeof ApiPublicResendLinksRoute
   '/api/public/stripe-webhook': typeof ApiPublicStripeWebhookRoute
 }
@@ -167,8 +185,10 @@ export interface FileRouteTypes {
     | '/hormonal-health'
     | '/longevity'
     | '/metabolic-health'
+    | '/refund'
     | '/resend'
     | '/system'
+    | '/terms'
     | '/api/public/resend-links'
     | '/api/public/stripe-webhook'
   fileRoutesByTo: FileRoutesByTo
@@ -184,8 +204,10 @@ export interface FileRouteTypes {
     | '/hormonal-health'
     | '/longevity'
     | '/metabolic-health'
+    | '/refund'
     | '/resend'
     | '/system'
+    | '/terms'
     | '/api/public/resend-links'
     | '/api/public/stripe-webhook'
   id:
@@ -201,8 +223,10 @@ export interface FileRouteTypes {
     | '/hormonal-health'
     | '/longevity'
     | '/metabolic-health'
+    | '/refund'
     | '/resend'
     | '/system'
+    | '/terms'
     | '/api/public/resend-links'
     | '/api/public/stripe-webhook'
   fileRoutesById: FileRoutesById
@@ -219,14 +243,23 @@ export interface RootRouteChildren {
   HormonalHealthRoute: typeof HormonalHealthRoute
   LongevityRoute: typeof LongevityRoute
   MetabolicHealthRoute: typeof MetabolicHealthRoute
+  RefundRoute: typeof RefundRoute
   ResendRoute: typeof ResendRoute
   SystemRoute: typeof SystemRoute
+  TermsRoute: typeof TermsRoute
   ApiPublicResendLinksRoute: typeof ApiPublicResendLinksRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/system': {
       id: '/system'
       path: '/system'
@@ -239,6 +272,13 @@ declare module '@tanstack/react-router' {
       path: '/resend'
       fullPath: '/resend'
       preLoaderRoute: typeof ResendRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refund': {
+      id: '/refund'
+      path: '/refund'
+      fullPath: '/refund'
+      preLoaderRoute: typeof RefundRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/metabolic-health': {
@@ -347,8 +387,10 @@ const rootRouteChildren: RootRouteChildren = {
   HormonalHealthRoute: HormonalHealthRoute,
   LongevityRoute: LongevityRoute,
   MetabolicHealthRoute: MetabolicHealthRoute,
+  RefundRoute: RefundRoute,
   ResendRoute: ResendRoute,
   SystemRoute: SystemRoute,
+  TermsRoute: TermsRoute,
   ApiPublicResendLinksRoute: ApiPublicResendLinksRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
 }
