@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Footer } from "@/components/site/Footer";
 import heroAsset from "@/assets/H1_Pomegranate_Salmon_Power_Plate.png.asset.json";
-import storyImg from "@/assets/about-mission.png.asset.json";
+import storyImg from "@/assets/Rainbow_Vegetable_Grain_Bowl-vertical.png.asset.json";
 import lookCheat from "@/assets/glp1-cheat-sheet.png.asset.json";
 import lookPlan from "@/assets/glp1-30day-preview.png.asset.json";
 import lookRecipe from "@/assets/glp1-recipe-preview.png.asset.json";
