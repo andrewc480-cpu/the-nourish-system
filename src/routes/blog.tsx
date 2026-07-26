@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
+import gutHero from "@/assets/gut-health-hero.png.asset.json";
+import metabolicHero from "@/assets/metabolic-hero.png.asset.json";
+import cognitiveHero from "@/assets/cognitive-hero.png.asset.json";
+import longevityHero from "@/assets/longevity-hero.png.asset.json";
+import hormonalHero from "@/assets/hormonal-hero.png.asset.json";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -166,6 +171,14 @@ const upcoming = [
       "The Mineral Trio: The Three Nutrients Your Hormones Cannot Function Without",
   },
 ];
+
+const UPCOMING_IMAGES: Record<string, string> = {
+  "Pillar 02 · Gut Health": gutHero.url,
+  "Pillar 03 · Metabolic Health": metabolicHero.url,
+  "Pillar 04 · Cognitive Performance": cognitiveHero.url,
+  "Pillar 05 · Longevity & Healthspan": longevityHero.url,
+  "Pillar 06 · Hormonal Health": hormonalHero.url,
+};
 
 function BlogPage() {
   const [showArticle, setShowArticle] = useState(false);
