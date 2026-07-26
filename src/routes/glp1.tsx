@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
-import heroImg from "@/assets/glp1-hero-eggs-salmon.jpg.asset.json";
+import heroImg from "@/assets/nourish-lib-01-glp1-v3.jpg.asset.json";
 import bandImg from "@/assets/glp1-band-grilled-salmon.jpg.asset.json";
 
 export const Route = createFileRoute("/glp1")({
