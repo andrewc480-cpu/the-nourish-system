@@ -561,7 +561,7 @@ function FreeRecipesPage() {
                 fontSize: 14,
               }}
             >
-              Explore All Protocols
+              Get The Complete System
             </Link>
             <Link
               to="/system"
