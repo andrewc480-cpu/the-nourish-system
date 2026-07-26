@@ -683,11 +683,8 @@ function BlogPage() {
                 style={{
                   position: "relative",
                   borderRadius: "4px",
-                  padding: "20px",
-                  minHeight: "220px",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "12px",
+                  minHeight: "300px",
+                  overflow: "hidden",
                   backgroundImage: `linear-gradient(rgba(28,28,28,0.6), rgba(28,28,28,0.6)), url(${UPCOMING_IMAGES[c.pillar]})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
@@ -723,27 +720,39 @@ function BlogPage() {
                 </div>
                 <div
                   style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: "9px",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.14em",
-                    color: "#C9A84C",
+                    position: "absolute",
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    padding: "20px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
                   }}
                 >
-                  {c.pillar}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontSize: "15px",
-                    fontWeight: 600,
-                    color: "#F7F5F1",
-                    lineHeight: 1.3,
-                    flex: 1,
-                    textShadow: "0 1px 3px rgba(0,0,0,0.5)",
-                  }}
-                >
-                  {c.title}
+                  <div
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: "9px",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.14em",
+                      color: "#C9A84C",
+                    }}
+                  >
+                    {c.pillar}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      fontSize: "15px",
+                      fontWeight: 600,
+                      color: "#F7F5F1",
+                      lineHeight: 1.3,
+                      textShadow: "0 1px 3px rgba(0,0,0,0.5)",
+                    }}
+                  >
+                    {c.title}
+                  </div>
                 </div>
               </div>
             ))}
