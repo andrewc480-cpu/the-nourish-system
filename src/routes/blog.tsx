@@ -693,22 +693,34 @@ function BlogPage() {
                   backgroundPosition: "center",
                 }}
               >
-                <span
+                <div
                   style={{
-                    display: "inline-block",
-                    alignSelf: "flex-start",
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: "9px",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.14em",
-                    background: "rgba(28,28,28,0.35)",
-                    color: "#F7F5F1",
-                    borderRadius: "12px",
-                    padding: "3px 10px",
+                    position: "absolute",
+                    inset: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "0 12px",
+                    pointerEvents: "none",
                   }}
                 >
-                  Coming Soon
-                </span>
+                  <span
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: "22px",
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.2em",
+                      color: "#F7F5F1",
+                      textAlign: "center",
+                      lineHeight: 1.1,
+                      textShadow:
+                        "0 2px 10px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.3)",
+                    }}
+                  >
+                    Coming Soon
+                  </span>
+                </div>
                 <div
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
