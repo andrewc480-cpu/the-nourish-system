@@ -799,7 +799,7 @@ function BlogPage() {
               Get The GLP-1 Protocol — <span className="price">$27</span>
             </Link>
             <Link
-              to="/bundle"
+              to="/system"
               style={{
                 background: "transparent",
                 border: "1px solid #1C1C1C",
@@ -812,7 +812,7 @@ function BlogPage() {
                 fontVariantNumeric: "lining-nums",
               }}
             >
-              Get The Complete Bundle — <span className="price">$147</span>
+              Get The Complete System — <span className="price">$97</span>
             </Link>
           </div>
         </div>
