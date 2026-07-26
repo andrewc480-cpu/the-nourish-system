@@ -177,41 +177,14 @@ const CSS = `
 `;
 
 function HomePage() {
-  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="nh">
-      <style>{CSS}</style>
-      <main>
+    <SiteLayout>
+      <div className="nh">
+        <style>{CSS}</style>
         {/* HERO */}
         <section className="hero" style={{ backgroundImage: `url(${heroAsset.url})` }}>
           <div className="hov" />
-          <nav className="nav">
-            <div className="logo">
-              nóurish<span>.</span>
-            </div>
-            <div className="nl">
-              <a href="#library">Shop</a>
-              <a href="/free-recipes">Free Recipes</a>
-              <a href="/blog">Blog</a>
-              <a href="/about">About</a>
-            </div>
-            <button
-              className="menu-btn"
-              aria-label="Open menu"
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-            {menuOpen && (
-              <div className="menu-panel">
-                <a href="#library" onClick={() => setMenuOpen(false)}>Shop</a>
-                <a href="/free-recipes" onClick={() => setMenuOpen(false)}>Free Recipes</a>
-                <a href="/blog" onClick={() => setMenuOpen(false)}>Blog</a>
-                <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
-              </div>
-            )}
-          </nav>
+
           <div className="hc">
             <h1>
               Stop guessing what<br />to eat. <span className="it">Start knowing.</span>
