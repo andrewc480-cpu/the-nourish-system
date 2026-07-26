@@ -400,8 +400,8 @@ function Glp1Page() {
             <div className="eye">Get The Protocol</div>
             <h2>GLP-1 Nutrition.</h2>
             <p>
-              The complete protocol — rules, weekly plan, cheat sheet, and 20
-              recipes built for how you eat now.
+              The complete protocol — weekly plan, cheat sheet, and 20 recipes
+              built for how you eat now.
             </p>
             <div className="price">
               <span className="now">$27</span>
