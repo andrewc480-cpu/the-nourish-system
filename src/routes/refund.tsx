@@ -81,16 +81,15 @@ function RefundPage() {
 
             <section className="mb-12">
               <h2 className="mb-4 font-display text-2xl font-bold text-[#1C1C1C]">
-                Try the free 15-Minute Week first
+                Not sure which protocol to choose?
               </h2>
               <p className="font-sans text-[15px] leading-relaxed text-[#3a3a3a]">
-                If you're unsure whether the system is right for you, we
-                encourage you to start with the free{" "}
-                <a href="/free-recipes" className="text-[#7D9B76] hover:underline">
-                  15-Minute Week
-                </a>
-                . It's a quick way to sample the style, structure,
-                and recipes before committing to a full protocol.
+                If you're unsure whether the system is right for you, browse{" "}
+                <a href="/system" className="text-[#7D9B76] hover:underline">
+                  The Complete System
+                </a>{" "}
+                to see exactly what's included — the protocols, meal plans,
+                and recipes — before you buy.
               </p>
             </section>
 

@@ -186,7 +186,7 @@ function HomePage() {
             </div>
             <div className="cta">
               <Link to="/system" className="gold">See What's Inside</Link>
-              <a href="/free-recipes" className="ghost">Explore Free Recipes</a>
+              <a href="/system" className="ghost">See What's Inside</a>
             </div>
           </div>
         </section>
