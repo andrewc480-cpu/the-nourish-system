@@ -325,8 +325,7 @@ function HomePage() {
             <div className="cap-fine">No spam. Unsubscribe anytime.</div>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </SiteLayout>
   );
 }
