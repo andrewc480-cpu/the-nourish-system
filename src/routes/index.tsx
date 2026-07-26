@@ -5,12 +5,12 @@ import storyImg from "@/assets/about-mission.png.asset.json";
 import lookCheat from "@/assets/glp1-cheat-sheet.png.asset.json";
 import lookPlan from "@/assets/glp1-30day-preview.png.asset.json";
 import lookRecipe from "@/assets/glp1-recipe-preview.png.asset.json";
-import lib01 from "@/assets/nourish-lib-01-glp1-v2.jpg.asset.json";
-import lib02 from "@/assets/nourish-lib-02-gut-v2.jpg.asset.json";
-import lib03 from "@/assets/nourish-lib-03-metabolic-v2.jpg.asset.json";
-import lib04 from "@/assets/nourish-lib-04-cognitive-v2.jpg.asset.json";
-import lib05 from "@/assets/nourish-lib-05-longevity-v2.jpg.asset.json";
-import lib06 from "@/assets/nourish-lib-06-hormonal-v2.jpg.asset.json";
+import lib01 from "@/assets/nourish-lib-01-glp1-v3.jpg.asset.json";
+import lib02 from "@/assets/nourish-lib-02-gut-v3.jpg.asset.json";
+import lib03 from "@/assets/nourish-lib-03-metabolic-v3.jpg.asset.json";
+import lib04 from "@/assets/nourish-lib-04-cognitive-v3.jpg.asset.json";
+import lib05 from "@/assets/nourish-lib-05-longevity-v3.jpg.asset.json";
+import lib06 from "@/assets/nourish-lib-06-hormonal-v3.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
