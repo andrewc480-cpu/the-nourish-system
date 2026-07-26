@@ -180,7 +180,7 @@ function LongevityPage() {
               <span className="per">· digital PDF, yours to keep</span>
             </div>
             <div className="cta">
-              <a href="#buy" className="gold">
+              <a href="https://buy.stripe.com/00wbJ1b7c3lg39if4n6Vq0m" className="gold" target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>
@@ -398,7 +398,7 @@ function LongevityPage() {
               <span className="now">$27</span>
             </div>
             <div className="cta">
-              <a href="#buy" className="gold">
+              <a href="https://buy.stripe.com/00wbJ1b7c3lg39if4n6Vq0m" className="gold" target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>

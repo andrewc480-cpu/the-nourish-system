@@ -181,7 +181,7 @@ function CognitivePerformancePage() {
               <span className="per">· digital PDF, yours to keep</span>
             </div>
             <div className="cta">
-              <a href="#buy" className="gold">
+              <a href="https://buy.stripe.com/dRm7sL5MS7BwcJS7BV6Vq0l" className="gold" target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>
@@ -399,7 +399,7 @@ function CognitivePerformancePage() {
               <span className="now">$27</span>
             </div>
             <div className="cta">
-              <a href="#buy" className="gold">
+              <a href="https://buy.stripe.com/dRm7sL5MS7BwcJS7BV6Vq0l" className="gold" target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>

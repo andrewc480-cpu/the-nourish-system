@@ -188,7 +188,7 @@ function MetabolicHealthPage() {
               <span className="per">· digital PDF, yours to keep</span>
             </div>
             <div className="cta">
-              <a href="#buy" className="gold">
+              <a href="https://buy.stripe.com/aFa14nejocVQ7pyf4n6Vq0k" className="gold" target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>
@@ -406,7 +406,7 @@ function MetabolicHealthPage() {
               <span className="now">$27</span>
             </div>
             <div className="cta">
-              <a href="#buy" className="gold">
+              <a href="https://buy.stripe.com/aFa14nejocVQ7pyf4n6Vq0k" className="gold" target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>

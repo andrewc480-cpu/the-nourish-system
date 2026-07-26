@@ -181,7 +181,7 @@ function HormonalHealthPage() {
               <span className="per">· digital PDF, yours to keep</span>
             </div>
             <div className="cta">
-              <a href="#buy" className="gold">
+              <a href="https://buy.stripe.com/00wcN5a38cVQeS009t6Vq0n" className="gold" target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>
@@ -400,7 +400,7 @@ function HormonalHealthPage() {
               <span className="now">$27</span>
             </div>
             <div className="cta">
-              <a href="#buy" className="gold">
+              <a href="https://buy.stripe.com/00wcN5a38cVQeS009t6Vq0n" className="gold" target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>
