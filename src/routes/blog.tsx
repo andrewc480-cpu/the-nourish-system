@@ -6,6 +6,7 @@ import metabolicHero from "@/assets/metabolic-hero.png.asset.json";
 import cognitiveHero from "@/assets/cognitive-hero.png.asset.json";
 import longevityHero from "@/assets/longevity-hero.png.asset.json";
 import hormonalHero from "@/assets/hormonal-hero.png.asset.json";
+import glp1Hero from "@/assets/nourish-lib-01-glp1-v3.jpg.asset.json";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -150,49 +151,49 @@ function PullQuote({ children }: { children: React.ReactNode }) {
 
 const upcoming = [
   {
-    pillar: "Pillar 02 · Gut Health",
+    pillar: "Gut Health",
     title: "The 30-Day Gut Reset: Why Phase Order Changes Everything",
     blurb:
-      "The complete phase-by-phase gut reset, from soothing soups to fibre reintroduction.",
+      "Remove, repair, rebuild — in that order. Skip a phase and the whole thing fails.",
+    readTime: 7,
+  },
+  {
+    pillar: "Metabolic Health",
+    title: "The Sequencing Protocol: How Eating Order Reduces Glucose by 40%",
+    blurb:
+      "Same meal, different order, dramatically different blood sugar response.",
+    readTime: 6,
+  },
+  {
+    pillar: "Cognitive Performance",
+    title: "The Morning Brain Protocol: Why Your Breakfast Determines Your 3pm",
+    blurb:
+      "What you eat at 7am determines whether you can think at three in the afternoon.",
+    readTime: 6,
+  },
+  {
+    pillar: "Longevity & Healthspan",
+    title: "What the Blue Zones Actually Eat — And What We Got Wrong",
+    blurb:
+      "Not exotic. Not expensive. Boring, repeatable, and almost nobody does it.",
     readTime: 8,
   },
   {
-    pillar: "Pillar 03 · Metabolic Health",
-    title: "The Sequencing Protocol: How Eating Order Reduces Glucose by 40%",
-    blurb:
-      "How the order of what you eat changes your blood sugar curve all day.",
-    readTime: 10,
-  },
-  {
-    pillar: "Pillar 04 · Cognitive Performance",
-    title: "The Morning Brain Protocol: Why Your Breakfast Determines Your 3pm",
-    blurb:
-      "The breakfast-to-dinner stack for steady focus without the afternoon crash.",
-    readTime: 9,
-  },
-  {
-    pillar: "Pillar 05 · Longevity & Healthspan",
-    title: "What the Blue Zones Actually Eat — And What We Got Wrong",
-    blurb:
-      "What the longest-lived populations eat — and what modern life gets wrong.",
-    readTime: 11,
-  },
-  {
-    pillar: "Pillar 06 · Hormonal Health",
+    pillar: "Hormonal Health",
     title:
       "The Mineral Trio: The Three Nutrients Your Hormones Cannot Function Without",
     blurb:
-      "The mineral, protein, and cycle-aware strategy behind hormonal balance.",
-    readTime: 9,
+      "Magnesium, zinc, and healthy fat — and why low-fat advice broke a generation.",
+    readTime: 7,
   },
 ];
 
 const UPCOMING_IMAGES: Record<string, string> = {
-  "Pillar 02 · Gut Health": gutHero.url,
-  "Pillar 03 · Metabolic Health": metabolicHero.url,
-  "Pillar 04 · Cognitive Performance": cognitiveHero.url,
-  "Pillar 05 · Longevity & Healthspan": longevityHero.url,
-  "Pillar 06 · Hormonal Health": hormonalHero.url,
+  "Gut Health": gutHero.url,
+  "Metabolic Health": metabolicHero.url,
+  "Cognitive Performance": cognitiveHero.url,
+  "Longevity & Healthspan": longevityHero.url,
+  "Hormonal Health": hormonalHero.url,
 };
 
 function BlogPage() {
@@ -209,7 +210,7 @@ function BlogPage() {
         }}
       >
         <div style={{ maxWidth: "720px", margin: "0 auto" }}>
-          <div style={eyebrowStyle}>The Nourish Journal</div>
+          <div style={eyebrowStyle}>The Journal</div>
           <h1
             style={{
               fontFamily: "'Playfair Display', serif",
@@ -245,9 +246,8 @@ function BlogPage() {
               lineHeight: 1.5,
             }}
           >
-            The science behind the system. One article per pillar. Written for
-            people who want to understand their biology — not just follow a
-            meal plan.
+            The reasoning behind the system — written for people who'd rather
+            understand what they're doing than just follow a plan.
           </p>
         </div>
       </section>
@@ -274,14 +274,33 @@ function BlogPage() {
           </div>
           <div
             style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "24px",
+              alignItems: "stretch",
+            }}
+          >
+          <div
+            style={{
+              minHeight: "320px",
+              borderRadius: "4px",
+              backgroundImage: `url(${glp1Hero.url})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            role="img"
+            aria-label="GLP-1 nutrition meal"
+          />
+          <div
+            style={{
               background: "rgba(247,245,241,0.04)",
               border: "1px solid rgba(247,245,241,0.08)",
               borderRadius: "4px",
-              padding: "48px",
+              padding: "40px",
             }}
           >
             <div style={{ ...pillarTagStyle, marginBottom: "16px" }}>
-              Pillar 01 · GLP-1 Nutrition
+              GLP-1 Nutrition · Latest
             </div>
             <h2
               style={{
@@ -293,10 +312,9 @@ function BlogPage() {
                 fontSize: "clamp(28px, 4.5vw, 40px)",
               }}
             >
-              The GLP-1 Meal Prep Guide
-              <br />
+              The GLP-1 meal prep guide{" "}
               <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
-                No One Is Talking About.
+                nobody's talking about.
               </em>
             </h2>
             <div
@@ -308,7 +326,7 @@ function BlogPage() {
                 marginBottom: "24px",
               }}
             >
-              June 2026 · 8 min read · GLP-1 Nutrition
+              8 min read
             </div>
             <p
               style={{
@@ -321,13 +339,9 @@ function BlogPage() {
                 marginBottom: "32px",
               }}
             >
-              One in five adults has now used a GLP-1 medication. Almost none
-              of them have a meal prep system built for how their body is now
-              functioning. Most GLP-1 content focuses on what to avoid. This
-              guide focuses on what to build — a weekly food system engineered
-              around the injection cycle, the protein imperative, and the
-              fibre strategy that prevents the most common nutritional
-              mistakes made on these medications.
+              One in five adults has used a GLP-1. Almost none of them have a
+              food system built for how their body now works. Here's how to
+              build one around the injection cycle.
             </p>
             <button
               type="button"
@@ -361,6 +375,7 @@ function BlogPage() {
             >
               Part of The Nourish System · GLP-1 Nutrition Protocol
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -826,11 +841,7 @@ function BlogPage() {
               marginBottom: "20px",
             }}
           >
-            The full GLP-1 protocol.
-            <br />
-            <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
-              20 recipes. Three windows. One system.
-            </em>
+            The articles are the free part.
           </h2>
           <p
             style={{
@@ -843,9 +854,8 @@ function BlogPage() {
               lineHeight: 1.8,
             }}
           >
-            Everything in this article — plus 20 complete recipes, full
-            ingredient guides, the five protocol principles, and a MidJourney
-            photography prompt for every recipe.
+            The protocols are where it gets specific — a 30-day meal plan, a
+            cheat sheet, and 20 recipes built for your situation.
           </p>
           <div
             style={{
@@ -855,21 +865,6 @@ function BlogPage() {
               flexWrap: "wrap",
             }}
           >
-            <Link
-              to="/glp1"
-              style={{
-                background: "#1C1C1C",
-                color: "#F7F5F1",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 500,
-                padding: "14px 32px",
-                textDecoration: "none",
-                borderRadius: "2px",
-                fontVariantNumeric: "lining-nums",
-              }}
-            >
-              Get The GLP-1 Protocol — <span className="price">$27</span>
-            </Link>
             <Link
               to="/system"
               style={{
@@ -884,7 +879,7 @@ function BlogPage() {
                 fontVariantNumeric: "lining-nums",
               }}
             >
-              Get The Complete System — <span className="price">$97</span>
+              See The Complete System — <span className="price">$97</span>
             </Link>
           </div>
         </div>
