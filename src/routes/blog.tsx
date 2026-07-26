@@ -629,208 +629,43 @@ function BlogPage() {
       )}
 
       {/* SECTION 3 — MORE FROM THE JOURNAL */}
-      <section
-        style={{
-          background: "#F7F5F1",
-          padding: "72px 24px",
-        }}
-      >
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div
-            style={{
-              textAlign: "center",
-              marginBottom: "48px",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: "10px",
-                textTransform: "uppercase",
-                letterSpacing: "0.2em",
-                color: "#7D9B76",
-                marginBottom: "16px",
-              }}
-            >
-              Coming Soon
-            </div>
-            <h2
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: "32px",
-                fontWeight: 700,
-                color: "#1C1C1C",
-                lineHeight: 1.2,
-              }}
-            >
-              Five more articles.
-              <br />
-              <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
-                One for every remaining pillar.
-              </em>
-            </h2>
-          </div>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-              gap: "16px",
-            }}
-          >
-            {upcoming.map((c) => (
+      <section className="bv3-more">
+        <h2 className="bv3-more-h">More from the journal.</h2>
+        <div className="bv3-pgrid">
+          {upcoming.map((c) => (
+            <div className="bv3-pc" key={c.pillar}>
               <div
-                key={c.pillar}
+                className="bv3-pimg"
                 style={{
-                  position: "relative",
-                  borderRadius: "4px",
-                  padding: "20px",
-                  minHeight: "220px",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "12px",
-                  backgroundImage: `linear-gradient(rgba(28,28,28,0.6), rgba(28,28,28,0.6)), url(${UPCOMING_IMAGES[c.pillar]})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundImage: `url(${UPCOMING_IMAGES[c.pillar]})`,
                 }}
-              >
-                <span
-                  style={{
-                    display: "inline-block",
-                    alignSelf: "flex-start",
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: "9px",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.14em",
-                    background: "rgba(28,28,28,0.35)",
-                    color: "#F7F5F1",
-                    borderRadius: "12px",
-                    padding: "3px 10px",
-                  }}
-                >
-                  Coming Soon
-                </span>
-                <div
-                  style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: "9px",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.14em",
-                    color: "#C9A84C",
-                  }}
-                >
-                  {c.pillar}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontSize: "15px",
-                    fontWeight: 600,
-                    color: "#F7F5F1",
-                    lineHeight: 1.3,
-                    flex: 1,
-                    textShadow: "0 1px 3px rgba(0,0,0,0.5)",
-                  }}
-                >
-                  {c.title}
-                </div>
+              />
+              <div className="bv3-pb">
+                <div className="bv3-ptag">{c.pillar}</div>
+                <div className="bv3-pt">{c.title}</div>
+                <div className="bv3-pd">{c.blurb}</div>
+                <div className="bv3-pm">{c.meta}</div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* SECTION 4 — ARTICLE CTA */}
-      <section
-        style={{
-          background: "#F2EDE4",
-          padding: "72px 24px",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-          <div
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: "10px",
-              textTransform: "uppercase",
-              letterSpacing: "0.2em",
-              color: "#7D9B76",
-              marginBottom: "16px",
-            }}
-          >
-            Go Deeper
-          </div>
-          <h2
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "32px",
-              fontWeight: 700,
-              color: "#1C1C1C",
-              lineHeight: 1.2,
-              marginBottom: "20px",
-            }}
-          >
-            The full GLP-1 protocol.
-            <br />
-            <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
-              20 recipes. Three windows. One system.
-            </em>
-          </h2>
-          <p
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: "14px",
-              fontWeight: 300,
-              color: "#3a3a3a",
-              maxWidth: "480px",
-              margin: "0 auto 32px",
-              lineHeight: 1.8,
-            }}
-          >
-            Everything in this article — plus 20 complete recipes, full
-            ingredient guides, the five protocol principles, and a MidJourney
-            photography prompt for every recipe.
-          </p>
-          <div
-            style={{
-              display: "flex",
-              gap: "16px",
-              justifyContent: "center",
-              flexWrap: "wrap",
-            }}
-          >
-            <Link
-              to="/glp1"
-              style={{
-                background: "#1C1C1C",
-                color: "#F7F5F1",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 500,
-                padding: "14px 32px",
-                textDecoration: "none",
-                borderRadius: "2px",
-                fontVariantNumeric: "lining-nums",
-              }}
-            >
-              Get The GLP-1 Protocol — <span className="price">$27</span>
-            </Link>
-            <Link
-              to="/system"
-              style={{
-                background: "transparent",
-                border: "1px solid #1C1C1C",
-                color: "#1C1C1C",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 400,
-                padding: "14px 32px",
-                textDecoration: "none",
-                borderRadius: "2px",
-                fontVariantNumeric: "lining-nums",
-              }}
-            >
-              Get The Complete System — <span className="price">$97</span>
-            </Link>
-          </div>
+      <section className="bv3-band">
+        <div style={eyebrowStyle}>Go deeper</div>
+        <h2 className="bv3-band-h">The articles are the free part.</h2>
+        <p className="bv3-band-p">
+          The protocols are where it gets specific — a 30-day meal plan, a
+          cheat sheet, and 20 recipes built for your situation.
+        </p>
+        <div className="bv3-band-b">
+          <Link to="/system" className="bv3-dark">
+            See The Complete System — <span className="price">$97</span>
+          </Link>
+          <Link to="/glp1" className="bv3-outline">
+            Get The GLP-1 Protocol — <span className="price">$27</span>
+          </Link>
         </div>
       </section>
     </div>
