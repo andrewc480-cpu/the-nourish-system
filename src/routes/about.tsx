@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "A food-first biological optimization methodology for people who want to understand their biology — not just follow a meal plan.",
+          "A food-first methodology for people who want to understand their biology — not just follow a meal plan.",
       },
       { property: "og:title", content: "About — The Nourish System | nóurish." },
       {
@@ -35,7 +35,7 @@ const pillars = [
 
 const brandValues = [
   { label: "Positioning", value: "Above the diet. Below the clinic." },
-  { label: "Method", value: "Food-first biological optimization." },
+  { label: "Method", value: "Food-first methodology." },
   { label: "Approach", value: "Education before instruction." },
   { label: "Promise", value: "Real food. Real biology. No restriction." },
 ];
@@ -76,7 +76,7 @@ function AboutPage() {
             <em style={{ color: "#7D9B76", fontStyle: "italic" }}>Below the clinic.</em>
           </h1>
           <p style={{ fontFamily: "'Playfair Display', serif", fontStyle: "italic", fontSize: "18px", color: "#9A9590", maxWidth: "520px", margin: "0 auto 36px", lineHeight: 1.5 }}>
-            A food-first biological optimization methodology for people who want to understand their biology — not just follow a meal plan.
+            A food-first methodology for people who want to understand their biology — not just follow a meal plan.
           </p>
           <div style={{ width: "1px", height: "48px", background: "#C9A84C", opacity: 0.5, margin: "0 auto" }} />
         </div>
