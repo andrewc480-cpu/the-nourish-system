@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
-import gutHero from "@/assets/gut-health-hero.png.asset.json";
-import metabolicHero from "@/assets/metabolic-hero.png.asset.json";
-import cognitiveHero from "@/assets/cognitive-hero.png.asset.json";
-import longevityHero from "@/assets/longevity-hero.png.asset.json";
-import hormonalHero from "@/assets/hormonal-hero.png.asset.json";
-import glp1Hero from "@/assets/nourish-lib-01-glp1-v3.jpg.asset.json";
+import featuredImg from "@/assets/blog-v3-1.png.asset.json";
+import cardGut from "@/assets/blog-v3-2.png.asset.json";
+import cardMetabolic from "@/assets/blog-v3-3.png.asset.json";
+import cardCognitive from "@/assets/blog-v3-4.png.asset.json";
+import cardLongevity from "@/assets/blog-v3-5.png.asset.json";
+import cardHormonal from "@/assets/blog-v3-6.png.asset.json";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
