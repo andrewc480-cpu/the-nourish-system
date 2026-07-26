@@ -274,14 +274,33 @@ function BlogPage() {
           </div>
           <div
             style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "24px",
+              alignItems: "stretch",
+            }}
+          >
+          <div
+            style={{
+              minHeight: "320px",
+              borderRadius: "4px",
+              backgroundImage: `url(${glp1Hero.url})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            role="img"
+            aria-label="GLP-1 nutrition meal"
+          />
+          <div
+            style={{
               background: "rgba(247,245,241,0.04)",
               border: "1px solid rgba(247,245,241,0.08)",
               borderRadius: "4px",
-              padding: "48px",
+              padding: "40px",
             }}
           >
             <div style={{ ...pillarTagStyle, marginBottom: "16px" }}>
-              Pillar 01 · GLP-1 Nutrition
+              GLP-1 Nutrition · Latest
             </div>
             <h2
               style={{
@@ -293,10 +312,9 @@ function BlogPage() {
                 fontSize: "clamp(28px, 4.5vw, 40px)",
               }}
             >
-              The GLP-1 Meal Prep Guide
-              <br />
+              The GLP-1 meal prep guide{" "}
               <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
-                No One Is Talking About.
+                nobody's talking about.
               </em>
             </h2>
             <div
@@ -308,7 +326,7 @@ function BlogPage() {
                 marginBottom: "24px",
               }}
             >
-              June 2026 · 8 min read · GLP-1 Nutrition
+              8 min read
             </div>
             <p
               style={{
@@ -321,13 +339,9 @@ function BlogPage() {
                 marginBottom: "32px",
               }}
             >
-              One in five adults has now used a GLP-1 medication. Almost none
-              of them have a meal prep system built for how their body is now
-              functioning. Most GLP-1 content focuses on what to avoid. This
-              guide focuses on what to build — a weekly food system engineered
-              around the injection cycle, the protein imperative, and the
-              fibre strategy that prevents the most common nutritional
-              mistakes made on these medications.
+              One in five adults has used a GLP-1. Almost none of them have a
+              food system built for how their body now works. Here's how to
+              build one around the injection cycle.
             </p>
             <button
               type="button"
@@ -361,6 +375,7 @@ function BlogPage() {
             >
               Part of The Nourish System · GLP-1 Nutrition Protocol
             </div>
+          </div>
           </div>
         </div>
       </section>
