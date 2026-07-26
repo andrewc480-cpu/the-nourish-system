@@ -659,231 +659,41 @@ function BlogPage() {
       )}
 
       {/* SECTION 3 — MORE FROM THE JOURNAL */}
-      <section
-        style={{
-          background: "#F7F5F1",
-          padding: "72px 24px",
-        }}
-      >
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <div
-            style={{
-              textAlign: "center",
-              marginBottom: "48px",
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: "10px",
-                textTransform: "uppercase",
-                letterSpacing: "0.2em",
-                color: "#7D9B76",
-                marginBottom: "16px",
-              }}
-            >
-              Coming Soon
-            </div>
-            <h2
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: "32px",
-                fontWeight: 700,
-                color: "#1C1C1C",
-                lineHeight: 1.2,
-              }}
-            >
-              Five more articles.
-              <br />
-              <em style={{ color: "#7D9B76", fontStyle: "italic" }}>
-                One for every remaining pillar.
-              </em>
-            </h2>
-          </div>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-              gap: "16px",
-            }}
-          >
-            {upcoming.map((c) => (
+      <div className="bmore">
+        <h2>More from the journal.</h2>
+        <div className="bpgrid">
+          {upcoming.map((c) => (
+            <div className="bpc" key={c.pillar}>
               <div
-                key={c.pillar}
-                style={{
-                  background: "#F2EDE4",
-                  borderRadius: "8px",
-                  overflow: "hidden",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <div
-                  style={{
-                    position: "relative",
-                    height: "180px",
-                    backgroundImage: `linear-gradient(rgba(28,28,28,0.45), rgba(28,28,28,0.45)), url(${UPCOMING_IMAGES[c.pillar]})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: 0,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      padding: "0 12px",
-                      pointerEvents: "none",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontSize: "20px",
-                        fontWeight: 700,
-                        textTransform: "uppercase",
-                        letterSpacing: "0.18em",
-                        color: "#F7F5F1",
-                        textAlign: "center",
-                        lineHeight: 1.1,
-                        textShadow:
-                          "0 2px 10px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.3)",
-                      }}
-                    >
-                      Coming Soon
-                    </span>
-                  </div>
-                </div>
-                <div style={{ padding: "20px" }}>
-                  <div
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: "9px",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.14em",
-                      color: "#C9A84C",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    {c.pillar}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: "'Playfair Display', serif",
-                      fontSize: "16px",
-                      fontWeight: 600,
-                      color: "#1C1C1C",
-                      lineHeight: 1.3,
-                      marginBottom: "10px",
-                    }}
-                  >
-                    {c.title}
-                  </div>
-                  <p
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: "13px",
-                      fontWeight: 300,
-                      color: "#6b6862",
-                      lineHeight: 1.6,
-                      margin: "0 0 12px",
-                    }}
-                  >
-                    {c.blurb}
-                  </p>
-                  <div
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: "11px",
-                      color: "#9A9590",
-                      letterSpacing: "0.06em",
-                    }}
-                  >
-                    {c.readTime} min read
-                  </div>
-                </div>
+                className="bpimg"
+                style={{ backgroundImage: `url(${UPCOMING_IMAGES[c.pillar]})` }}
+              />
+              <div className="bpb">
+                <div className="bptag">{c.pillar}</div>
+                <div className="bpt">{c.title}</div>
+                <div className="bpd">{c.blurb}</div>
+                <div className="bpm">{c.readTime} min read</div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
-      {/* SECTION 4 — ARTICLE CTA */}
-      <section
-        style={{
-          background: "#F2EDE4",
-          padding: "72px 24px",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-          <div
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: "10px",
-              textTransform: "uppercase",
-              letterSpacing: "0.2em",
-              color: "#7D9B76",
-              marginBottom: "16px",
-            }}
-          >
-            Go Deeper
-          </div>
-          <h2
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "32px",
-              fontWeight: 700,
-              color: "#1C1C1C",
-              lineHeight: 1.2,
-              marginBottom: "20px",
-            }}
-          >
-            The articles are the free part.
-          </h2>
-          <p
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: "14px",
-              fontWeight: 300,
-              color: "#3a3a3a",
-              maxWidth: "480px",
-              margin: "0 auto 32px",
-              lineHeight: 1.8,
-            }}
-          >
-            The protocols are where it gets specific — a 30-day meal plan, a
-            cheat sheet, and 20 recipes built for your situation.
-          </p>
-          <div
-            style={{
-              display: "flex",
-              gap: "16px",
-              justifyContent: "center",
-              flexWrap: "wrap",
-            }}
-          >
-            <Link
-              to="/system"
-              style={{
-                background: "transparent",
-                border: "1px solid #1C1C1C",
-                color: "#1C1C1C",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 400,
-                padding: "14px 32px",
-                textDecoration: "none",
-                borderRadius: "2px",
-                fontVariantNumeric: "lining-nums",
-              }}
-            >
-              See The Complete System — <span className="price">$97</span>
-            </Link>
-          </div>
+      {/* SECTION 4 — CTA BAND */}
+      <div className="bband">
+        <div className="beye">Go deeper</div>
+        <h2 style={{ marginTop: "12px" }}>The articles are the free part.</h2>
+        <p>
+          The protocols are where it gets specific — a 30-day meal plan, a
+          cheat sheet, and 20 recipes built for your situation.
+        </p>
+        <div style={{ marginTop: "24px" }}>
+          <Link className="bdark" to="/system">
+            See The Complete System — $97
+          </Link>
         </div>
-      </section>
+      </div>
+
     </div>
     </SiteLayout>
   );
