@@ -879,7 +879,7 @@ function BlogPage() {
                 fontVariantNumeric: "lining-nums",
               }}
             >
-              Get The Complete System — <span className="price">$97</span>
+              See The Complete System — <span className="price">$97</span>
             </Link>
           </div>
         </div>
