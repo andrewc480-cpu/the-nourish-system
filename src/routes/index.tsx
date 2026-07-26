@@ -190,6 +190,22 @@ function HomePage() {
               <a href="/blog">Blog</a>
               <a href="/about">About</a>
             </div>
+            <button
+              className="menu-btn"
+              aria-label="Open menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+            {menuOpen && (
+              <div className="menu-panel">
+                <a href="#library" onClick={() => setMenuOpen(false)}>Shop</a>
+                <a href="/free-recipes" onClick={() => setMenuOpen(false)}>Free Recipes</a>
+                <a href="/blog" onClick={() => setMenuOpen(false)}>Blog</a>
+                <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
+              </div>
+            )}
           </nav>
           <div className="hc">
             <h1>
