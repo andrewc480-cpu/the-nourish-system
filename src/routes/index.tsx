@@ -240,7 +240,7 @@ function HomePage() {
               <h2>Too many people are getting the <span className="it">wrong answer.</span></h2>
               <p>Someone starts a GLP-1 and asks what they should be eating. They get told to "eat clean." Someone's gut is a mess for the third year running and the internet hands them a keto plan that makes it worse. Someone is exhausted at 3pm every single day and gets told to drink more water.</p>
               <p><b>The real answers exist.</b> They're just buried in research papers, locked behind $300 consultations, or scattered across ten thousand contradicting blog posts written by people who've never read the science. So most of us do what anyone would do — we guess. We search the internet. We give up and order takeout, and feel bad about it.</p>
-              <p>Nourish exists to close that gap. Not another diet. Not another meal plan. <b>A straight answer for the exact situation your body is in</b> — the rules, a 30-day meal plan, a one-page cheat sheet, and 20 recipes — plus the reasons behind every one of them. The research is done. The guesswork is over. The hardest thing left is cooking dinner.</p>
+              <p>Nourish exists to close that gap. Not another diet. Not another meal plan. <b>A straight answer for the exact situation your body is in</b> — a 30-day meal plan, a one-page cheat sheet, and 20 recipes — plus the reasons behind every one of them. The research is done. The guesswork is over. The hardest thing left is cooking dinner.</p>
             </div>
             <div className="story-img" style={{ backgroundImage: `url(${storyImg.url})` }} />
           </div>
