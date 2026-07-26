@@ -49,7 +49,7 @@ const CSS = `
 /* HERO */
 .nh .hero{position:relative;min-height:640px;display:flex;align-items:center;background-size:cover;background-position:center}
 .nh .hov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,20,19,.93),rgba(20,20,19,.66) 42%,rgba(20,20,19,.15) 70%,rgba(20,20,19,0) 100%)}
-.nh .nav{position:absolute;inset-inline:0;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:24px 44px}
+.nh .nav{position:absolute;inset-inline:0;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:24px 44px}
 .nh .logo{font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:#F7F5F1}
 .nh .logo span{color:#C9A84C}
 .nh .nl{display:flex;gap:30px}
