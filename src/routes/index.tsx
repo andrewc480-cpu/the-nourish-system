@@ -172,6 +172,7 @@ const CSS = `
 `;
 
 function HomePage() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="nh">
       <style>{CSS}</style>
