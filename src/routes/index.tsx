@@ -186,7 +186,6 @@ function HomePage() {
             </div>
             <div className="cta">
               <Link to="/system" className="gold">See What's Inside</Link>
-              <a href="/system" className="ghost">See What's Inside</a>
             </div>
           </div>
         </section>
