@@ -572,18 +572,18 @@ function BlogPage() {
         <h2 className="bv3-more-h">More from the journal.</h2>
         <div className="bv3-pgrid">
           {upcoming.map((c) => (
-            <div className="bv3-pc" key={c.pillar}>
-              <div
-                className="bv3-pimg"
-                style={{
-                  backgroundImage: `url(${UPCOMING_IMAGES[c.pillar]})`,
-                }}
-              />
+            <div
+              className="bv3-pc"
+              key={c.pillar}
+              style={{ backgroundImage: `url(${UPCOMING_IMAGES[c.pillar]})` }}
+            >
+              <div className="bv3-pw">
+                <span>COMING SOON</span>
+              </div>
               <div className="bv3-pb">
                 <div className="bv3-ptag">{c.pillar}</div>
                 <div className="bv3-pt">{c.title}</div>
                 <div className="bv3-pd">{c.blurb}</div>
-                <div className="bv3-pm">{c.meta}</div>
               </div>
             </div>
           ))}
