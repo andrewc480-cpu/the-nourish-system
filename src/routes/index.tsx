@@ -153,8 +153,9 @@ const CSS = `
   .nh .story-img{height:300px;order:-1}
   .nh .story-copy h2{font-size:29px}
   .nh .midcta{padding:30px 24px}
-  .nh .midcta-in{flex-direction:column;text-align:center}
-  .nh .mc-text{font-size:21px}
+  .nh .midcta-in{flex-direction:column;align-items:center;text-align:center}
+  .nh .mc-text{font-size:21px;text-align:center;width:100%}
+  .nh .mc-btns{flex-direction:column;align-items:center;width:100%}
   .nh .look{padding:60px 24px}
   .nh .look h2{font-size:29px}
   .nh .look-grid{grid-template-columns:1fr;gap:20px}
