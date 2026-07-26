@@ -4,13 +4,18 @@ const exploreLinks = [
   { href: "/about", label: "About" },
 ];
 
+const legalLinks = [
+  { href: "/terms", label: "Terms of Service" },
+  { href: "/refund", label: "Refund Policy" },
+];
+
 const headingClass =
   "mb-5 font-sans uppercase text-[10px] tracking-[0.16em] text-[#7D9B76]";
 
 export function Footer() {
   return (
     <footer className="bg-[#1C1C1C] border-t border-[rgba(247,245,241,0.08)]">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="font-display text-3xl font-semibold text-[#F7F5F1]">
             nóurish<span className="text-[#C9A84C]">.</span>
@@ -75,6 +80,19 @@ export function Footer() {
           <h4 className={headingClass}>Explore</h4>
           <ul className="space-y-2.5 font-sans text-sm font-light text-[rgba(247,245,241,0.8)]">
             {exploreLinks.map((l) => (
+              <li key={l.label}>
+                <a href={l.href} className="transition-colors hover:text-[#7D9B76]">
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className={headingClass}>Legal</h4>
+          <ul className="space-y-2.5 font-sans text-sm font-light text-[rgba(247,245,241,0.8)]">
+            {legalLinks.map((l) => (
               <li key={l.label}>
                 <a href={l.href} className="transition-colors hover:text-[#7D9B76]">
                   {l.label}
