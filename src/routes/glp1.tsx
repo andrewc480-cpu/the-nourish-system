@@ -370,15 +370,10 @@ function Glp1Page() {
           <div className="eye">What you get</div>
           <h2>A full protocol. Not just recipes.</h2>
           <div className="body">
-            Four parts, built to be used — the rules, a 30-day meal plan, a
-            one-page cheat sheet, and 20 recipes built for GLP-1.
+            Three parts, built to be used — a 30-day meal plan, a one-page
+            cheat sheet, and 20 recipes built for GLP-1.
           </div>
           <div className="anat-grid">
-            <div className="anat-item">
-              <div className="an">05</div>
-              <h3>The Rules</h3>
-              <p>Five non-negotiables for eating on a GLP-1.</p>
-            </div>
             <div className="anat-item">
               <div className="an">30</div>
               <h3>30-Day Plan</h3>
