@@ -290,7 +290,7 @@ function HomePage() {
         <section id="library" className="lib">
           <div className="eye">The Library</div>
           <h2>Six protocols.<br /><span className="it">Pick one, or take them all.</span></h2>
-          <div className="lead">Each one is a complete guide to a single situation — the rules, a 30-day plan, a one-page cheat sheet, and 20 recipes built for it. Click any protocol to see what's inside.</div>
+          <div className="lead">Each one is a complete guide to a single situation — a 30-day plan, a one-page cheat sheet, and 20 recipes built for it. Click any protocol to see what's inside.</div>
           <div className="grid">
             {([
               { n: "01", name: "GLP-1 Nutrition", href: "/glp1", img: lib01.url },
