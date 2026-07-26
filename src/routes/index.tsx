@@ -131,12 +131,8 @@ const CSS = `
 
 @media(max-width:820px){
   .nh .hc h1{font-size:36px}
-  .nh .nl{display:none}
-  .nh .hc{padding:64px 24px}
+  .nh .hc{padding:72px 24px}
   .nh .hero{min-height:560px;background-position:center 75%}
-  .nh .nav{padding:20px 24px}
-  .nh .menu-btn{display:flex;align-items:center;justify-content:center;width:40px;height:40px}
-  .nh .menu-panel{display:block}
   .nh .story{padding:60px 24px}
   .nh .story-grid{grid-template-columns:1fr;gap:30px}
   .nh .story-img{height:300px;order:-1}
