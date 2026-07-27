@@ -309,7 +309,7 @@ function SystemPage() {
           <div className="mx-auto max-w-2xl">
             <div
               className="flex flex-col items-center p-10 text-center"
-              style={{ backgroundColor: BG, border: "1px solid rgba(28,28,28,0.09)" }}
+              style={{ backgroundColor: TEXT, border: "1px solid rgba(28,28,28,0.09)" }}
             >
               <p
                 className="font-sans font-medium uppercase"
@@ -319,19 +319,19 @@ function SystemPage() {
               </p>
               <h2
                 className="mt-5 font-display font-bold"
-                style={{ fontSize: 36, color: TEXT, lineHeight: 1.1 }}
+                style={{ fontSize: 36, color: BG, lineHeight: 1.1 }}
               >
                 The Complete System
               </h2>
               <p
                 className="mt-5 font-sans font-light"
-                style={{ fontSize: 15, color: "#4a4a4a", lineHeight: 1.75, maxWidth: 480 }}
+                style={{ fontSize: 15, color: MUTED, lineHeight: 1.75, maxWidth: 480 }}
               >
                 Every protocol, every plan, every recipe — whatever your body needs next, you already have it.
               </p>
               <ul
                 className="mt-8 w-full max-w-sm space-y-3 text-left font-sans"
-                style={{ fontSize: 14, color: TEXT }}
+                style={{ fontSize: 14, color: BG }}
               >
                 {[
                   "All six protocols",
@@ -347,7 +347,7 @@ function SystemPage() {
               </ul>
               <div
                 className="mt-8 w-full max-w-sm p-5 text-left"
-                style={{ backgroundColor: LINEN, borderLeft: `3px solid ${GOLD}` }}
+                style={{ backgroundColor: "rgba(125,155,118,0.16)", border: "1px solid rgba(125,155,118,0.4)", borderLeft: `3px solid ${GOLD}` }}
               >
                 <p
                   className="font-sans font-medium uppercase"
@@ -357,7 +357,7 @@ function SystemPage() {
                 </p>
                 <p
                   className="mt-2 font-sans font-light"
-                  style={{ fontSize: 13, color: "#3a3a3a", lineHeight: 1.7 }}
+                  style={{ fontSize: 13, color: BG, lineHeight: 1.7 }}
                 >
                   The Complete Drinks Collection — 20 functional coffees, matchas, teas and refreshers, each built to do a job. Yours with the system.
                 </p>
@@ -365,11 +365,11 @@ function SystemPage() {
               <div className="mt-10 flex items-baseline gap-4">
                 <span
                   className="font-display"
-                  style={{ fontSize: 22, color: MUTED, textDecoration: "line-through" }}
+                  style={{ fontSize: 22, color: "#6b6862", textDecoration: "line-through" }}
                 >
                   $162
                 </span>
-                <span className="price" style={{ fontSize: 44 }}>$97</span>
+                <span className="price" style={{ fontSize: 44, color: BG }}>$97</span>
               </div>
               <p
                 className="mt-2 font-sans"
@@ -393,7 +393,7 @@ function SystemPage() {
               </a>
               <p
                 className="mt-6 font-sans"
-                style={{ fontSize: 11, color: MUTED }}
+                style={{ fontSize: 11, color: "#B8B3AD" }}
               >
                 Instant download · No subscription · Yours to keep
               </p>
