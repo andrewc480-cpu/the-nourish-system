@@ -3,8 +3,6 @@ import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import heroAsset from "@/assets/H1_Pomegranate_Salmon_Power_Plate.png.asset.json";
 import storyImg from "@/assets/Rainbow_Vegetable_Grain_Bowl-vertical.png.asset.json";
-import lookCheat from "@/assets/glp1-cheat-sheet.png.asset.json";
-import lookPlan from "@/assets/glp1-30day-preview.png.asset.json";
 import lookRecipe from "@/assets/glp1-recipe-preview.png.asset.json";
 import lib01 from "@/assets/nourish-lib-01-glp1-v3.jpg.asset.json";
 import lib02 from "@/assets/nourish-lib-02-gut-v3.jpg.asset.json";
@@ -87,6 +85,12 @@ const CSS = `
 .nh .lstats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px;padding-top:40px;border-top:1px solid rgba(28,28,28,.14)}
 .nh .lstat .ln{font-family:'Archivo',sans-serif;font-weight:800;font-size:38px;color:#1C1C1C;font-variant-numeric:tabular-nums lining-nums}
 .nh .lstat .ll{color:#6b6862;font-size:13px;margin-top:8px;line-height:1.5;text-wrap:balance;max-width:200px;margin-left:auto;margin-right:auto}
+.nh .look-device{display:flex;justify-content:center;margin-top:48px}
+.nh .ipad{position:relative;background:#1C1C1C;border-radius:36px;padding:22px 18px;box-shadow:0 44px 84px rgba(28,28,28,.30),0 10px 24px rgba(28,28,28,.16);max-width:500px;width:100%}
+.nh .ipad::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;background:rgba(247,245,241,.3)}
+.nh .ipad-screen{background:#F7F5F1;border-radius:16px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(28,28,28,.06)}
+.nh .ipad-screen img{width:100%;display:block}
+.nh .look-cap{margin:24px auto 0;max-width:440px;font-size:13.5px;color:#6b6862;line-height:1.55;text-align:center}
 
 /* LIBRARY */
 .nh .lib{max-width:1160px;margin:0 auto;padding:84px 44px 30px}
@@ -146,7 +150,7 @@ const CSS = `
   .nh .mc-btns{flex-direction:column;align-items:center;width:100%}
   .nh .look{padding:60px 24px}
   .nh .look h2{font-size:29px}
-  .nh .look-grid{grid-template-columns:1fr;gap:20px}
+  .nh .ipad{padding:16px 12px;border-radius:28px}
   .nh .lstats{grid-template-columns:1fr 1fr;gap:28px 12px}
   .nh .lib{padding:60px 24px 20px}
   .nh .lib h2{font-size:30px}
@@ -254,20 +258,14 @@ function HomePage() {
             <div className="eye">Look inside</div>
             <h2>This is what you're actually getting.</h2>
             <div className="look-sub">Not a PDF of recipes scraped off the internet. Real reference pages, real plans, real numbers — built to be used in a kitchen.</div>
-            <div className="look-grid">
-              <div className="lcard">
-                <img src={lookCheat.url} alt="The cheat sheet" />
-                <div className="lcap"><b>The cheat sheet</b><span>Your targets, what to eat, what to skip — one page, on the fridge.</span></div>
-              </div>
-              <div className="lcard">
-                <img src={lookPlan.url} alt="The 30-day plan" />
-                <div className="lcap"><b>The 30-day plan</b><span>A month of meals, mapped to how your body feels each day.</span></div>
-              </div>
-              <div className="lcard">
-                <img src={lookRecipe.url} alt="Every recipe" />
-                <div className="lcap"><b>Every recipe</b><span>Protein count, timing, and why it works — not just instructions.</span></div>
+            <div className="look-device">
+              <div className="ipad">
+                <div className="ipad-screen">
+                  <img src={lookRecipe.url} alt="A Nourish recipe page" />
+                </div>
               </div>
             </div>
+            <div className="look-cap">One recipe page — one of 120 across the six protocols.</div>
             <div className="lstats">
               <div className="lstat"><div className="ln">120</div><div className="ll">Recipes, each built for a specific job</div></div>
               <div className="lstat"><div className="ln">28g+</div><div className="ll">Minimum protein in every GLP-1 recipe</div></div>
