@@ -19,6 +19,7 @@ import { Route as LongevityRouteImport } from './routes/longevity'
 import { Route as HormonalHealthRouteImport } from './routes/hormonal-health'
 import { Route as GutHealthRouteImport } from './routes/gut-health'
 import { Route as Glp1RouteImport } from './routes/glp1'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as CognitivePerformanceRouteImport } from './routes/cognitive-performance'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
@@ -76,6 +77,11 @@ const Glp1Route = Glp1RouteImport.update({
   path: '/glp1',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CognitivePerformanceRoute = CognitivePerformanceRouteImport.update({
   id: '/cognitive-performance',
   path: '/cognitive-performance',
@@ -112,6 +118,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/cognitive-performance': typeof CognitivePerformanceRoute
+  '/faq': typeof FaqRoute
   '/glp1': typeof Glp1Route
   '/gut-health': typeof GutHealthRoute
   '/hormonal-health': typeof HormonalHealthRoute
@@ -130,6 +137,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/cognitive-performance': typeof CognitivePerformanceRoute
+  '/faq': typeof FaqRoute
   '/glp1': typeof Glp1Route
   '/gut-health': typeof GutHealthRoute
   '/hormonal-health': typeof HormonalHealthRoute
@@ -149,6 +157,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/blog': typeof BlogRoute
   '/cognitive-performance': typeof CognitivePerformanceRoute
+  '/faq': typeof FaqRoute
   '/glp1': typeof Glp1Route
   '/gut-health': typeof GutHealthRoute
   '/hormonal-health': typeof HormonalHealthRoute
@@ -169,6 +178,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/cognitive-performance'
+    | '/faq'
     | '/glp1'
     | '/gut-health'
     | '/hormonal-health'
@@ -187,6 +197,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/cognitive-performance'
+    | '/faq'
     | '/glp1'
     | '/gut-health'
     | '/hormonal-health'
@@ -205,6 +216,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/blog'
     | '/cognitive-performance'
+    | '/faq'
     | '/glp1'
     | '/gut-health'
     | '/hormonal-health'
@@ -224,6 +236,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BlogRoute: typeof BlogRoute
   CognitivePerformanceRoute: typeof CognitivePerformanceRoute
+  FaqRoute: typeof FaqRoute
   Glp1Route: typeof Glp1Route
   GutHealthRoute: typeof GutHealthRoute
   HormonalHealthRoute: typeof HormonalHealthRoute
@@ -310,6 +323,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Glp1RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cognitive-performance': {
       id: '/cognitive-performance'
       path: '/cognitive-performance'
@@ -360,6 +380,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
   CognitivePerformanceRoute: CognitivePerformanceRoute,
+  FaqRoute: FaqRoute,
   Glp1Route: Glp1Route,
   GutHealthRoute: GutHealthRoute,
   HormonalHealthRoute: HormonalHealthRoute,
@@ -376,3 +397,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
