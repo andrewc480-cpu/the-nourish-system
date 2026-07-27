@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import heroAsset from "@/assets/H1_Pomegranate_Salmon_Power_Plate.png.asset.json";
 import storyImg from "@/assets/Rainbow_Vegetable_Grain_Bowl-vertical.png.asset.json";
@@ -128,6 +129,8 @@ const CSS = `
 .nh .cap-input{flex:1;background:#F7F5F1;border:none;border-radius:2px;padding:15px 18px;font-family:'DM Sans',sans-serif;font-size:15px;color:#1C1C1C;outline:none}
 .nh .cap-btn{background:#1C1C1C;color:#F7F5F1;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;padding:15px 26px;border-radius:2px;border:none;cursor:pointer;white-space:nowrap}
 .nh .cap-fine{margin-top:16px;font-size:12px;color:rgba(247,245,241,.78)}
+.nh .cap-success{margin:28px auto 0;max-width:470px;font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:#F7F5F1;line-height:1.5}
+.nh .cap-error{margin-top:16px;font-size:12px;color:#1C1C1C;background:rgba(247,245,241,.92);display:inline-block;padding:8px 14px;border-radius:2px}
 
 @media(max-width:820px){
   .nh .hc h1{font-size:36px}
@@ -164,6 +167,36 @@ const CSS = `
 `;
 
 function HomePage() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (status === "submitting") return;
+    const value = email.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      setStatus("error");
+      return;
+    }
+    setStatus("submitting");
+    try {
+      const res = await fetch("/api/public/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: value }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data?.ok) {
+        setStatus("success");
+        setEmail("");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
     <SiteLayout>
       <div className="nh">
@@ -304,11 +337,31 @@ function HomePage() {
             <div className="cap-eye">Free · No card required</div>
             <div className="cap-h">Try a week on us.</div>
             <div className="cap-sub"><b>The 15-Minute Week</b> — seven days of meals you can cook in fifteen minutes or less, plus three drinks to go with them. Enter your email and it's in your inbox.</div>
-            <form className="cap-form" onSubmit={(e) => e.preventDefault()}>
-              <input className="cap-input" type="email" placeholder="you@email.com" />
-              <button type="submit" className="cap-btn">Send It To Me</button>
-            </form>
-            <div className="cap-fine">No spam. Unsubscribe anytime.</div>
+            {status === "success" ? (
+              <div className="cap-success">Check your inbox — your 15-Minute Week is on its way.</div>
+            ) : (
+              <>
+                <form className="cap-form" onSubmit={handleSubscribe}>
+                  <input
+                    className="cap-input"
+                    type="email"
+                    placeholder="you@email.com"
+                    value={email}
+                    onChange={(e) => { setEmail(e.target.value); if (status === "error") setStatus("idle"); }}
+                    disabled={status === "submitting"}
+                    aria-label="Email address"
+                  />
+                  <button type="submit" className="cap-btn" disabled={status === "submitting"}>
+                    {status === "submitting" ? "Sending…" : "Send It To Me"}
+                  </button>
+                </form>
+                {status === "error" ? (
+                  <div className="cap-error">That didn't go through. Check the address and try again.</div>
+                ) : (
+                  <div className="cap-fine">No spam. Unsubscribe anytime.</div>
+                )}
+              </>
+            )}
           </div>
         </section>
       </div>
