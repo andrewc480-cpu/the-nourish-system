@@ -40,7 +40,7 @@ const CATEGORIES: { eyebrow: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "What's included in the $97 Complete System?",
-        a: "All six protocols — every rule, every meal plan, every cheat sheet, and all 120 recipes. It also includes The Complete Drinks Collection, twenty functional coffees, matchas, teas and refreshers. Bought individually the six protocols come to $162.",
+        a: "All six protocols — every meal plan, every cheat sheet, and all 120 recipes. It also includes The Complete Drinks Collection, twenty functional coffees, matchas, teas and refreshers. Bought individually the six protocols come to $162.",
       },
       {
         q: "How many recipes are there in total?",
