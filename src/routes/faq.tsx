@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 
@@ -108,6 +109,26 @@ const CATEGORIES: { eyebrow: string; items: { q: string; a: string }[] }[] = [
         q: "Why do the protocols focus so heavily on protein?",
         a: "Protein protects lean muscle, drives satiety, and blunts blood sugar spikes. It matters most when total food intake is low — which is why every GLP-1 recipe is built around a minimum of 28g, and why protein leads the plate in nearly every protocol.",
       },
+      {
+        q: "Will a GLP-1 make my hair thin or fall out?",
+        a: "It can, but usually not directly from the medication — it's typically a sign of not getting enough protein, iron, or zinc while eating less overall. Rapid weight loss puts the same kind of stress on hair follicles regardless of the cause. The GLP-1 Nutrition protocol is built around hitting those targets consistently, which is the main thing within your control here.",
+      },
+      {
+        q: "Will I lose muscle on a GLP-1?",
+        a: "Some muscle loss happens with any significant weight loss, medication or not — it isn't unique to GLP-1s. What changes the ratio of fat lost to muscle lost is protein intake and resistance training. The GLP-1 Nutrition protocol is built around a 28g+ protein minimum per meal specifically to protect against this.",
+      },
+      {
+        q: "Why does food taste different or “off” on a GLP-1?",
+        a: "Taste changes — food tasting metallic, bland, or just wrong — are commonly reported on these medications, though the exact mechanism isn't fully settled. It's one more reason appetite drops further and eating gets harder, which is exactly what the GLP-1 Nutrition protocol is built to work around.",
+      },
+      {
+        q: "I'm bloated no matter what I eat. Will this actually help?",
+        a: 'If bloating happens regardless of what you eat, that\'s worth mentioning to a doctor, since it can point to something beyond diet alone. The Gut Health protocol is built around a phased approach — remove, repair, rebuild — designed for exactly this kind of unpredictable, "nothing seems to help" bloating, rather than assuming one specific trigger food.',
+      },
+      {
+        q: "Is “gut health” actually real, or is it just marketing?",
+        a: "Fair question — the phrase gets used to sell a lot of things with thin evidence behind them. What's well-established is narrower: fibre diversity, fermented foods, and reducing ultra-processed intake do measurably affect digestion and the gut microbiome. The Gut Health protocol sticks to that established ground rather than trends like expensive probiotics or detox claims.",
+      },
     ],
   },
 ];
@@ -149,8 +170,43 @@ export const Route = createFileRoute("/faq")({
   component: FaqPage,
 });
 
-const EYE =
-  "text-[10px] uppercase tracking-[0.22em] text-[#7D9B76] font-sans";
+const EYE = "text-[10px] uppercase tracking-[0.22em] text-[#7D9B76] font-sans";
+
+function FaqItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="mb-3.5 overflow-hidden rounded-[8px] border border-[#7D9B76] bg-[#F2EDE4]">
+      <button
+        type="button"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+        className="flex w-full cursor-pointer items-center justify-between border-none bg-transparent px-[22px] py-5 text-left font-sans transition-colors hover:bg-[rgba(125,155,118,0.08)] md:px-[26px] md:py-[22px]"
+      >
+        <span className="font-display text-[16px] font-bold leading-[1.35] text-[#1C1C1C] md:text-[18px]">
+          {q}
+        </span>
+        <span
+          className="ml-4 shrink-0 text-[22px] font-bold text-[#7D9B76] transition-transform duration-[250ms]"
+          style={{
+            fontFamily: "Archivo, sans-serif",
+            transform: open ? "rotate(45deg)" : "rotate(0deg)",
+          }}
+          aria-hidden="true"
+        >
+          +
+        </span>
+      </button>
+      <div
+        className="overflow-hidden transition-[max-height] duration-[400ms] ease-in-out"
+        style={{ maxHeight: open ? 600 : 0 }}
+      >
+        <div className="px-[22px] pb-[22px] text-[16px] leading-[1.75] text-[#3a3a3a] md:px-[26px] md:pb-6">
+          {a}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function FaqPage() {
   return (
@@ -160,9 +216,9 @@ function FaqPage() {
         <div className="mx-auto max-w-[900px] px-6 pt-12 pb-2 md:px-11 md:pt-[66px] md:pb-[10px]">
           <div className={EYE}>Questions</div>
           <h1 className="mt-3.5 font-display text-[33px] font-bold leading-[1.06] tracking-[-0.015em] md:text-[50px]">
-            Straight answers.{" "}
+            Real questions.{" "}
             <span className="font-display italic font-bold text-[#7D9B76]">
-              No fluff.
+              Real answers.
             </span>
           </h1>
           <p className="mt-[18px] max-w-[520px] text-[17px] leading-[1.6] text-[#6b6862]">
@@ -179,21 +235,7 @@ function FaqPage() {
                 <div className={EYE}>{cat.eyebrow}</div>
               </div>
               {cat.items.map((item) => (
-                <div
-                  key={item.q}
-                  className="grid grid-cols-1 gap-2.5 border-b border-[rgba(28,28,28,0.11)] py-6 md:grid-cols-[0.9fr_1.1fr] md:gap-8"
-                >
-                  <div>
-                    <h3 className="font-display text-[18px] font-bold leading-[1.3] tracking-[-0.015em] md:text-[20px]">
-                      {item.q}
-                    </h3>
-                  </div>
-                  <div>
-                    <p className="text-[16px] leading-[1.75] text-[#3a3a3a]">
-                      {item.a}
-                    </p>
-                  </div>
-                </div>
+                <FaqItem key={item.q} q={item.q} a={item.a} />
               ))}
             </div>
           ))}
