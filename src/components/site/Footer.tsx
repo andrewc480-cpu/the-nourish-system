@@ -1,5 +1,4 @@
 const exploreLinks = [
-  { href: "/system", label: "The Complete System" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
