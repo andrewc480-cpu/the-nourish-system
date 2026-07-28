@@ -64,7 +64,7 @@ const CSS = `
 .nh .hero2-copy .ben{display:flex;gap:11px;align-items:baseline;color:#3a3a3a;font-size:15.5px;line-height:1.5}
 .nh .hero2-copy .ben .k{color:#C9A84C;font-weight:700}
 .nh .hero2-copy .cta{margin-top:30px}
-.nh .hero2-img{height:420px;border-radius:8px;background-size:cover;background-position:center;box-shadow:0 24px 56px rgba(28,28,28,.16);margin-top:48px}
+.nh .hero2-img{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);height:460px;background-size:cover;background-position:center;margin-top:48px}
 
 /* STORY */
 .nh .story{max-width:1160px;margin:0 auto;padding:84px 44px}
@@ -150,7 +150,7 @@ const CSS = `
 @media(max-width:820px){
   .nh .hero2{padding:44px 24px 0}
   .nh .hero2-copy h1{font-size:33px}
-  .nh .hero2-img{height:260px;margin-top:32px}
+  .nh .hero2-img{height:300px;margin-top:32px}
   .nh .story{padding:60px 24px}
   .nh .story-grid{grid-template-columns:1fr;gap:30px}
   .nh .story-img{height:300px;order:-1}
@@ -232,7 +232,7 @@ function HomePage() {
               <Link to="/system" className="gold">See What's Inside</Link>
             </div>
           </div>
-          <div className="hero2-img" style={{ backgroundImage: `url(${heroAsset.url})` }} />
+          <div className="hero2-img" style={{ backgroundImage: `url(${lib03.url})` }} />
         </section>
 
         {/* STORY */}
