@@ -55,6 +55,17 @@ const CSS = `
 .nh .hc .cta{margin-top:30px;display:flex;gap:13px;flex-wrap:wrap;align-items:center}
 .nh .hc .fine{margin-top:16px;font-size:12.5px;color:rgba(247,245,241,.62)}
 
+/* HERO2 — text on clean background, image band below (no text over image) */
+.nh .hero2{max-width:1160px;margin:0 auto;padding:80px 44px 0}
+.nh .hero2-copy{max-width:760px}
+.nh .hero2-copy h1{font-size:56px;line-height:1.05;color:#1C1C1C}
+.nh .hero2-copy .sub{font-size:18px;line-height:1.62;color:#3a3a3a;margin-top:22px;max-width:600px}
+.nh .hero2-copy .bens{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+.nh .hero2-copy .ben{display:flex;gap:11px;align-items:baseline;color:#3a3a3a;font-size:15.5px;line-height:1.5}
+.nh .hero2-copy .ben .k{color:#C9A84C;font-weight:700}
+.nh .hero2-copy .cta{margin-top:30px}
+.nh .hero2-img{height:420px;border-radius:8px;background-size:cover;background-position:center;box-shadow:0 24px 56px rgba(28,28,28,.16);margin-top:48px}
+
 /* STORY */
 .nh .story{max-width:1160px;margin:0 auto;padding:84px 44px}
 .nh .story-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
@@ -137,9 +148,9 @@ const CSS = `
 .nh .cap-error{margin-top:16px;font-size:12px;color:#1C1C1C;background:rgba(247,245,241,.92);display:inline-block;padding:8px 14px;border-radius:2px}
 
 @media(max-width:820px){
-  .nh .hc h1{font-size:36px}
-  .nh .hc{padding:72px 24px}
-  .nh .hero{min-height:560px;background-position:center 75%}
+  .nh .hero2{padding:44px 24px 0}
+  .nh .hero2-copy h1{font-size:33px}
+  .nh .hero2-img{height:260px;margin-top:32px}
   .nh .story{padding:60px 24px}
   .nh .story-grid{grid-template-columns:1fr;gap:30px}
   .nh .story-img{height:300px;order:-1}
@@ -206,25 +217,22 @@ function HomePage() {
       <div className="nh">
         <style>{CSS}</style>
         {/* HERO */}
-        <section className="hero" style={{ backgroundImage: `url(${heroAsset.url})` }}>
-          <div className="hov" />
-
-          <div className="hc">
-            <h1>
-              Stop guessing what<br />to eat. <span className="it">Start knowing.</span>
-            </h1>
+        <section className="hero2">
+          <div className="hero2-copy">
+            <h1>Stop guessing what to eat. <span className="it">Start knowing.</span></h1>
             <div className="sub">
               Six food guides for the situations your body is actually in. Open one, and dinner is already decided — and it's the right call for what your body is doing right now.
             </div>
             <div className="bens">
               <div className="ben"><span className="k">→</span><span>Never search the internet for "what should I eat for ___" again</span></div>
               <div className="ben"><span className="k">→</span><span>A full month of meals, already planned for you</span></div>
-              <div className="ben"><span className="k">→</span><span>120 recipes that actually work — and taste like this</span></div>
+              <div className="ben"><span className="k">→</span><span>120 recipes that actually work</span></div>
             </div>
             <div className="cta">
               <Link to="/system" className="gold">See What's Inside</Link>
             </div>
           </div>
+          <div className="hero2-img" style={{ backgroundImage: `url(${heroAsset.url})` }} />
         </section>
 
         {/* STORY */}
