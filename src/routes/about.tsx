@@ -57,11 +57,11 @@ const css = `
 .av5 .eye{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#7D9B76}
 .av5 .gold{background:#C9A84C;color:#1C1C1C;font-size:12px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;padding:16px 34px;border-radius:2px;text-decoration:none;display:inline-block}
 .av5{font-family:'DM Sans',sans-serif;background:#F7F5F1;color:#1C1C1C}
-.av5 .hero{position:relative;min-height:440px;display:flex;align-items:center;background:url(${heroImg.url}) center/cover}
-.av5 .hov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,20,19,.92),rgba(20,20,19,.6) 45%,rgba(20,20,19,.12) 75%,rgba(20,20,19,0) 100%)}
-.av5 .hc{position:relative;z-index:3;padding:48px 22px;max-width:720px}
-.av5 .hc h1{font-size:34px;line-height:1.05;color:#F7F5F1;margin-top:14px}
-.av5 .hc p{font-size:16px;line-height:1.65;color:rgba(247,245,241,.88);margin-top:20px;max-width:500px}
+.av5 .hero{max-width:1140px;margin:0 auto;padding:40px 22px 24px;display:grid;grid-template-columns:1fr;gap:26px;align-items:center}
+.av5 .hc{padding:0;max-width:none}
+.av5 .hc h1{font-size:34px;line-height:1.05;color:#1C1C1C;margin-top:14px}
+.av5 .hc p{font-size:16px;line-height:1.65;color:#3a3a3a;margin-top:20px;max-width:500px}
+.av5 .himg{border-radius:8px;height:300px;background:url(${heroImg.url}) center/cover;box-shadow:0 20px 50px rgba(28,28,28,.14)}
 .av5 .sec{max-width:1140px;margin:0 auto;padding:56px 22px}
 .av5 .split{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
 .av5 .copy h2{font-size:29px;line-height:1.12;margin-top:14px;text-wrap:balance}
@@ -91,9 +91,10 @@ const css = `
 .av5 .cta .btn{margin-top:26px}
 .av5 .cta .fine{color:#9A9590;font-size:12px;margin-top:16px}
 @media(min-width:821px){
-.av5 .hc{padding:60px 44px}
+.av5 .hero{grid-template-columns:1.02fr .98fr;gap:54px;padding:56px 44px 26px}
 .av5 .hc h1{font-size:52px}
 .av5 .hc p{font-size:17.5px}
+.av5 .himg{height:460px}
 .av5 .sec{padding:80px 44px}
 .av5 .split{grid-template-columns:1.1fr .9fr;gap:56px}
 .av5 .copy h2{font-size:40px}
@@ -116,8 +117,8 @@ function AboutPage() {
       <style dangerouslySetInnerHTML={{ __html: css }} />
       <div className="av5">
         <div className="hero">
-          <div className="hov" />
           <div className="hc">
+            <div className="eye">About Nourish</div>
             <h1>
               Above the diet.
               <br />
@@ -128,6 +129,7 @@ function AboutPage() {
               more practical than a medical consultation.
             </p>
           </div>
+          <div className="himg" />
         </div>
 
         <div className="sec">
