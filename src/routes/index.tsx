@@ -72,7 +72,7 @@ const CSS = `
 .nh .story-copy h2{font-size:38px;line-height:1.12;margin-top:14px;text-wrap:balance}
 .nh .story-copy p{font-size:17px;line-height:1.78;color:#3a3a3a;margin-top:20px}
 .nh .story-copy p b{color:#1C1C1C;font-weight:500}
-.nh .story-img{height:560px;border-radius:8px;background-color:#F2EDE4;background-size:contain;background-repeat:no-repeat;background-position:center;box-shadow:0 20px 50px rgba(28,28,28,.14)}
+.nh .story-img{height:560px;border-radius:8px;background-size:cover;background-position:center;box-shadow:0 20px 50px rgba(28,28,28,.14)}
 
 /* MID CTA */
 .nh .midcta{background:#1C1C1C;padding:36px 44px}
