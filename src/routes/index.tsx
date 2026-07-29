@@ -55,16 +55,16 @@ const CSS = `
 .nh .hc .cta{margin-top:30px;display:flex;gap:13px;flex-wrap:wrap;align-items:center}
 .nh .hc .fine{margin-top:16px;font-size:12.5px;color:rgba(247,245,241,.62)}
 
-/* HERO2 — text on clean background, image band below (no text over image) */
-.nh .hero2{max-width:1160px;margin:0 auto;padding:80px 44px 0}
-.nh .hero2-copy{max-width:760px}
-.nh .hero2-copy h1{font-size:56px;line-height:1.05;color:#1C1C1C}
-.nh .hero2-copy .sub{font-size:18px;line-height:1.62;color:#3a3a3a;margin-top:22px;max-width:600px}
-.nh .hero2-copy .bens{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+/* HERO2 — split: copy panel + image beside (GLP-1 hero template) */
+.nh .hero2{max-width:1140px;margin:0 auto;padding:56px 44px 26px;display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
+.nh .hero2-copy{max-width:520px}
+.nh .hero2-copy h1{font-size:52px;line-height:1.04;color:#1C1C1C}
+.nh .hero2-copy .sub{font-size:17px;line-height:1.62;color:#3a3a3a;margin-top:20px;max-width:480px}
+.nh .hero2-copy .bens{margin-top:22px;display:flex;flex-direction:column;gap:10px}
 .nh .hero2-copy .ben{display:flex;gap:11px;align-items:baseline;color:#3a3a3a;font-size:15.5px;line-height:1.5}
 .nh .hero2-copy .ben .k{color:#C9A84C;font-weight:700}
-.nh .hero2-copy .cta{margin-top:30px}
-.nh .hero2-img{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);height:460px;background-size:cover;background-position:center;margin-top:48px}
+.nh .hero2-copy .cta{margin-top:26px}
+.nh .hero2-img{border-radius:8px;height:460px;background-size:cover;background-position:center;box-shadow:0 20px 50px rgba(28,28,28,.14)}
 
 /* STORY */
 .nh .story{max-width:1160px;margin:0 auto;padding:84px 44px}
@@ -148,9 +148,9 @@ const CSS = `
 .nh .cap-error{margin-top:16px;font-size:12px;color:#1C1C1C;background:rgba(247,245,241,.92);display:inline-block;padding:8px 14px;border-radius:2px}
 
 @media(max-width:820px){
-  .nh .hero2{padding:44px 24px 0}
-  .nh .hero2-copy h1{font-size:33px}
-  .nh .hero2-img{height:300px;margin-top:32px}
+  .nh .hero2{grid-template-columns:1fr;gap:26px;padding:40px 22px 24px}
+  .nh .hero2-copy h1{font-size:36px}
+  .nh .hero2-img{height:300px}
   .nh .story{padding:60px 24px}
   .nh .story-grid{grid-template-columns:1fr;gap:30px}
   .nh .story-img{height:300px;order:-1}
