@@ -153,7 +153,7 @@ const CSS = `
   .nh .hero2-img{aspect-ratio:4/5}
   .nh .story{padding:60px 24px}
   .nh .story-grid{grid-template-columns:1fr;gap:30px}
-  .nh .story-img{order:-1}
+  .nh .story-img{order:1}
   .nh .story-copy h2{font-size:29px}
   .nh .midcta{padding:30px 24px}
   .nh .midcta-in{flex-direction:column;align-items:center;text-align:center}
