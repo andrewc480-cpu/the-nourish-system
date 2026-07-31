@@ -61,13 +61,13 @@ const css = `
 .av5 .hc{padding:0;max-width:none}
 .av5 .hc h1{font-size:34px;line-height:1.05;color:#1C1C1C;margin-top:14px}
 .av5 .hc p{font-size:16px;line-height:1.65;color:#3a3a3a;margin-top:20px;max-width:500px}
-.av5 .himg{border-radius:8px;height:300px;background:url(${heroImg.url}) center/cover;box-shadow:0 20px 50px rgba(28,28,28,.14)}
+.av5 .himg{border-radius:8px;width:100%;aspect-ratio:4/5;background:url(${heroImg.url}) center/cover;box-shadow:0 20px 50px rgba(28,28,28,.14)}
 .av5 .sec{max-width:1140px;margin:0 auto;padding:56px 22px}
 .av5 .split{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
 .av5 .copy h2{font-size:29px;line-height:1.12;margin-top:14px;text-wrap:balance}
 .av5 .copy p{font-size:16px;line-height:1.8;color:#3a3a3a;margin-top:22px}
 .av5 .copy p b{color:#1C1C1C;font-weight:500}
-.av5 .simg{height:300px;order:-1;border-radius:8px;background:url(${splitImg.url}) center/cover;box-shadow:0 20px 50px rgba(28,28,28,.14)}
+.av5 .simg{width:100%;aspect-ratio:4/5;order:-1;border-radius:8px;background:url(${splitImg.url}) center/cover;box-shadow:0 20px 50px rgba(28,28,28,.14)}
 .av5 .band{height:300px;background:url(${bandImg.url}) center/cover}
 .av5 .beliefs{background:#1C1C1C;padding:64px 22px}
 .av5 .bin{max-width:1040px;margin:0 auto}
@@ -94,12 +94,12 @@ const css = `
 .av5 .hero{grid-template-columns:1.02fr .98fr;gap:54px;padding:56px 44px 26px}
 .av5 .hc h1{font-size:52px}
 .av5 .hc p{font-size:17.5px}
-.av5 .himg{height:460px}
+.av5 .himg{aspect-ratio:4/5}
 .av5 .sec{padding:80px 44px}
 .av5 .split{grid-template-columns:1.1fr .9fr;gap:56px}
 .av5 .copy h2{font-size:40px}
 .av5 .copy p{font-size:17.5px}
-.av5 .simg{height:520px;order:0}
+.av5 .simg{order:0}
 .av5 .beliefs{padding:84px 44px}
 .av5 .bin h2{font-size:40px}
 .av5 .bgrid{grid-template-columns:repeat(2,1fr);gap:30px}
