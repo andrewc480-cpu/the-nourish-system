@@ -66,13 +66,13 @@ const CSS = `
 .nh .hero2-copy .cta{margin-top:26px}
 .nh .hero2-img{border-radius:8px;width:100%;aspect-ratio:4/5;background-size:cover;background-position:center;box-shadow:0 20px 50px rgba(28,28,28,.14)}
 
-/* STORY */
-.nh .story{max-width:1160px;margin:0 auto;padding:84px 44px}
-.nh .story-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-.nh .story-copy h2{font-size:38px;line-height:1.12;margin-top:14px;text-wrap:balance}
-.nh .story-copy p{font-size:17px;line-height:1.78;color:#3a3a3a;margin-top:20px}
-.nh .story-copy p b{color:#1C1C1C;font-weight:500}
-.nh .story-img{width:100%;aspect-ratio:4/5;border-radius:8px;background-size:cover;background-position:center;box-shadow:0 20px 50px rgba(28,28,28,.14)}
+/* STORY — mirrors protocol "Why it exists": dark text band + full-width image band */
+.nh .story{background:#1C1C1C}
+.nh .story-in{max-width:900px;margin:0 auto;padding:76px 44px}
+.nh .story-in h2{font-size:38px;line-height:1.12;margin-top:14px;color:#F7F5F1;text-wrap:balance}
+.nh .story-in p{font-size:17.5px;line-height:1.78;color:#c9c6c0;margin-top:22px}
+.nh .story-in p b{color:#F7F5F1;font-weight:500}
+.nh .story-band{height:320px;background-size:cover;background-position:center}
 
 /* MID CTA */
 .nh .midcta{background:#1C1C1C;padding:36px 44px}
@@ -151,10 +151,10 @@ const CSS = `
   .nh .hero2{grid-template-columns:1fr;gap:26px;padding:40px 22px 24px}
   .nh .hero2-copy h1{font-size:36px}
   .nh .hero2-img{aspect-ratio:4/5}
-  .nh .story{padding:60px 24px}
-  .nh .story-grid{grid-template-columns:1fr;gap:30px}
-  .nh .story-img{order:1}
-  .nh .story-copy h2{font-size:29px}
+  .nh .story-in{padding:56px 24px}
+  .nh .story-in h2{font-size:29px}
+  .nh .story-in p{font-size:16px}
+  .nh .story-band{height:220px}
   .nh .midcta{padding:30px 24px}
   .nh .midcta-in{flex-direction:column;align-items:center;text-align:center}
   .nh .mc-text{font-size:21px;text-align:center;width:100%}
@@ -235,19 +235,17 @@ function HomePage() {
           <div className="hero2-img" style={{ backgroundImage: `url(${lib03.url})` }} />
         </section>
 
-        {/* STORY */}
+        {/* STORY — mirrors protocol "Why it exists" */}
         <section className="story">
-          <div className="story-grid">
-            <div className="story-copy">
-              <div className="eye">Why this exists</div>
-              <h2>Too many people are getting the <span className="it">wrong answer.</span></h2>
-              <p>Someone starts a GLP-1 and asks what they should be eating. They get told to "eat clean." Someone's gut is a mess for the third year running and the internet hands them a keto plan that makes it worse. Someone is exhausted at 3pm every single day and gets told to drink more water.</p>
-              <p><b>The real answers exist.</b> They're just buried in research papers, locked behind $300 consultations, or scattered across ten thousand contradicting blog posts written by people who've never read the science. So most of us do what anyone would do — we guess. We search the internet. We give up and order takeout, and feel bad about it.</p>
-              <p>Nourish exists to close that gap. Not another diet. Not another meal plan. <b>A straight answer for the exact situation your body is in</b> — a 30-day meal plan, a one-page cheat sheet, and 20 recipes — plus the reasons behind every one of them. The research is done. The guesswork is over. The hardest thing left is cooking dinner.</p>
-            </div>
-            <div className="story-img" style={{ backgroundImage: `url(${storyImg.url})` }} />
+          <div className="story-in">
+            <div className="eye">Why this exists</div>
+            <h2>Too many people are getting the <span className="it">wrong answer.</span></h2>
+            <p>Someone starts a GLP-1 and asks what they should be eating. They get told to "eat clean." Someone's gut is a mess for the third year running and the internet hands them a keto plan that makes it worse. Someone is exhausted at 3pm every single day and gets told to drink more water.</p>
+            <p><b>The real answers exist.</b> They're just buried in research papers, locked behind $300 consultations, or scattered across ten thousand contradicting blog posts written by people who've never read the science. So most of us do what anyone would do — we guess. We search the internet. We give up and order takeout, and feel bad about it.</p>
+            <p>Nourish exists to close that gap. Not another diet. Not another meal plan. <b>A straight answer for the exact situation your body is in</b> — a 30-day meal plan, a one-page cheat sheet, and 20 recipes — plus the reasons behind every one of them. The research is done. The guesswork is over. The hardest thing left is cooking dinner.</p>
           </div>
         </section>
+        <div className="story-band" style={{ backgroundImage: `url(${storyImg.url})` }} />
 
         {/* MID CTA */}
         <section className="midcta">
