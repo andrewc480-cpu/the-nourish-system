@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import heroImg from "@/assets/about-v5-0.jpg.asset.json";
 import splitImg from "@/assets/about-v5-1.jpg.asset.json";
-import bandImg from "@/assets/about-v5-2.jpg.asset.json";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -62,13 +62,12 @@ const css = `
 .av5 .hc h1{font-size:34px;line-height:1.05;color:#1C1C1C;margin-top:14px}
 .av5 .hc p{font-size:16px;line-height:1.65;color:#3a3a3a;margin-top:20px;max-width:500px}
 .av5 .himg{border-radius:8px;width:100%;aspect-ratio:4/5;background:url(${heroImg.url}) center/cover;box-shadow:0 20px 50px rgba(28,28,28,.14)}
-.av5 .sec{max-width:1140px;margin:0 auto;padding:56px 22px}
-.av5 .split{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
-.av5 .copy h2{font-size:29px;line-height:1.12;margin-top:14px;text-wrap:balance}
-.av5 .copy p{font-size:16px;line-height:1.8;color:#3a3a3a;margin-top:22px}
-.av5 .copy p b{color:#1C1C1C;font-weight:500}
-.av5 .simg{width:100%;aspect-ratio:4/5;order:-1;border-radius:8px;background:url(${splitImg.url}) center/cover;box-shadow:0 20px 50px rgba(28,28,28,.14)}
-.av5 .band{height:300px;background:url(${bandImg.url}) center/cover}
+.av5 .aw{background:#1C1C1C}
+.av5 .aw-in{max-width:900px;margin:0 auto;padding:56px 22px}
+.av5 .aw-in h2{font-size:29px;line-height:1.12;margin-top:12px;color:#F7F5F1;text-wrap:balance}
+.av5 .aw-in p{font-size:16px;line-height:1.8;color:#c9c6c0;margin-top:22px}
+.av5 .aw-in p b{color:#F7F5F1;font-weight:500}
+.av5 .aw-band{height:220px;background:url(${splitImg.url}) center/cover}
 .av5 .beliefs{background:#1C1C1C;padding:64px 22px}
 .av5 .bin{max-width:1040px;margin:0 auto}
 .av5 .bin h2{color:#F7F5F1;font-size:29px;margin-top:14px;text-align:center}
@@ -95,11 +94,10 @@ const css = `
 .av5 .hc h1{font-size:52px}
 .av5 .hc p{font-size:17.5px}
 .av5 .himg{aspect-ratio:4/5}
-.av5 .sec{padding:80px 44px}
-.av5 .split{grid-template-columns:1.1fr .9fr;gap:56px}
-.av5 .copy h2{font-size:40px}
-.av5 .copy p{font-size:17.5px}
-.av5 .simg{order:0}
+.av5 .aw-in{padding:80px 44px}
+.av5 .aw-in h2{font-size:40px}
+.av5 .aw-in p{font-size:17.5px}
+.av5 .aw-band{height:320px}
 .av5 .beliefs{padding:84px 44px}
 .av5 .bin h2{font-size:40px}
 .av5 .bgrid{grid-template-columns:repeat(2,1fr);gap:30px}
@@ -132,33 +130,29 @@ function AboutPage() {
           <div className="himg" />
         </div>
 
-        <div className="sec">
-          <div className="split">
-            <div className="copy">
-              <div className="eye">What we do</div>
-              <h2>We answer one question, properly.</h2>
-              <p>
-                <b>What should I eat?</b> — for the situation your body is actually in right now.
-              </p>
-              <p>
-                Not what a healthy 25-year-old should eat. Not what worked for someone on TikTok. What{" "}
-                <i>you</i> should eat if you're on a GLP-1 medication, or your gut has been a mess for
-                three years, or your energy dies every afternoon at three o'clock.
-              </p>
-              <p>
-                The answers already exist. They're buried in research, locked behind expensive
-                consultations, or scattered across ten thousand contradicting articles.{" "}
-                <b>
-                  Nourish digs them out, tests them, and hands them to you as food you can actually cook
-                  tonight.
-                </b>
-              </p>
-            </div>
-            <div className="simg" />
+        <div className="aw">
+          <div className="aw-in">
+            <div className="eye">What we do</div>
+            <h2>We answer one question, properly.</h2>
+            <p>
+              <b>What should I eat?</b> — for the situation your body is actually in right now.
+            </p>
+            <p>
+              Not what a healthy 25-year-old should eat. Not what worked for someone on TikTok. What{" "}
+              <i>you</i> should eat if you're on a GLP-1 medication, or your gut has been a mess for
+              three years, or your energy dies every afternoon at three o'clock.
+            </p>
+            <p>
+              The answers already exist. They're buried in research, locked behind expensive
+              consultations, or scattered across ten thousand contradicting articles.{" "}
+              <b>
+                Nourish digs them out, tests them, and hands them to you as food you can actually cook
+                tonight.
+              </b>
+            </p>
           </div>
         </div>
-
-        <div className="band" />
+        <div className="aw-band" />
 
         <div className="beliefs">
           <div className="bin">
@@ -172,7 +166,6 @@ function AboutPage() {
             <div className="bgrid">
               {beliefs.map((b) => (
                 <div className="b" key={b.n}>
-                  <div className="bn">{b.n}</div>
                   <h3>{b.h}</h3>
                   <p>{b.p}</p>
                 </div>
