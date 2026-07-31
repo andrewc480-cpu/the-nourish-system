@@ -64,7 +64,7 @@ const CSS = `
 .nh .hero2-copy .ben{display:flex;gap:11px;align-items:baseline;color:#3a3a3a;font-size:15.5px;line-height:1.5}
 .nh .hero2-copy .ben .k{color:#C9A84C;font-weight:700}
 .nh .hero2-copy .cta{margin-top:26px}
-.nh .hero2-img{border-radius:8px;height:460px;background-size:cover;background-position:center;box-shadow:0 20px 50px rgba(28,28,28,.14)}
+.nh .hero2-img{border-radius:8px;width:100%;aspect-ratio:4/5;background-size:cover;background-position:center;box-shadow:0 20px 50px rgba(28,28,28,.14)}
 
 /* STORY */
 .nh .story{max-width:1160px;margin:0 auto;padding:84px 44px}
@@ -72,7 +72,7 @@ const CSS = `
 .nh .story-copy h2{font-size:38px;line-height:1.12;margin-top:14px;text-wrap:balance}
 .nh .story-copy p{font-size:17px;line-height:1.78;color:#3a3a3a;margin-top:20px}
 .nh .story-copy p b{color:#1C1C1C;font-weight:500}
-.nh .story-img{height:560px;border-radius:8px;background-size:cover;background-position:center;box-shadow:0 20px 50px rgba(28,28,28,.14)}
+.nh .story-img{width:100%;aspect-ratio:4/5;border-radius:8px;background-size:cover;background-position:center;box-shadow:0 20px 50px rgba(28,28,28,.14)}
 
 /* MID CTA */
 .nh .midcta{background:#1C1C1C;padding:36px 44px}
@@ -150,10 +150,10 @@ const CSS = `
 @media(max-width:820px){
   .nh .hero2{grid-template-columns:1fr;gap:26px;padding:40px 22px 24px}
   .nh .hero2-copy h1{font-size:36px}
-  .nh .hero2-img{height:300px}
+  .nh .hero2-img{aspect-ratio:4/5}
   .nh .story{padding:60px 24px}
   .nh .story-grid{grid-template-columns:1fr;gap:30px}
-  .nh .story-img{height:300px;order:-1}
+  .nh .story-img{order:-1}
   .nh .story-copy h2{font-size:29px}
   .nh .midcta{padding:30px 24px}
   .nh .midcta-in{flex-direction:column;align-items:center;text-align:center}
