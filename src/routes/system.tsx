@@ -36,6 +36,8 @@ const css = `
 .sv14 .was{font-family:'Archivo',sans-serif;font-weight:600;font-size:20px;color:#8a877f;text-decoration:line-through}
 .sv14 .hl .now{font-family:'Archivo',sans-serif;font-weight:800;font-size:46px;color:#1C1C1C}
 .sv14 .hl .cta{margin-top:22px}
+.sv14 .savenote{font-size:13px;color:#7D9B76;margin-top:8px;font-weight:500}
+.sv14 .launchnote{font-size:12px;color:#8a877f;margin-top:14px;letter-spacing:.02em}
 .sv14 .himg{border-radius:8px;overflow:hidden;height:300px;background-position:center;background-size:cover;box-shadow:0 20px 50px rgba(28,28,28,.14)}
 .sv14 .sec{max-width:900px;margin:0 auto;padding:56px 20px}
 .sv14 .sec h2{font-size:30px;margin-top:14px;line-height:1.08}
