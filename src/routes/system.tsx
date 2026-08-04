@@ -143,11 +143,13 @@ function SystemPage() {
               <span className="was">$162</span>
               <span className="now">$97</span>
             </div>
+            <div className="savenote">Save $65 vs. buying the six separately</div>
             <div className="cta">
               <a className="gold" href={STRIPE} target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>
+            <div className="launchnote">Launch price — $97 through Aug 21, then $127</div>
           </div>
           <div className="himg" style={{ backgroundImage: `url(${heroImg.url})` }} />
         </div>
