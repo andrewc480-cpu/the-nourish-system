@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you
+Disallow: /resend
+Disallow: /api/
+
+Sitemap: https://thenourishsystem.com/sitemap.xml
