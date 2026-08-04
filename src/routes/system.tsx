@@ -352,7 +352,7 @@ function SystemPage() {
                 Get The System
               </a>
             </div>
-            <div className="fine">Instant download · No subscription · Yours to keep</div>
+            <div className="fine">Launch price — $97 through Aug 21, then $127 · Instant download · Yours to keep</div>
           </div>
         </div>
       </div>
