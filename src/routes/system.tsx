@@ -142,7 +142,6 @@ function SystemPage() {
             <div className="price">
               <span className="was">$162</span>
               <span className="now">$97</span>
-              <span className="was" style={{fontSize:'22px'}}>$127 after Aug 21</span>
             </div>
             <div className="savenote">Save $65 vs. buying the six separately</div>
             <div className="cta">
@@ -346,7 +345,6 @@ function SystemPage() {
               <span className="now" style={{ color: "#F7F5F1" }}>
                 $97
               </span>
-              <span className="was" style={{fontSize:'18px',color:'#6b6862'}}>$127 after Aug 21</span>
             </div>
             <div className="save">You save $65 — more than two protocols, free</div>
             <div className="cta" style={{ marginTop: 24 }}>
