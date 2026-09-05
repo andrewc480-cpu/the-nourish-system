@@ -53,7 +53,7 @@ const CATEGORIES: { eyebrow: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: "Do the protocols overlap?",
-        a: "Each protocol has its own recipes and its own rules, built for its own situation. They connect — your gut affects your metabolism, your metabolism affects your hormones — which is why many people eventually want more than one. But you are never buying the same thing twice.",
+        a: "Each protocol has its own recipes and its own rules, built for its own situation. They connect — your gut affects your metabolism, your metabolism affects your hormones — which is why all six come together.",
       },
     ],
   },
@@ -246,11 +246,10 @@ function FaqPage() {
           <div className="mx-auto max-w-[620px]">
             <div className={EYE}>Still deciding?</div>
             <h2 className="mt-3 font-display text-[28px] font-bold tracking-[-0.015em] text-[#F7F5F1] md:text-[34px]">
-              Start with one. Or take all six.
+              Six protocols. One system.
             </h2>
             <p className="mt-3.5 text-[16px] leading-[1.6] text-[#9A9590]">
-              Each protocol is a complete guide to one situation — a full meal
-              plan, a cheat sheet, and 20 recipes.
+              Every protocol is a complete guide to one situation — a full meal plan, a cheat sheet, and 20 recipes. All six are included.
             </p>
             <div className="mt-[26px] flex flex-wrap justify-center gap-3.5">
               <Link

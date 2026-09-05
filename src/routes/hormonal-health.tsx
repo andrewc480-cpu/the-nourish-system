@@ -174,7 +174,7 @@ function HormonalHealthPage() {
               supply them.
             </p>
             <div className="stat">
-              20 recipes · 4 hormonal targets · magnesium-led
+              20 recipes · 3 hormonal targets · magnesium-led
             </div>
             <div className="cta">
               <Link to="/system" className="gold">
@@ -235,7 +235,7 @@ function HormonalHealthPage() {
         {/* TARGETS */}
         <div className="phases">
           <div className="ph-in">
-            <div className="eye">The four targets</div>
+            <div className="eye">The three targets</div>
             <h2>What the protocol is built around.</h2>
             <div className="body">
               Every recipe hits at least one — and the plan sequences them
@@ -378,7 +378,7 @@ function HormonalHealthPage() {
             <div className="anat-item">
               <div className="an">20</div>
               <h3>Recipes</h3>
-              <p>Built around the four hormonal targets.</p>
+              <p>Built around the three hormonal targets.</p>
             </div>
           </div>
         </div>

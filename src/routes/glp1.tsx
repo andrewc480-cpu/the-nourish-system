@@ -150,7 +150,7 @@ const css = `
   .glp1 .anat { padding:76px 44px; }
   .glp1 .anat h2 { font-size:38px; margin-top:14px; }
   .glp1 .anat .body { font-size:17px; margin-top:18px; }
-  .glp1 .anat-grid { grid-template-columns:repeat(4,1fr); gap:26px; margin-top:40px; }
+  .glp1 .anat-grid { grid-template-columns:repeat(3,1fr); gap:26px; margin-top:40px; }
   .glp1 .anat-item .an { font-size:34px; }
   .glp1 .anat-item h3 { font-size:18px; margin-top:10px; }
   .glp1 .anat-item p { font-size:13.5px; }
