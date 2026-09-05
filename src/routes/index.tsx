@@ -80,7 +80,7 @@ const CSS = `
 .nh .mc-text{font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:#F7F5F1}
 .nh .mc-text b{color:#C9A84C;font-weight:700}
 .nh .mc-btns{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.nh .mc-or{color:#9A9590;font-size:13.5px}
+
 
 /* LOOK */
 .nh .look{background:#F2EDE4;padding:84px 44px}
@@ -114,7 +114,7 @@ const CSS = `
 .nh .tmeta{background:#F2EDE4;border-radius:0 0 6px 6px;padding:16px 18px;display:flex;align-items:center;gap:12px}
 .nh .tnum{font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;color:#C9A84C}
 .nh .tname{font-family:'Playfair Display',serif;font-weight:600;font-size:17px;flex:1;line-height:1.2}
-.nh .tprice{font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;color:#1C1C1C;font-variant-numeric:tabular-nums lining-nums}
+
 
 /* OFFER */
 .nh .offer{max-width:1160px;margin:24px auto 0;padding:0 44px 84px}
@@ -128,9 +128,7 @@ const CSS = `
 .nh .bonus .bt{color:#7D9B76;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
 .nh .bonus .bb{color:#F7F5F1;font-size:14.5px;margin-top:6px;line-height:1.5}
 .nh .oprice{margin-top:32px;display:flex;align-items:baseline;justify-content:center;gap:14px}
-.nh .owas{font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;color:#6b6862;text-decoration:line-through;font-variant-numeric:tabular-nums lining-nums}
 .nh .onow{font-family:'Archivo',sans-serif;font-weight:800;font-size:54px;color:#F7F5F1;font-variant-numeric:tabular-nums lining-nums}
-.nh .osave{color:#7D9B76;font-size:13px;margin-top:8px}
 .nh .ofine{color:#6b6862;font-size:12px;margin-top:16px}
 
 /* CAPTURE */
@@ -282,8 +280,8 @@ function HomePage() {
         {/* LIBRARY */}
         <section id="library" className="lib">
           <div className="eye">The Library</div>
-          <h2>Six protocols.<br /><span className="it">One system.</span></h2>
-          <div className="lead">Each one is a complete guide to a single situation — a 30-day plan, a one-page cheat sheet, and 20 recipes built for it. All six are included in The Nourish System. Click any protocol to see what's inside.</div>
+          <h2>Six protocols.<br /><span className="it">All of them, in one system.</span></h2>
+          <div className="lead">Each one is a complete guide to a single situation — a 30-day plan, a one-page cheat sheet, and 20 recipes built for it. All six are included in the system. Click any protocol to see what's inside.</div>
           <div className="grid">
             {([
               { n: "01", name: "GLP-1 Nutrition", href: "/glp1", img: lib01.url },
@@ -308,7 +306,7 @@ function HomePage() {
         <section className="offer">
           <div className="obox">
             <div className="eye">The Complete System</div>
-            <h2>The Complete System</h2>
+            <h2>Everything, in one place.</h2>
             <div className="osub">Every protocol, every plan, every recipe — whatever your body needs next, you already have it.</div>
             <div className="incl">
               <div><span className="c">✓</span><span>All six protocols</span></div>

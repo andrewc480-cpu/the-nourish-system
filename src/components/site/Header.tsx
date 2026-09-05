@@ -4,9 +4,10 @@ import { useState } from "react";
 export function Header() {
   const [open, setOpen] = useState(false);
   const navLinks = [
-    { to: "/", label: "Shop", hash: undefined },
+    { to: "/system", label: "The System", hash: undefined },
     { to: "/blog", label: "Blog", hash: undefined },
     { to: "/about", label: "About", hash: undefined },
+    { to: "/faq", label: "FAQ", hash: undefined },
   ] as const;
 
   return (
