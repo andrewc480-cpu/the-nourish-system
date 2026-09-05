@@ -253,7 +253,6 @@ function HomePage() {
             <div className="mc-text">Sound familiar? <b>Stop guessing.</b></div>
             <div className="mc-btns">
               <Link to="/system" className="gold">Get The System — $97</Link>
-              <span className="mc-or">or start with one protocol for $27</span>
             </div>
           </div>
         </section>
@@ -284,8 +283,8 @@ function HomePage() {
         {/* LIBRARY */}
         <section id="library" className="lib">
           <div className="eye">The Library</div>
-          <h2>Six protocols.<br /><span className="it">Pick one, or take them all.</span></h2>
-          <div className="lead">Each one is a complete guide to a single situation — a 30-day plan, a one-page cheat sheet, and 20 recipes built for it. Click any protocol to see what's inside.</div>
+          <h2>Six protocols.<br /><span className="it">One system.</span></h2>
+          <div className="lead">Each one is a complete guide to a single situation — a 30-day plan, a one-page cheat sheet, and 20 recipes built for it. All six are included in The Nourish System. Click any protocol to see what's inside.</div>
           <div className="grid">
             {([
               { n: "01", name: "GLP-1 Nutrition", href: "/glp1", img: lib01.url },
@@ -300,7 +299,6 @@ function HomePage() {
                 <div className="tmeta">
                   <div className="tnum">{p.n}</div>
                   <div className="tname">{p.name}</div>
-                  <div className="tprice">$27</div>
                 </div>
               </a>
             ))}
@@ -310,7 +308,7 @@ function HomePage() {
         {/* OFFER */}
         <section className="offer">
           <div className="obox">
-            <div className="eye">Best Value · Save $65</div>
+            <div className="eye">The Complete System</div>
             <h2>The Complete System</h2>
             <div className="osub">Every protocol, every plan, every recipe — whatever your body needs next, you already have it.</div>
             <div className="incl">
@@ -324,10 +322,8 @@ function HomePage() {
               <div className="bb"><b>The Complete Drinks Collection</b> — 20 functional coffees, matchas, teas and refreshers, each built to do a job. Yours with the system.</div>
             </div>
             <div className="oprice">
-              <span className="owas">$162</span>
               <span className="onow">$97</span>
             </div>
-            <div className="osave">You save $65 — more than two protocols, free</div>
             <div style={{ marginTop: 24 }}>
               <Link to="/system" className="gold">Get The System</Link>
             </div>
