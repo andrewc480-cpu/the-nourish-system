@@ -393,7 +393,7 @@ function Glp1Page() {
         {/* BUY */}
         <div className="buy" id="buy">
           <div className="buy-in">
-            <div className="eye">Get The Protocol</div>
+            <div className="eye">Included In The System</div>
             <h2>GLP-1 Nutrition.</h2>
             <p>
               The complete protocol — weekly plan, cheat sheet, and 20 recipes

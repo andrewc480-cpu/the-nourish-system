@@ -384,7 +384,7 @@ function LongevityPage() {
         {/* BUY */}
         <div className="buy" id="buy">
           <div className="buy-in">
-            <div className="eye">Get The Protocol</div>
+            <div className="eye">Included In The System</div>
             <h2>Longevity & Healthspan.</h2>
             <p>
               The complete protocol — a 30-day plan, a cheat sheet, and 20

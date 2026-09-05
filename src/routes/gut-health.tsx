@@ -436,7 +436,7 @@ function GutHealthPage() {
         {/* BUY */}
         <div className="buy" id="buy">
           <div className="buy-in">
-            <div className="eye">Get The Protocol</div>
+            <div className="eye">Included In The System</div>
             <h2>Gut Health.</h2>
             <p>
               The complete 30-day reset — a phased daily plan, a cheat sheet,
