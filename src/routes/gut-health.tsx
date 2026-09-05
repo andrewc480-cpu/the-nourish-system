@@ -43,9 +43,6 @@ const css = `
 .gut .hl h1 .it { font-family:'Playfair Display',serif; font-style:italic; font-weight:700; color:#7D9B76; }
 .gut .hl p { font-size:16px; line-height:1.62; color:#3a3a3a; margin-top:18px; max-width:450px; }
 .gut .hl .stat { margin-top:20px; font-size:12px; color:#8a877f; }
-.gut .hl .price { margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
-.gut .hl .now { font-family:'Archivo'; font-weight:800; font-size:40px; color:#1C1C1C; font-variant-numeric:tabular-nums lining-nums; }
-.gut .hl .per { font-size:13px; color:#8a877f; }
 .gut .hl .cta { margin-top:20px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
 .gut .hl .eye { margin-bottom:14px; display:inline-block; }
 .gut .himg { border-radius:8px; overflow:hidden; height:300px; background-position:center; background-size:cover; box-shadow:0 20px 50px rgba(28,28,28,.14); }
@@ -119,20 +116,13 @@ const css = `
 .gut .buy .eye { color:#7D9B76; }
 .gut .buy h2 { font-size:32px; color:#F7F5F1; margin-top:12px; }
 .gut .buy p { color:#9A9590; font-size:15px; margin-top:16px; line-height:1.6; }
-.gut .buy .price { margin-top:24px; }
-.gut .buy .now { font-family:'Archivo'; font-weight:800; font-size:44px; color:#F7F5F1; font-variant-numeric:tabular-nums lining-nums; }
 .gut .buy .cta { margin-top:20px; }
 .gut .buy .fine { color:#6b6862; font-size:12px; margin-top:16px; }
-.gut .upsell { margin-top:30px; padding-top:24px; border-top:1px solid rgba(247,245,241,.14); }
-.gut .upsell .u { color:#c9c6c0; font-size:15px; }
-.gut .upsell .u b { color:#F7F5F1; font-weight:500; }
-.gut .upsell a { color:#C9A84C; text-decoration:none; font-size:13px; letter-spacing:.08em; text-transform:uppercase; display:inline-block; margin-top:12px; }
 
 @media (min-width:820px) {
   .gut .hero { padding:52px 44px 26px; grid-template-columns:1.02fr .98fr; gap:54px; }
   .gut .hl h1 { font-size:52px; }
   .gut .hl p { font-size:17px; margin-top:20px; }
-  .gut .hl .now { font-size:44px; }
   .gut .himg { height:460px; }
   .gut .sec { padding:76px 44px; }
   .gut .sec h2 { font-size:38px; margin-top:14px; }
@@ -167,7 +157,6 @@ const css = `
   .gut .anat-item p { font-size:13.5px; }
   .gut .buy { padding:80px 44px; }
   .gut .buy h2 { font-size:40px; }
-  .gut .buy .now { font-size:52px; }
 }
 `;
 

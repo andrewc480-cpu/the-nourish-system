@@ -41,9 +41,6 @@ const css = `
 .lgv .hl h1 .it { font-family:'Playfair Display',serif; font-style:italic; font-weight:700; color:#7D9B76; }
 .lgv .hl p { font-size:16px; line-height:1.62; color:#3a3a3a; margin-top:18px; max-width:450px; }
 .lgv .hl .stat { margin-top:20px; font-size:12px; color:#8a877f; }
-.lgv .hl .price { margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
-.lgv .hl .now { font-family:'Archivo'; font-weight:800; font-size:40px; color:#1C1C1C; font-variant-numeric:tabular-nums lining-nums; }
-.lgv .hl .per { font-size:13px; color:#8a877f; }
 .lgv .hl .cta { margin-top:20px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
 .lgv .hl .eye { margin-bottom:14px; display:inline-block; }
 .lgv .himg { border-radius:8px; overflow:hidden; height:300px; background-position:center; background-size:cover; box-shadow:0 20px 50px rgba(28,28,28,.14); }
@@ -105,20 +102,13 @@ const css = `
 .lgv .buy .eye { color:#7D9B76; }
 .lgv .buy h2 { font-size:32px; color:#F7F5F1; margin-top:12px; }
 .lgv .buy p { color:#9A9590; font-size:15px; margin-top:16px; line-height:1.6; }
-.lgv .buy .price { margin-top:24px; }
-.lgv .buy .now { font-family:'Archivo'; font-weight:800; font-size:44px; color:#F7F5F1; font-variant-numeric:tabular-nums lining-nums; }
 .lgv .buy .cta { margin-top:20px; }
 .lgv .buy .fine { color:#6b6862; font-size:12px; margin-top:16px; }
-.lgv .upsell { margin-top:30px; padding-top:24px; border-top:1px solid rgba(247,245,241,.14); }
-.lgv .upsell .u { color:#c9c6c0; font-size:15px; }
-.lgv .upsell .u b { color:#F7F5F1; font-weight:500; }
-.lgv .upsell a { color:#C9A84C; text-decoration:none; font-size:13px; letter-spacing:.08em; text-transform:uppercase; display:inline-block; margin-top:12px; }
 
 @media (min-width:820px) {
   .lgv .hero { padding:52px 44px 26px; grid-template-columns:1.02fr .98fr; gap:54px; }
   .lgv .hl h1 { font-size:52px; }
   .lgv .hl p { font-size:17px; margin-top:20px; }
-  .lgv .hl .now { font-size:44px; }
   .lgv .himg { height:460px; }
   .lgv .sec { padding:76px 44px; }
   .lgv .sec h2 { font-size:38px; margin-top:14px; }
@@ -149,7 +139,6 @@ const css = `
   .lgv .anat-item p { font-size:13.5px; }
   .lgv .buy { padding:80px 44px; }
   .lgv .buy h2 { font-size:40px; }
-  .lgv .buy .now { font-size:52px; }
 }
 `;
 

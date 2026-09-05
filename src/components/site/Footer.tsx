@@ -119,7 +119,7 @@ export function Footer() {
         style={{ borderTop: "1px solid rgba(247,245,241,0.14)" }}
       >
         <p className="py-6 text-center font-display italic text-[11px] text-[#9A9590]">
-          Food is information. Every meal sends a signal.
+          The thinking is done. The cooking is yours.
         </p>
       </div>
     </footer>

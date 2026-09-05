@@ -42,9 +42,6 @@ const css = `
 .meta .hl h1 .it { font-family:'Playfair Display',serif; font-style:italic; font-weight:700; color:#7D9B76; }
 .meta .hl p { font-size:16px; line-height:1.62; color:#3a3a3a; margin-top:18px; max-width:450px; }
 .meta .hl .stat { margin-top:20px; font-size:12px; color:#8a877f; }
-.meta .hl .price { margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
-.meta .hl .now { font-family:'Archivo'; font-weight:800; font-size:40px; color:#1C1C1C; font-variant-numeric:tabular-nums lining-nums; }
-.meta .hl .per { font-size:13px; color:#8a877f; }
 .meta .hl .cta { margin-top:20px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
 .meta .hl .eye { margin-bottom:14px; display:inline-block; }
 .meta .himg { border-radius:8px; overflow:hidden; height:300px; background-position:center; background-size:cover; box-shadow:0 20px 50px rgba(28,28,28,.14); }
@@ -112,20 +109,13 @@ const css = `
 .meta .buy .eye { color:#7D9B76; }
 .meta .buy h2 { font-size:32px; color:#F7F5F1; margin-top:12px; }
 .meta .buy p { color:#9A9590; font-size:15px; margin-top:16px; line-height:1.6; }
-.meta .buy .price { margin-top:24px; }
-.meta .buy .now { font-family:'Archivo'; font-weight:800; font-size:44px; color:#F7F5F1; font-variant-numeric:tabular-nums lining-nums; }
 .meta .buy .cta { margin-top:20px; }
 .meta .buy .fine { color:#6b6862; font-size:12px; margin-top:16px; }
-.meta .upsell { margin-top:30px; padding-top:24px; border-top:1px solid rgba(247,245,241,.14); }
-.meta .upsell .u { color:#c9c6c0; font-size:15px; }
-.meta .upsell .u b { color:#F7F5F1; font-weight:500; }
-.meta .upsell a { color:#C9A84C; text-decoration:none; font-size:13px; letter-spacing:.08em; text-transform:uppercase; display:inline-block; margin-top:12px; }
 
 @media (min-width:820px) {
   .meta .hero { padding:52px 44px 26px; grid-template-columns:1.02fr .98fr; gap:54px; }
   .meta .hl h1 { font-size:52px; }
   .meta .hl p { font-size:17px; margin-top:20px; }
-  .meta .hl .now { font-size:44px; }
   .meta .himg { height:460px; }
   .meta .sec { padding:76px 44px; }
   .meta .sec h2 { font-size:38px; margin-top:14px; }
@@ -156,7 +146,6 @@ const css = `
   .meta .anat-item p { font-size:13.5px; }
   .meta .buy { padding:80px 44px; }
   .meta .buy h2 { font-size:40px; }
-  .meta .buy .now { font-size:52px; }
 }
 `;
 

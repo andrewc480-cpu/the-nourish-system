@@ -41,9 +41,6 @@ const css = `
 .hrm .hl h1 .it { font-family:'Playfair Display',serif; font-style:italic; font-weight:700; color:#7D9B76; }
 .hrm .hl p { font-size:16px; line-height:1.62; color:#3a3a3a; margin-top:18px; max-width:450px; }
 .hrm .hl .stat { margin-top:20px; font-size:12px; color:#8a877f; }
-.hrm .hl .price { margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
-.hrm .hl .now { font-family:'Archivo'; font-weight:800; font-size:40px; color:#1C1C1C; font-variant-numeric:tabular-nums lining-nums; }
-.hrm .hl .per { font-size:13px; color:#8a877f; }
 .hrm .hl .cta { margin-top:20px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
 .hrm .hl .eye { margin-bottom:14px; display:inline-block; }
 .hrm .himg { border-radius:8px; overflow:hidden; height:300px; background-position:center; background-size:cover; box-shadow:0 20px 50px rgba(28,28,28,.14); }
@@ -105,20 +102,13 @@ const css = `
 .hrm .buy .eye { color:#7D9B76; }
 .hrm .buy h2 { font-size:32px; color:#F7F5F1; margin-top:12px; }
 .hrm .buy p { color:#9A9590; font-size:15px; margin-top:16px; line-height:1.6; }
-.hrm .buy .price { margin-top:24px; }
-.hrm .buy .now { font-family:'Archivo'; font-weight:800; font-size:44px; color:#F7F5F1; font-variant-numeric:tabular-nums lining-nums; }
 .hrm .buy .cta { margin-top:20px; }
 .hrm .buy .fine { color:#6b6862; font-size:12px; margin-top:16px; }
-.hrm .upsell { margin-top:30px; padding-top:24px; border-top:1px solid rgba(247,245,241,.14); }
-.hrm .upsell .u { color:#c9c6c0; font-size:15px; }
-.hrm .upsell .u b { color:#F7F5F1; font-weight:500; }
-.hrm .upsell a { color:#C9A84C; text-decoration:none; font-size:13px; letter-spacing:.08em; text-transform:uppercase; display:inline-block; margin-top:12px; }
 
 @media (min-width:820px) {
   .hrm .hero { padding:52px 44px 26px; grid-template-columns:1.02fr .98fr; gap:54px; }
   .hrm .hl h1 { font-size:52px; }
   .hrm .hl p { font-size:17px; margin-top:20px; }
-  .hrm .hl .now { font-size:44px; }
   .hrm .himg { height:460px; }
   .hrm .sec { padding:76px 44px; }
   .hrm .sec h2 { font-size:38px; margin-top:14px; }
@@ -149,7 +139,6 @@ const css = `
   .hrm .anat-item p { font-size:13.5px; }
   .hrm .buy { padding:80px 44px; }
   .hrm .buy h2 { font-size:40px; }
-  .hrm .buy .now { font-size:52px; }
 }
 `;
 
@@ -174,7 +163,7 @@ function HormonalHealthPage() {
               supply them.
             </p>
             <div className="stat">
-              20 recipes · 4 hormonal targets · magnesium-led
+              20 recipes · 3 hormonal targets · magnesium-led
             </div>
             <div className="cta">
               <Link to="/system" className="gold">
@@ -235,7 +224,7 @@ function HormonalHealthPage() {
         {/* TARGETS */}
         <div className="phases">
           <div className="ph-in">
-            <div className="eye">The four targets</div>
+            <div className="eye">The three targets</div>
             <h2>What the protocol is built around.</h2>
             <div className="body">
               Every recipe hits at least one — and the plan sequences them
@@ -378,7 +367,7 @@ function HormonalHealthPage() {
             <div className="anat-item">
               <div className="an">20</div>
               <h3>Recipes</h3>
-              <p>Built around the four hormonal targets.</p>
+              <p>Built around the three hormonal targets.</p>
             </div>
           </div>
         </div>
