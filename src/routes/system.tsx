@@ -33,11 +33,8 @@ const css = `
 .sv14 .hl h1 .g{color:#C9A84C}
 .sv14 .hl p{font-size:17px;line-height:1.62;color:#3a3a3a;margin-top:20px;max-width:440px}
 .sv14 .price{margin-top:26px;display:flex;align-items:baseline;gap:12px}
-.sv14 .was{font-family:'Archivo',sans-serif;font-weight:600;font-size:20px;color:#8a877f;text-decoration:line-through}
 .sv14 .hl .now{font-family:'Archivo',sans-serif;font-weight:800;font-size:46px;color:#1C1C1C}
 .sv14 .hl .cta{margin-top:22px}
-.sv14 .savenote{font-size:13px;color:#7D9B76;margin-top:8px;font-weight:500}
-.sv14 .launchnote{font-size:12px;color:#8a877f;margin-top:14px;letter-spacing:.02em}
 .sv14 .himg{border-radius:8px;overflow:hidden;height:300px;background-position:center;background-size:cover;box-shadow:0 20px 50px rgba(28,28,28,.14)}
 .sv14 .sec{max-width:900px;margin:0 auto;padding:56px 20px}
 .sv14 .sec h2{font-size:30px;margin-top:14px;line-height:1.08}
@@ -69,21 +66,13 @@ const css = `
 .sv14 .sfor{font-size:14px;color:#8a877f;margin-top:4px}
 .sv14 .sarrow{color:#7D9B76;font-size:18px;padding-right:6px}
 .sv14 .value{max-width:900px;margin:0 auto;padding:20px 20px 56px}
-.sv14 .valuebox{background:#F2EDE4;border-radius:6px;padding:32px;max-width:460px;margin:0 auto}
-.sv14 .valuebox .vt{text-align:center;margin-bottom:16px}
-.sv14 .valuebox .row{display:flex;justify-content:space-between;padding:9px 0;font-size:15px;color:#3a3a3a}
-.sv14 .valuebox .tot{display:flex;justify-content:space-between;border-top:2px solid #1C1C1C;margin-top:10px;padding-top:14px;align-items:baseline}
-.sv14 .valuebox .tot .now{font-family:'Archivo',sans-serif;font-weight:800;font-size:34px}
-.sv14 .valuebox .save{text-align:center;color:#7D9B76;font-size:13px;margin-top:8px}
 .sv14 .offer{background:#1C1C1C;padding:60px 20px}
 .sv14 .offer-in{max-width:720px;margin:0 auto;text-align:center}
 .sv14 .offer h2{font-size:32px;color:#F7F5F1}
 .sv14 .offer .clist{margin:34px auto 0;max-width:420px;text-align:left}
 .sv14 .cli{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(247,245,241,.1);color:#F7F5F1;font-size:15px}
 .sv14 .offer .price{margin-top:34px;display:flex;align-items:baseline;justify-content:center;gap:14px}
-.sv14 .offer .was{font-family:'Archivo',sans-serif;font-weight:600;font-size:22px;color:#6b6862;text-decoration:line-through}
 .sv14 .offer .now{font-family:'Archivo',sans-serif;font-weight:800;font-size:44px;color:#F7F5F1}
-.sv14 .offer .save{color:#7D9B76;font-size:13px;margin-top:8px}
 .sv14 .offer .cta{margin-top:26px}
 .sv14 .offer .fine{color:#6b6862;font-size:12px;margin-top:16px}
 @media(min-width:821px){
@@ -310,7 +299,7 @@ function SystemPage() {
                 Get The System
               </a>
             </div>
-            <div className="fine">Instant download · Yours to keep</div>
+            <div className="fine">Instant download · No subscription · Yours to keep</div>
           </div>
         </div>
       </div>
