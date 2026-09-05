@@ -43,9 +43,6 @@ const css = `
 .glp1 .hl h1 .em { font-style:italic; color:#7D9B76; }
 .glp1 .hl p { font-size:16px; line-height:1.62; color:#3a3a3a; margin-top:18px; max-width:450px; }
 .glp1 .hl .stat { margin-top:20px; font-size:12px; letter-spacing:.02em; color:#8a877f; }
-.glp1 .hl .price { margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
-.glp1 .hl .now { font-family:'Archivo'; font-weight:800; font-size:40px; color:#1C1C1C; font-variant-numeric:tabular-nums lining-nums; }
-.glp1 .hl .per { font-size:13px; color:#8a877f; }
 .glp1 .hl .cta { margin-top:20px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
 .glp1 .hl .eye { margin-bottom:14px; display:inline-block; }
 .glp1 .himg { border-radius:8px; overflow:hidden; height:300px; background-position:center; background-size:cover; box-shadow:0 20px 50px rgba(28,28,28,.14); }
@@ -113,20 +110,13 @@ const css = `
 .glp1 .buy .eye { color:#7D9B76; }
 .glp1 .buy h2 { font-size:32px; color:#F7F5F1; margin-top:12px; }
 .glp1 .buy p { color:#9A9590; font-size:15px; margin-top:16px; line-height:1.6; }
-.glp1 .buy .price { margin-top:24px; }
-.glp1 .buy .now { font-family:'Archivo'; font-weight:800; font-size:44px; color:#F7F5F1; font-variant-numeric:tabular-nums lining-nums; }
 .glp1 .buy .cta { margin-top:20px; }
 .glp1 .buy .fine { color:#6b6862; font-size:12px; margin-top:16px; }
-.glp1 .upsell { margin-top:30px; padding-top:24px; border-top:1px solid rgba(247,245,241,.14); }
-.glp1 .upsell .u { color:#c9c6c0; font-size:15px; }
-.glp1 .upsell .u b { color:#F7F5F1; font-weight:500; }
-.glp1 .upsell a { color:#C9A84C; text-decoration:none; font-size:13px; letter-spacing:.08em; text-transform:uppercase; display:inline-block; margin-top:12px; }
 
 @media (min-width:820px) {
   .glp1 .hero { padding:52px 44px 26px; grid-template-columns:1.02fr .98fr; gap:54px; }
   .glp1 .hl h1 { font-size:52px; }
   .glp1 .hl p { font-size:17px; margin-top:20px; }
-  .glp1 .hl .now { font-size:44px; }
   .glp1 .himg { height:460px; }
   .glp1 .sec { padding:76px 44px; }
   .glp1 .sec h2 { font-size:38px; margin-top:14px; }
@@ -156,7 +146,6 @@ const css = `
   .glp1 .anat-item p { font-size:13.5px; }
   .glp1 .buy { padding:80px 44px; }
   .glp1 .buy h2 { font-size:40px; }
-  .glp1 .buy .now { font-size:52px; }
 }
 `;
 
