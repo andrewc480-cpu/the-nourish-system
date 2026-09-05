@@ -183,14 +183,10 @@ function MetabolicHealthPage() {
             <div className="stat">
               20 recipes · 3 daily windows · plate-order method
             </div>
-            <div className="price">
-              <span className="now">$27</span>
-              <span className="per">· digital PDF, yours to keep</span>
-            </div>
             <div className="cta">
-              <a href="https://buy.stripe.com/aFa14nejocVQ7pyf4n6Vq0k" className="gold" target="_blank" rel="noopener noreferrer">
-                Get Instant Access
-              </a>
+              <Link to="/system" className="gold">
+                Get The Nourish System — $97
+              </Link>
             </div>
           </div>
           <div
@@ -396,30 +392,19 @@ function MetabolicHealthPage() {
         {/* BUY */}
         <div className="buy" id="buy">
           <div className="buy-in">
-            <div className="eye">Get The Protocol</div>
+            <div className="eye">Included In The System</div>
             <h2>Metabolic Health.</h2>
             <p>
               The complete protocol — a 30-day plan, a cheat sheet, and 20
               recipes that keep your energy level.
             </p>
-            <div className="price">
-              <span className="now">$27</span>
-            </div>
             <div className="cta">
-              <a href="https://buy.stripe.com/aFa14nejocVQ7pyf4n6Vq0k" className="gold" target="_blank" rel="noopener noreferrer">
-                Get Instant Access
-              </a>
+              <Link to="/system" className="gold">
+                Get The Nourish System — $97
+              </Link>
             </div>
             <div className="fine">
               Digital PDF · Instant download · No subscription · Yours to keep
-            </div>
-            <div className="upsell">
-              <div className="u">
-                Blood sugar touches everything else.{" "}
-                <b>The Complete System</b> is all six protocols for $97 — save
-                $65.
-              </div>
-              <Link to="/system">See The Complete System →</Link>
             </div>
           </div>
         </div>

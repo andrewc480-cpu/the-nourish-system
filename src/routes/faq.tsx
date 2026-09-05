@@ -19,8 +19,8 @@ const CATEGORIES: { eyebrow: string; items: { q: string; a: string }[] }[] = [
         a: "No. The protocols work by what they add, not what they take away — the right foods, in the right order, at the right time for your situation. There's no elimination list and no calorie counting. You're building meals, not subtracting from them.",
       },
       {
-        q: "Do I need to buy all six protocols?",
-        a: "No. Most people start with the one situation that matters most to them, for $27. If you want all six, the Complete System is $97 — which saves you $65 versus buying them individually.",
+        q: "Do I get all six protocols?",
+        a: "Yes. The Nourish System is one offer at $97 and it includes all six protocols. The protocols are not sold separately — you get the whole library in a single download.",
       },
       {
         q: "Which protocol should I start with?",
@@ -36,12 +36,12 @@ const CATEGORIES: { eyebrow: string; items: { q: string; a: string }[] }[] = [
     eyebrow: "The Products",
     items: [
       {
-        q: "What exactly do I get for $27?",
-        a: "One complete protocol as a digital PDF: a 30-day meal plan mapped day by day, a one-page cheat sheet, and 20 recipes built specifically for that situation — each with ingredients, method, and the reason it works.",
+        q: "What exactly is a protocol?",
+        a: "One complete guide as a digital PDF: a 30-day meal plan mapped day by day, a one-page cheat sheet, and 20 recipes built specifically for that situation — each with ingredients, method, and the reason it works.",
       },
       {
         q: "What's included in the $97 Complete System?",
-        a: "All six protocols — every meal plan, every cheat sheet, and all 120 recipes. It also includes The Complete Drinks Collection, twenty functional coffees, matchas, teas and refreshers. Bought individually the six protocols come to $162.",
+        a: "All six protocols — every meal plan, every cheat sheet, and all 120 recipes. It also includes The Complete Drinks Collection, twenty functional coffees, matchas, teas and refreshers.",
       },
       {
         q: "How many recipes are there in total?",
@@ -146,7 +146,7 @@ const FAQ_JSONLD = {
 };
 
 const DESC =
-  "What The Nourish System is, what you get for $27 or $97, how delivery works, and the science behind the six protocols. Straight answers, no fluff.";
+  "What The Nourish System is, what you get for $97, how delivery works, and the science behind the six protocols. Straight answers, no fluff.";
 
 export const Route = createFileRoute("/faq")({
   head: () => ({
@@ -258,7 +258,7 @@ function FaqPage() {
                 hash="library"
                 className="inline-block rounded-[2px] border border-[rgba(247,245,241,0.45)] px-[34px] py-4 text-[12px] font-medium uppercase tracking-[0.13em] text-[#F7F5F1] transition-colors hover:border-[#F7F5F1]"
               >
-                See All Six Protocols — $27 Each
+                See All Six Protocols
               </Link>
               <Link
                 to="/system"

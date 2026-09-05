@@ -200,15 +200,13 @@ function AboutPage() {
           <div className="eye">Start here</div>
           <h2>Find your situation.</h2>
           <p>
-            Six protocols, each a complete guide to one thing your body is dealing with. Take the one you
-            need — or take all of them.
+            Six protocols, each a complete guide to one thing your body is dealing with. All six are included in The Nourish System.
           </p>
           <div className="btn">
             <Link className="gold" to="/system">
               See The Complete System — $97
             </Link>
           </div>
-          <div className="fine">Or start with one protocol for $27</div>
         </div>
       </div>
     </SiteLayout>

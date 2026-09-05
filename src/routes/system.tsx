@@ -140,16 +140,13 @@ function SystemPage() {
               and the meals to do it. All of it, one download.
             </p>
             <div className="price">
-              <span className="was">$162</span>
               <span className="now">$97</span>
             </div>
-            <div className="savenote">Save $65 vs. buying the six separately</div>
             <div className="cta">
               <a className="gold" href={STRIPE} target="_blank" rel="noopener noreferrer">
                 Get Instant Access
               </a>
             </div>
-            <div className="launchnote">Instant download · Yours to keep</div>
           </div>
           <div className="himg" style={{ backgroundImage: `url(${heroImg.url})` }} />
         </div>
@@ -244,47 +241,10 @@ function SystemPage() {
           </div>
         </div>
 
-        {/* VALUE */}
-        <div className="value">
-          <div style={{ textAlign: "center", maxWidth: 620, margin: "0 auto 40px" }}>
-            <div className="eye">Why get all six</div>
-            <h2 style={{ fontSize: 30, marginTop: 12, fontFamily: "'Playfair Display',serif", fontWeight: 700 }}>
-              One connected system.
-            </h2>
-            <div className="body" style={{ fontSize: 16, lineHeight: 1.75, color: "#3a3a3a", marginTop: 24 }}>
-              Your gut talks to your metabolism. Your metabolism talks to your hormones. Improve one
-              and the others move with it — which is why the answer you’re after often lives in a
-              protocol you didn’t expect.
-              <br />
-              Get all six, and whatever your body needs next, you already have it.
-            </div>
-          </div>
-          <div className="valuebox">
-            <div className="eye vt">The Math</div>
-            <div className="row">
-              <span>6 protocols individually</span>
-              <span className="arch">$162</span>
-            </div>
-            <div className="row">
-              <span>The Complete System</span>
-              <span className="arch" style={{ color: "#7D9B76" }}>
-                −$65
-              </span>
-            </div>
-            <div className="tot">
-              <span className="pfw" style={{ fontSize: 18, fontWeight: 700 }}>
-                Your price
-              </span>
-              <span className="arch now">$97</span>
-            </div>
-            <div className="save">Save $65 — more than two protocols, free</div>
-          </div>
-        </div>
-
         {/* OFFER */}
         <div className="offer">
           <div className="offer-in">
-            <div className="eye">Best Value · Save $65</div>
+            <div className="eye">The Complete System</div>
             <h2 style={{ marginTop: 12 }}>The Complete System</h2>
             <div
               style={{
@@ -341,18 +301,16 @@ function SystemPage() {
               </div>
             </div>
             <div className="price" style={{ justifyContent: "center" }}>
-              <span className="was">$162</span>
               <span className="now" style={{ color: "#F7F5F1" }}>
                 $97
               </span>
             </div>
-            <div className="save">You save $65 — more than two protocols, free</div>
             <div className="cta" style={{ marginTop: 24 }}>
               <a className="gold" href={STRIPE} target="_blank" rel="noopener noreferrer">
                 Get The System
               </a>
             </div>
-            <div className="fine">Instant download · Yours to keep · Secure checkout</div>
+            <div className="fine">Instant download · Yours to keep</div>
           </div>
         </div>
       </div>
