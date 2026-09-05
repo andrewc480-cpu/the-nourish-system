@@ -168,9 +168,8 @@ const CSS = `
   .nh .grid{grid-template-columns:1fr 1fr;gap:14px}
   .nh .timg{height:150px}
   .nh .tmeta{padding:14px 14px;flex-wrap:wrap}
-  .nh .tname{flex:1 1 100%;order:2}
+  .nh .tname{flex:1;order:2}
   .nh .tnum{order:1}
-  .nh .tprice{order:1;margin-left:auto}
   .nh .offer{padding:0 24px 60px}
   .nh .obox{padding:40px 24px}
   .nh .obox h2{font-size:30px}
