@@ -149,7 +149,7 @@ function SystemPage() {
                 Get Instant Access
               </a>
             </div>
-            <div className="launchnote">Launch price — $97 through Aug 21, then $127</div>
+            <div className="launchnote">Instant download · Yours to keep</div>
           </div>
           <div className="himg" style={{ backgroundImage: `url(${heroImg.url})` }} />
         </div>
@@ -200,7 +200,7 @@ function SystemPage() {
             <div className="eye">What you get</div>
             <h2>Six complete guides. Not just recipes.</h2>
             <div className="body">
-              Every protocol is a full playbook for its situation — four things, not a pile of
+              Every protocol is a full playbook for its situation — three things, not a pile of
               recipes:
             </div>
             <div className="anat-grid">
@@ -352,7 +352,7 @@ function SystemPage() {
                 Get The System
               </a>
             </div>
-            <div className="fine">Launch price — $97 through Aug 21, then $127 · Instant download · Yours to keep</div>
+            <div className="fine">Instant download · Yours to keep · Secure checkout</div>
           </div>
         </div>
       </div>
