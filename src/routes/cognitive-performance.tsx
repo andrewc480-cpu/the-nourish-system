@@ -176,14 +176,10 @@ function CognitivePerformancePage() {
             <div className="stat">
               20 recipes · 3 brain targets · omega-3 led
             </div>
-            <div className="price">
-              <span className="now">$27</span>
-              <span className="per">· digital PDF, yours to keep</span>
-            </div>
             <div className="cta">
-              <a href="https://buy.stripe.com/dRm7sL5MS7BwcJS7BV6Vq0l" className="gold" target="_blank" rel="noopener noreferrer">
-                Get Instant Access
-              </a>
+              <Link to="/system" className="gold">
+                Get The Nourish System — $97
+              </Link>
             </div>
           </div>
           <div
@@ -395,24 +391,13 @@ function CognitivePerformancePage() {
               The complete protocol — a 30-day plan, a cheat sheet, and 20
               recipes for focus now and protection later.
             </p>
-            <div className="price">
-              <span className="now">$27</span>
-            </div>
             <div className="cta">
-              <a href="https://buy.stripe.com/dRm7sL5MS7BwcJS7BV6Vq0l" className="gold" target="_blank" rel="noopener noreferrer">
-                Get Instant Access
-              </a>
+              <Link to="/system" className="gold">
+                Get The Nourish System — $97
+              </Link>
             </div>
             <div className="fine">
               Digital PDF · Instant download · No subscription · Yours to keep
-            </div>
-            <div className="upsell">
-              <div className="u">
-                A sharp brain needs a steady body.{" "}
-                <b>The Complete System</b> is all six protocols for $97 — save
-                $65.
-              </div>
-              <Link to="/system">See The Complete System →</Link>
             </div>
           </div>
         </div>

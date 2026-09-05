@@ -176,14 +176,10 @@ function HormonalHealthPage() {
             <div className="stat">
               20 recipes · 4 hormonal targets · magnesium-led
             </div>
-            <div className="price">
-              <span className="now">$27</span>
-              <span className="per">· digital PDF, yours to keep</span>
-            </div>
             <div className="cta">
-              <a href="https://buy.stripe.com/00wcN5a38cVQeS009t6Vq0n" className="gold" target="_blank" rel="noopener noreferrer">
-                Get Instant Access
-              </a>
+              <Link to="/system" className="gold">
+                Get The Nourish System — $97
+              </Link>
             </div>
           </div>
           <div
@@ -396,24 +392,13 @@ function HormonalHealthPage() {
               The complete protocol — a 30-day plan, a cheat sheet, and 20
               recipes built for hormonal support.
             </p>
-            <div className="price">
-              <span className="now">$27</span>
-            </div>
             <div className="cta">
-              <a href="https://buy.stripe.com/00wcN5a38cVQeS009t6Vq0n" className="gold" target="_blank" rel="noopener noreferrer">
-                Get Instant Access
-              </a>
+              <Link to="/system" className="gold">
+                Get The Nourish System — $97
+              </Link>
             </div>
             <div className="fine">
               Digital PDF · Instant download · No subscription · Yours to keep
-            </div>
-            <div className="upsell">
-              <div className="u">
-                Hormones don't work in isolation.{" "}
-                <b>The Complete System</b> is all six protocols for $97 — save
-                $65.
-              </div>
-              <Link to="/system">See The Complete System →</Link>
             </div>
           </div>
         </div>

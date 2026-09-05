@@ -192,14 +192,10 @@ function GutHealthPage() {
               diversity that keeps it working.
             </p>
             <div className="stat">20 recipes · 3 phases · 30 days</div>
-            <div className="price">
-              <span className="now">$27</span>
-              <span className="per">· digital PDF, yours to keep</span>
-            </div>
             <div className="cta">
-              <a href="https://buy.stripe.com/4gMdR92AGf3Y5hq4pJ6Vq0j" className="gold" target="_blank" rel="noopener noreferrer">
-                Get Instant Access
-              </a>
+              <Link to="/system" className="gold">
+                Get The Nourish System — $97
+              </Link>
             </div>
           </div>
           <div
@@ -446,23 +442,13 @@ function GutHealthPage() {
               The complete 30-day reset — a phased daily plan, a cheat sheet,
               and 20 recipes engineered for each phase.
             </p>
-            <div className="price">
-              <span className="now">$27</span>
-            </div>
             <div className="cta">
-              <a href="https://buy.stripe.com/4gMdR92AGf3Y5hq4pJ6Vq0j" className="gold" target="_blank" rel="noopener noreferrer">
-                Get Instant Access
-              </a>
+              <Link to="/system" className="gold">
+                Get The Nourish System — $97
+              </Link>
             </div>
             <div className="fine">
               Digital PDF · Instant download · No subscription · Yours to keep
-            </div>
-            <div className="upsell">
-              <div className="u">
-                Gut trouble rarely travels alone. <b>The Complete System</b> is
-                all six protocols for $97 — save $65.
-              </div>
-              <Link to="/system">See The Complete System →</Link>
             </div>
           </div>
         </div>
